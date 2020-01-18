@@ -22,12 +22,12 @@ public class BoardManager : MonoBehaviour {
     public Count enemyCount = new Count(1,3);
     //    public GameObject start;
     //    public GameObject exit;
-    public GameObject[] floorTiles;
+    public GameObject[] roomTiles;
     public GameObject[] enemyTiles;
 
     private Transform boardHolder;
     private List<Vector3> gridPositions = new List<Vector3>();
- 
+    private List<GameObject> roomsOnBoard = new List<GameObject>();
 
     void InitializeList() {
         gridPositions.Clear();
@@ -47,81 +47,87 @@ public class BoardManager : MonoBehaviour {
 
     void BoardSetup () {
         boardHolder = new GameObject ("Board").transform;
-        int north, south, west, east;
-        north = south = west = east = 0;
-        Vector3 lastRoom = new Vector3(0f, 0f, 0f);
+        string lastRoom = "";
+        int roomTile;
 
-        for (int x = 0; x < rooms; x++)
-        {
-            int place = Random.Range(1, 5);
-            if (x != 0)
-            {
-                if (place == 1) { east++; }
-                else if (place == 2) { north++; }
-                else if (place == 3) { west++; }
-                else if (place == 4) { south++; }
+        GameObject instance = Instantiate(roomTiles[0], new Vector3(0f, 0f, 0f), Quaternion.identity) as GameObject;
+        roomsOnBoard.Add(instance);
+        instance.transform.SetParent(boardHolder);
+
+        for (int i = 0; i < rooms; i++) {
+            int direction;
+            if (lastRoom == "Up") {
+                direction = Random.Range(1, 3);
             }
-            for (int y = 0; y < columns; y++)
-            {
-                for (int z = 0; z < rows; z++)
-                {
-                    if (x == 0)
-                    {
-                        GameObject instance = Instantiate(floorTiles[0], new Vector3(y, z, 0f), Quaternion.identity) as GameObject;
-                        instance.transform.SetParent(boardHolder);
-                        if (y == 0 && z == 0)
-                        {
-                            lastRoom = instance.transform.position;
-                        }
-                    }
-                    else {
-                        if (place == 1)
-                        {
-                            GameObject instance = Instantiate(floorTiles[0], lastRoom + new Vector3(7*east + y, z, 0f), Quaternion.identity) as GameObject;
-                            instance.transform.SetParent(boardHolder);
-                            if (y==0 && z==0) {
-                                lastRoom = instance.transform.position;
-                            }
-                        }
-                        else if (place == 2)
-                        {
-                            GameObject instance = Instantiate(floorTiles[0], lastRoom + new Vector3(y, z+7*north, 0f), Quaternion.identity) as GameObject;
-                            instance.transform.SetParent(boardHolder);
-                            if (y == 0 && z == 0)
-                            {
-                                lastRoom = instance.transform.position;
-                            }
-                        }
+            else if (lastRoom == "Down") {
+                direction = Random.Range(1,3);
+                if (direction == 2) { direction = 3; }
+            }
+            else {
+                direction = Random.Range(1, 4);
+            }
 
-                        else if (place == 3)
-                        {
-                            GameObject instance = Instantiate(floorTiles[0], lastRoom + new Vector3(y-7*west, z, 0f), Quaternion.identity) as GameObject;
-                            instance.transform.SetParent(boardHolder);
-                            if (y == 0 && z == 0)
-                            {
-                                lastRoom = instance.transform.position;
-                            }
-                        }
-                        else if (place == 4)
-                        {
-                            GameObject instance = Instantiate(floorTiles[0], lastRoom + new Vector3(y, z-7*south, 0f), Quaternion.identity) as GameObject;
-                            instance.transform.SetParent(boardHolder);
-                            if (y == 0 && z == 0)
-                            {
-                                lastRoom = instance.transform.position;
-                            }
-                        }
-                    }
+            roomTile = Random.Range(0, 3);
+
+            if (direction == 1) {
+                instance = Instantiate(roomTiles[roomTile], instance.transform.position + (2*Vector3.right), Quaternion.identity) as GameObject;
+                instance.transform.SetParent(boardHolder);
+                roomsOnBoard.Add(instance);
+                Debug.Log("Instance added to Board");
+
+                if (roomsOnBoard.Count == rooms) { break; }
+                lastRoom = "Right";
+                Debug.Log(lastRoom);
+            }
+            else if (direction == 2) {
+                instance = Instantiate(roomTiles[roomTile], instance.transform.position + (2*Vector3.up), Quaternion.identity) as GameObject;
+                instance.transform.SetParent(boardHolder);
+                roomsOnBoard.Add(instance);
+                Debug.Log("Instance added to Board");
+
+                if (roomsOnBoard.Count == rooms) { break; }
+                lastRoom = "Up";
+                Debug.Log(lastRoom);
+            }
+            /*else if (direction == 3) {
+                instance = Instantiate(roomTiles[roomTile], instance.transform.position + (2*Vector3.left), Quaternion.identity) as GameObject;
+                instance.transform.SetParent(boardHolder);
+                roomsOnBoard.Add(instance);
+                Debug.Log("Instance added to Board");
+
+                if (roomsOnBoard.Count == rooms) { break; }
+                lastRoom = "Left";
+                Debug.Log(lastRoom);
+            }*/
+            else if (direction == 3) {
+                instance = Instantiate(roomTiles[roomTile], instance.transform.position + (2*Vector3.down), Quaternion.identity) as GameObject;
+                instance.transform.SetParent(boardHolder);
+                roomsOnBoard.Add(instance);
+                Debug.Log("Instance added to Board");
+
+                if (roomsOnBoard.Count == rooms) { break; }
+                lastRoom = "Down";
+                Debug.Log(lastRoom);
+            }
+        }
+    }
+
+    //Here for possible room mapping 
+    /*void RandomFillMap() {
+        string seed = Time.time.ToString();
+
+        System.Random pseudoRandom = new System.Random(seed.GetHashCode());
+
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                if (x == 0 || x == width - 1 || y == 0 || y == height - 1) {
+                    map[x, y] = 1;
+                } else {
+                    map[x, y] = (pseudoRandom.Next(0, 100) < randomFillPercent) ? 1 : 0;
                 }
             }
         }
- //       for (int x = 0; x < columns; x++) {
-   //         for (int y = 0; y < rows; y++) {
-     //               GameObject instance = Instantiate(floorTiles[0], new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
-       //             instance.transform.SetParent(boardHolder)
-         //   }
-       // }
-    }
+    }*/
 
     Vector3 RandomPosition (int room) {
         int randomIndex = Random.Range(0, gridPositions.Count);
