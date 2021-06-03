@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda33b94f9649a24fb51c879c320bdab, type: 3}
+  m_Name: Greater Health Potion
+  m_EditorClassIdentifier: 
+  itemID: 3a7ca4c8-3105-42b6-96cc-c0b2b541603b
+  displayName: Greater Health Potion
+  description: This deep red potion will heal 20 health points to the adventurer who
+    drinks it.
+  icon: {fileID: 21300000, guid: 7add2691e6dec2d4a847ac9eb7d5263b, type: 3}
+  pickup: {fileID: 5341070917969346335, guid: 29970e199cd571a468e8cf15eab076d5, type: 3}
+  stackable: 1
+  consumable: 1
+  healingAmount: 20
+  onUseParticleEffect: {fileID: 0}
+  sfx: {fileID: 0}

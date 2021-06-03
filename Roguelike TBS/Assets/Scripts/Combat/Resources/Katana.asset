@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecef2dd27e6544a4d8ed73b526f4e06c, type: 3}
+  m_Name: Katana
+  m_EditorClassIdentifier: 
+  itemID: 2ad977d9-96fa-43af-b365-74a9f811a0a4
+  displayName: Katana
+  description: While you were adventuring, I was studying the blade.
+  icon: {fileID: 21300000, guid: 9f27a2af4d111294f8e7a08ec3627aee, type: 3}
+  pickup: {fileID: 5010155065259366316, guid: 9bf75d4b434b29645bb06e42bf6b71f4, type: 3}
+  stackable: 0
+  equippedPrefab: {fileID: 4343782131202490209, guid: 59b9c4eaccfbb494889829c2997b1d39,
+    type: 3}
+  weaponDamage: 5

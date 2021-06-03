@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecef2dd27e6544a4d8ed73b526f4e06c, type: 3}
+  m_Name: Fire Longsword
+  m_EditorClassIdentifier: 
+  itemID: 86019f0e-7b8f-4341-b339-d48cd4481452
+  displayName: Fire Longsword
+  description: Something something fire sword.
+  icon: {fileID: 21300000, guid: 5dc5acb99e566dd43a23defb9740f4c3, type: 3}
+  pickup: {fileID: 7044427206039546587, guid: 6b7a4d4389a460f449266fbfb575f458, type: 3}
+  stackable: 0
+  equippedPrefab: {fileID: 4545864812502022180, guid: f4f3ac19f22dae34b8e71f2f0b23651c,
+    type: 3}
+  weaponDamage: 6

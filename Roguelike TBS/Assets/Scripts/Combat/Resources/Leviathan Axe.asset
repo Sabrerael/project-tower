@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecef2dd27e6544a4d8ed73b526f4e06c, type: 3}
+  m_Name: Leviathan Axe
+  m_EditorClassIdentifier: 
+  itemID: 5e991279-0c50-4b6d-b552-b16332101124
+  displayName: Leviathan Axe
+  description: This powerful axe can be thrown at your enemies and recalled to your
+    hand.
+  icon: {fileID: 21300000, guid: 03737ab9665eefb448b051b8cce26447, type: 3}
+  pickup: {fileID: 6546241761320859305, guid: 9fcf00094ab9fdd41b133ab64b867da6, type: 3}
+  stackable: 0
+  equippedPrefab: {fileID: 7759101235039732278, guid: 9dc03e9e331ec2649a948b43d5be25a0,
+    type: 3}
+  weaponDamage: 10

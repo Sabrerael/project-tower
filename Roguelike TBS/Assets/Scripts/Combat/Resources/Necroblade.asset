@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecef2dd27e6544a4d8ed73b526f4e06c, type: 3}
+  m_Name: Necroblade
+  m_EditorClassIdentifier: 
+  itemID: 804fefe6-3139-4dff-a97e-62ccc30fac26
+  displayName: Necroblade
+  description: A mystic blade steeped in necrotic energies. If used properly, it can
+    drain the life force of your enemies to supplant your own.
+  icon: {fileID: 21300000, guid: b1a429e805903504eac861346ff77f74, type: 3}
+  pickup: {fileID: 1522993731178321327, guid: 6c2532e318dd04d499acaf665b0313a9, type: 3}
+  stackable: 0
+  equippedPrefab: {fileID: 1493062353609023030, guid: 1841a6a3a7e17054bab5c93796427e34,
+    type: 3}
+  weaponDamage: 7

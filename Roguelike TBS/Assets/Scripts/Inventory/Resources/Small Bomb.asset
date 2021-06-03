@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2401f721474bff4983584b743f7ab91, type: 3}
+  m_Name: Small Bomb
+  m_EditorClassIdentifier: 
+  itemID: aaf2fddd-9cfa-44ab-8258-cdb2c83e5f7f
+  displayName: Small Bomb
+  description: If you light the fuse, make sure to throw it.
+  icon: {fileID: 21300000, guid: 89bb10d7bfc64384d8bc4cbb066d516a, type: 3}
+  pickup: {fileID: 3345829692324254004, guid: cd57ab4ab3a2b7d43aca105c51f1da89, type: 3}
+  stackable: 1
+  consumable: 1
+  throwSpeed: 5
+  itemPrefab: {fileID: 408829435049745697, guid: 1d6149d575a1e984eac93652501521f2,
+    type: 3}
+  sfx: {fileID: 0}

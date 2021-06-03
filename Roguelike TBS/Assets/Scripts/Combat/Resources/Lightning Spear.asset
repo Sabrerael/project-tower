@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecef2dd27e6544a4d8ed73b526f4e06c, type: 3}
+  m_Name: Lightning Spear
+  m_EditorClassIdentifier: 
+  itemID: 7ea02a30-5b1d-4032-87de-b988b08581c0
+  displayName: Lightning Spear
+  description: Something something lightning
+  icon: {fileID: 21300000, guid: c619090942bf1414ab002594d52d3053, type: 3}
+  pickup: {fileID: 6455465004419160195, guid: 8ebe0b182e5352b4fbb6ebf82f466000, type: 3}
+  stackable: 0
+  equippedPrefab: {fileID: -1730134469691448914, guid: 350d92915532ff04ba11d2f31a162b03,
+    type: 3}
+  weaponDamage: 8

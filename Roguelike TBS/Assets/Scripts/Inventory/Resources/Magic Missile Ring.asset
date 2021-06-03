@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5574981d3c1120345b47ba12039f1818, type: 3}
+  m_Name: Magic Missile Ring
+  m_EditorClassIdentifier: 
+  itemID: 430bbaad-60b6-4ac4-96e2-75fc0585ce64
+  displayName: Ring of Magic Missile
+  description: Launches Magic Missles
+  icon: {fileID: 21300000, guid: d6468ad796d71ad40915f33eef8fb603, type: 3}
+  pickup: {fileID: 0}
+  stackable: 0
+  consumable: 0
+  sfx: {fileID: 0}
+  magicToSpawn: {fileID: 7099480259740861144, guid: b90cf173aac386546959d61f08ec0473,
+    type: 3}

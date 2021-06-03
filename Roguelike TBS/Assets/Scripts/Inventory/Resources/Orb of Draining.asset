@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5387239366e9594f8807469dcb9a805, type: 3}
+  m_Name: Orb of Draining
+  m_EditorClassIdentifier: 
+  itemID: 162dfd56-4aae-4041-a610-a073af5d4488
+  displayName: Orb of Draining
+  description: A sky blue orb, this magical item will drain the health of nearby enemies
+    to heal the user.
+  icon: {fileID: 21300000, guid: 872157c74ba1e6145a465f8548dd0d32, type: 3}
+  pickup: {fileID: 8710806042474463348, guid: f1b4693806c821642991ca97c94be20d, type: 3}
+  stackable: 0
+  consumable: 0
+  aoePrefab: {fileID: 2568748944854759653, guid: 0f06f47274d746f47a828df1c3a40f81,
+    type: 3}
+  sfx: {fileID: 0}

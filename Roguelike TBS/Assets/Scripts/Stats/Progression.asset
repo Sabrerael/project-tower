@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3790a4cffc80bf54bb2e6eefca76d146, type: 3}
+  m_Name: Progression
+  m_EditorClassIdentifier: 
+  characterClasses:
+  - characterClass: 0
+    stats:
+    - stat: 0
+      levels: 14000000190000001e000000230000002800000032000000
+    - stat: 3
+      levels: 05000000060000000700000008000000090000000a000000
+    - stat: 4
+      levels: 020000000300000004000000040000000500000005000000
+    - stat: 2
+      levels: fa000000f4010000ee020000e8030000e2040000
+    - stat: 6
+      levels: 3c0000003c0000003c0000003c0000003c0000003c000000
+    - stat: 5
+      levels: 0a0000000a0000000a0000000a0000000a0000000a000000
+    - stat: 7
+      levels: 010000000100000001000000010000000100000001000000
+  - characterClass: 1
+    stats:
+    - stat: 0
+      levels: 
+    - stat: 0
+      levels: 
+    - stat: 0
+      levels: 
+  - characterClass: 2
+    stats:
+    - stat: 0
+      levels: 
+    - stat: 0
+      levels: 
+    - stat: 0
+      levels: 
+  - characterClass: 3
+    stats:
+    - stat: 0
+      levels: 
+    - stat: 0
+      levels: 
+    - stat: 0
+      levels: 
+  - characterClass: 4
+    stats:
+    - stat: 0
+      levels: 0a0000000c0000000e0000001000000012000000
+    - stat: 1
+      levels: 0f00000014000000190000001e00000023000000
+    - stat: 3
+      levels: 0200000002000000030000000300000004000000
+    - stat: 4
+      levels: 0100000001000000020000000200000003000000
+  - characterClass: 5
+    stats:
+    - stat: 0
+      levels: 0f0000001200000015000000180000001b000000
+    - stat: 1
+      levels: 14000000190000001e0000002300000028000000
+    - stat: 3
+      levels: 0300000004000000040000000500000005000000
+    - stat: 4
+      levels: 0200000002000000030000000300000004000000
+  - characterClass: 6
+    stats:
+    - stat: 0
+      levels: 14000000180000001c0000002000000024000000
+    - stat: 1
+      levels: 1e00000028000000320000003c00000046000000
+    - stat: 3
+      levels: 0500000006000000070000000800000009000000
+    - stat: 4
+      levels: 0300000003000000040000000400000005000000
+  - characterClass: 7
+    stats:
+    - stat: 0
+      levels: 1000000014000000180000001c00000020000000
+    - stat: 1
+      levels: 1e00000028000000320000003c00000046000000
+    - stat: 3
+      levels: 0500000006000000070000000800000009000000
+    - stat: 4
+      levels: 0100000001000000020000000200000003000000
+  - characterClass: 8
+    stats:
+    - stat: 0
+      levels: 1e00000023000000280000002d00000032000000
+    - stat: 1
+      levels: 3200000041000000500000005f0000006e000000
+    - stat: 3
+      levels: 0500000007000000090000000b0000000d000000
+    - stat: 4
+      levels: 0100000001000000010000000100000001000000
+  - characterClass: 9
+    stats:
+    - stat: 0
+      levels: 230000002d00000037000000410000004b000000
+    - stat: 1
+      levels: 3c0000005000000064000000780000008c000000
+    - stat: 3
+      levels: 08000000090000000a0000000b0000000c000000
+    - stat: 4
+      levels: 0500000006000000070000000800000009000000
+  - characterClass: 10
+    stats:
+    - stat: 0
+      levels: 1900000021000000290000003100000039000000
+    - stat: 1
+      levels: 2800000037000000460000005500000064000000
+    - stat: 3
+      levels: 050000000600000007000000080000000a000000
+    - stat: 4
+      levels: 0400000005000000060000000700000008000000
+  - characterClass: 11
+    stats:
+    - stat: 0
+      levels: 140000001c000000240000002c00000034000000
+    - stat: 1
+      levels: 2800000037000000460000005500000064000000
+    - stat: 3
+      levels: 050000000600000007000000080000000a000000
+    - stat: 4
+      levels: 0300000004000000050000000600000007000000
+  - characterClass: 12
+    stats:
+    - stat: 0
+      levels: 3200000041000000500000005f0000006e000000
+    - stat: 1
+      levels: 96000000c8000000fa0000002c0100005e010000
+    - stat: 3
+      levels: 0c0000000e000000100000001200000014000000
+    - stat: 4
+      levels: 090000000a0000000b0000000c0000000d000000
+  - characterClass: 13
+    stats:
+    - stat: 0
+      levels: 3c0000004b0000005a0000006900000078000000
+    - stat: 1
+      levels: a0000000d2000000040100003601000068010000
+    - stat: 3
+      levels: 0e00000010000000120000001400000016000000
+    - stat: 4
+      levels: 0700000008000000090000000a0000000b000000
+  - characterClass: 14
+    stats:
+    - stat: 0
+      levels: 14000000190000001e0000002300000028000000
+    - stat: 1
+      levels: 1e00000028000000320000003c00000046000000
+    - stat: 3
+      levels: 050000000600000007000000080000000a000000
+    - stat: 4
+      levels: 0300000004000000050000000600000007000000
+  - characterClass: 15
+    stats:
+    - stat: 0
+      levels: 230000002d00000037000000410000004b000000
+    - stat: 1
+      levels: c8000000fa0000002c0100005e01000090010000
+    - stat: 3
+      levels: 0a0000000b0000000c0000000d0000000e000000
+    - stat: 4
+      levels: 0d0000000e0000000f0000001000000011000000
+  - characterClass: 16
+    stats:
+    - stat: 0
+      levels: 0f00000014000000190000001e00000023000000
+    - stat: 1
+      levels: 3c0000005000000064000000780000008c000000
+    - stat: 3
+      levels: 08000000090000000a0000000b0000000c000000
+    - stat: 4
+      levels: 0700000008000000090000000a0000000b000000
+  - characterClass: 17
+    stats:
+    - stat: 0
+      levels: 320000003c00000046000000500000005a000000
+    - stat: 1
+      levels: 96000000af000000c8000000e1000000fa000000
+    - stat: 3
+      levels: 0a0000000b0000000c0000000d0000000e000000
+    - stat: 4
+      levels: 08000000090000000a0000000b0000000c000000
+  - characterClass: 18
+    stats:
+    - stat: 0
+      levels: 37000000410000004b000000550000005f000000
+    - stat: 1
+      levels: 96000000af000000c8000000e1000000fa000000
+    - stat: 3
+      levels: 0a0000000b0000000c0000000d0000000e000000
+    - stat: 4
+      levels: 0700000008000000090000000a0000000b000000
+  - characterClass: 19
+    stats:
+    - stat: 0
+      levels: 190000001e00000023000000280000002d000000
+    - stat: 1
+      levels: 64000000780000008c000000a0000000b4000000
+    - stat: 3
+      levels: 0d0000000e0000000f0000001000000011000000
+    - stat: 4
+      levels: 08000000090000000a0000000b0000000c000000

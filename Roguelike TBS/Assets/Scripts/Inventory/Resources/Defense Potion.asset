@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bcb1133f92c6ff4a9fc38c71b6c441a, type: 3}
+  m_Name: Defense Potion
+  m_EditorClassIdentifier: 
+  itemID: 1ca9f032-b4f3-4d0f-8b6b-83272d1a2604
+  displayName: Defense Potion
+  description: This mystrious blue potion will increase your defense for a short time.
+  icon: {fileID: 21300000, guid: 17a4b0ae44b843e4490c02270c79e382, type: 3}
+  pickup: {fileID: 3639444658826190136, guid: 0eceb122d8ed8744c926bc91eccef70e, type: 3}
+  stackable: 1
+  consumable: 1
+  stat: 4
+  increase: 30
+  time: 30
+  onUseParticleEffect: {fileID: 0}
+  sfx: {fileID: 0}
