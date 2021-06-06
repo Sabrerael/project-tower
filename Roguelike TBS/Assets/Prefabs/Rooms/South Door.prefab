@@ -69,8 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: -1089995869
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1580889181118451701, guid: d307eec3161e2794f812b7ab778a44a3,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41642f14d5102824f99ab3a8e2a516dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,5 +153,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newRoomManager: {fileID: 0}
   directionToMove: 1
-  openDoor: {fileID: 3028980172476509402, guid: d307eec3161e2794f812b7ab778a44a3,
-    type: 3}
+  openDoor: {fileID: 21300000, guid: bbe5546dd210d5a4fbbdb8c69944fe54, type: 3}

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2114479279911131902
+--- !u!1001 &5162055413812017901
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,13 +10,13 @@ PrefabInstance:
     - target: {fileID: 6069897099916873073, guid: 9e42c659609a79d47af3adee122dae2a,
         type: 3}
       propertyPath: m_Name
-      value: Health Ring Pickup
+      value: Gauntlet of Survival Pickup
       objectReference: {fileID: 0}
     - target: {fileID: 8395294293350479208, guid: 9e42c659609a79d47af3adee122dae2a,
         type: 3}
       propertyPath: passiveItem
       value: 
-      objectReference: {fileID: 11400000, guid: 2585d6a6c23cd0d42b45b3adf1af132c,
+      objectReference: {fileID: 11400000, guid: 3404163977a8e214a8f296771bd5677c,
         type: 2}
     - target: {fileID: 8089252511885458278, guid: 9e42c659609a79d47af3adee122dae2a,
         type: 3}
@@ -73,31 +73,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5078760516770832457, guid: 9e42c659609a79d47af3adee122dae2a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5078760516770832457, guid: 9e42c659609a79d47af3adee122dae2a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 3169422164052819538, guid: 9e42c659609a79d47af3adee122dae2a,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8e2f51d76765e084aaa5b8943797de61,
+      objectReference: {fileID: 21300000, guid: b32b8a7ed4458cf48a45133f926949b2,
         type: 3}
     - target: {fileID: 3169422164052819538, guid: 9e42c659609a79d47af3adee122dae2a,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.28
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3169422164052819538, guid: 9e42c659609a79d47af3adee122dae2a,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.28
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3169422164052819538, guid: 9e42c659609a79d47af3adee122dae2a,
         type: 3}
