@@ -10,7 +10,6 @@ public enum AbilityState {
 }
 
 public class Paladin : Character {
-    // Scriptable Object for LevelUpBonuses
     [SerializeField] LevelUpBonuses levelUpBonuses = null;
     [SerializeField] TextMeshProUGUI[] bonusesMenuTextFields = null;
     [SerializeField] GameObject levelUpMenu = null;
@@ -21,6 +20,7 @@ public class Paladin : Character {
     private int activeAbilityModifier = 0;
     private float timer = 0;
     private AbilityState abilityState = AbilityState.Ready;
+    private LevelUpBonus[] randomBonuses = new LevelUpBonus[3];
 
     private void Update() {
         if (abilityState == AbilityState.Cooldown) {
@@ -49,7 +49,8 @@ public class Paladin : Character {
 
         levelOfBonuses = (baseStats.GetLevel() / 2) - 1;
 
-        var bonuses = levelUpBonuses.GetLevelUpBonusesByLevel(levelOfBonuses);
+        randomBonuses = levelUpBonuses.GetLevelUpBonusesByLevel(levelOfBonuses);
+        Debug.Log(levelUpMenu);
         
         Time.timeScale = 0;
 
@@ -58,31 +59,28 @@ public class Paladin : Character {
             var index = UnityEngine.Random.Range(0,5);
             choiceIndexes[i] = index;
 
-            if (bonuses[index].type == "Multiplicative") {
-                bonusesMenuTextFields[i].text = "Increases your " + bonuses[index].stat + " by " + bonuses[index].bonus + "%";
+            if (randomBonuses[index].type == "Multiplicative") {
+                bonusesMenuTextFields[i].text = "Increases your " + randomBonuses[index].stat + " by " + randomBonuses[index].bonus + "%";
             } else {
-                bonusesMenuTextFields[i].text = "Increases your " + bonuses[index].stat + " by " + bonuses[index].bonus + " points";
+                bonusesMenuTextFields[i].text = "Increases your " + randomBonuses[index].stat + " by " + randomBonuses[index].bonus + " points";
             }
         }
     }
 
     public void ChooseBonusOne() {
-        var bonuses = levelUpBonuses.GetLevelUpBonusesByLevel(levelOfBonuses);
-        AddLevelUpModifier(bonuses[choiceIndexes[0]]);
+        AddLevelUpModifier(randomBonuses[choiceIndexes[0]]);
         levelUpMenu.SetActive(false);
         Time.timeScale = 1;
     }
 
     public void ChooseBonusTwo() {
-        var bonuses = levelUpBonuses.GetLevelUpBonusesByLevel(levelOfBonuses);
-        AddLevelUpModifier(bonuses[choiceIndexes[1]]);
+        AddLevelUpModifier(randomBonuses[choiceIndexes[1]]);
         levelUpMenu.SetActive(false);
         Time.timeScale = 1;
     }
 
     public void ChooseBonusThree() {
-        var bonuses = levelUpBonuses.GetLevelUpBonusesByLevel(levelOfBonuses);
-        AddLevelUpModifier(bonuses[choiceIndexes[2]]);
+        AddLevelUpModifier(randomBonuses[choiceIndexes[2]]);
         levelUpMenu.SetActive(false);
         Time.timeScale = 1;
     }

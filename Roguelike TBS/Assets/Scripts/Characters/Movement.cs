@@ -2,7 +2,6 @@
 using UnityEngine;
 
 public class Movement : MonoBehaviour {
-    //[SerializeField] float movementSpeed = 10f;
     [SerializeField] float padding = 0.5f;
     [SerializeField] float speedUpRate = 0.4f;
 
@@ -33,8 +32,8 @@ public class Movement : MonoBehaviour {
         } else {
             GetComponent<Animator>().SetBool("IsWalking", true);
         }
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(Input.GetAxis("Horizontal") * movementSpeed*50000 * Time.deltaTime,
-                                       Input.GetAxis("Vertical") * movementSpeed*50000 * Time.deltaTime));
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime,
+                                       Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime));
         AddBrakeForce();
     }
 
@@ -49,12 +48,9 @@ public class Movement : MonoBehaviour {
     // This doesn't appear to be doing anything
     private void AddBrakeForce() {
         float speed = Vector3.Magnitude(GetComponent<Rigidbody2D>().velocity);  // test current object speed
-        //Debug.Log(speed);
       
         if (speed > 10) {
-            //Debug.Log("In if statement");
             float brakeSpeed = speed - 10;  // calculate the speed decrease
-            //Debug.Log(brakeSpeed);
         
             Vector2 normalisedVelocity = GetComponent<Rigidbody2D>().velocity.normalized;
             Vector2 brakeVelocity = normalisedVelocity * brakeSpeed;  // make the brake Vector3 value

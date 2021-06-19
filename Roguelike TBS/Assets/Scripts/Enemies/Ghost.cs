@@ -60,13 +60,22 @@ public class Ghost : Enemy {
                 GetComponent<Collider2D>().enabled = true;
             }
         } else if (isVisible) {
-            float playerX = player.transform.position.x;
-            float playerY = player.transform.position.y;
+            var offset = new Vector2(
+                player.transform.position.x - gameObject.transform.position.x,
+                player.transform.position.y - gameObject.transform.position.y
+            );
+            var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
 
-            float translateX = (playerX - transform.position.x) * movementSpeed;
-            float translateY = (playerY - transform.position.y) * movementSpeed;
+            var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
+            var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
 
-            transform.Translate(translateX  * Time.deltaTime, translateY  * Time.deltaTime, 0f);
+            var deltaX = xRatio * movementSpeed * Time.deltaTime;
+            var deltaY = yRatio * movementSpeed * Time.deltaTime;
+
+            float newXPos = transform.localPosition.x + deltaX;
+            float newyPos = transform.localPosition.y + deltaY;
+
+            transform.localPosition = new Vector2(newXPos, newyPos);
 
             if (timer > visableTime) {
                 isVisible = false;

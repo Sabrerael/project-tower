@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
-  movementSpeed: 2
+  movementSpeed: 4.5
 --- !u!114 &1636054475031200755
 MonoBehaviour:
   m_ObjectHideFlags: 0

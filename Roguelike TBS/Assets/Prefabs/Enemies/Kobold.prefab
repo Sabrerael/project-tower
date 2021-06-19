@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 1025088853335906274}
   - component: {fileID: 1025088853335906273}
   - component: {fileID: 4765209952850814436}
-  - component: {fileID: 3391014598707747303}
   - component: {fileID: 8055614107109403468}
   - component: {fileID: 3729827403146163279}
   - component: {fileID: 8821925286237565998}
+  - component: {fileID: 2076684853698406582}
+  - component: {fileID: 6605239914709352248}
   m_Layer: 11
   m_Name: Kobold
   m_TagString: Enemy
@@ -124,19 +125,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.06}
   m_Size: {x: 0.56, y: 1.1}
   m_Direction: 0
---- !u!114 &3391014598707747303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025088853335906303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00e877170d6ff3f48adf6b696de9b48c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
 --- !u!114 &8055614107109403468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +166,7 @@ Animator:
   m_GameObject: {fileID: 1025088853335906303}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6f4b90f045143949a3504b9a29b613a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 44497ac12bd1fc24885e0fe21cf0fba1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -187,6 +175,47 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &2076684853698406582
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025088853335906303}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 0.49, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.28}
+  m_EdgeRadius: 0
+--- !u!114 &6605239914709352248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025088853335906303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c05cba77f556b44b263a1d6fd7f11d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 0}
+  movementSpeed: 0
+  weaponDamage: 10
 --- !u!1001 &2830304421150703375
 PrefabInstance:
   m_ObjectHideFlags: 0

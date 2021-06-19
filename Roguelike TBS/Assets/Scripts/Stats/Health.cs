@@ -56,7 +56,9 @@ namespace RPG.Stats {
 
             isDead = true;
             gameObject.GetComponent<Animator>().SetBool("Dead", true);
-            gameObject.GetComponent<Collider2D>().enabled = false;
+            foreach (var collider in gameObject.GetComponents<Collider2D>()) {
+                collider.enabled = false;
+            }
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
             transform.SetParent(GameObject.Find("Dead Enemies").transform);
         }

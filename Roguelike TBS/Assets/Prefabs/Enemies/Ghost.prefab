@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 0}
-  movementSpeed: 1
+  movementSpeed: 3.75
   alphaChangeTime: 1
   disappearenceTime: 1.5
   visableTime: 15

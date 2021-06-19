@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5915529073886209530}
   - component: {fileID: 1997041137797899675}
   - component: {fileID: -3463411375600842157}
+  - component: {fileID: 7239040884086236497}
   m_Layer: 11
   m_Name: Animated Armor
   m_TagString: Enemy
@@ -165,7 +166,7 @@ Animator:
   m_GameObject: {fileID: 8062275640398464586}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6f4b90f045143949a3504b9a29b613a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1f578e3588babc043b6c669c37e486d2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -187,7 +188,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 0}
-  movementSpeed: 0
+  movementSpeed: 2
+  weaponDamage: 10
+--- !u!61 &7239040884086236497
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8062275640398464586}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.55, y: -0.1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.92, y: 1.92}
+    newSize: {x: 0.49, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.75, y: 1.5}
+  m_EdgeRadius: 0
 --- !u!1001 &5459321260375772156
 PrefabInstance:
   m_ObjectHideFlags: 0

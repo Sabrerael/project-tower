@@ -2870,6 +2870,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kobold Spawner 2
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 6605239914709352248, guid: 70b5ae050334b5b43baadd42ee02d22d,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2925,12 +2931,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 3391014598707747303, guid: 70b5ae050334b5b43baadd42ee02d22d,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &4766602581053107616 stripped
@@ -2963,6 +2963,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Slime Spawner 2
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 3251617602242367725, guid: 5047cab668169dc41a1c8a7020bb0bce,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3018,12 +3024,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 3251617602242367725, guid: 5047cab668169dc41a1c8a7020bb0bce,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &4796894386802454367 stripped
@@ -3056,6 +3056,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Slime Spawner 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 3251617602242367725, guid: 5047cab668169dc41a1c8a7020bb0bce,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3111,12 +3117,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 3251617602242367725, guid: 5047cab668169dc41a1c8a7020bb0bce,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &6321638643076116065 stripped
@@ -3236,6 +3236,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kobold Spawner 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 6605239914709352248, guid: 70b5ae050334b5b43baadd42ee02d22d,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3291,12 +3297,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 3391014598707747303, guid: 70b5ae050334b5b43baadd42ee02d22d,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!114 &5882882343425292207 stripped

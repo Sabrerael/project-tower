@@ -2,7 +2,7 @@
 using RPG.Stats;
 // TODO Consolidate specific enemy scripts into enemy behavior scripts? 
 public class Enemy : MonoBehaviour {
-    [SerializeField] AudioClip sfx = null;
+    [SerializeField] protected AudioClip sfx = null;
     [SerializeField] protected float movementSpeed = 0f;
 
     /// CACHE
@@ -20,7 +20,10 @@ public class Enemy : MonoBehaviour {
             var damageTaken = wielder.GetComponent<BaseStats>().GetStat(Stat.Attack) - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
             Debug.Log("Damage being dealt is " + damageTaken);
             GetComponent<Health>().TakeDamage(wielder, damageTaken);
-            AudioSource.PlayClipAtPoint(sfx, transform.position);
+
+            if (sfx) {
+                AudioSource.PlayClipAtPoint(sfx, transform.position);
+            }
         }
     }
 
@@ -33,7 +36,9 @@ public class Enemy : MonoBehaviour {
                 other.gameObject.GetComponent<ThrownItem>().GetWielder().gameObject,
                 damageTaken
             );
-            AudioSource.PlayClipAtPoint(sfx, transform.position);
+            if (sfx) {
+                AudioSource.PlayClipAtPoint(sfx, transform.position);
+            }
         } else if (other.gameObject.tag == "Magic") {
             gameObject.GetComponent<Animator>().SetTrigger("Hit");
             var damageTaken = other.gameObject.GetComponent<MagicMissile>().GetDamage() - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
@@ -42,7 +47,9 @@ public class Enemy : MonoBehaviour {
                 other.gameObject.GetComponent<MagicMissile>().GetCaster().gameObject,
                 damageTaken
             );
-            AudioSource.PlayClipAtPoint(sfx, transform.position);
+            if (sfx) {
+                AudioSource.PlayClipAtPoint(sfx, transform.position);
+            }
         }
     }
 

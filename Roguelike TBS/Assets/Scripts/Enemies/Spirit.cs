@@ -14,20 +14,34 @@ public class Spirit : Enemy {
         shootTimer += Time.deltaTime;
 
         if (shootTimer >= timeBetweenShots) {
-            ShootMagic();
+            TriggerAttackAnimation();
         }
 
         MoveEnemy();
     }
 
+    private void TriggerAttackAnimation() {
+        GetComponent<Animator>().SetTrigger("Attack");
+        shootTimer = 0;
+    }
+
     private void MoveEnemy() {
-        float playerX = player.transform.position.x;
-        float playerY = player.transform.position.y;
+        var offset = new Vector2(
+            player.transform.position.x - gameObject.transform.position.x,
+            player.transform.position.y - gameObject.transform.position.y
+        );
+        var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
 
-        float translateX = (playerX - transform.position.x) * movementSpeed;
-        float translateY = (playerY - transform.position.y) * movementSpeed;
+        var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
+        var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
 
-        transform.Translate(translateX  * Time.deltaTime, translateY  * Time.deltaTime, 0f);
+        var deltaX = xRatio * movementSpeed * Time.deltaTime;
+        var deltaY = yRatio * movementSpeed * Time.deltaTime;
+
+        float newXPos = transform.localPosition.x + deltaX;
+        float newyPos = transform.localPosition.y + deltaY;
+
+        transform.localPosition = new Vector2(newXPos, newyPos);
     }
 
     private void ShootMagic() {
@@ -47,7 +61,5 @@ public class Spirit : Enemy {
         spawnedItem.transform.rotation = Quaternion.Euler(0, 0, angle);
 
         spawnedItem.GetComponent<EnemyProjectile>().SetMovementValues(xRatio * magicBlobSpeed, yRatio * magicBlobSpeed);
-
-        shootTimer = 0;
     }
 }

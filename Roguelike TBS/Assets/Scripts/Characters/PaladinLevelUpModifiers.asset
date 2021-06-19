@@ -78,18 +78,18 @@ MonoBehaviour:
       bonus: 5
       stat: 0
   - bonuses:
-    - type: 
-      bonus: 0
+    - type: Multiplicative
+      bonus: 10
       stat: 3
-    - type: 
-      bonus: 0
+    - type: Multiplicative
+      bonus: 10
       stat: 4
-    - type: 
-      bonus: 0
+    - type: Multiplicative
+      bonus: 10
       stat: 0
-    - type: 
-      bonus: 0
+    - type: Multiplicative
+      bonus: 2
       stat: 7
-    - type: 
-      bonus: 0
+    - type: Multiplicative
+      bonus: 15
       stat: 4

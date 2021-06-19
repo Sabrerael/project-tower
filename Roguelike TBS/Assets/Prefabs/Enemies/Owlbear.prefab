@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1282034542475008502}
   - component: {fileID: 6369347250030795159}
   - component: {fileID: 6320121381112623133}
+  - component: {fileID: 1134842908665474993}
   m_Layer: 11
   m_Name: Owlbear
   m_TagString: Enemy
@@ -165,7 +166,7 @@ Animator:
   m_GameObject: {fileID: 3184160646430669382}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6f4b90f045143949a3504b9a29b613a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 191375cbbab665846bef0059001fd468, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -188,6 +189,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfx: {fileID: 0}
   movementSpeed: 0
+  weaponDamage: 10
+--- !u!61 &1134842908665474993
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3184160646430669382}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.92, y: 1.28}
+    newSize: {x: 0.49, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.65, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1001 &8424334107342277570
 PrefabInstance:
   m_ObjectHideFlags: 0

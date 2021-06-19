@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 6287286811541217704}
   - component: {fileID: 6287286811541217707}
   - component: {fileID: 1417288655988127184}
-  - component: {fileID: 8536145542647295917}
   - component: {fileID: 3941349733104393478}
   - component: {fileID: 7690517211234845189}
   - component: {fileID: 2527909878121153124}
+  - component: {fileID: 7325942485036885695}
   m_Layer: 11
   m_Name: Gelatinous Cube
   m_TagString: Enemy
@@ -123,19 +123,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.56, y: 2.56}
   m_Direction: 0
---- !u!114 &8536145542647295917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6287286811541217717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00e877170d6ff3f48adf6b696de9b48c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
 --- !u!114 &3941349733104393478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +164,7 @@ Animator:
   m_GameObject: {fileID: 6287286811541217717}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6f4b90f045143949a3504b9a29b613a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 70db23424a7f41849ae1ed8b789b94f1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -186,3 +173,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7325942485036885695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6287286811541217717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519cd2efd07b2a84aa1512de89917e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
+  movementSpeed: 0
+  slimeSpawners: []
+  xMax: 11.5
+  xMin: 0.5
+  yMax: -2.5
+  yMin: -9.5

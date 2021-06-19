@@ -2868,6 +2868,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Purple Slime Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 8594834395561557851, guid: 4d3aeefda623a2f4c855c181eb2c098f,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2923,12 +2929,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 8594834395561557851, guid: 4d3aeefda623a2f4c855c181eb2c098f,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!114 &5103564393411223835 stripped
@@ -2961,6 +2961,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minotaur Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 4959966339612144051, guid: 61c1255d5ab6f1040a5dde731502ada1,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3016,12 +3022,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 4776764792108772203, guid: 61c1255d5ab6f1040a5dde731502ada1,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &2509062238990057109 stripped
@@ -3141,6 +3141,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Slime Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 3251617602242367725, guid: 5047cab668169dc41a1c8a7020bb0bce,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3196,12 +3202,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 3251617602242367725, guid: 5047cab668169dc41a1c8a7020bb0bce,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &4227207706759324077 stripped

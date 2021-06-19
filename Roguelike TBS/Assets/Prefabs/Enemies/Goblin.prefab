@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8420947490802133716}
   - component: {fileID: 4428150229514644149}
   - component: {fileID: 5538082706348345827}
+  - component: {fileID: 1421668700795967728}
   m_Layer: 11
   m_Name: Goblin
   m_TagString: Enemy
@@ -165,7 +166,7 @@ Animator:
   m_GameObject: {fileID: 5271443035979090276}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6f4b90f045143949a3504b9a29b613a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d755b6452ffefa448835c7e270af86d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -188,6 +189,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: 5be84a2c32abf794b94d0d1f546497e3, type: 3}
   movementSpeed: 1.5
+  weaponDamage: 10
+--- !u!61 &1421668700795967728
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5271443035979090276}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 0.49, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!1001 &208199937127426680
 PrefabInstance:
   m_ObjectHideFlags: 0

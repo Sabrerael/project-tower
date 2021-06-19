@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7977838631596919993}
   - component: {fileID: -8608902495455757594}
   m_Layer: 11
-  m_Name: Fire Spirit
+  m_Name: Lava Spirit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
+  movementSpeed: 0
 --- !u!114 &8867717274235130843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +180,7 @@ Animator:
   m_GameObject: {fileID: 1937365157563625320}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6f4b90f045143949a3504b9a29b613a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1642abe1559ee3446a1d00f7b3383400, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -200,11 +201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7c99c31ae55cd41b43ef2869e0d795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magicBlob: {fileID: 0}
+  sfx: {fileID: 0}
+  movementSpeed: 2.5
+  magicBlob: {fileID: 3339126878067345744, guid: 3902d5750b4095145bc0e53f370945ca,
+    type: 3}
   magicBlobSpeed: 5
-  timeBetweenShots: 2
-  shootTimer: -3
-  movementSpeed: 4
+  timeBetweenShots: 1.5
+  shootTimer: -1
 --- !u!1001 &2486023482254775060
 PrefabInstance:
   m_ObjectHideFlags: 0

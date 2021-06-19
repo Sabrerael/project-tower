@@ -165,7 +165,7 @@ Animator:
   m_GameObject: {fileID: 3245029717875965108}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6f4b90f045143949a3504b9a29b613a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1d768d564bab4fb4bb10d8d19a71b977, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -189,9 +189,9 @@ MonoBehaviour:
   sfx: {fileID: 0}
   movementSpeed: 0
   arrow: {fileID: 1188875467988603800, guid: 451fdaccb2f9efc4aa31743959503ecc, type: 3}
-  arrowSpeed: 5
-  timeBetweenShots: 2
-  shootTimer: -3
+  arrowSpeed: 7.5
+  timeBetweenShots: 1.75
+  shootTimer: -0.75
 --- !u!1001 &1105803199578433169
 PrefabInstance:
   m_ObjectHideFlags: 0

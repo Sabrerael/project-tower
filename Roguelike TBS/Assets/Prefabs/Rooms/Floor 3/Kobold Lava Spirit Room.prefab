@@ -2457,6 +2457,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lava Spirit Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 4311196596825186672, guid: 4ec06e0cb59a0c643a63e63da89ebec9,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2512,12 +2518,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 4311196596825186672, guid: 4ec06e0cb59a0c643a63e63da89ebec9,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &5865058561692218805 stripped
@@ -2550,6 +2550,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kobold Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 6605239914709352248, guid: 70b5ae050334b5b43baadd42ee02d22d,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2605,12 +2611,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 3391014598707747303, guid: 70b5ae050334b5b43baadd42ee02d22d,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &2149297502038787648 stripped

@@ -165,7 +165,7 @@ Animator:
   m_GameObject: {fileID: 326188733307739849}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6f4b90f045143949a3504b9a29b613a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 455a4cb411882ef4494ca66862a363f8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -187,12 +187,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 0}
-  movementSpeed: 4
-  magicBlob: {fileID: 6022668787323426602, guid: ef06a703ecdc6544f96fd46a775b64bc,
+  movementSpeed: 2.5
+  magicBlob: {fileID: 5986619145827378281, guid: e177524b28fcb9646b8ec0b939102983,
     type: 3}
   magicBlobSpeed: 5
-  timeBetweenShots: 2
-  shootTimer: -3
+  timeBetweenShots: 1.5
+  shootTimer: -1
 --- !u!1001 &1038372263891889149
 PrefabInstance:
   m_ObjectHideFlags: 0

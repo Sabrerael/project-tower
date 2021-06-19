@@ -29,6 +29,4 @@ public class LevelUpBonuses : ScriptableObject {
     public LevelUpBonus[] GetLevelUpBonusesByLevel(int level) {
         return bonusesAtLevels[level].bonuses;
     }
-
-
 }
