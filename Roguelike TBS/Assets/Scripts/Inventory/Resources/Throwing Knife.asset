@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: aa70f2ef-af4f-400d-b5ed-b7beff76413c
   displayName: Throwing Knife
-  description: gfjmgfmghm
+  description: A knife well balanced for throwing.
   icon: {fileID: 21300000, guid: c7e74b55373c58c48a54b9ec4985768e, type: 3}
   pickup: {fileID: 2837722447018993435, guid: 84aab82aca348214784b62be305bfbbe, type: 3}
   stackable: 1

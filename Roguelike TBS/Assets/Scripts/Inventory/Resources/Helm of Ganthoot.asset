@@ -17,7 +17,7 @@ MonoBehaviour:
   description: This legendary helm saw much glorious combat. It will help you end
     the combat you face. Adds 3 to Attack.
   icon: {fileID: 21300000, guid: 3c0f24e3e39b1884dababcc24a22bb88, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 4079878691466649387, guid: c9ca7d3a02084d445b98b0721c6d7c3c, type: 3}
   stackable: 0
   modifierAmount: 3
   statModified: 3

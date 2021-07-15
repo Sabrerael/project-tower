@@ -11,7 +11,7 @@ public class Goblin : Enemy {
     [SerializeField] int weaponDamage = 10;
 
     private AttackState attackState = AttackState.Ready;
-    // Will chase after the player, swinging their sword when in range
+
     private void Update() {
         if (player == null) { return; }
 
@@ -29,10 +29,10 @@ public class Goblin : Enemy {
         var deltaX = xRatio * movementSpeed * Time.deltaTime;
         var deltaY = yRatio * movementSpeed * Time.deltaTime;
 
-        float newXPos = transform.localPosition.x + deltaX;
-        float newyPos = transform.localPosition.y + deltaY;
+        float newXPos = transform.position.x + deltaX;
+        float newyPos = transform.position.y + deltaY;
 
-        transform.localPosition = new Vector2(newXPos, newyPos);
+        transform.position = new Vector2(newXPos, newyPos);
     }
 
     private void OnTriggerStay2D(Collider2D other) {

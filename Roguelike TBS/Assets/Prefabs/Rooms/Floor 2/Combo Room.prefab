@@ -2657,6 +2657,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 5538082706348345827, guid: 3a08fb49e7da0844284bd9e120e125a3,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2744,6 +2750,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin Archer Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 3233196814810533421, guid: 4edf90b8d19902747830ffe3925e5919,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2918,6 +2930,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloaker Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 6187043180810194374, guid: f28e4e7432a2f944f9553b1b3e1347d9,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x

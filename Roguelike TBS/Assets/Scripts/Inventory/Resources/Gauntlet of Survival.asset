@@ -17,7 +17,7 @@ MonoBehaviour:
   description: This armor covers your forearm, compelling you to live. Grants 3 additional
     Health Points.
   icon: {fileID: 21300000, guid: b32b8a7ed4458cf48a45133f926949b2, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 3684328918101348229, guid: d8136bcc12202d6489ff4ba74cd5d29f, type: 3}
   stackable: 0
   modifierAmount: 3
   statModified: 0

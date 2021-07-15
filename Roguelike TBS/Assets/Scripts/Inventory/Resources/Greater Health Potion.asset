@@ -21,5 +21,6 @@ MonoBehaviour:
   stackable: 1
   consumable: 1
   healingAmount: 20
-  onUseParticleEffect: {fileID: 0}
-  sfx: {fileID: 0}
+  onUseParticleEffect: {fileID: 5084641533062172750, guid: 7acd2cc53805d804fbd14cab457a6276,
+    type: 3}
+  sfx: {fileID: 8300000, guid: 916baf2dd37cd7e42acb847d997f9893, type: 3}

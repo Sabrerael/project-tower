@@ -17,7 +17,7 @@ MonoBehaviour:
   description: Wearing this simple ring makes you feel more powerful and gives you
     a +2 to your Strength.
   icon: {fileID: 21300000, guid: 6028066e2e5ae9b4aab64c20b23b35aa, type: 3}
-  pickup: {fileID: 3261538363189612446, guid: 4160b2a7ff1adb145a57ef91d62fa74d, type: 3}
+  pickup: {fileID: 933037598572381295, guid: 96b6c1ce53993f9489bab9fb1879e30c, type: 3}
   stackable: 0
   modifierAmount: 2
   statModified: 3

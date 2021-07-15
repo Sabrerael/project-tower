@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 430bbaad-60b6-4ac4-96e2-75fc0585ce64
   displayName: Ring of Magic Missile
-  description: Launches Magic Missles
+  description: A magical ring that allows the wielder to cast Magic Missile.
   icon: {fileID: 21300000, guid: d6468ad796d71ad40915f33eef8fb603, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 9087610045200673096, guid: 2b58024b8f43e8b428e9b572de6d5d35, type: 3}
   stackable: 0
   consumable: 0
   sfx: {fileID: 0}

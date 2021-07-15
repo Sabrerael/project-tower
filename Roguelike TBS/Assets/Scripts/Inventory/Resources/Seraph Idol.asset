@@ -17,7 +17,7 @@ MonoBehaviour:
   description: This angelic statue helps increases your vitality. Grants a 10% bonus
     to Health.
   icon: {fileID: 21300000, guid: b800aca4b6fdae846a207009efeaa194, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 3328882109073478688, guid: 0ddd6fd26828f024bb38ac664ebcda71, type: 3}
   stackable: 0
   modifierAmount: 10
   statModified: 0

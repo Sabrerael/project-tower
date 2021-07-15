@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour {
     public void LoadMainMenu() {
+        DestroyPlayerObjects();
+
         SceneManager.LoadScene(0);
     }
 
@@ -23,14 +25,27 @@ public class LevelLoader : MonoBehaviour {
     }
 
     public void LoadWinScreen() {
+        DestroyPlayerObjects();
+
         SceneManager.LoadScene(5);
     }
 
     public void LoadGameOver() {
+        DestroyPlayerObjects();
+        
         SceneManager.LoadScene(6);
     }
 
     public void QuitGame() {
         Application.Quit();
+    }
+
+    private void DestroyPlayerObjects() {
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (player) {
+            GameObject.Destroy(GameObject.Find("Pause Menu"));
+            GameObject.Destroy(GameObject.Find("Level Up Bonuses Menu"));
+            GameObject.Destroy(player);
+        }
     }
 }

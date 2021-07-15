@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Plate Armor
   description: Armor made of steel. Increases the wearer's defense by 3.
   icon: {fileID: 21300000, guid: d9cedb4976540e846935583264f6d8b2, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 8391041531893173903, guid: d107eabda7d522c42b5dbea496b6bb49, type: 3}
   stackable: 0
   modifierAmount: 3
   statModified: 4

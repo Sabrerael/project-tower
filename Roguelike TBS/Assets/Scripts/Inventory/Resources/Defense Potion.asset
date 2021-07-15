@@ -22,5 +22,6 @@ MonoBehaviour:
   stat: 4
   increase: 30
   time: 30
-  onUseParticleEffect: {fileID: 0}
-  sfx: {fileID: 0}
+  onUseParticleEffect: {fileID: 9143154608172599820, guid: 567ad428c9101cc47af8abed508bc604,
+    type: 3}
+  sfx: {fileID: 8300000, guid: 916baf2dd37cd7e42acb847d997f9893, type: 3}

@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Chainmail
   description: A shirt of chainmail that increases the defense of the wearer.
   icon: {fileID: 21300000, guid: 6fddd52f78a46a94ba379dd0fbd14109, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 8816613031341936194, guid: 75922865ec2d28f48955826b9d92bd3b, type: 3}
   stackable: 0
   modifierAmount: 2
   statModified: 4

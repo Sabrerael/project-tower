@@ -17,7 +17,7 @@ MonoBehaviour:
   description: A totem resembling the Shield Aegis. Grants the holder an increase
     to their Defensive stat.
   icon: {fileID: 21300000, guid: bd896b88c29ebfe47a8ab31ade60d830, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 7768183692554758565, guid: 6ff4b1bb3b8e57f4495da60c1d364a2f, type: 3}
   stackable: 0
   modifierAmount: 10
   statModified: 4

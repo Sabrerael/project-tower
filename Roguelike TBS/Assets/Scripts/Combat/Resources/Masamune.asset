@@ -22,3 +22,4 @@ MonoBehaviour:
   equippedPrefab: {fileID: -4317373801989430208, guid: 1c38804ec4307be45952d840ecbe84ad,
     type: 3}
   weaponDamage: 9
+  abilityIcon: {fileID: 21300000, guid: ea15ff6cfbf6b26439ba784110d9cf52, type: 3}

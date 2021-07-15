@@ -708,7 +708,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropSpawner: {fileID: 3074402845654585419}
   enemiesParent: {fileID: 5400396586815830641}
-  enemySpawners: []
+  enemySpawners:
+  - {fileID: 6695917394226507188}
+  - {fileID: 2604330478395388792}
 --- !u!1 &8213823141229640553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2633,6 +2635,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin Archer Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 3233196814810533421, guid: 4edf90b8d19902747830ffe3925e5919,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2688,12 +2696,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 3233196814810533421, guid: 4edf90b8d19902747830ffe3925e5919,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &8225097254307023329 stripped
@@ -2702,6 +2704,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3991307593011114555}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2604330478395388792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3991307593011114555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a5c2449a5057a43bea8ff1cfd7c5cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5426918069563703464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2801,6 +2815,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frost Spirit Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 212921209414593901, guid: c561274dee870ea42bdf4b262017b850,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2856,12 +2876,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 212921209414593901, guid: c561274dee870ea42bdf4b262017b850,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &787487813628253997 stripped
@@ -2870,3 +2884,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5740722534332968183}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6695917394226507188 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5740722534332968183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a5c2449a5057a43bea8ff1cfd7c5cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

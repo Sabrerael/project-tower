@@ -17,7 +17,7 @@ MonoBehaviour:
   description: If the holder focuses their energy into this curious orb, it will make
     them impervious to damage for a short time.
   icon: {fileID: 21300000, guid: afa60ec38a3bda545ba3d8d5657ccb79, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 1297336853702275794, guid: d08e67c90a92c924f887baceae360d6e, type: 3}
   stackable: 0
   consumable: 0
   invulnerabilityTimer: 10

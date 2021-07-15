@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] float yDeltaBetweenRooms = 14;
 
     [SerializeField] DropLibrary dropLibrary = null;
-    [SerializeField] GameObject pauseMenu = null;
+    [SerializeField] PauseMenu pauseMenu = null;
 
     // CACHE
     private GameObject roomsParent = null;
@@ -20,23 +20,25 @@ public class GameManager : MonoBehaviour {
 
     private int levelOfEnemies = 1;
 
-    public static GameManager instance = null;
+    //public static GameManager instance = null;
 
     private void Awake() {
-        if (instance == null)
+        /*if (instance == null)
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);*/
+        var player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = new Vector3(6, -6, 0);
 
         GenerateLevel();
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeInHierarchy) {
+        if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.GetMenuBodyActive()) {
             PauseGame();
-        } else if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeInHierarchy) {
+        } else if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.GetMenuBodyActive()) {
             UnPauseGame();
         }
     }
@@ -176,11 +178,11 @@ public class GameManager : MonoBehaviour {
 
     public void PauseGame() {
         Time.timeScale = 0;
-        pauseMenu.SetActive(true);
+        pauseMenu.ToggleBodyActive();
     }
 
     public void UnPauseGame() {
         Time.timeScale = 1;
-        pauseMenu.SetActive(false);
+        pauseMenu.ToggleBodyActive();
     }
 }

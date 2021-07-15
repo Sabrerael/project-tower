@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: be744ba1-8f81-4568-8897-fb37d6faed33
   displayName: Gem of Swiftness
-  description: 
+  description: This magical gem will grant you enhanced speed, increasing your attack
+    speed and movement speed for a short time.
   icon: {fileID: 21300000, guid: 39b407b24c0b01147b9a2896ffc98b9a, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 2564209664355090188, guid: 9215814af4870c9459ea0b24627c103a, type: 3}
   stackable: 0
   consumable: 0
   movementIncrease: 50

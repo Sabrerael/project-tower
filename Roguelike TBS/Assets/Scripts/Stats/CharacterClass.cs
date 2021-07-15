@@ -6,7 +6,7 @@
     Ranger,
     GreenSlime,
     BlueSlime,
-    PurpleSlime,// TODO Remove
+    PurpleSlime,
     Bat,
     Ghost,
     Spider,
@@ -19,5 +19,6 @@
     SkeletonArcher,
     IceSpirit,
     FireSpirit,
-    Cloaker
+    Cloaker,
+    GelatinousCube
 }

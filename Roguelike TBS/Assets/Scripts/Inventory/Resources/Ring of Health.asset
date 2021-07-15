@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Ring of Health
   description: This green rings bolsters the wearer's health, increasing it by 2.
   icon: {fileID: 21300000, guid: 8e2f51d76765e084aaa5b8943797de61, type: 3}
-  pickup: {fileID: 7627461825386393494, guid: a8a881deb5b31ac46bc19e0820240e3e, type: 3}
+  pickup: {fileID: 6240456044432742704, guid: 12a435a13fb682e4ab2fedbca24c3301, type: 3}
   stackable: 0
   modifierAmount: 2
   statModified: 0

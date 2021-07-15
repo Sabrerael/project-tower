@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ThrowableWeapon : Weapon {
     [SerializeField] float cooldownTimer = 10;
@@ -71,10 +72,13 @@ public class ThrowableWeapon : Weapon {
     }
 
     private IEnumerator CooldownTimer() {
+        var weaponAbilityIcon = GameObject.Find("Weapon Ability Icon");
+        weaponAbilityIcon.GetComponent<Image>().color = new Color(0.5f,0.5f,0.5f,0.75f);
         onCooldown = true;
 
         yield return new WaitForSeconds(cooldownTimer);
 
+        weaponAbilityIcon.GetComponent<Image>().color = new Color(1,1,1,0.75f);
         onCooldown = false;
     }
 }

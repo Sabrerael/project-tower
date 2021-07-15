@@ -285,6 +285,8 @@ MonoBehaviour:
   levelUpMenu: {fileID: 0}
   abilityModifyPercent: 30
   abilityTimer: 30
+  abilityParticles: {fileID: 1012001659695591961, guid: 78e7ddfbcaa481841a52539742eda257,
+    type: 3}
 --- !u!114 &2136328106936073578
 MonoBehaviour:
   m_ObjectHideFlags: 0

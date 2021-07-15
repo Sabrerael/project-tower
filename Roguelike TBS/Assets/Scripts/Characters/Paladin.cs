@@ -2,6 +2,7 @@
 using TMPro;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.UI;
 
 public enum AbilityState {
     Ready,
@@ -12,25 +13,18 @@ public enum AbilityState {
 public class Paladin : Character {
     [SerializeField] LevelUpBonuses levelUpBonuses = null;
     [SerializeField] TextMeshProUGUI[] bonusesMenuTextFields = null;
-    [SerializeField] GameObject levelUpMenu = null;
+    [SerializeField] LevelUpBonusMenu levelUpMenu = null;
     [SerializeField] int abilityModifyPercent = 30;
     [SerializeField] float abilityTimer = 30;
+    [SerializeField] GameObject abilityParticles = null;
 
     private int[] choiceIndexes = new int[3];
     private int activeAbilityModifier = 0;
-    private float timer = 0;
     private AbilityState abilityState = AbilityState.Ready;
     private LevelUpBonus[] randomBonuses = new LevelUpBonus[3];
 
     private void Update() {
-        if (abilityState == AbilityState.Cooldown) {
-            timer += Time.deltaTime;
-            
-            if (timer > cooldownTimer) {
-                abilityState = AbilityState.Ready;
-                timer = 0;
-            }
-        } else if (abilityState == AbilityState.Ready) {
+        if (abilityState == AbilityState.Ready) {
             if (Input.GetKeyDown(KeyCode.Q)) {
                 ActiveAbility();
             }
@@ -40,7 +34,9 @@ public class Paladin : Character {
     public override void ActiveAbility() {
         abilityState = AbilityState.Active;
         activeAbilityModifier = abilityModifyPercent;
-        Debug.Log("Active Ability active");
+        if (abilityParticles != null) { 
+            Instantiate(abilityParticles, transform);
+        }
         StartCoroutine(StatTimer(abilityTimer, abilityModifyPercent));
     }
 
@@ -50,11 +46,10 @@ public class Paladin : Character {
         levelOfBonuses = (baseStats.GetLevel() / 2) - 1;
 
         randomBonuses = levelUpBonuses.GetLevelUpBonusesByLevel(levelOfBonuses);
-        Debug.Log(levelUpMenu);
         
         Time.timeScale = 0;
 
-        levelUpMenu.SetActive(true);
+        levelUpMenu.ToggleBodyActive();
         for(int i = 0; i < 3; i++) {
             var index = UnityEngine.Random.Range(0,5);
             choiceIndexes[i] = index;
@@ -69,19 +64,19 @@ public class Paladin : Character {
 
     public void ChooseBonusOne() {
         AddLevelUpModifier(randomBonuses[choiceIndexes[0]]);
-        levelUpMenu.SetActive(false);
+        levelUpMenu.ToggleBodyActive();
         Time.timeScale = 1;
     }
 
     public void ChooseBonusTwo() {
         AddLevelUpModifier(randomBonuses[choiceIndexes[1]]);
-        levelUpMenu.SetActive(false);
+        levelUpMenu.ToggleBodyActive();
         Time.timeScale = 1;
     }
 
     public void ChooseBonusThree() {
         AddLevelUpModifier(randomBonuses[choiceIndexes[2]]);
-        levelUpMenu.SetActive(false);
+        levelUpMenu.ToggleBodyActive();
         Time.timeScale = 1;
     }
     
@@ -120,12 +115,22 @@ public class Paladin : Character {
     }
 
     private IEnumerator StatTimer(float time, int percent) {
+        characterAbilityIcon.GetComponent<Image>().color = new Color(0.5f,0.5f,0.5f,0.25f);
+        // Trigger particle effect
+        Debug.Log("Ability Triggered");
         yield return new WaitForSeconds(time);
 
+        Debug.Log("Ability Over");
         RemoveAbilityModifier(percent);
-        Debug.Log("Active Ability over");
+
         abilityState = AbilityState.Cooldown;
         cooldownTimer = baseStats.GetStat(Stat.Cooldown);
+
+        yield return new WaitForSeconds(cooldownTimer);
+
+        Debug.Log("Cooldown Over");
+        characterAbilityIcon.GetComponent<Image>().color = new Color(1,1,1,0.75f);
+        abilityState = AbilityState.Ready;
     }
 
     public void RemoveAbilityModifier(int percent) {

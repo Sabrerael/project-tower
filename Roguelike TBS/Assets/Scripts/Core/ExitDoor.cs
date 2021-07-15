@@ -2,6 +2,7 @@
 
 public class ExitDoor : MonoBehaviour {
     [SerializeField] Sprite openDoor = null;
+    [SerializeField] int floor = 1;
 
     private LevelLoader levelLoader = null;
 
@@ -11,7 +12,13 @@ public class ExitDoor : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
-            levelLoader.LoadWinScreen();
+            if (floor == 1) {
+                levelLoader.LoadLevelTwo();
+            } else if (floor == 2) {
+                levelLoader.LoadLevelThree();
+            } else if (floor == 3) {
+                levelLoader.LoadWinScreen();
+            }
         }
     }
 

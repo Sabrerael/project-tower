@@ -10,6 +10,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     protected int levelOfBonuses = 0;
     protected float cooldownTimer = 0;
     protected RoomManager currentRoom = null;
+    protected GameObject characterAbilityIcon;
 
     private void Awake() {
         if (instance == null)
@@ -23,7 +24,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
         if (baseStats != null) {
             baseStats.onLevelUp += ChooseLevelUpModifier;
         }
-        //cooldownTimer = baseStats.GetStat(Stat.Cooldown);
+        characterAbilityIcon = GameObject.Find("Character Ability Icon");
     }
 
     public virtual void ActiveAbility() {

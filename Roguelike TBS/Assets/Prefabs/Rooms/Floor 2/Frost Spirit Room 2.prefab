@@ -2635,6 +2635,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frost Spirit Spawner 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 212921209414593901, guid: c561274dee870ea42bdf4b262017b850,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2722,6 +2728,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frost Spirit Spawner 2
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 212921209414593901, guid: c561274dee870ea42bdf4b262017b850,
+        type: 3}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x

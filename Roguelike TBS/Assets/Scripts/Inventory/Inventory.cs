@@ -52,6 +52,8 @@ public class Inventory : MonoBehaviour, IModifierProvider {
             }
         } else if (Input.GetKeyDown(KeyCode.E)) {
             ChangeWeapon();
+        } else if (Input.GetKeyDown(KeyCode.Backspace)) {
+            DeleteEquipWeapon();
         }
     }
 
@@ -440,6 +442,25 @@ public class Inventory : MonoBehaviour, IModifierProvider {
                 activeWeaponIndex = attemptedWeaponIndex;
                 gameObject.GetComponent<Fighter>().EquipWeapon(GetWeaponInSlot(activeWeaponIndex));
                 AudioSource.PlayClipAtPoint(sfx, transform.position);
+            }
+        }
+    }
+
+    private void DeleteEquipWeapon() {
+        //Check for another weapon (Player should not have zero weapons)
+        int attemptedWeaponIndex = activeWeaponIndex;
+        for (int i = 0; i < weaponInventory.Length - 1; i++) {
+            attemptedWeaponIndex += 1;
+            if (attemptedWeaponIndex >= 5) {
+                attemptedWeaponIndex -= 5;
+            }
+
+            // If another weapon exists, switch to the new weapon and delete the previously equip weapon
+            if (GetWeaponInSlot(attemptedWeaponIndex)) {
+                int weaponIndexToDelete = activeWeaponIndex;
+                ChangeWeapon();
+                RemoveFromWeaponSlot(weaponIndexToDelete, 1);
+                return;
             }
         }
     }
