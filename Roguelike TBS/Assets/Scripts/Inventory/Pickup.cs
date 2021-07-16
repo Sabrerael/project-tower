@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    // TODO This can likely be condensed into one field
     [SerializeField] WeaponConfig weaponConfig = null;
     [SerializeField] ActionItem item = null;
     [SerializeField] PassiveItem passiveItem = null;
     [SerializeField] int number = 1;
+    [SerializeField] AudioClip sfx = null;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
@@ -29,5 +31,6 @@ public class Pickup : MonoBehaviour
             other.gameObject.GetComponent<Inventory>().AddToFirstEmptyPassiveItemSlot(passiveItem);
             Destroy(gameObject);
         }
+        if (sfx) { AudioSource.PlayClipAtPoint(sfx, transform.position); }
     }
 }

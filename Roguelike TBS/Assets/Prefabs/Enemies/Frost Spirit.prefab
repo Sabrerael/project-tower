@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7c99c31ae55cd41b43ef2869e0d795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 5be84a2c32abf794b94d0d1f546497e3, type: 3}
   movementSpeed: 2.5
   magicBlob: {fileID: 5986619145827378281, guid: e177524b28fcb9646b8ec0b939102983,
     type: 3}

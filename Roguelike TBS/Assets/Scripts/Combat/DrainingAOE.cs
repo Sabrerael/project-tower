@@ -6,9 +6,16 @@ using UnityEngine;
 public class DrainingAOE : MonoBehaviour {
     [SerializeField] float healthToDrain = 10;
     [SerializeField] float lifeTime = 0.5f;
+    [SerializeField] GameObject particles = null;
 
     private GameObject instigator = null;
     private float lifeTimer = 0;
+
+    private void Start() {
+        if (particles != null) {
+            Instantiate(particles, transform.position, Quaternion.identity);
+        }
+    }
 
     private void Update() {
         lifeTimer += Time.deltaTime;

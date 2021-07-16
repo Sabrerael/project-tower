@@ -23,4 +23,4 @@ MonoBehaviour:
   throwSpeed: 7
   itemPrefab: {fileID: 9013888103382522242, guid: 4152cdfbacb96e949aec7480426bebc3,
     type: 3}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: c7ca7689ec0c3e7408ae4b0c7e836cee, type: 3}

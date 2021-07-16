@@ -17,5 +17,6 @@ public class MagicSpawner : ActionItem {
         var magic = Instantiate(magicToSpawn, user.transform.position, Quaternion.identity);
 
         magic.GetComponent<MagicMissile>().SetCaster(user);
+        if (sfx) { AudioSource.PlayClipAtPoint(sfx, user.transform.position, 2); }
     }
 }

@@ -7,6 +7,9 @@ using UnityEngine;
 /// inventory slot prefabs.
 /// </summary>
 public class InventoryUI : MonoBehaviour {
+
+    public static InventoryUI instance = null;
+
     // CONFIG DATA
     [SerializeField] InventorySlotUI InventoryItemPrefab = null;
 
@@ -16,6 +19,13 @@ public class InventoryUI : MonoBehaviour {
     // LIFECYCLE METHODS
 
     private void Awake() {
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+
+        DontDestroyOnLoad(gameObject);
+        
         playerInventory = Inventory.GetPlayerInventory();
         playerInventory.actionItemInventoryUpdated += Redraw;
     }

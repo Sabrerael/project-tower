@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aofGameObject: {fileID: 3450269692966638253, guid: 3cf11080436f1974ebf56ddb6741f590,
     type: 3}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 52654878ec5681549883caa90902e6b3, type: 3}
 --- !u!50 &3715152289746430567
 Rigidbody2D:
   serializedVersion: 4

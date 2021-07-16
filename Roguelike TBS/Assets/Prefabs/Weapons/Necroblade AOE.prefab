@@ -62,3 +62,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthToDrain: 10
   lifeTime: 0.5
+  particles: {fileID: 7517006969604988770, guid: 9e074dacb0651944dae03a0af9c9436b,
+    type: 3}

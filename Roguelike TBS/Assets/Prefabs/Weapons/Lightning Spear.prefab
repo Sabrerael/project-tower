@@ -98,7 +98,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.36}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.085}
     oldSize: {x: 0.5, y: 1}
     newSize: {x: 0.05, y: 0.13}
     adaptiveTilingThreshold: 0.5
@@ -128,4 +128,4 @@ MonoBehaviour:
   projectile: {fileID: 1933491423486881612, guid: c8b7e05c1a33af340a66cdb9b1b1326d,
     type: 3}
   cooldownTimer: 30
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: f4b365c4ff8ccb543a9de625859982d5, type: 3}

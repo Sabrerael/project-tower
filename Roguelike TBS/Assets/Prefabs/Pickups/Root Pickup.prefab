@@ -145,3 +145,4 @@ MonoBehaviour:
   item: {fileID: 0}
   passiveItem: {fileID: 0}
   number: 1
+  sfx: {fileID: 8300000, guid: d2607202210b02743bc6b497249269da, type: 3}

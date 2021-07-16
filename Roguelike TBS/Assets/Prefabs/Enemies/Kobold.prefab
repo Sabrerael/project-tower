@@ -213,8 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c05cba77f556b44b263a1d6fd7f11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfx: {fileID: 0}
-  movementSpeed: 0
+  sfx: {fileID: 8300000, guid: 8a4494ebe0140804bbf58fe192cfe314, type: 3}
+  movementSpeed: 1.5
   weaponDamage: 10
 --- !u!1001 &2830304421150703375
 PrefabInstance:

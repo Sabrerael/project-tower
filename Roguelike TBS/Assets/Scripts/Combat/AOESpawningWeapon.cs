@@ -13,6 +13,7 @@ public class AOESpawningWeapon : Weapon {
         if (!isSwinging && Input.GetKeyDown(KeyCode.R) && !onCooldown) {
             var aoe = Instantiate(aoeToSpawn, transform.position, Quaternion.identity);
             aoe.GetComponent<DrainingAOE>().SetInstigator(wielder.gameObject);
+            StartCoroutine(CooldownTimer());
         }
     }
 

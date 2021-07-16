@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 249c13ef-a0e9-4977-b138-b1ecd441ad3a
   displayName: Bear Trap
-  description: Good from trapping more than just bears.
+  description: Good for trapping more than just bears.
   icon: {fileID: 21300000, guid: 9a47f5a3293e43544865295c1932ed16, type: 3}
   pickup: {fileID: 2457410639070131065, guid: 6bf382872b77a5e4fb4ef0492d4a1923, type: 3}
   stackable: 1
@@ -22,4 +22,4 @@ MonoBehaviour:
   throwSpeed: 5
   itemPrefab: {fileID: 2741359800321458906, guid: f3486fe8115960d4b88f6731c0109235,
     type: 3}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: c7ca7689ec0c3e7408ae4b0c7e836cee, type: 3}

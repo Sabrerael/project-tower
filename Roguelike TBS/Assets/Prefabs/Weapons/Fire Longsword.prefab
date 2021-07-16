@@ -127,3 +127,5 @@ MonoBehaviour:
   swingSound: {fileID: 8300000, guid: 3da7a30bbf6bcf34fac6d4d4c43fc703, type: 3}
   projectile: {fileID: 2589884000878905734, guid: f352e9f973bd46c418a005ae78e77043,
     type: 3}
+  cooldownTimer: 30
+  sfx: {fileID: 8300000, guid: 44d5b49a647dc38408cdc537a30be249, type: 3}

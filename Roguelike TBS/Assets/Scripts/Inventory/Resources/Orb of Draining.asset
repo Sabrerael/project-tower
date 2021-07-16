@@ -22,4 +22,4 @@ MonoBehaviour:
   consumable: 0
   aoePrefab: {fileID: 2568748944854759653, guid: 0f06f47274d746f47a828df1c3a40f81,
     type: 3}
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 3ae984400f101b14082701a8f816ad46, type: 3}

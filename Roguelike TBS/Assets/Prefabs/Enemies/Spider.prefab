@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83f4fc886e95f6248a8eaef3fce21861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: b441f538ac554b94ba14d6f2b1f03d0a, type: 3}
   movementSpeed: 0
   webShot: {fileID: 6022668787323426602, guid: ef06a703ecdc6544f96fd46a775b64bc, type: 3}
   webSpeed: 6

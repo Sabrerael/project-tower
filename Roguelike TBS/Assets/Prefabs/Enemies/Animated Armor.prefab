@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abc79285ac76554b94868cac32823a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfx: {fileID: 0}
-  movementSpeed: 2
+  sfx: {fileID: 8300000, guid: 1930e594a6adf2a4f875e63494c96b5c, type: 3}
+  movementSpeed: 1
   weaponDamage: 10
 --- !u!61 &7239040884086236497
 BoxCollider2D:

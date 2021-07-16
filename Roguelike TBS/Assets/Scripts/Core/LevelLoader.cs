@@ -45,6 +45,7 @@ public class LevelLoader : MonoBehaviour {
         if (player) {
             GameObject.Destroy(GameObject.Find("Pause Menu"));
             GameObject.Destroy(GameObject.Find("Level Up Bonuses Menu"));
+            GameObject.Destroy(GameObject.Find("HUD"));
             GameObject.Destroy(player);
         }
     }

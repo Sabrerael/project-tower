@@ -21,5 +21,6 @@ MonoBehaviour:
   stackable: 0
   consumable: 0
   invulnerabilityTimer: 10
-  onUseParticleEffect: {fileID: 0}
-  sfx: {fileID: 0}
+  onUseParticleEffect: {fileID: 3511290564131851078, guid: e6bc43cf1796abc41995f12a84e7418d,
+    type: 3}
+  sfx: {fileID: 8300000, guid: 3ae984400f101b14082701a8f816ad46, type: 3}

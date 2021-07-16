@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e49bc89d100ade428019dd7a89f9938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfx: {fileID: 8300000, guid: 5be84a2c32abf794b94d0d1f546497e3, type: 3}
+  sfx: {fileID: 8300000, guid: 8a4494ebe0140804bbf58fe192cfe314, type: 3}
   movementSpeed: 1.5
   weaponDamage: 10
 --- !u!61 &1421668700795967728

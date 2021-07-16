@@ -17,6 +17,7 @@ public class Ghost : Enemy {
     private bool isVisible = false;
 
     private void Update() {
+        if (player == null) { return; }
         if (gameObject.GetComponent<Health>().IsDead()) { return; }
 
         timer += Time.deltaTime;
