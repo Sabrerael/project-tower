@@ -50,7 +50,9 @@ public class RoomManager : MonoBehaviour {
         if (enemiesParent.transform.childCount == 0) {
             OpenAllDoors();
             doorsOpen = true;
-            if (gameObject.name.Equals("End Room(Clone)")) {
+            if (gameObject.name.Equals("End Room(Clone)") ||
+                gameObject.name.Equals("Floor 2 End Room (Clone)") ||
+                gameObject.name.Equals("Floor Three End Room(Clone)")) {
                 OpenExitDoor();
             }
         }

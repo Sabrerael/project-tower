@@ -19,7 +19,9 @@ namespace RPG.Stats {
         public void TakeDamage(GameObject instigator, int damage) {
             if (isDead) { return; }
 
-            if (Mathf.Sign(damage) == -1) { damage = 1; }
+            if (Mathf.Sign(damage) == -1 || damage == 0) {
+                damage = 1;
+            }
             
             healthPoints = Mathf.Max(healthPoints - damage, 0);
 

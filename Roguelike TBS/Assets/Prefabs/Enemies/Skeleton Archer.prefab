@@ -206,7 +206,7 @@ MonoBehaviour:
   arrow: {fileID: 1188875467988603800, guid: 451fdaccb2f9efc4aa31743959503ecc, type: 3}
   arrowSpeed: 5
   timeBetweenShots: 2
-  shootTimer: -3
+  shootTimer: -1
 --- !u!1001 &1790884580342342283
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: aa1f2abc23f5b234e8c7746e02353987, type: 3}
-  movementSpeed: 3
+  movementSpeed: 5
   distance: 5
   cooldownTime: 2
   xMin: -0.5

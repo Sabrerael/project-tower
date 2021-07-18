@@ -1720,7 +1720,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: f0d47297001998b47bd2ae3fbc5edf21,
+      objectReference: {fileID: 11400000, guid: a6b5cc039499c9a47b6b9563435a233b,
         type: 2}
     - target: {fileID: 5638160444598600647, guid: f0acd8a3f62b84140a2d28dd8144de9d,
         type: 3}
@@ -1731,18 +1731,17 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponInventory.Array.data[0].weapon
       value: 
-      objectReference: {fileID: 11400000, guid: f0d47297001998b47bd2ae3fbc5edf21,
+      objectReference: {fileID: 11400000, guid: a6b5cc039499c9a47b6b9563435a233b,
         type: 2}
     - target: {fileID: 5638160444598600647, guid: f0acd8a3f62b84140a2d28dd8144de9d,
         type: 3}
       propertyPath: actionItemInventory.Array.data[1].item
       value: 
-      objectReference: {fileID: 11400000, guid: f80a0186098d13941a31d5104959c9e3,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5638160444598600647, guid: f0acd8a3f62b84140a2d28dd8144de9d,
         type: 3}
       propertyPath: actionItemInventory.Array.data[1].number
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5638160444598600647, guid: f0acd8a3f62b84140a2d28dd8144de9d,
         type: 3}
@@ -1780,17 +1779,16 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponInventory.Array.data[1].weapon
       value: 
-      objectReference: {fileID: 11400000, guid: 8d044966f6ea1e54ba11ce7ffd38dfbd,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5638160444598600647, guid: f0acd8a3f62b84140a2d28dd8144de9d,
         type: 3}
       propertyPath: weaponInventory.Array.data[1].number
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5638160444598600647, guid: f0acd8a3f62b84140a2d28dd8144de9d,
         type: 3}
       propertyPath: actionItemInventory.Array.data[0].number
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4975066957920948533, guid: f0acd8a3f62b84140a2d28dd8144de9d,
         type: 3}
@@ -1806,8 +1804,7 @@ PrefabInstance:
         type: 3}
       propertyPath: deadSprite
       value: 
-      objectReference: {fileID: 21300000, guid: c455d60a1183e3b48925ccbee2621692,
-        type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0acd8a3f62b84140a2d28dd8144de9d, type: 3}
 --- !u!114 &2087315791 stripped
@@ -1893,16 +1890,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3145165280580370895, guid: f7699b610e4b9234dae2b9aa27416ad9,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3145165280580370895, guid: f7699b610e4b9234dae2b9aa27416ad9,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3145165280580370895, guid: f7699b610e4b9234dae2b9aa27416ad9,
         type: 3}
