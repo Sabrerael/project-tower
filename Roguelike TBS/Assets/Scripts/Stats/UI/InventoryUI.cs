@@ -18,7 +18,7 @@ public class InventoryUI : MonoBehaviour {
 
     // LIFECYCLE METHODS
 
-    private void Awake() {
+    private void Start() {
         if (instance == null)
             instance = this;
         else if (instance != this)
@@ -28,9 +28,6 @@ public class InventoryUI : MonoBehaviour {
         
         playerInventory = Inventory.GetPlayerInventory();
         playerInventory.actionItemInventoryUpdated += Redraw;
-    }
-
-    private void Start() {
         Redraw();
     }
 

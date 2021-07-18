@@ -2737,7 +2737,7 @@ PrefabInstance:
     - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: levelOfEnemy
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}

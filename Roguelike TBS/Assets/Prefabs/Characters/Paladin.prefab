@@ -193,7 +193,7 @@ MonoBehaviour:
     number: 0
   actionItemInventory:
   - item: {fileID: 11400000, guid: a08a6191debd8bd45af26660e63f45a2, type: 2}
-    number: 5
+    number: 10
   - item: {fileID: 0}
     number: 0
   - item: {fileID: 0}

@@ -2374,6 +2374,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Owlbear Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 6320121381112623133, guid: da3c5d8494e830043afe4b164890f0c6,
+        type: 3}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: levelOfEnemy
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2429,12 +2440,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 6320121381112623133, guid: da3c5d8494e830043afe4b164890f0c6,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &7944486710700362502 stripped
@@ -2466,6 +2471,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Frost Spirit Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 212921209414593901, guid: c561274dee870ea42bdf4b262017b850,
+        type: 3}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: levelOfEnemy
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -2522,12 +2538,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 212921209414593901, guid: c561274dee870ea42bdf4b262017b850,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &1704918182200677442 stripped
@@ -2559,6 +2569,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cloaker Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 6187043180810194374, guid: f28e4e7432a2f944f9553b1b3e1347d9,
+        type: 3}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: levelOfEnemy
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -2615,12 +2636,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: enemyToSpawn
-      value: 
-      objectReference: {fileID: 6187043180810194374, guid: f28e4e7432a2f944f9553b1b3e1347d9,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b798e819513982044af0d272189d741b, type: 3}
 --- !u!4 &1398398382555680987 stripped
