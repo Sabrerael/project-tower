@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 6291460629405002498}
   - component: {fileID: 6605892206959597984}
   - component: {fileID: 2136328106936073578}
+  - component: {fileID: 8561713649446563629}
   m_Layer: 9
   m_Name: Paladin
   m_TagString: Player
@@ -118,6 +119,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -299,6 +302,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8099a16619192c34abdece7c8d3d383a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8561713649446563629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383780246614317365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04201bbc44417a4cbabcf3752c3d32f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingBalance: 0
 --- !u!1 &7722696142883002182
 GameObject:
   m_ObjectHideFlags: 0

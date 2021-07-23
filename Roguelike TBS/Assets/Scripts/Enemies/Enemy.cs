@@ -4,6 +4,7 @@ using RPG.Stats;
 public class Enemy : MonoBehaviour {
     [SerializeField] protected AudioClip sfx = null;
     [SerializeField] protected float movementSpeed = 0f;
+    [SerializeField] int moneyDropped = 1;
 
     /// CACHE
     protected GameObject player;
@@ -11,6 +12,8 @@ public class Enemy : MonoBehaviour {
     // Start is called before the first frame update
     private void Awake() {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        GetComponent<Health>().onDeath += AddMoney;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -60,5 +63,9 @@ public class Enemy : MonoBehaviour {
         } else {
             movementSpeed = Mathf.Max(movementSpeed - speedChange, 0);
         }
+    }
+
+    private void AddMoney() {
+        player.GetComponent<Purse>().UpdateBalance(moneyDropped);
     }
 }

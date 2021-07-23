@@ -9,6 +9,8 @@ namespace RPG.Stats {
         private bool isDead = false;
         private LevelLoader levelLoader = null;
 
+        public event Action onDeath;
+
         private void Start() {
             healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
             levelLoader = GameObject.Find("Level Loader").GetComponent<LevelLoader>();
@@ -65,6 +67,10 @@ namespace RPG.Stats {
             }
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
             transform.SetParent(GameObject.Find("Dead Enemies").transform);
+            
+            if (onDeath != null) {
+                onDeath();
+            }
         }
 
         private void AwardExperience(GameObject instigator) {
@@ -78,6 +84,7 @@ namespace RPG.Stats {
         }
 
         private void RegenerateHealth() {
+            // TODO This currently doesn't do anything
             int regenHealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
