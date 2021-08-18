@@ -13,8 +13,14 @@ public class Spider : Enemy {
 
         shootTimer += Time.deltaTime;
 
+        if (Mathf.Sign(player.transform.position.x - transform.position.x) == -1) {
+            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+        } else {
+            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+        }
+
         if (shootTimer >= timeBetweenShots) {
-            GameObject spawnedItem = Instantiate(webShot, gameObject.transform.position, Quaternion.identity);
+            GameObject spawnedItem = Instantiate(webShot, transform.position, Quaternion.identity);
             spawnedItem.GetComponent<EnemyProjectile>().SetDamage(gameObject.GetComponent<BaseStats>().GetStat(Stat.Attack));
             spawnedItem.GetComponent<EnemyProjectile>().SetWielder(gameObject.GetComponent<Enemy>());
 
@@ -22,6 +28,7 @@ public class Spider : Enemy {
                 player.transform.position.x - spawnedItem.transform.position.x,
                 player.transform.position.y - spawnedItem.transform.position.y
             );
+
             var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
 
             var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);

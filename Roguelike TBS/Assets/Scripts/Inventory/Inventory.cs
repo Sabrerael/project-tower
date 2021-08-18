@@ -112,7 +112,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     }
 
      /// <summary>
-    /// Could this Action Item fit anywhere in the inventory?
+    /// Could this Passive Item fit anywhere in the inventory?
     /// </summary>
     public bool HasSpaceForPassiveItem(PassiveItem item) {
         return FindActionItemSlot(item) >= 0;

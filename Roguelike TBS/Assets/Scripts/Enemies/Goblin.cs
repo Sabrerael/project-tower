@@ -33,6 +33,12 @@ public class Goblin : Enemy {
         float newyPos = transform.position.y + deltaY;
 
         transform.position = new Vector2(newXPos, newyPos);
+
+        if (Mathf.Sign(deltaX) == -1) {
+            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+        } else {
+            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other) {

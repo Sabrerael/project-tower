@@ -92,7 +92,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0030292273, y: -0.06354904}
+  m_Offset: {x: 0, y: -0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -103,7 +103,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64254737, y: 0.8729019}
+  m_Size: {x: 0.5, y: 0.8729019}
   m_EdgeRadius: 0
 --- !u!212 &4383780246614317361
 SpriteRenderer:
@@ -145,7 +145,7 @@ SpriteRenderer:
   m_SortingLayerID: 998918281
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 39e9c14f3cc0b5a488079c19145ff0a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ef1fdd48147ea24482c0d8c8cfe58f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -284,12 +284,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelUpBonuses: {fileID: 0}
+  abilityParticles: {fileID: 1012001659695591961, guid: 78e7ddfbcaa481841a52539742eda257,
+    type: 3}
   bonusesMenuTextFields: []
   levelUpMenu: {fileID: 0}
   abilityModifyPercent: 30
   abilityTimer: 30
-  abilityParticles: {fileID: 1012001659695591961, guid: 78e7ddfbcaa481841a52539742eda257,
-    type: 3}
 --- !u!114 &2136328106936073578
 MonoBehaviour:
   m_ObjectHideFlags: 0

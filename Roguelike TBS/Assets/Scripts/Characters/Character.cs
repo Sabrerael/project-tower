@@ -1,16 +1,37 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using RPG.Stats;
+using TMPro;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour, IModifierProvider {
     public static Character instance = null;
 
-    protected List<LevelUpBonus> bonuses = new List<LevelUpBonus>();
+    [Header("Level Up Bonus Variables")]
+    [SerializeField] protected LevelUpBonuses levelUpBonuses = null;
+    [SerializeField] protected GameObject abilityParticles = null;
+
+    [Header("Level Up UI")]
+    [SerializeField] protected TextMeshProUGUI[] bonusesMenuTextFields = null;
+    [SerializeField] protected LevelUpBonusMenu levelUpMenu = null;
+
+    protected List<int> choiceIndexes = new List<int>();
     protected BaseStats baseStats;
-    protected int levelOfBonuses = 0;
-    protected float cooldownTimer = 0;
     protected RoomManager currentRoom = null;
+    
+    protected ClassAbility[] randomBonuses = new ClassAbility[3];
+    protected List<ClassAbility> selectedAbilities = new List<ClassAbility>();
+    protected int levelOfBonuses = 0;
+
+    // Passive Stat increases
+    protected Dictionary<Stat, int> passiveModifyAdditions = new Dictionary<Stat, int>();
+    protected Dictionary<Stat, int> passiveModifyPercentages = new Dictionary<Stat, int>();
+
+    // Active Ability variables
+    protected Dictionary<Stat, int> activeAbilityModifyPercentages = new Dictionary<Stat, int>();
+    protected float cooldownTimer = 0;
     protected GameObject characterAbilityIcon;
+    protected AbilityState abilityState = AbilityState.Ready;
 
     private void Awake() {
         if (instance == null)
@@ -25,62 +46,87 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
             baseStats.onLevelUp += ChooseLevelUpModifier;
         }
         characterAbilityIcon = GameObject.Find("Character Ability Icon");
+
+        foreach(Stat stat in Enum.GetValues(typeof(Stat))) {
+            passiveModifyPercentages[stat] = 0;
+            passiveModifyAdditions[stat] = 0;
+        }
     }
+
+    public AbilityState GetAbilityState() { return abilityState; }
 
     public virtual void ActiveAbility() {
         // Overrided in the specific character classes
     }
 
-    public virtual void ChooseLevelUpModifier() {
+    public virtual void CallOnAbilityKill() {
         // Overrided in the specific character classes
     }
 
-    public void AddLevelUpModifier(LevelUpBonus bonus) {
-        Debug.Log("AddLevelUpModifier called");
-        bonuses.Add(bonus);
+    public void ChooseLevelUpModifier() {
+        if (baseStats.GetLevel() % 2 == 1) { return; }
+
+        levelOfBonuses = (baseStats.GetLevel() / 2) - 1;
+
+        randomBonuses = levelUpBonuses.GetLevelUpBonusesByLevel(levelOfBonuses);
+        
+        Time.timeScale = 0;
+
+        levelUpMenu.ToggleBodyActive();
+        do {
+            var index = UnityEngine.Random.Range(0, randomBonuses.Length);
+            if (!choiceIndexes.Contains(index)) {
+                choiceIndexes.Add(index);
+            }
+
+            bonusesMenuTextFields[choiceIndexes.Count-1].text = randomBonuses[index].GetAbilityDescription();
+        } while (choiceIndexes.Count < 3);
     }
 
+
+    // TODO These are all the same, condense
+    public void ChooseBonusOne() {
+        HandleSelectedClassAbility(randomBonuses[choiceIndexes[0]]);
+        levelUpMenu.ToggleBodyActive();
+        Time.timeScale = 1;
+        choiceIndexes = new List<int>();
+    }
+
+    public void ChooseBonusTwo() {
+        HandleSelectedClassAbility(randomBonuses[choiceIndexes[1]]);
+        levelUpMenu.ToggleBodyActive();
+        Time.timeScale = 1;
+        choiceIndexes = new List<int>();
+    }
+
+    public void ChooseBonusThree() {
+        HandleSelectedClassAbility(randomBonuses[choiceIndexes[2]]);
+        levelUpMenu.ToggleBodyActive();
+        Time.timeScale = 1;
+        choiceIndexes = new List<int>();
+    }
+
+    protected abstract void HandleSelectedClassAbility(ClassAbility ability);
+
     public IEnumerable<int> GetAdditiveModifiers(Stat stat) {
-        int bonusValue = 0;
-
-        if (stat == Stat.Attack) {
-            foreach(LevelUpBonus bonus in bonuses) {
-                if (bonus.type == "Additive" && bonus.stat == Stat.Attack) {
-                    bonusValue += bonus.bonus;
-                }
-            }
-
-            yield return bonusValue;
-        } else if (stat == Stat.Defense) {
-            foreach(LevelUpBonus bonus in bonuses) {
-                if (bonus.type == "Additive" && bonus.stat == Stat.Defense) {
-                    bonusValue += bonus.bonus;
-                }
-            }
-
-            yield return bonusValue;
-        } else if (stat == Stat.Health) {
-            foreach(LevelUpBonus bonus in bonuses) {
-                if (bonus.type == "Additive" && bonus.stat == Stat.Health) {
-                    bonusValue += bonus.bonus;
-                }
-            }
-
-            yield return bonusValue;
-        }
+        yield return passiveModifyAdditions[stat];
     }
 
     public virtual IEnumerable<int> GetMultiplicativeModifiers(Stat stat) {
         // Overrided in character class
-        foreach(LevelUpBonus bonus in bonuses) {
-            if (bonus.type == "Multiplicative" && bonus.stat == Stat.Attack && stat == Stat.Attack) {
-                yield return bonus.bonus;
-            } else if (bonus.type == "Multiplicative" && bonus.stat == Stat.Defense && stat == Stat.Defense) {
-                yield return bonus.bonus;
-            } else if (bonus.type == "Multiplicative" && bonus.stat == Stat.Health && stat == Stat.Health) {
-                yield return bonus.bonus;
-            }
-        }
+        yield return 0;
+    }
+
+    public void ModifyAbilityBonusPercentage(Stat stat, int percent) {
+        activeAbilityModifyPercentages[stat] += percent;
+    }
+
+    public void ModifyPassiveBonusAddition(Stat stat, int increase) {
+        passiveModifyAdditions[stat] += increase;
+    }
+
+    public void ModifyPassiveBonusPercentage(Stat stat, int percent) {
+        passiveModifyPercentages[stat] += percent;
     }
 
     public void SetCurrentRoom(RoomManager roomManager) { currentRoom = roomManager; }

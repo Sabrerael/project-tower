@@ -18,6 +18,8 @@ public abstract class InventoryItem : ScriptableObject, ISerializationCallbackRe
     [SerializeField] string displayName = null;
     [Tooltip("Item description to be displayed in UI.")]
     [SerializeField][TextArea] string description = null;
+    [Tooltip("Price the item is sold for in the shop.")]
+    [SerializeField] int shopPrice = 1;
     [Tooltip("The UI icon to represent this item in the inventory.")]
     [SerializeField] Sprite icon = null;
     [Tooltip("The prefab that should be spawned when this item is dropped.")]
@@ -88,6 +90,10 @@ public abstract class InventoryItem : ScriptableObject, ISerializationCallbackRe
 
     public string GetDescription() {
         return description;
+    }
+
+    public int GetShopPrice() {
+        return shopPrice;
     }
 
     // PRIVATE    

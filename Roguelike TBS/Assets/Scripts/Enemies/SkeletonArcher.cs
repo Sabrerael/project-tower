@@ -14,7 +14,12 @@ public class SkeletonArcher : Enemy {
         shootTimer += Time.deltaTime;
 
         if (shootTimer >= timeBetweenShots) {
-                        TriggerAttackAnimation();
+            if (Mathf.Sign(player.transform.position.x - transform.position.x) == -1) {
+                transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+            } else {
+                transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+            }
+            TriggerAttackAnimation();
             shootTimer = 0;
         }
     }
@@ -24,7 +29,7 @@ public class SkeletonArcher : Enemy {
     }
 
     public void Attack() {
-        GameObject spawnedItem = Instantiate(arrow, gameObject.transform.position, Quaternion.identity);
+        GameObject spawnedItem = Instantiate(arrow, transform.position, Quaternion.identity);
         spawnedItem.GetComponent<EnemyProjectile>().SetDamage(gameObject.GetComponent<BaseStats>().GetStat(Stat.Attack));
         spawnedItem.GetComponent<EnemyProjectile>().SetWielder(gameObject.GetComponent<Enemy>());
 

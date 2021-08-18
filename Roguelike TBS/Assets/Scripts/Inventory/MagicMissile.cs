@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO Rename to Tracking Magic
 public class MagicMissile : MonoBehaviour {
     [SerializeField] float movementSpeed = 7.5f;
     [SerializeField] float xMin, xMax, yMin, yMax = 0;

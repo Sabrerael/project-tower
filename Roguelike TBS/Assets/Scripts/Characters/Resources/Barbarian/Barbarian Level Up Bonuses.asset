@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1bad79b3b402e4b82c4022f863a00e, type: 3}
+  m_Name: Barbarian Level Up Bonuses
+  m_EditorClassIdentifier: 
+  bonusesAtLevels:
+  - bonuses:
+    - {fileID: 11400000, guid: afc21c65b5370074f87088e72879d305, type: 2}
+    - {fileID: 11400000, guid: 13e1c3e3acde40846b23ed800337f384, type: 2}
+    - {fileID: 11400000, guid: b68c37abfc930ca49b0f749dfa1bc171, type: 2}
+    - {fileID: 11400000, guid: 63f2242968df9274f8af9094124e6517, type: 2}
+    - {fileID: 11400000, guid: 02a1d991ddf28aa4baa299b143b43b2e, type: 2}
+  - bonuses:
+    - {fileID: 11400000, guid: 13a6cb917e79d9e4c957613f3a0132f3, type: 2}
+    - {fileID: 11400000, guid: 41d76d1d877af2f4bb1345068858c14a, type: 2}
+    - {fileID: 11400000, guid: dab93acdeb5586243a548f28a394c63e, type: 2}
+    - {fileID: 11400000, guid: 727dce6920150e9429a00d9349ffc89c, type: 2}
+    - {fileID: 11400000, guid: 270027b981a439942aa413d62dde9257, type: 2}
+  - bonuses:
+    - {fileID: 11400000, guid: 91db44c1d6009dd408b64275c5f3c7c7, type: 2}
+    - {fileID: 11400000, guid: 2ef8801475a2ace4f9a1e1bfd7feda04, type: 2}
+    - {fileID: 11400000, guid: 6697d4c2ff594e6429697e854cb26198, type: 2}
+    - {fileID: 11400000, guid: fe731c52fad9b074790f40a13eab65ed, type: 2}
+    - {fileID: 11400000, guid: 14c3ec204bb082c48a59aafefd4039ea, type: 2}
+  - bonuses:
+    - {fileID: 11400000, guid: c80dd531635cc934aa4db3302f0c33d6, type: 2}
+    - {fileID: 11400000, guid: 3f65a23b6d22f18438182ac55276fcb9, type: 2}
+    - {fileID: 11400000, guid: 340308f670fc4a946ae225e79e499ad8, type: 2}
+    - {fileID: 11400000, guid: a5319f98380ea534c85769d76f02d943, type: 2}
+    - {fileID: 11400000, guid: a5e355f27cb82de4c9f3868e97bd5e4a, type: 2}
+  - bonuses:
+    - {fileID: 11400000, guid: 18f18b6979681554f967aaea25cc53c1, type: 2}
+    - {fileID: 11400000, guid: c4a8ca51979da324a9632e2e6e194e4b, type: 2}
+    - {fileID: 11400000, guid: 233ed88b18dd80c459c4654035de2767, type: 2}
+    - {fileID: 11400000, guid: a805e9c6218ebe54f912e03c667a82d3, type: 2}
+    - {fileID: 11400000, guid: 775d283d74d02914abd0681b861d8f5f, type: 2}

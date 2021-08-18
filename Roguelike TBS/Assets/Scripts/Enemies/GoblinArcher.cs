@@ -14,6 +14,12 @@ public class GoblinArcher : Enemy {
         shootTimer += Time.deltaTime;
 
         if (shootTimer >= timeBetweenShots) {
+            if (Mathf.Sign(player.transform.position.x - transform.position.x) == -1) {
+                transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+            } else {
+                transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+            }
+
             TriggerAttackAnimation();
             shootTimer = 0;
         }

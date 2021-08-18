@@ -23,10 +23,10 @@ public class LevelUpBonuses : ScriptableObject {
 
     [System.Serializable]
     public struct BonusesAtLevel {
-        public LevelUpBonus[] bonuses;
+        public ClassAbility[] bonuses;
     }
 
-    public LevelUpBonus[] GetLevelUpBonusesByLevel(int level) {
+    public ClassAbility[] GetLevelUpBonusesByLevel(int level) {
         return bonusesAtLevels[level].bonuses;
     }
 }

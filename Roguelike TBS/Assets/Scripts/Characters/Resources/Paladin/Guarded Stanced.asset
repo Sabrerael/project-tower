@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c34ebdf6be5eb4fbab9552febd2ad1, type: 3}
+  m_Name: Guarded Stanced
+  m_EditorClassIdentifier: 
+  activatationPoint: 0
+  abilityName: Guarded Stance
+  abilityDescription: While Divine Protection is active, the Paladin moves 10% slower
+    to increase their defense by 10%
+  statToIncrease: 4
+  statIncrease: 10
+  statToDecrease: 5
+  statDecrease: 10

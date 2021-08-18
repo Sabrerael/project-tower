@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class FloorManager : MonoBehaviour {
     [SerializeField] GameObject[] roomArray = null;
     [SerializeField] GameObject[] doorArray = null;
     [SerializeField] int numberOfRooms = 10;
@@ -20,15 +20,15 @@ public class GameManager : MonoBehaviour {
 
     private int levelOfEnemies = 1;
 
-    //public static GameManager instance = null;
+    public static FloorManager instance = null;
 
     private void Awake() {
-        /*if (instance == null)
+        if (instance == null)
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
 
-        DontDestroyOnLoad(gameObject);*/
+        DontDestroyOnLoad(gameObject);
         var player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = new Vector3(6, -6, 0);
 
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour {
     }
 
 // TODO Improvements: Weapons should only be dropped once; Need to test the game and evaluate the distribution of items
+// Need to add ShopRoom into the floor
     private void GenerateLevel() {
         roomsParent = GameObject.Find("Rooms");
 

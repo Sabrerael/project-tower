@@ -49,6 +49,12 @@ public class Bat : Enemy {
                 float newyPos = Mathf.Clamp(transform.localPosition.y + deltaY, yMin, yMax);
 
                 transform.localPosition = new Vector2(newXPos, newyPos);
+                
+                if (Mathf.Sign(deltaX) == -1) {
+                    transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+                } else {
+                    transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+                }
                 moving = true;
             }
         }
