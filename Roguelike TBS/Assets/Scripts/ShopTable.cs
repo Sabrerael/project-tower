@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -7,19 +5,22 @@ using TMPro;
 // TODO Check for conditions (enough money, space for item) and change label color to red in conditions fail
 public class ShopTable : MonoBehaviour {
     [SerializeField] InventoryItem itemForSale = null;
+    [SerializeField] int numberOfItems = 1;
     [SerializeField] TextMeshProUGUI priceLabel = null;
+    [SerializeField] TextMeshProUGUI quantityLabel = null;
     [SerializeField] Image itemSprite = null;
     [SerializeField] Sprite soldOutSign = null;
 
-    private bool canBuy = true;
+    private bool canBuy = false;
 
-    private void Awake() {
+    private void Start() {
         if (itemSprite) {
             itemSprite.sprite = itemForSale.GetIcon();
         }
 
         if (itemForSale) {
             SetPriceLabel();
+            SetQuantityLabel();
         }
     }
 
@@ -48,7 +49,13 @@ public class ShopTable : MonoBehaviour {
         }
     }
 
-    public void SetItemForSale(InventoryItem item) { itemForSale = item ;} 
+    public void SetItemForSale(InventoryItem item, int quantity) { 
+        itemForSale = item;
+        numberOfItems = quantity;
+        SetPriceLabel();
+        SetQuantityLabel();
+        SetItemSprite();
+    } 
 
     private void GiveItemToPlayer(GameObject player) {
         if (itemForSale as WeaponConfig) {
@@ -60,15 +67,20 @@ public class ShopTable : MonoBehaviour {
             // TODO Add ability to buy multiple action items (potions, etc.)
             player.GetComponent<Inventory>().AddToFirstEmptyActionItemSlot(itemForSale as ActionItem, 1);
         }
+        numberOfItems--;
+        SetQuantityLabel();
+        if (numberOfItems == 0) {
+            SetSoldOut();
+        }
     }
 
     private void PurchaseItem(GameObject player) {
         player.GetComponent<Purse>().UpdateBalance(-1*itemForSale.GetShopPrice());
         GiveItemToPlayer(player);
-        SetSoldOut();
     }
 
     private bool PurchaseConditions(GameObject player) {
+        if (itemForSale == null) { return false; }
         bool hasEnoughMoney = player.GetComponent<Purse>().GetBalance() >= itemForSale.GetShopPrice();
         bool hasSpaceForItem = false;
 
@@ -77,13 +89,28 @@ public class ShopTable : MonoBehaviour {
             hasSpaceForItem = player.GetComponent<Inventory>().HasSpaceForWeapon(itemForSale as WeaponConfig);
         } else if (itemForSale as ActionItem) {
             hasSpaceForItem = player.GetComponent<Inventory>().HasSpaceForActionItem(itemForSale as ActionItem);
+        } else if (itemForSale as PassiveItem) {
+            hasSpaceForItem = true;
         }
 
         return hasEnoughMoney && hasSpaceForItem;
     }
 
+    private void SetItemSprite() {
+        itemSprite.sprite = itemForSale.GetIcon();
+    }
+
     private void SetPriceLabel() {
         priceLabel.text = itemForSale.GetShopPrice().ToString();
+    }
+
+    private void SetQuantityLabel() {
+        if (numberOfItems <= 1) {
+            quantityLabel.gameObject.SetActive(false);
+        } else {
+            quantityLabel.gameObject.SetActive(true);
+            quantityLabel.text = "X" + numberOfItems.ToString();
+        }
     }
 
     private void SetSoldOut() {

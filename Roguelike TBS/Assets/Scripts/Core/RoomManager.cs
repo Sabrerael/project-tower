@@ -30,7 +30,10 @@ public class RoomManager : MonoBehaviour {
     }
 
     private void TriggerEnemySpawners() {
-        if (enemySpawners == null) { return; }
+        if (enemySpawners == null) { 
+            enemiesSpawned = true;
+            return;
+        }
 
         for (int i = 0; i < enemySpawners.Length; i++)
         {
@@ -69,7 +72,7 @@ public class RoomManager : MonoBehaviour {
         roomIsActive = true;
     }
 
-    private void OpenAllDoors() {
+    protected void OpenAllDoors() {
         var rooms = gameObject.GetComponentsInChildren<RoomMovement>();
 
         foreach(var room in rooms) {

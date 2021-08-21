@@ -8,6 +8,7 @@ public class FloorManager : MonoBehaviour {
     [SerializeField] int numberOfRooms = 10;
     [SerializeField] GameObject startingRoom = null;
     [SerializeField] GameObject endRoom = null;
+    [SerializeField] GameObject shopRoom = null;
     [SerializeField] float xDeltaBetweenRooms = 18;
     [SerializeField] float yDeltaBetweenRooms = 14;
 
@@ -60,7 +61,7 @@ public class FloorManager : MonoBehaviour {
             } 
             CreateNewRooms(rooms, rooms[i]);
 
-            if (i != 0 && i != rooms.Count - 1) {
+            if (i != 0 && i != rooms.Count - 1 && i != 8) {
                 AddLootToRoom(rooms[i]);
             }
         }
@@ -139,6 +140,13 @@ public class FloorManager : MonoBehaviour {
                 var door = Instantiate(doorArray[doorArrayIndex], newRoom.transform);
                 door.GetComponent<RoomMovement>().SetNewRoomManager(currentRoom.GetComponent<RoomManager>());
                 doorsInRoom[i].SetNewRoomManager(newRoom.GetComponent<RoomManager>());
+                rooms.Add(newRoom);
+            } else if (rooms.Count == 8) { // TODO Make this serializable or calculated
+                var newRoom = Instantiate(shopRoom, newRoomPosition, Quaternion.identity, roomsParent.transform);
+                var door = Instantiate(doorArray[doorArrayIndex], newRoom.transform);
+                door.GetComponent<RoomMovement>().SetNewRoomManager(currentRoom.GetComponent<RoomManager>());
+                doorsInRoom[i].SetNewRoomManager(newRoom.GetComponent<RoomManager>());
+                newRoom.GetComponent<ShopRoomManager>().SetShopTables();
                 rooms.Add(newRoom);
             } else {
                 var newRoom = Instantiate(roomArray[Random.Range(0,14)], newRoomPosition, Quaternion.identity, roomsParent.transform);

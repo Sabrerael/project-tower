@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class ShopRoomManager : RoomManager {
     [SerializeField] ShopTable[] shopTables = null;
-    [SerializeField] InventoryItem[] itemsForSale = null;
+    [SerializeField] ShopLibrary itemsForSale = null;
 
     public void SetShopTables() {
         for (int i = 0; i < shopTables.Length; i++) {
-            shopTables[i].SetItemForSale(itemsForSale[i]);
+            if (i == 0) {
+                var result = itemsForSale.GetHealthPotions();
+                shopTables[i].SetItemForSale(result.item, result.number);
+            } else {
+                var result = itemsForSale.GetRandomItem();
+                shopTables[i].SetItemForSale(result.item, result.number);
+            }
         }
     }
 }

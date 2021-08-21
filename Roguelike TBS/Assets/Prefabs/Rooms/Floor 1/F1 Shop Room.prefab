@@ -2549,18 +2549,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropSpawner: {fileID: 0}
-  enemiesParent: {fileID: 0}
+  enemiesParent: {fileID: 5176972840007681588}
   enemySpawners: []
   shopTables:
   - {fileID: 8928853637369511133}
   - {fileID: 411660450285170701}
   - {fileID: 1733628662133303524}
   - {fileID: 5061868330809102086}
-  itemsForSale:
-  - {fileID: 11400000, guid: a08a6191debd8bd45af26660e63f45a2, type: 2}
-  - {fileID: 11400000, guid: 15d46265eea10c94489b3099e2b18a6c, type: 2}
-  - {fileID: 11400000, guid: daeeb0515c15694408e4e48084470962, type: 2}
-  - {fileID: 11400000, guid: 8f8e90b6bb92f23459c3417d0eed6593, type: 2}
+  itemsForSale: {fileID: 11400000, guid: 4ee0aa9db01ea144f86b7bcc44114f9d, type: 2}
 --- !u!1001 &579085063363092968
 PrefabInstance:
   m_ObjectHideFlags: 0
