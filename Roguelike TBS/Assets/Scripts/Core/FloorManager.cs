@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +9,7 @@ public class FloorManager : MonoBehaviour {
     [SerializeField] GameObject startingRoom = null;
     [SerializeField] GameObject endRoom = null;
     [SerializeField] GameObject shopRoom = null;
+    [SerializeField] int shopRoomIndex = 8;
     [SerializeField] float xDeltaBetweenRooms = 18;
     [SerializeField] float yDeltaBetweenRooms = 14;
 
@@ -44,8 +45,6 @@ public class FloorManager : MonoBehaviour {
         }
     }
 
-// TODO Improvements: Weapons should only be dropped once; Need to test the game and evaluate the distribution of items
-// Need to add ShopRoom into the floor
     private void GenerateLevel() {
         roomsParent = GameObject.Find("Rooms");
 
@@ -56,12 +55,11 @@ public class FloorManager : MonoBehaviour {
             if (rooms.Count%5 == 0) {
                 levelOfEnemies++;
             }
-            if (i != 0) {
-                MakeNewDoors(rooms[i]);
-            } 
+            
+            MakeNewDoors(rooms[i]); 
             CreateNewRooms(rooms, rooms[i]);
 
-            if (i != 0 && i != rooms.Count - 1 && i != 8) {
+            if (i != 0 && i != rooms.Count - 1 && i != shopRoomIndex) {
                 AddLootToRoom(rooms[i]);
             }
         }
@@ -130,7 +128,6 @@ public class FloorManager : MonoBehaviour {
 
             var existingRoom = CheckForExistingRoom(newRoomPosition);
 
-            // TODO Change Enemy levels in here.
             if (existingRoom != null) {
                 var door = Instantiate(doorArray[doorArrayIndex], existingRoom.transform);
                 door.GetComponent<RoomMovement>().SetNewRoomManager(currentRoom.GetComponent<RoomManager>());
@@ -141,7 +138,7 @@ public class FloorManager : MonoBehaviour {
                 door.GetComponent<RoomMovement>().SetNewRoomManager(currentRoom.GetComponent<RoomManager>());
                 doorsInRoom[i].SetNewRoomManager(newRoom.GetComponent<RoomManager>());
                 rooms.Add(newRoom);
-            } else if (rooms.Count == 8) { // TODO Make this serializable or calculated
+            } else if (rooms.Count == shopRoomIndex) { 
                 var newRoom = Instantiate(shopRoom, newRoomPosition, Quaternion.identity, roomsParent.transform);
                 var door = Instantiate(doorArray[doorArrayIndex], newRoom.transform);
                 door.GetComponent<RoomMovement>().SetNewRoomManager(currentRoom.GetComponent<RoomManager>());
@@ -149,7 +146,7 @@ public class FloorManager : MonoBehaviour {
                 newRoom.GetComponent<ShopRoomManager>().SetShopTables();
                 rooms.Add(newRoom);
             } else {
-                var newRoom = Instantiate(roomArray[Random.Range(0,14)], newRoomPosition, Quaternion.identity, roomsParent.transform);
+                var newRoom = Instantiate(roomArray[Random.Range(0,roomArray.Length)], newRoomPosition, Quaternion.identity, roomsParent.transform);
                 var door = Instantiate(doorArray[doorArrayIndex], newRoom.transform);
                 door.GetComponent<RoomMovement>().SetNewRoomManager(currentRoom.GetComponent<RoomManager>());
                 doorsInRoom[i].SetNewRoomManager(newRoom.GetComponent<RoomManager>());

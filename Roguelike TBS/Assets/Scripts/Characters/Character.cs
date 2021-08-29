@@ -83,24 +83,8 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
         } while (choiceIndexes.Count < 3);
     }
 
-
-    // TODO These are all the same, condense
-    public void ChooseBonusOne() {
-        HandleSelectedClassAbility(randomBonuses[choiceIndexes[0]]);
-        levelUpMenu.ToggleBodyActive();
-        Time.timeScale = 1;
-        choiceIndexes = new List<int>();
-    }
-
-    public void ChooseBonusTwo() {
-        HandleSelectedClassAbility(randomBonuses[choiceIndexes[1]]);
-        levelUpMenu.ToggleBodyActive();
-        Time.timeScale = 1;
-        choiceIndexes = new List<int>();
-    }
-
-    public void ChooseBonusThree() {
-        HandleSelectedClassAbility(randomBonuses[choiceIndexes[2]]);
+    public void ChooseBonusButton(int index) {
+        HandleSelectedClassAbility(randomBonuses[choiceIndexes[index]]);
         levelUpMenu.ToggleBodyActive();
         Time.timeScale = 1;
         choiceIndexes = new List<int>();

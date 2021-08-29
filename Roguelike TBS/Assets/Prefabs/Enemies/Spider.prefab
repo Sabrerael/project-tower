@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5213626404527144852}
   - component: {fileID: 3001674644869792569}
   - component: {fileID: 4395892240677582512}
-  - component: {fileID: 9153164958398448661}
   - component: {fileID: 5802910008123404283}
   - component: {fileID: 8832806412920690998}
+  - component: {fileID: -5642016722639533399}
   m_Layer: 11
   m_Name: Spider
   m_TagString: Enemy
@@ -52,6 +52,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -139,24 +141,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 1
   deadSprite: {fileID: 0}
---- !u!114 &9153164958398448661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5213626404527144842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83f4fc886e95f6248a8eaef3fce21861, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfx: {fileID: 8300000, guid: b441f538ac554b94ba14d6f2b1f03d0a, type: 3}
-  movementSpeed: 0
-  webShot: {fileID: 6022668787323426602, guid: ef06a703ecdc6544f96fd46a775b64bc, type: 3}
-  webSpeed: 6
-  timeBetweenShots: 2
-  shootTimer: -1
 --- !u!61 &5802910008123404283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -202,6 +186,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-5642016722639533399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5213626404527144842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48af584b0d08f524ca6647bca237bf17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: b441f538ac554b94ba14d6f2b1f03d0a, type: 3}
+  movementSpeed: 0
+  moneyDropped: 1
+  arrow: {fileID: 6022668787323426602, guid: ef06a703ecdc6544f96fd46a775b64bc, type: 3}
+  arrowSpeed: 6
+  timeBetweenShots: 2
+  shootTimer: -1
 --- !u!1001 &7460756168752383985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209,10 +212,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5213626404527144854}
     m_Modifications:
-    - target: {fileID: 8384248595204781744, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
-      propertyPath: m_Name
-      value: Health Bar
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
@@ -231,6 +234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -243,16 +251,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
@@ -274,6 +272,11 @@ PrefabInstance:
       propertyPath: healthComponent
       value: 
       objectReference: {fileID: 4395892240677582512}
+    - target: {fileID: 8384248595204781744, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+        type: 3}
+      propertyPath: m_Name
+      value: Health Bar
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 122a1dd73fcea254b9a781a20a6aab1a, type: 3}
 --- !u!4 &8640405824517249814 stripped

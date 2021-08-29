@@ -1,4 +1,4 @@
-﻿using RPG.Stats;
+using RPG.Stats;
 using UnityEngine;
 
 public class AOE : MonoBehaviour {
@@ -21,7 +21,6 @@ public class AOE : MonoBehaviour {
         }
     }
 
-    // TODO Separate this code out into a DOT AOE script
     protected virtual void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.GetComponent<Health>() == null) { return; }
 

@@ -78,14 +78,8 @@ namespace RPG.Stats {
 
             Experience experience = instigator.GetComponent<Experience>();
             if (experience == null) { return; }
-
             
             experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
-        }
-
-        private void RegenerateHealth() {
-            // TODO This currently doesn't do anything
-            int regenHealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         public object CaptureState() {

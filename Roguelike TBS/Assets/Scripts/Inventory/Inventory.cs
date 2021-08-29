@@ -1,51 +1,46 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using RPG.Stats;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour, IModifierProvider {
-    // TODO Is this necessary? Weapons won't ever be stackable
-    [Serializable]
-    public struct WeaponInventorySlot {
-        public WeaponConfig weapon;
-        public int number;
-    }
-
     [Serializable]
     public struct ActionItemInventorySlot {
         public ActionItem item;
         public int number;
     }
 
-    [SerializeField] WeaponInventorySlot[] weaponInventory = new WeaponInventorySlot[5];
+    [SerializeField] WeaponConfig[] weaponInventory = new WeaponConfig[5];
     [SerializeField] ActionItemInventorySlot[] actionItemInventory = new ActionItemInventorySlot[5];
     [SerializeField] List<PassiveItem> passiveItemInventory = new List<PassiveItem>();
     [SerializeField] AudioClip sfx = null;
 
     private int activeWeaponIndex = 0;
+    private bool[] activeItemsInCooldown = {false, false, false, false, false};
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            if (GetItemInSlot(0) != null && CanUseHealthPotion(0)) {
+            if (GetItemInSlot(0) != null && CanUseHealthPotion(0) && !activeItemsInCooldown[0]) { //TODO this might be a issue
                 actionItemInventory[0].item.Use(gameObject);
                 RemoveFromSlot(0, 1);
             }
-        } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+        } else if (Input.GetKeyDown(KeyCode.Alpha2) && !activeItemsInCooldown[1]) {
             if (GetItemInSlot(1) != null) {
                 actionItemInventory[1].item.Use(gameObject);
                 RemoveFromSlot(1, 1);
             }
-        } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+        } else if (Input.GetKeyDown(KeyCode.Alpha3) && !activeItemsInCooldown[2]) {
             if (GetItemInSlot(2) != null) {
                 actionItemInventory[2].item.Use(gameObject);
                 RemoveFromSlot(2, 1);
             }
-        } else if (Input.GetKeyDown(KeyCode.Alpha4)) {
+        } else if (Input.GetKeyDown(KeyCode.Alpha4) && !activeItemsInCooldown[3]) {
             if (GetItemInSlot(3) != null) {
                 actionItemInventory[3].item.Use(gameObject);
                 RemoveFromSlot(3, 1);
             }
-        } else if (Input.GetKeyDown(KeyCode.Alpha5)) {
+        } else if (Input.GetKeyDown(KeyCode.Alpha5) && !activeItemsInCooldown[4]) {
             if (GetItemInSlot(4) != null) {
                 actionItemInventory[4].item.Use(gameObject);
                 RemoveFromSlot(4, 1);
@@ -140,8 +135,8 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     }
 
     // All these might not be necessary
-    public WeaponInventorySlot[] GetWeaponInventory() { return weaponInventory; }
-    public WeaponInventorySlot GetWeaponInventorySlot(int index) { return weaponInventory[index]; }
+    public WeaponConfig[] GetWeaponInventory() { return weaponInventory; }
+    public WeaponConfig GetWeaponInventorySlot(int index) { return weaponInventory[index]; }
     public ActionItemInventorySlot[] GetActionItemInventory() { return actionItemInventory; }
     public ActionItemInventorySlot GetActionItemInventorySlot(int index) { return actionItemInventory[index]; }
     public List<PassiveItem> GetPassiveItemInventory() { return passiveItemInventory; }
@@ -159,8 +154,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
             return false;
         }
 
-        weaponInventory[i].weapon = weapon;
-        weaponInventory[i].number = 1;
+        weaponInventory[i] = weapon;
         if (weaponInventoryUpdated != null) {
             weaponInventoryUpdated();
         }
@@ -172,7 +166,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     /// </summary>
     public bool HasWeapon(WeaponConfig weapon) {
         for (int i = 0; i < weaponInventory.Length; i++) {
-            if (object.ReferenceEquals(weaponInventory[i].weapon, weapon)) {
+            if (object.ReferenceEquals(weaponInventory[i], weapon)) {
                 return true;
             }
         }
@@ -183,26 +177,15 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     /// Return the weapon in the given slot.
     /// </summary>
     public WeaponConfig GetWeaponInSlot(int slot) {
-        return weaponInventory[slot].weapon;
-    }
-
-    /// <summary>
-    /// Get the number of weapons in the given slot.
-    /// </summary>
-    public int GetNumberInWeaponSlot(int slot) {
-        return weaponInventory[slot].number;
+        return weaponInventory[slot];
     }
 
     /// <summary>
     /// Remove a number of items from the given slot. Will never remove more
     /// that there are.
     /// </summary>
-    public void RemoveFromWeaponSlot(int slot, int number) {
-        weaponInventory[slot].number -= number;
-        if (weaponInventory[slot].number <= 0) {
-            weaponInventory[slot].number = 0;
-            weaponInventory[slot].weapon = null;
-        }
+    public void RemoveFromWeaponSlot(int slot) {
+        weaponInventory[slot] = null;
         if (weaponInventoryUpdated != null) {
             weaponInventoryUpdated();
         }
@@ -218,7 +201,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     /// <param name="number">The number of items to add.</param>
     /// <returns>True if the item was added anywhere in the inventory.</returns>
     public bool AddWeaponToSlot(int slot, WeaponConfig weapon, int number) {
-        if (weaponInventory[slot].weapon != null) {
+        if (weaponInventory[slot] != null) {
             return AddToFirstEmptyWeaponSlot(weapon);
         }
 
@@ -381,7 +364,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     /// <returns>-1 if all slots are full.</returns>
     private int FindEmptyWeaponSlot() {
         for (int i = 0; i < weaponInventory.Length; i++) {
-            if (weaponInventory[i].weapon == null) {
+            if (weaponInventory[i] == null) {
                 return i;
             }
         }
@@ -430,6 +413,12 @@ public class Inventory : MonoBehaviour, IModifierProvider {
         return -1;
     }
 
+    private IEnumerator CooldownTimer(float time, int index) {
+        activeItemsInCooldown[index] = true;
+        yield return new WaitForSeconds(time);
+        activeItemsInCooldown[index] = false;
+    }
+
     private void ChangeWeapon() {
         int attemptedWeaponIndex = activeWeaponIndex;
         for (int i = 0; i < weaponInventory.Length - 1; i++) {
@@ -459,7 +448,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
             if (GetWeaponInSlot(attemptedWeaponIndex)) {
                 int weaponIndexToDelete = activeWeaponIndex;
                 ChangeWeapon();
-                RemoveFromWeaponSlot(weaponIndexToDelete, 1);
+                RemoveFromWeaponSlot(weaponIndexToDelete);
                 return;
             }
         }

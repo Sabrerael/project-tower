@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 using RPG.Stats;
-// TODO Consolidate specific enemy scripts into enemy behavior scripts? 
+
 public class Enemy : MonoBehaviour {
     [SerializeField] protected AudioClip sfx = null;
     [SerializeField] protected float movementSpeed = 0f;

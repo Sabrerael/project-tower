@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5603317434479675125}
   - component: {fileID: 1282034542475008502}
   - component: {fileID: 6369347250030795159}
-  - component: {fileID: 6320121381112623133}
   - component: {fileID: 1134842908665474993}
+  - component: {fileID: -9090496181529313574}
   m_Layer: 11
   m_Name: Owlbear
   m_TagString: Enemy
@@ -177,22 +177,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6320121381112623133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3184160646430669382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e058e07fab8e79542ab22c8761c7a1dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfx: {fileID: 8300000, guid: c522fd756629e2e4ea3dee86c38acdfd, type: 3}
-  movementSpeed: 1.1
-  moneyDropped: 1
-  weaponDamage: 10
 --- !u!61 &1134842908665474993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -219,6 +203,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.28}
   m_EdgeRadius: 0
+--- !u!114 &-9090496181529313574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3184160646430669382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9bb01842bd53e44925569e5fcf9424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: c522fd756629e2e4ea3dee86c38acdfd, type: 3}
+  movementSpeed: 1.1
+  moneyDropped: 1
+  weaponDamage: 10
 --- !u!1001 &8424334107342277570
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class ActionItem : InventoryItem {
     // CONFIG DATA
     [Tooltip("Does an instance of this item get consumed every time it's used.")]
     [SerializeField] bool consumable = false;
+    [Tooltip("Cooldown Timer")]
+    [SerializeField] float cooldownTimer = 1f;
 
     // PUBLIC
 
@@ -24,5 +26,9 @@ public class ActionItem : InventoryItem {
 
     public bool isConsumable() {
         return consumable;
+    }
+
+    public float GetCooldownTimer() {
+        return cooldownTimer;
     }
 }

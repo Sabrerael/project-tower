@@ -1,6 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-// TODO Need to make this expandable
 [CreateAssetMenu(menuName = ("Inventory/Speed Up Gem"))]
 public class SpeedUpGem: ActionItem {
     [SerializeField] int movementIncrease = 5;

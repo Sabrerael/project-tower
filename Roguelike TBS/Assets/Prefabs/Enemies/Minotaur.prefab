@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 184222980446771648}
   - component: {fileID: 6811190621552019139}
   - component: {fileID: 1668849486596015778}
-  - component: {fileID: 4959966339612144051}
   - component: {fileID: 3011774022316496563}
+  - component: {fileID: -4926649906289906299}
   m_Layer: 11
   m_Name: Minotaur
   m_TagString: Enemy
@@ -177,22 +177,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4959966339612144051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7168867949964649843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c022d460cf8d7b54eb5830508b3c5d2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfx: {fileID: 8300000, guid: fbe9269afd972de469ee520db86c4c1f, type: 3}
-  movementSpeed: 1.1
-  moneyDropped: 1
-  weaponDamage: 10
 --- !u!61 &3011774022316496563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -219,6 +203,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &-4926649906289906299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168867949964649843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9bb01842bd53e44925569e5fcf9424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: fbe9269afd972de469ee520db86c4c1f, type: 3}
+  movementSpeed: 1.1
+  moneyDropped: 1
+  weaponDamage: 10
 --- !u!1001 &5990789950724985867
 PrefabInstance:
   m_ObjectHideFlags: 0

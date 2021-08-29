@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 8212506489934336601}
   - component: {fileID: 1155803994657746677}
   - component: {fileID: 334236142976375676}
-  - component: {fileID: 1528925133151731166}
   - component: {fileID: 1030473343704507168}
+  - component: {fileID: -2964826781143218350}
   m_Layer: 11
   m_Name: Bat
   m_TagString: Enemy
@@ -52,6 +52,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -155,26 +157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 1
   deadSprite: {fileID: 0}
---- !u!114 &1528925133151731166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8212506489934336582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a882f1b1cd0cbb74a88fedc4c7944760, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfx: {fileID: 8300000, guid: aa1f2abc23f5b234e8c7746e02353987, type: 3}
-  movementSpeed: 5
-  distance: 5
-  cooldownTime: 2
-  xMin: -0.5
-  xMax: 12.5
-  yMin: -10.5
-  yMax: -1.5
 --- !u!95 &1030473343704507168
 Animator:
   serializedVersion: 3
@@ -194,6 +176,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-2964826781143218350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212506489934336582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6583a5c5e07b8e42b118be72f1bb9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: aa1f2abc23f5b234e8c7746e02353987, type: 3}
+  movementSpeed: 5
+  moneyDropped: 1
+  distance: 5
+  cooldownTime: 2
+  xMin: -0.5
+  xMax: 12.5
+  yMin: -10.5
+  yMax: -1.5
 --- !u!1001 &3470434952311303095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201,10 +204,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8212506489934336602}
     m_Modifications:
-    - target: {fileID: 8384248595204781744, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
-      propertyPath: m_Name
-      value: Health Bar
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
@@ -223,6 +226,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -235,16 +243,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
@@ -266,6 +264,11 @@ PrefabInstance:
       propertyPath: healthComponent
       value: 
       objectReference: {fileID: 334236142976375676}
+    - target: {fileID: 8384248595204781744, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+        type: 3}
+      propertyPath: m_Name
+      value: Health Bar
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 122a1dd73fcea254b9a781a20a6aab1a, type: 3}
 --- !u!4 &2326244820378859344 stripped

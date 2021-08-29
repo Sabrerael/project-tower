@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 1013422352908778233}
   - component: {fileID: 5915529073886209530}
   - component: {fileID: 1997041137797899675}
-  - component: {fileID: -3463411375600842157}
   - component: {fileID: 7239040884086236497}
+  - component: {fileID: -5641740243285510131}
   m_Layer: 11
   m_Name: Animated Armor
   m_TagString: Enemy
@@ -177,22 +177,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-3463411375600842157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8062275640398464586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9abc79285ac76554b94868cac32823a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfx: {fileID: 8300000, guid: 1930e594a6adf2a4f875e63494c96b5c, type: 3}
-  movementSpeed: 1
-  moneyDropped: 1
-  weaponDamage: 10
 --- !u!61 &7239040884086236497
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -219,6 +203,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &-5641740243285510131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8062275640398464586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9bb01842bd53e44925569e5fcf9424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: 1930e594a6adf2a4f875e63494c96b5c, type: 3}
+  movementSpeed: 1
+  moneyDropped: 1
+  weaponDamage: 10
 --- !u!1001 &5459321260375772156
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-// TODO Check for conditions (enough money, space for item) and change label color to red in conditions fail
 public class ShopTable : MonoBehaviour {
     [SerializeField] InventoryItem itemForSale = null;
     [SerializeField] int numberOfItems = 1;
@@ -59,12 +58,11 @@ public class ShopTable : MonoBehaviour {
 
     private void GiveItemToPlayer(GameObject player) {
         if (itemForSale as WeaponConfig) {
-            // TODO Weapon should be automatically equipped when purchased
             player.GetComponent<Inventory>().AddToFirstEmptyWeaponSlot(itemForSale as WeaponConfig);
+            player.GetComponent<Fighter>().EquipWeapon(itemForSale as WeaponConfig);
         } else if (itemForSale as PassiveItem) {
             player.GetComponent<Inventory>().AddToFirstEmptyPassiveItemSlot(itemForSale as PassiveItem);
         } else if (itemForSale as ActionItem) {
-            // TODO Add ability to buy multiple action items (potions, etc.)
             player.GetComponent<Inventory>().AddToFirstEmptyActionItemSlot(itemForSale as ActionItem, 1);
         }
         numberOfItems--;
@@ -80,12 +78,11 @@ public class ShopTable : MonoBehaviour {
     }
 
     private bool PurchaseConditions(GameObject player) {
-        if (itemForSale == null) { return false; }
+        if (itemForSale == null || !player.GetComponent<Purse>()) { return false; }
         bool hasEnoughMoney = player.GetComponent<Purse>().GetBalance() >= itemForSale.GetShopPrice();
         bool hasSpaceForItem = false;
 
         if (itemForSale as WeaponConfig) {
-            // TODO Weapon should be automatically equipped when purchased
             hasSpaceForItem = player.GetComponent<Inventory>().HasSpaceForWeapon(itemForSale as WeaponConfig);
         } else if (itemForSale as ActionItem) {
             hasSpaceForItem = player.GetComponent<Inventory>().HasSpaceForActionItem(itemForSale as ActionItem);

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8419808376583865477}
   - component: {fileID: 2941240886132546438}
   - component: {fileID: 7025517617997388775}
-  - component: {fileID: 7362790924653752660}
+  - component: {fileID: 4595391094503483487}
   m_Layer: 11
   m_Name: Skeleton Archer
   m_TagString: Enemy
@@ -53,6 +53,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -139,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
   movementSpeed: 0
+  moneyDropped: 1
 --- !u!114 &8419808376583865477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +192,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7362790924653752660
+--- !u!114 &4595391094503483487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,11 +201,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1525517012024883254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf3567d310a1acb4daeb382ca0b1b667, type: 3}
+  m_Script: {fileID: 11500000, guid: 48af584b0d08f524ca6647bca237bf17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: 8a4494ebe0140804bbf58fe192cfe314, type: 3}
   movementSpeed: 0
+  moneyDropped: 1
   arrow: {fileID: 1188875467988603800, guid: 451fdaccb2f9efc4aa31743959503ecc, type: 3}
   arrowSpeed: 5
   timeBetweenShots: 2
@@ -214,10 +218,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1525517012024883242}
     m_Modifications:
-    - target: {fileID: 8384248595204781744, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
-      propertyPath: m_Name
-      value: Health Bar
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
@@ -236,6 +240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -248,16 +257,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
@@ -279,6 +278,11 @@ PrefabInstance:
       propertyPath: healthComponent
       value: 
       objectReference: {fileID: 2941240886132546438}
+    - target: {fileID: 8384248595204781744, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+        type: 3}
+      propertyPath: m_Name
+      value: Health Bar
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 122a1dd73fcea254b9a781a20a6aab1a, type: 3}
 --- !u!4 &629252071884652140 stripped

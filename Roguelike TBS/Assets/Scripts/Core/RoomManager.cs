@@ -1,14 +1,24 @@
 ﻿using UnityEngine;
 
 public class RoomManager : MonoBehaviour {
+    [System.Serializable]
+    public struct EnemySpawns {
+        public Enemy[] enemies;
+    }
+
     [SerializeField] DropSpawner dropSpawner = null;
     [SerializeField] GameObject enemiesParent = null;
+    [SerializeField] EnemySpawns[] enemySpawns = null;
     [SerializeField] EnemySpawner[] enemySpawners = null;
 
     private bool itemSpawned = false;
     private bool roomIsActive = false;
     private bool enemiesSpawned = false;
     private bool doorsOpen = false;
+
+    private void Start() {
+        SetEnemySpawners();
+    }
 
     private void Update() {
         CheckDropSpawner();
@@ -58,6 +68,21 @@ public class RoomManager : MonoBehaviour {
                 gameObject.name.Equals("Floor Three End Room(Clone)")) {
                 OpenExitDoor();
             }
+        }
+    }
+
+    private void SetEnemySpawners() {
+        if (enemySpawns == null || enemySpawns.Length == 0) {
+            enemiesSpawned = true;
+            roomIsActive = true; 
+            CheckDoors();
+            return;
+        }
+
+        for (int i = 0; i < enemySpawners.Length; i++) {
+            int maximumNum = enemySpawns[i].enemies.Length;
+            int index = UnityEngine.Random.Range(0, enemySpawns[i].enemies.Length);
+            enemySpawners[i].SetEnemy(enemySpawns[i].enemies[index]);
         }
     }
 

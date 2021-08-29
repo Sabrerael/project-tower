@@ -13,4 +13,5 @@ public class EnemySpawner : MonoBehaviour {
     }
 
     public void SetEnemyLevel(int level) { levelOfEnemy = level; }
+    public void SetEnemy(Enemy enemy) { enemyToSpawn = enemy; }
 }

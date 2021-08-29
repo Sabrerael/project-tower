@@ -16,7 +16,6 @@ public class Movement : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        // TODO this line gets called every frame. Make this an action? When Passive inventory happens? 
         var movementSpeed = GetComponent<BaseStats>().GetStat(Stat.MovementSpeed);
 
         //float deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movementSpeed;

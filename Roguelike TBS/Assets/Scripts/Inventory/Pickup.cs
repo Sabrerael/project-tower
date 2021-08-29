@@ -1,15 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class Pickup : MonoBehaviour
-{
-    // TODO This can likely be condensed into one field
-    [SerializeField] WeaponConfig weaponConfig = null;
-    [SerializeField] ActionItem item = null;
-    [SerializeField] PassiveItem passiveItem = null;
+public class Pickup : MonoBehaviour {
+    [SerializeField] InventoryItem item = null;
     [SerializeField] int number = 1;
+    [SerializeField] Image itemSprite = null;
     [SerializeField] AudioClip sfx = null;
+
+    private void Start() {
+        if (item) {
+            SetPickupSprite();
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
@@ -17,20 +19,32 @@ public class Pickup : MonoBehaviour
         }
     }
 
+    public void SetItem(InventoryItem itemToSet, int quantity) { 
+        item = itemToSet;
+        number = quantity;
+        SetPickupSprite();
+    } 
+
     public void SetNumber(int num) { number = num; }
 
     private void DoPickup(Collider2D other) {
-        if (weaponConfig) {
-            other.gameObject.GetComponent<Fighter>().EquipWeapon(weaponConfig);
-            other.gameObject.GetComponent<Inventory>().AddToFirstEmptyWeaponSlot(weaponConfig);
+        if (item as WeaponConfig) {
+            other.gameObject.GetComponent<Fighter>().EquipWeapon(item as WeaponConfig);
+            other.gameObject.GetComponent<Inventory>().AddToFirstEmptyWeaponSlot(item as WeaponConfig);
             Destroy(gameObject);
-        } else if (item) {
-            other.gameObject.GetComponent<Inventory>().AddToFirstEmptyActionItemSlot(item, number);
+        } else if (item as ActionItem) {
+            other.gameObject.GetComponent<Inventory>().AddToFirstEmptyActionItemSlot(item as ActionItem, number);
             Destroy(gameObject);
-        } else if (passiveItem) {
-            other.gameObject.GetComponent<Inventory>().AddToFirstEmptyPassiveItemSlot(passiveItem);
+        } else if (item as PassiveItem) {
+            other.gameObject.GetComponent<Inventory>().AddToFirstEmptyPassiveItemSlot(item as PassiveItem);
             Destroy(gameObject);
         }
         if (sfx) { AudioSource.PlayClipAtPoint(sfx, transform.position); }
+    }
+
+    private void SetPickupSprite() {
+        if (itemSprite) {
+            itemSprite.sprite = item.GetIcon();
+        }
     }
 }

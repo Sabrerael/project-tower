@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3729827403146163279}
   - component: {fileID: 8821925286237565998}
   - component: {fileID: 2076684853698406582}
-  - component: {fileID: 6605239914709352248}
+  - component: {fileID: -1919064418608243645}
   m_Layer: 11
   m_Name: Kobold
   m_TagString: Enemy
@@ -203,7 +203,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &6605239914709352248
+--- !u!114 &-1919064418608243645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1025088853335906303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2c05cba77f556b44b263a1d6fd7f11d, type: 3}
+  m_Script: {fileID: 11500000, guid: db9bb01842bd53e44925569e5fcf9424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: 8a4494ebe0140804bbf58fe192cfe314, type: 3}
