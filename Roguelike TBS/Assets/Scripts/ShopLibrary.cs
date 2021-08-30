@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = ("Shop/Shop Library"))]
@@ -26,6 +27,18 @@ public class ShopLibrary : ScriptableObject {
         public int number;
     }
 
+    // These don't have to be IEnumerables
+    public IEnumerable<ShopItem> GetRandomItems() {
+        var gameManager = GameManager.instance;
+        var randomItem = new ShopItem();
+
+        do {
+            randomItem = GetRandomItem();
+        } while (gameManager.ItemIsInKnockoutList(randomItem.item));
+
+        yield return randomItem;
+    }
+
     public ShopItem GetHealthPotions() {
         ShopItem healthPotions = new ShopItem();
         healthPotions.item = healthPotion;
@@ -34,15 +47,11 @@ public class ShopLibrary : ScriptableObject {
         return healthPotions;
     }
 
-    public ShopItem GetRandomItem() {
+    private ShopItem GetRandomItem() {
         ShopItemConfig item = SelectRandomItem();
         ShopItem result = new ShopItem();
         result.item = item.item;
         result.number = item.GetRandomNumber();
-
-        if (result.item is WeaponConfig) {
-            //droppedWeapons.Add(result.item);
-        }
 
         return result;
     }

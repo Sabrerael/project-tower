@@ -13,11 +13,8 @@ public class ShopTable : MonoBehaviour {
     private bool canBuy = false;
 
     private void Start() {
-        if (itemSprite) {
-            itemSprite.sprite = itemForSale.GetIcon();
-        }
-
         if (itemForSale) {
+            itemSprite.sprite = itemForSale.GetIcon();
             SetPriceLabel();
             SetQuantityLabel();
         }

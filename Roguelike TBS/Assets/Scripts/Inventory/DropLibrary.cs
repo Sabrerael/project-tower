@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = ("Inventory/Drop Library"))]
 public class DropLibrary : ScriptableObject {
     [SerializeField] DropConfig[] potentialDrops;
     [SerializeField] float dropChancePercentage; // Future work: turn this into an array to represent different rarities of drops
-    //[SerializeField] List<InventoryItem> droppedWeapons = new List<InventoryItem>(); 
 
     [System.Serializable]
     class DropConfig {
@@ -31,12 +29,20 @@ public class DropLibrary : ScriptableObject {
         public int number;
     }
 
+    // These don't have to be IEnumerables
     public IEnumerable<Dropped> GetRandomDrops() {
         if (!ShouldRandomDrop()) {
             yield break;
         }
 
-        yield return GetRandomDrop();
+        var gameManager = GameManager.instance;
+        var randomDrop = new Dropped();
+
+        do {
+            randomDrop = GetRandomDrop();
+        } while (gameManager.ItemIsInKnockoutList(randomDrop.item));
+
+        yield return randomDrop;
     }
 
     private bool ShouldRandomDrop() {
@@ -50,10 +56,6 @@ public class DropLibrary : ScriptableObject {
         result.itemDropped = drop.itemDropped;
         result.number = drop.GetRandomNumber();
         result.itemDropped.SetNumber(result.number);
-
-        if (result.item is WeaponConfig) {
-            //droppedWeapons.Add(result.item);
-        }
 
         return result;
     }

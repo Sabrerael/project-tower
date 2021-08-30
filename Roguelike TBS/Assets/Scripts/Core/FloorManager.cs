@@ -19,20 +19,15 @@ public class FloorManager : MonoBehaviour {
     // CACHE
     private GameObject roomsParent = null;
     private List<GameObject> rooms = new List<GameObject>();
+    private GameManager gameManager = null;
 
     private int levelOfEnemies = 1;
 
-    public static FloorManager instance = null;
-
     private void Awake() {
-        if (instance == null)
-            instance = this;
-        else if (instance != this)
-            Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
         var player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = new Vector3(6, -6, 0);
+
+        gameManager = GameManager.instance;
 
         GenerateLevel();
     }
@@ -55,7 +50,7 @@ public class FloorManager : MonoBehaviour {
             if (rooms.Count%5 == 0) {
                 levelOfEnemies++;
             }
-            
+
             MakeNewDoors(rooms[i]); 
             CreateNewRooms(rooms, rooms[i]);
 
@@ -170,7 +165,11 @@ public class FloorManager : MonoBehaviour {
 
     private void AddLootToRoom(GameObject room) {
         var drops = dropLibrary.GetRandomDrops();
+        // Technically don't need foreach loop. 
         foreach(var drop in drops) {
+            if (!drop.item.IsStackable()) {
+                gameManager.AddItemToKnockoutList(drop.item);
+            }
             room.GetComponent<RoomManager>().SetDropSpawner(drop.itemDropped);
         }
     }
