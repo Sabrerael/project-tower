@@ -16,7 +16,8 @@ public class MovementAdjustmentAOE : AOE {
         
         other.gameObject.GetComponent<Health>().TakeDamage(instigator, damage);
         other.gameObject.GetComponent<Animator>().SetTrigger("Hit");
-        other.GetComponent<Enemy>().ModifyMovementSpeed(movementAdjustment);
+        if (other.GetComponent<Enemy>())
+            other.GetComponent<Enemy>().ModifyMovementSpeed(movementAdjustment);
 
         if (locksAfterTrigger) {
             Destroy(gameObject);

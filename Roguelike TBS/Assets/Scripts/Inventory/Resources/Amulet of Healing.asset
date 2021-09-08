@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda33b94f9649a24fb51c879c320bdab, type: 3}
+  m_Name: Amulet of Healing
+  m_EditorClassIdentifier: 
+  itemID: c4079776-1ebb-456c-b829-f50169203e01
+  displayName: Amulet of Healing
+  description: Focusing magical energies into this amulet will grant it the ability
+    to heal some of your wounds.
+  shopPrice: 1
+  icon: {fileID: 0}
+  pickup: {fileID: 0}
+  stackable: 0
+  consumable: 0
+  cooldownTimer: 120
+  healingAmount: 15
+  onUseParticleEffect: {fileID: 0}
+  sfx: {fileID: 0}

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 8310941228006675438}
   - component: {fileID: 4160310109428090246}
   - component: {fileID: 5965288372700633025}
+  - component: {fileID: 2080211334033173846}
   m_Layer: 9
   m_Name: Barbarian
   m_TagString: Player
@@ -58,6 +59,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padding: 0.5
   speedUpRate: 0.4
+  dodgeSpeed: 0
+  dodgeDistance: 0
 --- !u!114 &7448079461017747273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +196,7 @@ MonoBehaviour:
   handTransform: {fileID: 1911165935411346104}
   currentWeapon: {fileID: 11400000, guid: a6b5cc039499c9a47b6b9563435a233b, type: 2}
   iFramesTimeLimit: 1
+  dodgeRollTime: 0.2
 --- !u!114 &7649190338548185899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,16 +210,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponInventory:
-  - weapon: {fileID: 11400000, guid: a6b5cc039499c9a47b6b9563435a233b, type: 2}
-    number: 1
-  - weapon: {fileID: 0}
-    number: 0
-  - weapon: {fileID: 0}
-    number: 0
-  - weapon: {fileID: 0}
-    number: 0
-  - weapon: {fileID: 0}
-    number: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   actionItemInventory:
   - item: {fileID: 11400000, guid: a08a6191debd8bd45af26660e63f45a2, type: 2}
     number: 10
@@ -318,6 +317,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingBalance: 0
+--- !u!114 &2080211334033173846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787920190854717913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5cceb6020623a448a9565c4a02cb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5707503429180780458
 GameObject:
   m_ObjectHideFlags: 0

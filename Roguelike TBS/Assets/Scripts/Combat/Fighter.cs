@@ -7,6 +7,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     [SerializeField] Transform handTransform = null;
     [SerializeField] WeaponConfig currentWeapon = null;
     [SerializeField] float iFramesTimeLimit = 0.75f;
+    [SerializeField] float dodgeRollTime = 1f;
 
     private int multiplicativeModifier = 0;
     private int movementModifier = 0;
@@ -75,6 +76,12 @@ public class Fighter : MonoBehaviour, IModifierProvider {
 
     // Sets iFramesActive to the opposite of what it currently is
     public void ToggleIFramesActive() { iFramesActive = !iFramesActive; }
+
+    public void DodgeRoll() {
+        // Set Animator value
+        GetComponent<Movement>().StartDodgeRolling();
+        StartIFrameTimer(dodgeRollTime);
+    }
 
     public IEnumerable<int> GetAdditiveModifiers(Stat stat) {
         if (stat == Stat.Attack) {
