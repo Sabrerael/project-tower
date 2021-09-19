@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2401f721474bff4983584b743f7ab91, type: 3}
+  m_Name: Acid Vial
+  m_EditorClassIdentifier: 
+  itemID: 128e04d5-0919-4584-8b09-068ca9e70b5b
+  displayName: Acid Vial
+  description: Like the fire thing but different
+  shopPrice: 1
+  icon: {fileID: 21300000, guid: c670f7c7b72fe234aba630dbcfadf497, type: 3}
+  pickup: {fileID: 0}
+  stackable: 1
+  consumable: 1
+  cooldownTimer: 1
+  throwSpeed: 5
+  itemPrefab: {fileID: 0}
+  sfx: {fileID: 8300000, guid: c7ca7689ec0c3e7408ae4b0c7e836cee, type: 3}

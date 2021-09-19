@@ -22,6 +22,7 @@ public abstract class InventoryItem : ScriptableObject, ISerializationCallbackRe
     [SerializeField] int shopPrice = 1;
     [Tooltip("The UI icon to represent this item in the inventory.")]
     [SerializeField] Sprite icon = null;
+    // TO BE REMOVED. WILL NEED A NEW FUNCTION
     [Tooltip("The prefab that should be spawned when this item is dropped.")]
     [SerializeField] Pickup pickup = null;
     [Tooltip("If true, multiple items of this type can be stacked in the same inventory slot.")]

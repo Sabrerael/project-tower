@@ -19,6 +19,16 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     private int activeWeaponIndex = 0;
     private bool[] activeItemsInCooldown = {false, false, false, false, false};
 
+    protected Dictionary<Stat, int> statModifyAdditions = new Dictionary<Stat, int>();
+    protected Dictionary<Stat, int> statModifyPercentages = new Dictionary<Stat, int>();
+
+    private void Awake() {
+        foreach(Stat stat in Enum.GetValues(typeof(Stat))) {
+            statModifyPercentages[stat] = 0;
+            statModifyAdditions[stat] = 0;
+        }
+    }
+
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             if (GetItemInSlot(0) != null && CanUseHealthPotion(0) && !activeItemsInCooldown[0]) { //TODO this might be a issue
@@ -316,6 +326,18 @@ public class Inventory : MonoBehaviour, IModifierProvider {
 
         if (item is RegenItem) {
             StartCoroutine((item as RegenItem).StartRegen());
+        } else if (item is PurseModifier) {
+            (item as PurseModifier).AddPurseMultiplier(GetComponent<Purse>());
+        } else if (item as StatModifierItem) {
+            (item as StatModifierItem).ApplyStatChanges(this);
+        } else if (item as TradeOffItem) {
+            (item as TradeOffItem).ApplyStatChanges(this);
+        } else if (item as ShieldItem) {
+            GetComponent<Fighter>().onInitialHit += (item as ShieldItem).WillShieldPlayer;
+        } else if (item as DodgeChanceItem) {
+            GetComponent<Fighter>().onInitialHit += (item as DodgeChanceItem).WillDodge;
+        } else if (item as AttackFeedbackItem) {
+            GetComponent<Fighter>().onActualHit += (item as AttackFeedbackItem).FeedbackEffect;
         }
 
         if (passiveItemInventoryUpdated != null) {
@@ -342,8 +364,25 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     /// </summary>
     /// <param name="item">The item type to add.</param>
     /// <returns>True if the item was added anywhere in the inventory.</returns>
-    public bool AddPassiveItemToSlot( PassiveItem item) {
+    public bool AddPassiveItemToSlot(PassiveItem item) {
         passiveItemInventory.Add(item);
+        
+        if (item is RegenItem) {
+            StartCoroutine((item as RegenItem).StartRegen());
+        } else if (item is PurseModifier) {
+            (item as PurseModifier).AddPurseMultiplier(GetComponent<Purse>());
+        } else if (item as StatModifierItem) {
+            (item as StatModifierItem).ApplyStatChanges(this);
+        } else if (item as TradeOffItem) {
+            (item as TradeOffItem).ApplyStatChanges(this);
+        } else if (item as ShieldItem) {
+            GetComponent<Fighter>().onInitialHit += (item as ShieldItem).WillShieldPlayer;
+        } else if (item as DodgeChanceItem) {
+            GetComponent<Fighter>().onInitialHit += (item as DodgeChanceItem).WillDodge;
+        } else if (item as AttackFeedbackItem) {
+            GetComponent<Fighter>().onActualHit += (item as AttackFeedbackItem).FeedbackEffect;
+        }
+
         if (passiveItemInventoryUpdated != null) {
             passiveItemInventoryUpdated();
         }
@@ -454,120 +493,19 @@ public class Inventory : MonoBehaviour, IModifierProvider {
         }
     }
 
+    public void ModifyPassiveBonusAddition(Stat stat, int increase) {
+        statModifyAdditions[stat] += increase;
+    }
+
+    public void ModifyPassiveBonusPercentage(Stat stat, int percent) {
+        statModifyPercentages[stat] += percent;
+    }
+
     IEnumerable<int> IModifierProvider.GetAdditiveModifiers(Stat stat) {
-        int bonusValue = 0;
-
-        if (stat == Stat.Attack) {
-            foreach(PassiveItem slot in passiveItemInventory) {
-                var item = slot as StatModifierItem;
-                if (item == null) {
-                    continue;
-                }
-                
-                if (item.GetTypeOfModifier() == "Additive" && item.GetStatModified() == Stat.Attack) {
-                    bonusValue += item.GetModifierAmount();
-                }
-            }
-
-            yield return bonusValue;
-        } else if (stat == Stat.Defense) {
-            foreach(PassiveItem slot in passiveItemInventory) {
-                var item = slot as StatModifierItem;
-                if (item == null) {
-                    continue;
-                }
-
-                if (item.GetTypeOfModifier() == "Additive" && item.GetStatModified() == Stat.Defense) {
-                    bonusValue += item.GetModifierAmount();
-                }
-            }
-
-            yield return bonusValue;
-        } else if (stat == Stat.Health) {
-            foreach(PassiveItem slot in passiveItemInventory) {
-                var item = slot as StatModifierItem;
-                if (item == null) {
-                    continue;
-                }
-
-                if (item.GetTypeOfModifier() == "Additive" && item.GetStatModified() == Stat.Health) {
-                    bonusValue += item.GetModifierAmount();
-                }
-            }
-
-            yield return bonusValue;
-        }
-        yield return 0;
+        yield return statModifyAdditions[stat];
     }
 
     IEnumerable<int> IModifierProvider.GetMultiplicativeModifiers(Stat stat) {
-        int bonusValue = 0;
-
-        if (stat == Stat.Attack) {
-            foreach(PassiveItem slot in passiveItemInventory) {
-                var item = slot as StatModifierItem;
-                if (item == null) {
-                    continue;
-                }
-
-                if (item.GetTypeOfModifier() == "Multiplicative" && item.GetStatModified() == Stat.Health) {
-                    bonusValue += item.GetModifierAmount();
-                }
-            }
-
-            yield return bonusValue;
-        } else if (stat == Stat.Defense) {
-            foreach(PassiveItem slot in passiveItemInventory) {
-                var item = slot as StatModifierItem;
-                if (item == null) {
-                    continue;
-                }
-
-                if (item.GetTypeOfModifier() == "Multiplicative" && item.GetStatModified() == Stat.Health) {
-                    bonusValue += item.GetModifierAmount();
-                }
-            }
-
-            yield return bonusValue;
-        } else if (stat == Stat.Health) {
-            foreach(PassiveItem slot in passiveItemInventory) {
-                var item = slot as StatModifierItem;
-                if (item == null) {
-                    continue;
-                }
-
-                if (item.GetTypeOfModifier() == "Multiplicative" && item.GetStatModified() == Stat.Health) {
-                    bonusValue += item.GetModifierAmount();
-                }
-            }
-
-            yield return bonusValue;
-        } else if (stat == Stat.MovementSpeed) {
-            foreach(PassiveItem slot in passiveItemInventory) {
-                var item = slot as StatModifierItem;
-                if (item == null) {
-                    continue;
-                }
-
-                if (item.GetTypeOfModifier() == "Multiplicative" && item.GetStatModified() == Stat.MovementSpeed) {
-                    bonusValue += item.GetModifierAmount();
-                }
-            }
-
-            yield return bonusValue;
-        } else if (stat == Stat.Cooldown) {
-            foreach(PassiveItem slot in passiveItemInventory) {
-                var item = slot as StatModifierItem;
-                if (item == null) {
-                    continue;
-                }
-
-                if (item.GetTypeOfModifier() == "Multiplicative" && item.GetStatModified() == Stat.Cooldown) {
-                    bonusValue += item.GetModifierAmount();
-                }
-            }
-
-            yield return bonusValue;
-        }
+        yield return statModifyAdditions[stat];
     }
 }

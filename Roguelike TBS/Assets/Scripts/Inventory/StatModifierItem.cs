@@ -8,7 +8,11 @@ public class StatModifierItem: PassiveItem {
     [SerializeField] Stat statModified = Stat.Attack;
     [SerializeField] string typeOfModifier = "Additive";
 
-    public int GetModifierAmount() { return modifierAmount; }
-    public Stat GetStatModified() { return statModified; }
-    public string GetTypeOfModifier() { return typeOfModifier; }
+    public void ApplyStatChanges(Inventory inventory) {
+        if (typeOfModifier == "Additive") {
+            inventory.ModifyPassiveBonusAddition(statModified, modifierAmount);
+        } else if (typeOfModifier == "Multiplicative") {
+            inventory.ModifyPassiveBonusPercentage(statModified, modifierAmount);
+        }
+    }
 }

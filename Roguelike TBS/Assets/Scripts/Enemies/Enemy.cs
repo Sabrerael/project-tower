@@ -57,7 +57,6 @@ public class Enemy : MonoBehaviour {
     }
 
     public void ModifyMovementSpeed(float speedChange) {
-        Debug.Log("In ModifyMovementSpeed");
         if (Mathf.Approximately(speedChange, 0)) {
             movementSpeed = 0;
         } else {

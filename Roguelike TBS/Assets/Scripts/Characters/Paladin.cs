@@ -54,9 +54,9 @@ public class Paladin : Character {
     
     public override IEnumerable<int> GetMultiplicativeModifiers(Stat stat) {
         if (abilityState == AbilityState.Active) {
-            yield return activeAbilityModifyPercentages[stat];
+            yield return activeAbilityModifyPercentages[stat] + passiveModifyPercentages[stat];
         }
-        yield return 0;
+        yield return passiveModifyPercentages[stat];
     }
 
     protected override void HandleSelectedClassAbility(ClassAbility ability) {

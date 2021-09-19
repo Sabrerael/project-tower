@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Stats;
@@ -14,6 +15,9 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     private int attackSpeedModifier = 0;
     private bool iFramesActive = false;
 
+    public event Func<bool> onInitialHit;
+    public event Action<Enemy> onActualHit;
+
     private void Start() {
         EquipWeapon(currentWeapon);
     }
@@ -25,12 +29,15 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     private void OnCollisionEnter2D(Collision2D other) {
         if (iFramesActive) { return; }
 
+        if (onInitialHit != null && onInitialHit()) { return; }
+
         if (other.gameObject.tag == "Enemy") {
             gameObject.GetComponent<Animator>().SetTrigger("Hit");
             var enemyBaseStats = other.gameObject.GetComponent<BaseStats>();
             var damageTaken = enemyBaseStats.GetStat(Stat.Attack) - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
             gameObject.GetComponent<Health>().TakeDamage(other.gameObject, damageTaken);
             StartCoroutine(IFrameTimer(iFramesTimeLimit));
+            if (onActualHit != null) { onActualHit(other.gameObject.GetComponent<Enemy>()); }
         } else if (other.gameObject.tag == "Enemy Projectile") {
             gameObject.GetComponent<Animator>().SetTrigger("Hit");
             var enemyProjectile = other.gameObject.GetComponent<EnemyProjectile>();
