@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecef2dd27e6544a4d8ed73b526f4e06c, type: 3}
+  m_Name: Mace
+  m_EditorClassIdentifier: 
+  itemID: 8ee6ffdf-4ac2-4df6-822c-35ceb23ff529
+  displayName: Mace
+  description: Heavy blunt object for swinging at enemies.
+  shopPrice: 1
+  icon: {fileID: 21300000, guid: 16c26c935ae80ce4da4d10be55ef34af, type: 3}
+  pickup: {fileID: 0}
+  stackable: 0
+  equippedPrefab: {fileID: 7847909870991476948, guid: d4f37f4c7125c424487f3e29d092f48c,
+    type: 3}
+  weaponDamage: 10
+  abilityIcon: {fileID: 0}
+  weaponType: 0

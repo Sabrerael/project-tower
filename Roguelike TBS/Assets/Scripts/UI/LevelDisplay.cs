@@ -5,7 +5,7 @@ using TMPro;
 public class LevelDisplay : MonoBehaviour {
     private BaseStats baseStats;
 
-    private void Awake() {
+    private void Start() {
         baseStats = GameObject.FindGameObjectWithTag("Player").GetComponent<BaseStats>();
     }
 

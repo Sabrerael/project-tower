@@ -6,6 +6,7 @@ public class WeaponConfig : InventoryItem {
     [SerializeField] Weapon equippedPrefab = null;
     [SerializeField] int weaponDamage = 5;
     [SerializeField] Sprite abilityIcon = null;
+    [SerializeField] WeaponType weaponType = WeaponType.OneHanded;
 
     const string weaponName = "Weapon";
     Weapon weapon = null;
@@ -29,16 +30,7 @@ public class WeaponConfig : InventoryItem {
                 weaponAbilityIcon.GetComponent<Image>().color = Color.clear;
             }
         }
-
-        /*var overrideController = animator.runtimeAnimatorController as AnimatorOverrideController;
-        if (animatorOverride != null) {
-            animator.runtimeAnimatorController = animatorOverride; 
-        }
-        else if (overrideController != null) {
-            animator.runtimeAnimatorController = overrideController.runtimeAnimatorController;
-        }*/
-
-        //return weapon;
+        HandlePassive(fighter.gameObject);
     }
 
     private void DestroyOldWeapon(Transform hand) {
@@ -51,4 +43,8 @@ public class WeaponConfig : InventoryItem {
     }
 
     public int GetWeaponDamage() { return weaponDamage; }
+
+    public virtual void HandlePassive(GameObject user) {
+        // Overrided in specific files for now
+    }
 }

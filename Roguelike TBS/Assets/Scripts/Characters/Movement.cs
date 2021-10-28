@@ -27,6 +27,10 @@ public class Movement : MonoBehaviour {
         } else {
             NormalMovement();
         }
+
+        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0) {
+            GetComponent<Animator>().SetBool("IsWalking", false);
+        }
     }
 
     public void StartDodgeRolling() {
@@ -64,6 +68,7 @@ public class Movement : MonoBehaviour {
     }
 
     private void NormalMovement() {
+        GetComponent<Animator>().SetBool("IsWalking", true);
         var movementSpeed = GetComponent<BaseStats>().GetStat(Stat.MovementSpeed);
 
         float deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movementSpeed;

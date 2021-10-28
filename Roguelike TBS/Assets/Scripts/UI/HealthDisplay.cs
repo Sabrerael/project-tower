@@ -5,7 +5,7 @@ using TMPro;
 public class HealthDisplay : MonoBehaviour {
     private Health health;
 
-    private void Awake() {
+    private void Start() {
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
 

@@ -5,7 +5,7 @@ using TMPro;
 public class ExperienceDisplay : MonoBehaviour {
     private Experience experience;
 
-    private void Awake() {
+    private void Start() {
         experience = GameObject.FindGameObjectWithTag("Player").GetComponent<Experience>();
     }
 

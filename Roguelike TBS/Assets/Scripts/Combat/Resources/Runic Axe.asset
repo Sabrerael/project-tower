@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bdc6420c98b944ebc14da9547a3db8, type: 3}
+  m_Name: Runic Axe
+  m_EditorClassIdentifier: 
+  itemID: 4636d529-5537-4092-8b01-9c0f798af8f3
+  displayName: Runic Axe
+  description: The runes embedded within this greataxe will occasionally shield the
+    wielder, halving incoming damage.
+  shopPrice: 1
+  icon: {fileID: 21300000, guid: 384839b17e556cc43885f11000b508d2, type: 3}
+  pickup: {fileID: 0}
+  stackable: 0
+  equippedPrefab: {fileID: 2247627334927990540, guid: 6abac8a82ca613140b728665be0952a2,
+    type: 3}
+  weaponDamage: 10
+  abilityIcon: {fileID: 0}
+  weaponType: 0
+  numerator: 1
+  denominator: 20

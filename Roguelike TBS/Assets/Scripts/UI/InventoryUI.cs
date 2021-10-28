@@ -23,8 +23,6 @@ public class InventoryUI : MonoBehaviour {
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
         
         playerInventory = Inventory.GetPlayerInventory();
         playerInventory.actionItemInventoryUpdated += Redraw;

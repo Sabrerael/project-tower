@@ -19,7 +19,9 @@ public class DashingWeapon : Weapon {
         // Need to either enable the weapon's collider or add one to act as the collider for the attack
         // Need to clamp the end positions
         
-        if (!isSwinging && Input.GetKeyDown(KeyCode.R) && !onCooldown) {
+        if (weaponState != WeaponState.Swinging1 && 
+            weaponState != WeaponState.Swinging2 && 
+            weaponState != WeaponState.Swinging3 && Input.GetKeyDown(KeyCode.R) && !onCooldown) {
             inAction = true;
             wielder.GetComponent<BoxCollider2D>().enabled = false;
 

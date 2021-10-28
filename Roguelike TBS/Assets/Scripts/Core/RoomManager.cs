@@ -68,6 +68,8 @@ public class RoomManager : MonoBehaviour {
                 gameObject.name.Equals("Floor Three End Room(Clone)")) {
                 OpenExitDoor();
             }
+            var player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<Character>().TriggerOnRoomClear();
         }
     }
 

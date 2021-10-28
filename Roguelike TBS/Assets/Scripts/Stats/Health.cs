@@ -9,6 +9,7 @@ namespace RPG.Stats {
         private bool isDead = false;
         private LevelLoader levelLoader = null;
 
+        public event Func<int, int> onDamageTaken;
         public event Action onDeath;
 
         private void Start() {
@@ -23,6 +24,10 @@ namespace RPG.Stats {
 
             if (Mathf.Sign(damage) == -1 || damage == 0) {
                 damage = 1;
+            }
+
+            if (onDamageTaken != null) {
+                damage = onDamageTaken(damage);
             }
             
             healthPoints = Mathf.Max(healthPoints - damage, 0);

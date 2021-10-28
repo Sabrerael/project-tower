@@ -66,7 +66,9 @@ public class ThrowableWeapon : Weapon {
             endingAngle = 160f;
         }
 
-        if (!isSwinging) {
+        if (weaponState != WeaponState.Swinging1 && 
+            weaponState != WeaponState.Swinging2 && 
+            weaponState != WeaponState.Swinging3) {
             gameObject.transform.rotation = Quaternion.Euler(0,0, startingAngle);
         }
     }

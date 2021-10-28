@@ -10,7 +10,9 @@ public class SpinningWeapon : Weapon {
 
     public override void UseActiveAbility() {
         // Make the player and weapon spin around, damaging enemies in a circle around the player
-        if (!isSwinging && Input.GetKeyDown(KeyCode.R) && !onCooldown) {
+        if (weaponState != WeaponState.Swinging1 && 
+            weaponState != WeaponState.Swinging2 && 
+            weaponState != WeaponState.Swinging3 && Input.GetKeyDown(KeyCode.R) && !onCooldown) {
 
         }
     }

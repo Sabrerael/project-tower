@@ -11,7 +11,10 @@ public class ProjectileSpawningWeapon : Weapon {
 
     public override void UseActiveAbility() {
         // Swings the weapon, spawning a projectile
-        if (!isSwinging && Input.GetKeyDown(KeyCode.R) && !onCooldown) {
+        if (weaponState != WeaponState.Swinging1 && 
+            weaponState != WeaponState.Swinging2 && 
+            weaponState != WeaponState.Swinging3 &&
+            Input.GetKeyDown(KeyCode.R) && !onCooldown) {
             ThrownItem projectileInstance = Instantiate(projectile, wielder.transform.position, Quaternion.identity);
             projectileInstance.SetWielder(wielder);
 

@@ -12,28 +12,32 @@ public class LevelLoader : MonoBehaviour {
         SceneManager.LoadScene(1);
     }
 
-    public void LoadLevelOne() {
+    public void LoadPlayerSelect() {
         SceneManager.LoadScene(2);
     }
 
-    public void LoadLevelTwo() {
+    public void LoadLevelOne() {
         SceneManager.LoadScene(3);
     }
 
-    public void LoadLevelThree() {
+    public void LoadLevelTwo() {
         SceneManager.LoadScene(4);
+    }
+
+    public void LoadLevelThree() {
+        SceneManager.LoadScene(5);
     }
 
     public void LoadWinScreen() {
         DestroyPlayerObjects();
 
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(6);
     }
 
     public void LoadGameOver() {
         DestroyPlayerObjects();
         
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(7);
     }
 
     public void QuitGame() {

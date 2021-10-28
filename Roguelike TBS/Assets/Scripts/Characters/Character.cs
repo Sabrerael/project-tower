@@ -33,6 +33,8 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     protected GameObject characterAbilityIcon;
     protected AbilityState abilityState = AbilityState.Ready;
 
+    public event Action<GameObject> onRoomClear;
+
     private void Awake() {
         if (instance == null)
             instance = this;
@@ -115,4 +117,8 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
 
     public void SetCurrentRoom(RoomManager roomManager) { currentRoom = roomManager; }
     public RoomManager GetCurrentRoom() { return currentRoom; }
+
+    public void TriggerOnRoomClear() {
+        if (onRoomClear != null) { onRoomClear(gameObject); }
+    }
 }

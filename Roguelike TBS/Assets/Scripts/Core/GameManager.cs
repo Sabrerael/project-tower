@@ -1,9 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
     private List<InventoryItem> knockoutList = new List<InventoryItem>();
+    private CharacterClass playerCharacter = CharacterClass.Paladin;
 
     public static GameManager instance = null;
 
@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
     }
+
+    public CharacterClass GetPlayerCharacter() { return playerCharacter; }
+    public void SetPlayerCharacter(CharacterClass character) { playerCharacter = character; }
+    public void SetPlayerCharacter(int value) { playerCharacter = (CharacterClass)value; }
 
     public void AddItemToKnockoutList(InventoryItem item) {
         knockoutList.Add(item);

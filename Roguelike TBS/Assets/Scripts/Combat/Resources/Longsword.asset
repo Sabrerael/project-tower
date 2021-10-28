@@ -15,9 +15,12 @@ MonoBehaviour:
   itemID: 7204e9a3-2391-49cd-af3b-4644782935f0
   displayName: Longsword
   description: 'Standard issue longsword. Sturdy and reliable. '
-  icon: {fileID: 21300000, guid: 06fe665d4bef21947a48bd6036a02152, type: 3}
+  shopPrice: 1
+  icon: {fileID: 21300000, guid: fe682d377539e1744a0fccee99b5aba4, type: 3}
   pickup: {fileID: 3818617737214729517, guid: 18d2d0eaa3807a645a81a2827aac37ca, type: 3}
   stackable: 0
   equippedPrefab: {fileID: 2625812075166073533, guid: 16cb66e7280c9be4fb492328fd102e92,
     type: 3}
   weaponDamage: 6
+  abilityIcon: {fileID: 0}
+  weaponType: 0

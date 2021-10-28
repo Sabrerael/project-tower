@@ -4,7 +4,7 @@ using UnityEngine;
 public class PurseDisplay : MonoBehaviour {
     private Purse purse;
 
-    private void Awake() {
+    private void Start() {
         purse = GameObject.FindGameObjectWithTag("Player").GetComponent<Purse>();
     }
 

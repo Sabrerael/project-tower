@@ -14,6 +14,7 @@ public class FloorManager : MonoBehaviour {
     [SerializeField] float yDeltaBetweenRooms = 14;
 
     [SerializeField] DropLibrary dropLibrary = null;
+    [SerializeField] Character[] characters = null;
     [SerializeField] PauseMenu pauseMenu = null;
 
     // CACHE
@@ -24,10 +25,14 @@ public class FloorManager : MonoBehaviour {
     private int levelOfEnemies = 1;
 
     private void Awake() {
-        var player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = new Vector3(6, -6, 0);
-
         gameManager = GameManager.instance;
+        
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (player) {
+            player.transform.position = new Vector3(6, -6, 0);
+        } else {
+            Instantiate(characters[(int)gameManager.GetPlayerCharacter()], new Vector3(6, -6, 0), Quaternion.identity);
+        }
 
         GenerateLevel();
     }
