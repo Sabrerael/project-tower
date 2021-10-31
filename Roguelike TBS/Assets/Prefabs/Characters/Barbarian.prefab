@@ -81,6 +81,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   levelUpMenu: {fileID: 0}
+  activeAbilityIcon: {fileID: 21300000, guid: f522ac44fe7316a439285796fb877e06, type: 3}
   abilityModifyPercent: 20
   abilityTime: 30
 --- !u!50 &1787920190854717915

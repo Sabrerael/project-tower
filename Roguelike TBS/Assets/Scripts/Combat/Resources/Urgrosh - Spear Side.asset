@@ -16,10 +16,10 @@ MonoBehaviour:
   displayName: Urgrosh
   description: This dwarven weapon allows the wielder to use either an axe or a spear.
   shopPrice: 1
-  icon: {fileID: 21300000, guid: c7a5a3da6ba05194a851981cb186cded, type: 3}
+  icon: {fileID: 21300000, guid: 58b1f1c97a1a0ae4bbd0e93aae548f80, type: 3}
   pickup: {fileID: 0}
   stackable: 0
-  equippedPrefab: {fileID: 1215735438392425198, guid: f0ef79c04e4c46741b3f6a01deb96333,
+  equippedPrefab: {fileID: 8618288404555701386, guid: 2f726793f9381ac41b92f12089d64e7f,
     type: 3}
   weaponDamage: 9
   abilityIcon: {fileID: 0}

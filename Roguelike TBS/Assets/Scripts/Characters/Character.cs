@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using RPG.Stats;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Character : MonoBehaviour, IModifierProvider {
     public static Character instance = null;
@@ -14,6 +15,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     [Header("Level Up UI")]
     [SerializeField] protected TextMeshProUGUI[] bonusesMenuTextFields = null;
     [SerializeField] protected LevelUpBonusMenu levelUpMenu = null;
+    [SerializeField] protected Sprite activeAbilityIcon = null;
 
     protected List<int> choiceIndexes = new List<int>();
     protected BaseStats baseStats;
@@ -52,6 +54,14 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
         foreach(Stat stat in Enum.GetValues(typeof(Stat))) {
             passiveModifyPercentages[stat] = 0;
             passiveModifyAdditions[stat] = 0;
+        }
+    }
+
+    private void Start() {
+        if (activeAbilityIcon) {
+                var weaponAbilityIcon = GameObject.Find("Character Ability Icon");
+                weaponAbilityIcon.GetComponent<Image>().sprite = activeAbilityIcon;
+                weaponAbilityIcon.GetComponent<Image>().color = new Color(1,1,1,0.75f);
         }
     }
 

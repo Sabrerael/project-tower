@@ -282,11 +282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afb8c3f6d0217b498c204ea7c0015e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelUpBonuses: {fileID: 0}
+  levelUpBonuses: {fileID: 11400000, guid: 273e4711a4078544abff238e14a5c6d7, type: 2}
   abilityParticles: {fileID: 1012001659695591961, guid: 78e7ddfbcaa481841a52539742eda257,
     type: 3}
   bonusesMenuTextFields: []
   levelUpMenu: {fileID: 0}
+  activeAbilityIcon: {fileID: 21300000, guid: c455d60a1183e3b48925ccbee2621692, type: 3}
   abilityModifyPercent: 30
   abilityTimer: 30
 --- !u!114 &2136328106936073578
