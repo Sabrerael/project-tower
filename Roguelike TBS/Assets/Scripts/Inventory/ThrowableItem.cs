@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 [CreateAssetMenu(menuName = ("Inventory/Throwable Item"))]
 public class ThrowableItem: ActionItem {
@@ -16,7 +17,7 @@ public class ThrowableItem: ActionItem {
         ThrownItem spawnedItem = Instantiate(itemPrefab, user.transform.position, Quaternion.identity);
         spawnedItem.SetWielder(user.GetComponent<Fighter>());
 
-        var mouse = Input.mousePosition;
+        var mouse = Mouse.current.position.ReadValue();
         var screenPoint = Camera.main.WorldToScreenPoint(spawnedItem.transform.localPosition);
         var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
         var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;

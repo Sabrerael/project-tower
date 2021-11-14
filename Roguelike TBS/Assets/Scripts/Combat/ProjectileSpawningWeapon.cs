@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class ProjectileSpawningWeapon : Weapon {
@@ -14,11 +15,11 @@ public class ProjectileSpawningWeapon : Weapon {
         if (weaponState != WeaponState.Swinging1 && 
             weaponState != WeaponState.Swinging2 && 
             weaponState != WeaponState.Swinging3 &&
-            Input.GetKeyDown(KeyCode.R) && !onCooldown) {
+            !onCooldown) {
             ThrownItem projectileInstance = Instantiate(projectile, wielder.transform.position, Quaternion.identity);
             projectileInstance.SetWielder(wielder);
 
-            var mouse = Input.mousePosition;
+            var mouse = Mouse.current.position.ReadValue();
             var screenPoint = Camera.main.WorldToScreenPoint(projectileInstance.transform.localPosition);
             var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
             var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;

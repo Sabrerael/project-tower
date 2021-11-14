@@ -29,36 +29,10 @@ public class Inventory : MonoBehaviour, IModifierProvider {
         }
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            if (GetItemInSlot(0) != null && CanUseHealthPotion(0) && !activeItemsInCooldown[0]) { //TODO this might be a issue
-                actionItemInventory[0].item.Use(gameObject);
-                RemoveFromSlot(0, 1);
-            }
-        } else if (Input.GetKeyDown(KeyCode.Alpha2) && !activeItemsInCooldown[1]) {
-            if (GetItemInSlot(1) != null) {
-                actionItemInventory[1].item.Use(gameObject);
-                RemoveFromSlot(1, 1);
-            }
-        } else if (Input.GetKeyDown(KeyCode.Alpha3) && !activeItemsInCooldown[2]) {
-            if (GetItemInSlot(2) != null) {
-                actionItemInventory[2].item.Use(gameObject);
-                RemoveFromSlot(2, 1);
-            }
-        } else if (Input.GetKeyDown(KeyCode.Alpha4) && !activeItemsInCooldown[3]) {
-            if (GetItemInSlot(3) != null) {
-                actionItemInventory[3].item.Use(gameObject);
-                RemoveFromSlot(3, 1);
-            }
-        } else if (Input.GetKeyDown(KeyCode.Alpha5) && !activeItemsInCooldown[4]) {
-            if (GetItemInSlot(4) != null) {
-                actionItemInventory[4].item.Use(gameObject);
-                RemoveFromSlot(4, 1);
-            }
-        } else if (Input.GetKeyDown(KeyCode.E)) {
-            ChangeWeapon();
-        } else if (Input.GetKeyDown(KeyCode.Backspace)) {
-            DeleteEquipWeapon();
+    public void UseItemInSlot(int index) {
+        if (GetItemInSlot(index) != null && CanUseHealthPotion(index) && !activeItemsInCooldown[index]) {
+            actionItemInventory[index].item.Use(gameObject);
+            RemoveFromSlot(index, 1);
         }
     }
 
@@ -458,7 +432,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
         activeItemsInCooldown[index] = false;
     }
 
-    private void ChangeWeapon() {
+    public void ChangeWeapon() {
         int attemptedWeaponIndex = activeWeaponIndex;
         for (int i = 0; i < weaponInventory.Length - 1; i++) {
             attemptedWeaponIndex += 1;
@@ -474,7 +448,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
         }
     }
 
-    private void DeleteEquipWeapon() {
+    public void DeleteEquipWeapon() {
         //Check for another weapon (Player should not have zero weapons)
         int attemptedWeaponIndex = activeWeaponIndex;
         for (int i = 0; i < weaponInventory.Length - 1; i++) {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
 
@@ -20,8 +21,8 @@ public class ShopTable : MonoBehaviour {
         }
     }
 
-    private void Update() {
-        if (canBuy && Input.GetKeyDown(KeyCode.Mouse0)) {
+    private void OnAttack(InputValue value) {
+        if (value.isPressed && canBuy) {
             PurchaseItem(GameObject.FindGameObjectWithTag("Player"));
         }
     }

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 2136328106936073578}
   - component: {fileID: 8561713649446563629}
   - component: {fileID: 5243569103272183601}
+  - component: {fileID: 8653081930771871401}
   m_Layer: 9
   m_Name: Paladin
   m_TagString: Player
@@ -59,8 +60,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padding: 0.5
   speedUpRate: 0.4
-  dodgeSpeed: 0
-  dodgeDistance: 0
+  dodgeSpeed: 15
+  dodgeDistance: 1.5
 --- !u!50 &4383780246614317367
 Rigidbody2D:
   serializedVersion: 4
@@ -327,6 +328,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5cceb6020623a448a9565c4a02cb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8653081930771871401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383780246614317365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 91491d88468b9e249af9c297f2f744ac,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &7722696142883002182
 GameObject:
   m_ObjectHideFlags: 0

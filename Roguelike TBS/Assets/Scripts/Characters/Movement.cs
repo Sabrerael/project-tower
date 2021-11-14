@@ -1,5 +1,6 @@
 ﻿using RPG.Stats;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour {
     [SerializeField] float padding = 0.5f;
@@ -7,13 +8,16 @@ public class Movement : MonoBehaviour {
     [SerializeField] float dodgeSpeed;
     [SerializeField] float dodgeDistance;
 
+    private Rigidbody2D playerRigidbody;
     private float xMin, xMax, yMin, yMax;
+    private Vector2 movementValues = new Vector2();
     private float deltaX = 0;
     private float deltaY = 0;
     private bool isDodging = false;
     private Vector3 dodgeStartingPosition = new Vector3();
 
     private void Start() {
+        playerRigidbody = GetComponent<Rigidbody2D>();
         Camera gameCamera = Camera.main;
         xMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).x + padding;
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1,0,0)).x - padding;
@@ -27,24 +31,20 @@ public class Movement : MonoBehaviour {
         } else {
             NormalMovement();
         }
-
-        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0) {
-            GetComponent<Animator>().SetBool("IsWalking", false);
-        }
     }
 
     public void StartDodgeRolling() {
         isDodging = true;
         dodgeStartingPosition = transform.localPosition;
-        var mouse = Input.mousePosition;
+        var mouse = Mouse.current.position.ReadValue();
         var screenPoint = Camera.main.WorldToScreenPoint(dodgeStartingPosition);
         var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
         var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
 
         var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
         var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
-        deltaX = xRatio * dodgeSpeed * Time.deltaTime;
-        deltaY = yRatio * dodgeSpeed * Time.deltaTime;
+        deltaX = xRatio * dodgeSpeed * Time.fixedDeltaTime;
+        deltaY = yRatio * dodgeSpeed * Time.fixedDeltaTime;
     }
 
     public void UpdateMinMaxValues() {
@@ -53,6 +53,10 @@ public class Movement : MonoBehaviour {
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1,0,0)).x - padding;
         yMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).y + padding;
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0,1,0)).y - padding;
+    }
+
+    public void SetMovementValues(Vector2 values) {
+        movementValues = values;
     }
 
     private void DodgeRoll() {
@@ -67,12 +71,12 @@ public class Movement : MonoBehaviour {
         }
     }
 
-    private void NormalMovement() {
+    public void NormalMovement() {
         GetComponent<Animator>().SetBool("IsWalking", true);
         var movementSpeed = GetComponent<BaseStats>().GetStat(Stat.MovementSpeed);
 
-        float deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movementSpeed;
-        float deltaY = Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed;
+        float deltaX = movementValues.x * Time.fixedDeltaTime * movementSpeed;
+        float deltaY = movementValues.y * Time.fixedDeltaTime * movementSpeed;
 
         float newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
         float newyPos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);

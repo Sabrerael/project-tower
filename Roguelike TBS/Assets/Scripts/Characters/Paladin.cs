@@ -26,16 +26,9 @@ public class Paladin : Character {
         activeAbilityModifyPercentages[Stat.Defense] = abilityModifyPercent;
     }
 
-    private void Update() {
-        if (abilityState == AbilityState.Ready) {
-            // TODO Pull out Input code into a PlayerController class
-            if (Input.GetKeyDown(KeyCode.Q)) {
-                ActiveAbility();
-            }
-        }
-    }
-
     public override void ActiveAbility() {
+        if (abilityState != AbilityState.Ready) { return; }
+
         abilityState = AbilityState.Active;
         if (abilityParticles != null) { 
             Instantiate(abilityParticles, transform);

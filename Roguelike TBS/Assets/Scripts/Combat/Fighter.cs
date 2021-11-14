@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using RPG.Stats;
 
 public class Fighter : MonoBehaviour, IModifierProvider {
@@ -48,7 +49,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     }
 
     private void UpdateWeaponPlacement() {
-        var mouse = Input.mousePosition;
+        var mouse = Mouse.current.position.ReadValue();
         var screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.localPosition);
         var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
         var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;

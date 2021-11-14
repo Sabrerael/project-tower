@@ -12,7 +12,8 @@ public class AOESpawningWeapon : Weapon {
         // Swings the weapon, spawns an AOE that affects the enemies within it
         if (weaponState != WeaponState.Swinging1 && 
             weaponState != WeaponState.Swinging2 && 
-            weaponState != WeaponState.Swinging3 && Input.GetKeyDown(KeyCode.R) && !onCooldown) {
+            weaponState != WeaponState.Swinging3 &&
+            !onCooldown) {
             var aoe = Instantiate(aoeToSpawn, transform.position, Quaternion.identity);
             aoe.GetComponent<DrainingAOE>().SetInstigator(wielder.gameObject);
             StartCoroutine(CooldownTimer());

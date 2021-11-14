@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using RPG.Stats;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,16 +22,9 @@ public class Barbarian : Character {
         activeAbilityModifyPercentages[Stat.Attack] = abilityModifyPercent;
     }
 
-    private void Update() {
-        if (abilityState == AbilityState.Ready) {
-            // TODO Pull out Input code into a PlayerController class
-            if (Input.GetKeyDown(KeyCode.Q)) {
-                ActiveAbility();
-            }
-        }
-    }
-
     public override void ActiveAbility() {
+        if (abilityState != AbilityState.Ready) { return; }
+
         abilityState = AbilityState.Active;
         if (abilityParticles != null) { 
             Instantiate(abilityParticles, transform);

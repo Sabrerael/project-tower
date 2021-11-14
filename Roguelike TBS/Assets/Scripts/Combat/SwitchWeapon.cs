@@ -13,7 +13,8 @@ public class SwitchWeapon : Weapon {
         // Swings the weapon, spawns an AOE that affects the enemies within it
         if (weaponState != WeaponState.Swinging1 && 
             weaponState != WeaponState.Swinging2 && 
-            weaponState != WeaponState.Swinging3 && Input.GetKeyDown(KeyCode.R) && !onCooldown) {
+            weaponState != WeaponState.Swinging3
+            && !onCooldown) {
             if (activeWeapon == weaponConfig) {
                 activeWeapon = otherSide;
 

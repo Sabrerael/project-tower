@@ -25,14 +25,8 @@ public class Weapon : MonoBehaviour {
     protected bool inputReceived = false;
     [SerializeField] protected WeaponState weaponState = WeaponState.Ready;
 
-    private void Update() {
-        CheckIfSwinging();
-
-        SwingWeapon();
-    }
-
     private void FixedUpdate() {
-        UseActiveAbility();
+        SwingWeapon();
     }
 
     public float GetBaseAttackSpeed() { return baseAttackSpeed; }
@@ -74,42 +68,45 @@ public class Weapon : MonoBehaviour {
         return;
     }
 
-    private void CheckIfSwinging() {
-        if (Input.GetMouseButtonDown(0)) {
-            if (weaponState == WeaponState.Ready) {
-                ChangeWeaponState();
-            } else {
-                inputReceived = true;
-            }
-            
-            GetComponent<Collider2D>().enabled = true;
-            AudioSource.PlayClipAtPoint(swingSound, transform.position);
-            attackSpeedModifier = wielder.GetAttackSpeedModifier();
+    public void CheckIfSwinging() {
+        if (weaponState == WeaponState.Ready) {
+            ChangeWeaponState();
+        } else {
+            inputReceived = true;
         }
+            
+        GetComponent<Collider2D>().enabled = true;
+        AudioSource.PlayClipAtPoint(swingSound, transform.position);
+        attackSpeedModifier = wielder.GetAttackSpeedModifier();
     }
 
     private void ChangeWeaponState() {
         if (weaponState == WeaponState.Swinging3) {
             weaponState = WeaponState.Ready;
+            wielder.GetComponent<Animator>().SetInteger("AttackState", 0);
             return;
         }
 
         if (weaponState == WeaponState.Ready) {
             weaponState = WeaponState.Swinging1;
+            wielder.GetComponent<Animator>().SetInteger("AttackState", 1);
             return;
         }
 
         if (weaponState != WeaponState.Ready && !inputReceived) {
             weaponState = WeaponState.Ready;
+            wielder.GetComponent<Animator>().SetInteger("AttackState", 0);
             return;
         }
 
         if (inputReceived) {
             if (weaponState == WeaponState.Swinging1) {
                 weaponState = WeaponState.Swinging2;
+                //
                 return;
             } else if (weaponState == WeaponState.Swinging2) {
                 weaponState = WeaponState.Swinging3;
+                //
                 return;
             }
         }

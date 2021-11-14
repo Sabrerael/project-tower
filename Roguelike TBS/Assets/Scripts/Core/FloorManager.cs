@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,10 +36,10 @@ public class FloorManager : MonoBehaviour {
         GenerateLevel();
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.GetMenuBodyActive()) {
+    public void TogglePause() {
+        if (!pauseMenu.GetMenuBodyActive()) {
             PauseGame();
-        } else if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.GetMenuBodyActive()) {
+        } else if (pauseMenu.GetMenuBodyActive()) {
             UnPauseGame();
         }
     }

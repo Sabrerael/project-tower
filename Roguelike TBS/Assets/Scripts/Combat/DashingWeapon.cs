@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DashingWeapon : Weapon {
@@ -21,12 +22,13 @@ public class DashingWeapon : Weapon {
         
         if (weaponState != WeaponState.Swinging1 && 
             weaponState != WeaponState.Swinging2 && 
-            weaponState != WeaponState.Swinging3 && Input.GetKeyDown(KeyCode.R) && !onCooldown) {
+            weaponState != WeaponState.Swinging3 &&
+            !onCooldown) {
             inAction = true;
             wielder.GetComponent<BoxCollider2D>().enabled = false;
 
             //Set up dash collider 
-            var mouse = Input.mousePosition;
+            var mouse = Mouse.current.position.ReadValue();
             var screenPoint = Camera.main.WorldToScreenPoint(wielder.transform.localPosition);
             var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
             var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
