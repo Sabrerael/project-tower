@@ -45,34 +45,6 @@ public class ThrowableWeapon : Weapon {
         }*/
     }
 
-    public override void UpdateWeaponAngles(Direction direction) {
-        if (thrown || returning) { return; }
-
-        if (direction == Direction.Up) {
-            // Sword is over head
-            startingAngle = -45f;
-            endingAngle = 95f;
-        } else if (direction == Direction.Right) {
-            // Sword is to the right
-            startingAngle = -20f;
-            endingAngle = -160f;
-        } else if (direction == Direction.Down) {
-            // Sword is under
-            startingAngle = -100f;
-            endingAngle = -240f;
-        } else if (direction == Direction.Left){ 
-            // Sword is to the left
-            startingAngle = 20f;
-            endingAngle = 160f;
-        }
-
-        if (weaponState != WeaponState.Swinging1 && 
-            weaponState != WeaponState.Swinging2 && 
-            weaponState != WeaponState.Swinging3) {
-            gameObject.transform.rotation = Quaternion.Euler(0,0, startingAngle);
-        }
-    }
-
     private IEnumerator CooldownTimer() {
         var weaponAbilityIcon = GameObject.Find("Weapon Ability Icon");
         weaponAbilityIcon.GetComponent<Image>().color = new Color(0.5f,0.5f,0.5f,0.75f);

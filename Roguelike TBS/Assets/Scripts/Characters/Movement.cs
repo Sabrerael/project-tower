@@ -28,7 +28,7 @@ public class Movement : MonoBehaviour {
     private void FixedUpdate() {
         if (isDodging) {
             DodgeRoll();
-        } else {
+        } else if (movementValues.magnitude > Mathf.Epsilon) {
             NormalMovement();
         }
     }
@@ -45,6 +45,8 @@ public class Movement : MonoBehaviour {
         var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
         deltaX = xRatio * dodgeSpeed * Time.fixedDeltaTime;
         deltaY = yRatio * dodgeSpeed * Time.fixedDeltaTime;
+
+        GetComponent<Animator>().SetTrigger("DodgeRoll");
     }
 
     public void UpdateMinMaxValues() {

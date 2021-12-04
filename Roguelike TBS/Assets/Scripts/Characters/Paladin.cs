@@ -29,6 +29,7 @@ public class Paladin : Character {
     public override void ActiveAbility() {
         if (abilityState != AbilityState.Ready) { return; }
 
+        GetComponent<Animator>().SetTrigger("DivineProtection");
         abilityState = AbilityState.Active;
         if (abilityParticles != null) { 
             Instantiate(abilityParticles, transform);

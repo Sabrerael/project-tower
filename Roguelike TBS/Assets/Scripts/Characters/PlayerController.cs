@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour {
     private void OnAttack(InputValue value) {
         if (value.isPressed) {
-            GetComponent<Weapon>().CheckIfSwinging();
+            GetComponent<Fighter>().CheckIfSwinging();
         }
     }
 

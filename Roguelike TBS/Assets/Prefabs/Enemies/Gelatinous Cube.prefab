@@ -54,6 +54,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -190,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
   movementSpeed: 8
+  moneyDropped: 1
   slimeSpawners:
   - {fileID: 5499922236453728186}
   - {fileID: 5967201805771514692}
@@ -206,36 +209,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6287286811541217705}
     m_Modifications:
-    - target: {fileID: 4750231927203397398, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Slime Spawner 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: levelOfEnemy
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: enemyToSpawn
       value: 
       objectReference: {fileID: 1409681306626070522, guid: 6cd01a74f3fcb694f9aac118520d1de4,
         type: 3}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: levelOfEnemy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750231927203397398, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Slime Spawner 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.75
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -251,16 +264,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -304,22 +307,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6287286811541217705}
     m_Modifications:
-    - target: {fileID: 4750231927203397398, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Slime Spawner 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: levelOfEnemy
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: enemyToSpawn
       value: 
       objectReference: {fileID: 1409681306626070522, guid: 6cd01a74f3fcb694f9aac118520d1de4,
         type: 3}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: levelOfEnemy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750231927203397398, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Slime Spawner 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -328,12 +336,17 @@ PrefabInstance:
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.75
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -349,16 +362,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -402,36 +405,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6287286811541217705}
     m_Modifications:
-    - target: {fileID: 4750231927203397398, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Slime Spawner 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: levelOfEnemy
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: enemyToSpawn
       value: 
       objectReference: {fileID: 1409681306626070522, guid: 6cd01a74f3fcb694f9aac118520d1de4,
         type: 3}
+    - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: levelOfEnemy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750231927203397398, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Slime Spawner 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.75
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -446,16 +459,6 @@ PrefabInstance:
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,

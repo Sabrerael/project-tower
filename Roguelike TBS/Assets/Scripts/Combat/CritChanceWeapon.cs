@@ -10,9 +10,9 @@ public class CritChanceWeapon : Weapon {
 
     public override void UseActiveAbility() {
         // Swings the weapon, spawns an AOE that affects the enemies within it
-        if (weaponState != WeaponState.Swinging1 && 
+        if (/*weaponState != WeaponState.Swinging1 && 
             weaponState != WeaponState.Swinging2 && 
-            weaponState != WeaponState.Swinging3 &&
+            weaponState != WeaponState.Swinging3 &&*/
             !onCooldown) {
             instantCritActive = true;
         }

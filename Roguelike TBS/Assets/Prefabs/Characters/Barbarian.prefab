@@ -199,6 +199,9 @@ MonoBehaviour:
   currentWeapon: {fileID: 11400000, guid: a6b5cc039499c9a47b6b9563435a233b, type: 2}
   iFramesTimeLimit: 1
   dodgeRollTime: 0.2
+  comboResetTime: 1.25
+  swingSound: {fileID: 8300000, guid: 3da7a30bbf6bcf34fac6d4d4c43fc703, type: 3}
+  weaponState: 0
 --- !u!114 &7649190338548185899
 MonoBehaviour:
   m_ObjectHideFlags: 0

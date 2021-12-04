@@ -16,7 +16,6 @@ public class WeaponConfig : InventoryItem {
 
         if (equippedPrefab != null) {
             weapon = Instantiate(equippedPrefab, hand);
-            weapon.transform.rotation = Quaternion.Euler(0, 0, weapon.gameObject.GetComponent<Weapon>().GetStartingAngle());
             weapon.gameObject.GetComponent<Collider2D>().enabled = false;
             weapon.gameObject.name = weaponName;
             weapon.SetWielder(fighter);

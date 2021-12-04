@@ -1,30 +1,40 @@
-﻿using System;
+﻿using RPG.Stats;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using RPG.Stats;
+
+public enum WeaponState {
+    Ready,
+    Swinging1,
+    Swinging2,
+    Swinging3
+}
 
 public class Fighter : MonoBehaviour, IModifierProvider {
     [SerializeField] Transform handTransform = null;
     [SerializeField] WeaponConfig currentWeapon = null;
     [SerializeField] float iFramesTimeLimit = 0.75f;
     [SerializeField] float dodgeRollTime = 1f;
+    [SerializeField] float comboResetTime = 1.25f;
+    [SerializeField] AudioClip swingSound = null;
 
+    private Camera mainCam;
     private int multiplicativeModifier = 0;
     private int movementModifier = 0;
     private int attackSpeedModifier = 0;
     private bool iFramesActive = false;
+    private bool waitingForNextAttack = false;
+    protected bool inputReceived = false;
+    private WeaponState weaponState = WeaponState.Ready;
 
     public event Func<bool> onInitialHit;
     public event Action<Enemy> onActualHit;
 
     private void Start() {
+        mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         EquipWeapon(currentWeapon);
-    }
-
-    private void Update() {
-        UpdateWeaponPlacement();
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
@@ -48,35 +58,6 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         }
     }
 
-    private void UpdateWeaponPlacement() {
-        var mouse = Mouse.current.position.ReadValue();
-        var screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.localPosition);
-        var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
-        var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-
-        if (angle > 45 && angle <= 135) {
-            // Sword is over head
-            handTransform.position = gameObject.transform.position + new Vector3(0f, 0.15f, 0);
-            handTransform.GetComponentInChildren<Weapon>().UpdateWeaponAngles(Direction.Up);
-            handTransform.GetChild(0).transform.localScale = new Vector2 (-1, 1);
-        } else if (angle > -45 && angle <= 45) {
-            // Sword is to the right
-            handTransform.position = gameObject.transform.position + new Vector3(0.45f, -0.2f, 0);
-            handTransform.GetComponentInChildren<Weapon>().UpdateWeaponAngles(Direction.Right);
-            handTransform.GetChild(0).transform.localScale = new Vector2 (1, 1);
-        } else if (angle < -45 && angle >= -135) {
-            // Sword is under
-            handTransform.position = gameObject.transform.position + new Vector3(0f, -0.35f, 0);
-            handTransform.GetComponentInChildren<Weapon>().UpdateWeaponAngles(Direction.Down);
-            handTransform.GetChild(0).transform.localScale = new Vector2 (1, 1);
-        } else if (angle > 135 || angle < -135){ 
-            // Sword is to the left
-            handTransform.position = gameObject.transform.position + new Vector3(-0.45f, -0.2f, 0);
-            handTransform.GetComponentInChildren<Weapon>().UpdateWeaponAngles(Direction.Left);
-            handTransform.GetChild(0).transform.localScale = new Vector2 (-1, 1);
-        }
-    }
-
     public void EquipWeapon(WeaponConfig weapon) {
         currentWeapon = weapon;
         weapon.Spawn(handTransform, null, this);
@@ -89,6 +70,86 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         // Set Animator value
         GetComponent<Movement>().StartDodgeRolling();
         StartIFrameTimer(dodgeRollTime);
+    }
+
+    public void StartComboResetTimer() {
+        StartCoroutine(WeaponSwingTimer(comboResetTime));
+    }
+
+    public void CheckIfSwinging() {
+        if (waitingForNextAttack) {
+            return;
+        } else if (weaponState == WeaponState.Ready) {
+            ChangeWeaponState();
+        } else {
+            inputReceived = true;
+            ChangeWeaponState();
+        }
+            
+        handTransform.gameObject.GetComponentInChildren<Collider2D>().enabled = true;
+        AudioSource.PlayClipAtPoint(swingSound, transform.position);
+    }
+
+    public void StartIFrameTimer(float time) {
+        StartCoroutine(IFrameTimer(time));
+    }
+
+    private void ChangeWeaponState() {
+        if (weaponState == WeaponState.Swinging3) {
+            weaponState = WeaponState.Ready;
+            return;
+        }
+
+        if (weaponState == WeaponState.Ready) {
+            weaponState = WeaponState.Swinging1;
+            CheckMouseLocation();
+            GetComponent<Animator>().SetTrigger("AttackState1");
+            return;
+        }
+
+        if (weaponState != WeaponState.Ready && !inputReceived) {
+            weaponState = WeaponState.Ready;
+            inputReceived = false;
+            return;
+        }
+
+        if (inputReceived) {
+            if (weaponState == WeaponState.Swinging1) {
+                weaponState = WeaponState.Swinging2;
+                CheckMouseLocation();
+                GetComponent<Animator>().SetTrigger("AttackState2");
+                inputReceived = false;
+                return;
+            } else if (weaponState == WeaponState.Swinging2) {
+                weaponState = WeaponState.Swinging3;
+                CheckMouseLocation();
+                GetComponent<Animator>().SetTrigger("AttackState3");
+                waitingForNextAttack = true;
+                return;
+            }
+        }
+    }
+
+    private void CheckMouseLocation() {
+        var offset = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;
+        var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
+
+        if (40 < angle && angle < 110) {
+           GetComponent<Animator>().SetTrigger("MouseUp"); 
+        } else if (-110 < angle && angle < -40) {
+            GetComponent<Animator>().SetTrigger("MouseDown");
+        }
+    }
+
+    private IEnumerator WeaponSwingTimer(float timer) {
+        yield return new WaitForSeconds(timer);
+        ChangeWeaponState();
+        inputReceived = false;
+        waitingForNextAttack = false;
+        GetComponent<Animator>().ResetTrigger("AttackState2");
+        GetComponent<Animator>().ResetTrigger("AttackState3");
+        GetComponent<Animator>().ResetTrigger("MouseUp");
+        GetComponent<Animator>().ResetTrigger("MouseDown");
     }
 
     public IEnumerable<int> GetAdditiveModifiers(Stat stat) {
@@ -109,10 +170,6 @@ public class Fighter : MonoBehaviour, IModifierProvider {
 
     public float GetAttackSpeedModifier() {
         return GetComponent<BaseStats>().GetStat(Stat.AttackSpeed);
-    }
-
-    public void StartIFrameTimer(float time) {
-        StartCoroutine(IFrameTimer(time));
     }
 
     private IEnumerator IFrameTimer(float time) {

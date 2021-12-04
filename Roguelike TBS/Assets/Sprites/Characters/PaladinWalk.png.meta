@@ -23,9 +23,6 @@ TextureImporter:
   - first:
       213: -2941012010282615621
     second: PaladinWalk_6
-  - first:
-      213: -2650894957323304956
-    second: PaladinWalk_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -269,27 +266,6 @@ TextureImporter:
       bones: []
       spriteID: bbc72f6a82d6f27d0800000000000000
       internalID: -2941012010282615621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaladinWalk_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 400ced3d411263bd0800000000000000
-      internalID: -2650894957323304956
       vertices: []
       indices: 
       edges: []
