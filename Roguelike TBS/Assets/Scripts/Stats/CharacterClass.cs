@@ -20,5 +20,13 @@
     IceSpirit,
     FireSpirit,
     Cloaker,
-    GelatinousCube
+    Imps, 
+    Dryad,
+    FlameSkull,
+    HellHound,
+    Harpy,
+    Bullywug,
+    GelatinousCube,
+    Beholder,
+    Balor
 }

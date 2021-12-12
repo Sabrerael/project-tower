@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 5965288372700633025}
   - component: {fileID: 2080211334033173846}
   - component: {fileID: 1190929169530881778}
+  - component: {fileID: -8278384841113085282}
   m_Layer: 9
   m_Name: Barbarian
   m_TagString: Player
@@ -60,8 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padding: 0.5
   speedUpRate: 0.4
-  dodgeSpeed: 0
-  dodgeDistance: 0
+  dodgeSpeed: 15
+  dodgeDistance: 1.5
 --- !u!114 &7448079461017747273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +202,6 @@ MonoBehaviour:
   dodgeRollTime: 0.2
   comboResetTime: 1.25
   swingSound: {fileID: 8300000, guid: 3da7a30bbf6bcf34fac6d4d4c43fc703, type: 3}
-  weaponState: 0
 --- !u!114 &7649190338548185899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,7 +288,7 @@ Animator:
   m_GameObject: {fileID: 1787920190854717913}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6cf22bc7a634fa348b414ab4733c9d82, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -365,6 +365,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-8278384841113085282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787920190854717913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14dee38ffd1ffe847bf5b60405bb5b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5707503429180780458
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5707503429180780458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.45, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0.21, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1787920190854717916}
