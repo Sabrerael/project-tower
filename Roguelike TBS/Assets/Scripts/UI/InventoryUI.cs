@@ -14,17 +14,16 @@ public class InventoryUI : MonoBehaviour {
     [SerializeField] InventorySlotUI InventoryItemPrefab = null;
 
     // CACHE
-    Inventory playerInventory;
+    [SerializeField] Inventory playerInventory;
 
     // LIFECYCLE METHODS
 
     private void Start() {
-        if (instance == null)
-            instance = this;
-        else if (instance != this)
-            Destroy(gameObject);
+        //if (instance == null)
+            //instance = this;
+        //else if (instance != this)
+            //Destroy(gameObject);
         
-        playerInventory = Inventory.GetPlayerInventory();
         playerInventory.actionItemInventoryUpdated += Redraw;
         Redraw();
     }

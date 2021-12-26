@@ -4,14 +4,8 @@ using UnityEngine.UI;
 public class Pickup : MonoBehaviour {
     [SerializeField] InventoryItem item = null;
     [SerializeField] int number = 1;
-    [SerializeField] Image itemSprite = null;
+    [SerializeField] SpriteRenderer spriteRenderer = null;
     [SerializeField] AudioClip sfx = null;
-
-    private void Start() {
-        if (item) {
-            SetPickupSprite();
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
@@ -43,8 +37,8 @@ public class Pickup : MonoBehaviour {
     }
 
     private void SetPickupSprite() {
-        if (itemSprite) {
-            itemSprite.sprite = item.GetIcon();
+        if (item) {
+            spriteRenderer.sprite = item.GetIcon();
         }
     }
 }

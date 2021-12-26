@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class FloorManager : MonoBehaviour {
     [SerializeField] GameObject[] roomArray = null;
@@ -174,7 +176,7 @@ public class FloorManager : MonoBehaviour {
             if (!drop.item.IsStackable()) {
                 gameManager.AddItemToKnockoutList(drop.item);
             }
-            room.GetComponent<RoomManager>().SetDropSpawner(drop.itemDropped);
+            room.GetComponent<RoomManager>().ConfigureDropSpawner(drop.item, drop.number);
         }
     }
 

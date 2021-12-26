@@ -78,10 +78,6 @@ MonoBehaviour:
   levelUpBonuses: {fileID: 11400000, guid: 15e85085cfc0b624eaeee6a4b5fdeea5, type: 2}
   abilityParticles: {fileID: 1012001659695591961, guid: 78e7ddfbcaa481841a52539742eda257,
     type: 3}
-  bonusesMenuTextFields:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   levelUpMenu: {fileID: 0}
   activeAbilityIcon: {fileID: 21300000, guid: f522ac44fe7316a439285796fb877e06, type: 3}
   abilityModifyPercent: 20
@@ -215,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponInventory:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: a6b5cc039499c9a47b6b9563435a233b, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

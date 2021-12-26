@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventorySlotUI : MonoBehaviour { //, IItemHolder, IDragContainer<InventoryItem> {
+public class InventorySlotUI : MonoBehaviour, IItemHolder {
     // CONFIG DATA
     [SerializeField] InventoryItemIcon icon = null;
     [SerializeField] int index = 0;

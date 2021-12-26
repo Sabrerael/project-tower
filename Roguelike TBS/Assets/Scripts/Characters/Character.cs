@@ -13,7 +13,6 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     [SerializeField] protected GameObject abilityParticles = null;
 
     [Header("Level Up UI")]
-    [SerializeField] protected TextMeshProUGUI[] bonusesMenuTextFields = null;
     [SerializeField] protected LevelUpBonusMenu levelUpMenu = null;
     [SerializeField] protected Sprite activeAbilityIcon = null;
 
@@ -36,6 +35,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     protected AbilityState abilityState = AbilityState.Ready;
 
     public event Action<GameObject> onRoomClear;
+    public virtual event Action onFeatAdded;
 
     private void Awake() {
         if (instance == null)
@@ -90,8 +90,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
             if (!choiceIndexes.Contains(index)) {
                 choiceIndexes.Add(index);
             }
-
-            bonusesMenuTextFields[choiceIndexes.Count-1].text = randomBonuses[index].GetAbilityDescription();
+            levelUpMenu.SetAbilityDescription(choiceIndexes.Count-1, randomBonuses[index].GetAbilityDescription());
         } while (choiceIndexes.Count < 3);
     }
 
@@ -126,7 +125,9 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     }
 
     public void SetCurrentRoom(RoomManager roomManager) { currentRoom = roomManager; }
+    
     public RoomManager GetCurrentRoom() { return currentRoom; }
+    public List<ClassAbility> GetSelectedAbilities() { return selectedAbilities; }
 
     public void TriggerOnRoomClear() {
         if (onRoomClear != null) { onRoomClear(gameObject); }

@@ -5,13 +5,12 @@ public class PassiveInventoryUI : MonoBehaviour {
     [SerializeField] PassiveInventorySlotUI InventoryItemPrefab = null;
 
     // CACHE
-    Inventory playerInventory;
+    [SerializeField] Inventory playerInventory;
 
     // LIFECYCLE METHODS
 
     private void Awake() {
-        playerInventory = Inventory.GetPlayerInventory();
-        playerInventory.weaponInventoryUpdated += Redraw;
+        playerInventory.passiveItemInventoryUpdated += Redraw;
     }
 
     private void Start() {

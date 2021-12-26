@@ -7,16 +7,13 @@ public class WeaponInventoryUI : MonoBehaviour {
     [SerializeField] WeaponInventorySlotUI InventoryItemPrefab = null;
 
     // CACHE
-    Inventory playerInventory;
+    [SerializeField] Inventory playerInventory;
 
     // LIFECYCLE METHODS
 
-    private void Awake() {
-        playerInventory = Inventory.GetPlayerInventory();
-        playerInventory.weaponInventoryUpdated += Redraw;
-    }
-
     private void Start() {
+        playerInventory.weaponInventoryUpdated += Redraw;
+
         Redraw();
     }
 

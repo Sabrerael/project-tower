@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PassiveInventorySlotUI : MonoBehaviour {
+public class PassiveInventorySlotUI : MonoBehaviour, IItemHolder {
     // CONFIG DATA
     [SerializeField] PassiveInventoryItemIcon icon = null;
     [SerializeField] int index = 0;

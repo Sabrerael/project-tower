@@ -45,6 +45,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -141,8 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb0f910312ab4d4989d9c35e57c3c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponConfig: {fileID: 0}
   item: {fileID: 0}
-  passiveItem: {fileID: 0}
   number: 1
+  spriteRenderer: {fileID: 3169422164052819538}
   sfx: {fileID: 8300000, guid: d2607202210b02743bc6b497249269da, type: 3}

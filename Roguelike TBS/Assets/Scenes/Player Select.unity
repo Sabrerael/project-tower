@@ -543,8 +543,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player Select
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c73f59409a8950d4db66437bb27bf43b, type: 2}
-  m_sharedMaterial: {fileID: -488186892269901568, guid: c73f59409a8950d4db66437bb27bf43b,
+  m_fontAsset: {fileID: 11400000, guid: 065c7c4618496a140bab23d5d3ac78e6, type: 2}
+  m_sharedMaterial: {fileID: -5052694200749206396, guid: 065c7c4618496a140bab23d5d3ac78e6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -718,7 +718,7 @@ MonoBehaviour:
         m_CallState: 1
       - m_Target: {fileID: 3863213225363710247}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: LoadLevelOne
+        m_MethodName: LoadLevelOneBarb
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -741,14 +741,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92549026, g: 0.89019614, b: 0.8078432, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 9a5ca1e22facc2847918e71e493e88cd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -994,8 +994,8 @@ MonoBehaviour:
     Active Ability: Increases Defense
     for a short time'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c73f59409a8950d4db66437bb27bf43b, type: 2}
-  m_sharedMaterial: {fileID: -488186892269901568, guid: c73f59409a8950d4db66437bb27bf43b,
+  m_fontAsset: {fileID: 11400000, guid: 065c7c4618496a140bab23d5d3ac78e6, type: 2}
+  m_sharedMaterial: {fileID: -5052694200749206396, guid: 065c7c4618496a140bab23d5d3ac78e6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1127,8 +1127,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6ffab32f608491b45b65392e644fa72f, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 890ea79085fa89c40a34280f66cd1445, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1204,8 +1204,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Paladin
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c73f59409a8950d4db66437bb27bf43b, type: 2}
-  m_sharedMaterial: {fileID: -488186892269901568, guid: c73f59409a8950d4db66437bb27bf43b,
+  m_fontAsset: {fileID: 11400000, guid: 065c7c4618496a140bab23d5d3ac78e6, type: 2}
+  m_sharedMaterial: {fileID: -5052694200749206396, guid: 065c7c4618496a140bab23d5d3ac78e6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1541,15 +1541,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.92549026, g: 0.89019614, b: 0.8078432, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9a5ca1e22facc2847918e71e493e88cd, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1625,8 +1625,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Barbarian
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c73f59409a8950d4db66437bb27bf43b, type: 2}
-  m_sharedMaterial: {fileID: -488186892269901568, guid: c73f59409a8950d4db66437bb27bf43b,
+  m_fontAsset: {fileID: 11400000, guid: 065c7c4618496a140bab23d5d3ac78e6, type: 2}
+  m_sharedMaterial: {fileID: -5052694200749206396, guid: 065c7c4618496a140bab23d5d3ac78e6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1762,8 +1762,8 @@ MonoBehaviour:
 
     Active Ability: Increases Strength for a short time'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c73f59409a8950d4db66437bb27bf43b, type: 2}
-  m_sharedMaterial: {fileID: -488186892269901568, guid: c73f59409a8950d4db66437bb27bf43b,
+  m_fontAsset: {fileID: 11400000, guid: 065c7c4618496a140bab23d5d3ac78e6, type: 2}
+  m_sharedMaterial: {fileID: -5052694200749206396, guid: 065c7c4618496a140bab23d5d3ac78e6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

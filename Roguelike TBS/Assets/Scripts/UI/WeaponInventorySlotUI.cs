@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponInventorySlotUI : MonoBehaviour {
+public class WeaponInventorySlotUI : MonoBehaviour, IItemHolder {
     // CONFIG DATA
     [SerializeField] WeaponInventoryItemIcon icon = null;
     [SerializeField] int index = 0;

@@ -90,7 +90,10 @@ public class RoomManager : MonoBehaviour {
 
     public GameObject GetEnemiesParent() { return enemiesParent; }
 
-    public void SetDropSpawner(Pickup pickup) { dropSpawner.SetPickup(pickup); }
+    public void ConfigureDropSpawner(InventoryItem item, int number) { 
+        dropSpawner.SetItemToDrop(item);
+        dropSpawner.SetNumberOfItem(number);    
+    }
 
     public void SetRoomActive() {
         if (roomIsActive) { return; }

@@ -17,8 +17,17 @@ public class Paladin : Character {
 
     private event Action<GameObject> onAbilityActivate;
     private event Action<GameObject> onAbilityKill;
+    public override event Action onFeatAdded;
 
     private void Start() {
+        if (activeAbilityIcon) {
+            var weaponAbilityIcon = GameObject.Find("Character Ability Icon");
+            weaponAbilityIcon.GetComponent<Image>().sprite = activeAbilityIcon;
+            weaponAbilityIcon.GetComponent<Image>().color = new Color(1,1,1,0.75f);
+        }
+
+        levelUpMenu = GameObject.Find("Level Up Bonuses Menu").GetComponent<LevelUpBonusMenu>();
+
         foreach(Stat stat in Enum.GetValues(typeof(Stat))) {
             activeAbilityModifyPercentages[stat] = 0;
         }
@@ -61,6 +70,9 @@ public class Paladin : Character {
             onAbilityActivate += ability.Use;
         } else if (ability.GetActivatationPoint() == ActivatationPoint.OnKill) {
             onAbilityKill += ability.Use;
+        }
+        if (onFeatAdded != null) {
+            onFeatAdded();
         }
     }
 

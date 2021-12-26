@@ -365,14 +365,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+  m_Color: {r: 0.90588236, g: 0.40392157, b: 0.40392157, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 468103d8134533c45956ce6f5090d7c7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d09947d1ec095a44cb32c0a13ef26329, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -711,7 +711,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 260}
-  m_SizeDelta: {x: 800, y: 200}
+  m_SizeDelta: {x: 1100, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &381204062
 MonoBehaviour:
@@ -735,8 +735,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Project Tower
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c73f59409a8950d4db66437bb27bf43b, type: 2}
-  m_sharedMaterial: {fileID: -488186892269901568, guid: c73f59409a8950d4db66437bb27bf43b,
+  m_fontAsset: {fileID: 11400000, guid: 065c7c4618496a140bab23d5d3ac78e6, type: 2}
+  m_sharedMaterial: {fileID: -5052694200749206396, guid: 065c7c4618496a140bab23d5d3ac78e6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -869,7 +869,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 7e3f0ccb3b30d834897c0f058b4b9b64, type: 3}
+    m_Font: {fileID: 12800000, guid: db18ada8a72e1d24c91679aebde53257, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -1076,10 +1076,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Explore the Area, grab some loot and Get to the End!
+  m_text: Explore the Tower, grab some loot and get to the end!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c73f59409a8950d4db66437bb27bf43b, type: 2}
-  m_sharedMaterial: {fileID: -488186892269901568, guid: c73f59409a8950d4db66437bb27bf43b,
+  m_fontAsset: {fileID: 11400000, guid: 065c7c4618496a140bab23d5d3ac78e6, type: 2}
+  m_sharedMaterial: {fileID: -5052694200749206396, guid: 065c7c4618496a140bab23d5d3ac78e6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1211,8 +1211,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 629fefb6c2a912c499f4a6851863fd93, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 890ea79085fa89c40a34280f66cd1445, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1299,7 +1299,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 7e3f0ccb3b30d834897c0f058b4b9b64, type: 3}
+    m_Font: {fileID: 12800000, guid: db18ada8a72e1d24c91679aebde53257, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0

@@ -20,24 +20,28 @@ public class LevelLoader : MonoBehaviour {
         SceneManager.LoadScene(3);
     }
 
-    public void LoadLevelTwo() {
+    public void LoadLevelOneBarb() {
         SceneManager.LoadScene(4);
     }
 
-    public void LoadLevelThree() {
+    public void LoadLevelTwo() {
         SceneManager.LoadScene(5);
+    }
+
+    public void LoadLevelThree() {
+        SceneManager.LoadScene(6);
     }
 
     public void LoadWinScreen() {
         DestroyPlayerObjects();
 
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(7);
     }
 
     public void LoadGameOver() {
         DestroyPlayerObjects();
         
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(8);
     }
 
     public void QuitGame() {

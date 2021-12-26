@@ -20,7 +20,7 @@
     IceSpirit,
     FireSpirit,
     Cloaker,
-    Imps, 
+    Imp, 
     Dryad,
     FlameSkull,
     HellHound,
