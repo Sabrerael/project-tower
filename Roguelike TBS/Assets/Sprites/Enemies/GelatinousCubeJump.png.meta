@@ -60,7 +60,7 @@ TextureImporter:
       213: 1368123185026658440
     second: GelatinousCubeJump_18
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -80,6 +80,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -88,9 +89,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -102,7 +103,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,16 +112,20 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -132,7 +137,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -144,7 +149,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -172,16 +177,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bee83b333f9a82e4cb6b31169e422e08
+      spriteID: f921d1693f3914770800000000000000
       internalID: 8593312238404440735
       vertices: []
       indices: 
@@ -191,18 +196,18 @@ TextureImporter:
       name: GelatinousCubeJump_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d6feffdb16366449b843484268595de
+      spriteID: f8c4339f474ce0af0800000000000000
       internalID: -428188907877479281
       vertices: []
       indices: 
@@ -212,18 +217,18 @@ TextureImporter:
       name: GelatinousCubeJump_2
       rect:
         serializedVersion: 2
-        x: 512
+        x: 256
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efbb5374a9389c047baac068d0253f7c
+      spriteID: ff6a4aee6945bfa60800000000000000
       internalID: 7708848194400331519
       vertices: []
       indices: 
@@ -233,18 +238,18 @@ TextureImporter:
       name: GelatinousCubeJump_3
       rect:
         serializedVersion: 2
-        x: 768
+        x: 384
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c3410a4adaf241429c61c0dc059019b
+      spriteID: 2a9c935191e0085f0800000000000000
       internalID: -756589236505163358
       vertices: []
       indices: 
@@ -254,18 +259,18 @@ TextureImporter:
       name: GelatinousCubeJump_4
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 512
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f16d51ce8b140e543ab07d90eeeee7ae
+      spriteID: 5aa4dec6631b87cb0800000000000000
       internalID: -4865944550059980123
       vertices: []
       indices: 
@@ -275,18 +280,18 @@ TextureImporter:
       name: GelatinousCubeJump_5
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 640
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b72535123008aa14d82118ddbabcec50
+      spriteID: 7921aa68a8c0d5460800000000000000
       internalID: 7231950365731197591
       vertices: []
       indices: 
@@ -296,18 +301,18 @@ TextureImporter:
       name: GelatinousCubeJump_6
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 768
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5730712bce66aa4dae9f65f88e5a34b
+      spriteID: 1196aed8c8be8dc40800000000000000
       internalID: 5537434730760923409
       vertices: []
       indices: 
@@ -317,18 +322,18 @@ TextureImporter:
       name: GelatinousCubeJump_7
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 896
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 429a9b7ccda49df4da1a91e179b5769c
+      spriteID: 1728024ccf8d80c50800000000000000
       internalID: 6631789031436878449
       vertices: []
       indices: 
@@ -338,18 +343,18 @@ TextureImporter:
       name: GelatinousCubeJump_8
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 1024
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64d20e136ea02f04ca9f4defb763bd2a
+      spriteID: 27a6fd530ca292b70800000000000000
       internalID: 8874671545736194674
       vertices: []
       indices: 
@@ -359,18 +364,18 @@ TextureImporter:
       name: GelatinousCubeJump_9
       rect:
         serializedVersion: 2
-        x: 2304
+        x: 1152
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59cc48f5ad454e845a35fe105a15a551
+      spriteID: 931e41c11bc123600800000000000000
       internalID: 446450860069019961
       vertices: []
       indices: 
@@ -380,18 +385,18 @@ TextureImporter:
       name: GelatinousCubeJump_10
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 1280
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86d2ae0826a890840aa90a6c33f0f6a9
+      spriteID: a8173794f614bb500800000000000000
       internalID: 412995737064010122
       vertices: []
       indices: 
@@ -401,18 +406,18 @@ TextureImporter:
       name: GelatinousCubeJump_11
       rect:
         serializedVersion: 2
-        x: 2816
+        x: 1408
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4082a48bd3987e48857d18b3ab7595f
+      spriteID: 3468abad119887d90800000000000000
       internalID: -7099774102772480445
       vertices: []
       indices: 
@@ -422,18 +427,18 @@ TextureImporter:
       name: GelatinousCubeJump_12
       rect:
         serializedVersion: 2
-        x: 3072
+        x: 1536
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9a38fa703cb46342b1f13c4dfe81d95
+      spriteID: 4eb2914406afa64f0800000000000000
       internalID: -834579489557500956
       vertices: []
       indices: 
@@ -443,18 +448,18 @@ TextureImporter:
       name: GelatinousCubeJump_13
       rect:
         serializedVersion: 2
-        x: 3328
+        x: 1664
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15b82bb514f20904cb5e3aa5f14bfb69
+      spriteID: 45616fc95e48f2c80800000000000000
       internalID: -8345305462778489260
       vertices: []
       indices: 
@@ -464,18 +469,18 @@ TextureImporter:
       name: GelatinousCubeJump_14
       rect:
         serializedVersion: 2
-        x: 3584
+        x: 1792
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cecccc6934b28f34196542e730262917
+      spriteID: 459d1d77b9403af70800000000000000
       internalID: 9197199929797368148
       vertices: []
       indices: 
@@ -485,18 +490,18 @@ TextureImporter:
       name: GelatinousCubeJump_15
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 1920
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9963cc561349ee543b72731e58f2c483
+      spriteID: 27d8025fa1d6df670800000000000000
       internalID: 8574129228132420978
       vertices: []
       indices: 
@@ -506,18 +511,18 @@ TextureImporter:
       name: GelatinousCubeJump_16
       rect:
         serializedVersion: 2
-        x: 4096
+        x: 2048
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7465ab2c7b009264490d4447f5822f21
+      spriteID: 6b2506b9f05ab8be0800000000000000
       internalID: -1473902966583831882
       vertices: []
       indices: 
@@ -527,18 +532,18 @@ TextureImporter:
       name: GelatinousCubeJump_17
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 2176
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 799d980272a023f42a9513870a214529
+      spriteID: e5d2acb20e86cd260800000000000000
       internalID: 7123684022609915230
       vertices: []
       indices: 
@@ -548,18 +553,18 @@ TextureImporter:
       name: GelatinousCubeJump_18
       rect:
         serializedVersion: 2
-        x: 4608
+        x: 2304
         y: 0
-        width: 256
-        height: 896
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1428}
+        width: 128
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faefe72508c8d6d41b7fe74610108c6f
+      spriteID: 8807d74c9cc8cf210800000000000000
       internalID: 1368123185026658440
       vertices: []
       indices: 

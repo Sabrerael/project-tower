@@ -2867,7 +2867,7 @@ PrefabInstance:
     - target: {fileID: 4750231927203397398, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_Name
-      value: Cube Spawner
+      value: Balor Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}

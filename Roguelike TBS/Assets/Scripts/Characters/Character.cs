@@ -90,7 +90,8 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
             if (!choiceIndexes.Contains(index)) {
                 choiceIndexes.Add(index);
             }
-            levelUpMenu.SetAbilityDescription(choiceIndexes.Count-1, randomBonuses[index].GetAbilityDescription());
+            levelUpMenu.SetAbilityDescription(choiceIndexes.Count-1,
+                randomBonuses[index].GetAbilityName() + ": " + randomBonuses[index].GetAbilityDescription());
         } while (choiceIndexes.Count < 3);
     }
 

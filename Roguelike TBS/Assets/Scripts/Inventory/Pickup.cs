@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class Pickup : MonoBehaviour {
     [SerializeField] InventoryItem item = null;
@@ -34,6 +33,7 @@ public class Pickup : MonoBehaviour {
             Destroy(gameObject);
         }
         if (sfx) { AudioSource.PlayClipAtPoint(sfx, transform.position); }
+        GameObject.Find("HUD").GetComponent<HUD>().LaunchItemPopup(item.GetDisplayName() + ": " + item.GetDescription());
     }
 
     private void SetPickupSprite() {

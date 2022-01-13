@@ -32,7 +32,7 @@ public class RoomManager : MonoBehaviour {
 
         if (!enemiesSpawned) { return; }
 
-        if (dropSpawner.GetPickup() != null && enemiesParent.transform.childCount == 0)
+        if (dropSpawner.GetItemToDrop() != null && enemiesParent.transform.childCount == 0)
         {
             dropSpawner.SpawnPickup();
             itemSpawned = true;

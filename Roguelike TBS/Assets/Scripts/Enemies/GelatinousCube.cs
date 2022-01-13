@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using RPG.Stats;
 using UnityEngine;
-// TODO Take common code and make a Boss class
-public class GelatinousCube : Enemy {
+
+public class GelatinousCube : Boss {
     [SerializeField] EnemySpawner[] slimeSpawners = null;
     [SerializeField] float xMax, xMin, yMax, yMin = 0f; 
     [SerializeField] float jumpTime = 1f;
@@ -95,7 +95,6 @@ public class GelatinousCube : Enemy {
             } else if (phase == CubePhase.Starting) {
                 StartCoroutine(IdleTimer(1));
             }
-            Debug.Log(phase);
         }
     }
 
@@ -221,17 +220,4 @@ public class GelatinousCube : Enemy {
         phase = heldPhase;
         ChangeBossPhase();
     }
-
-    public void ToggleCollider() {
-        GetComponent<Collider2D>().enabled = !GetComponent<Collider2D>().enabled;
-    }
-
-    private void SetUpBossHealthBar() {
-        var bossHealthBar = GameObject.Find("Boss Health Bar");
-        Debug.Log(bossHealthBar);
-        bossHealthBar.GetComponent<BossHealthBar>().EnableCanvas();
-        bossHealthBar.GetComponent<BossHealthBar>().SetBossTitle(gameObject.name);
-        bossHealthBar.GetComponent<BossHealthBar>().SetHealthComponent(gameObject);
-    }
-
 }
