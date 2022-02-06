@@ -22,5 +22,6 @@ MonoBehaviour:
   consumable: 1
   cooldownTimer: 1
   throwSpeed: 5
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 2488428905241997257, guid: 042857d9a76dbfe428bec462c931baf4,
+    type: 3}
   sfx: {fileID: 8300000, guid: c7ca7689ec0c3e7408ae4b0c7e836cee, type: 3}

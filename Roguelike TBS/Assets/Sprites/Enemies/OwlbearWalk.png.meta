@@ -30,7 +30,7 @@ TextureImporter:
       213: 3283163623072078179
     second: OwlbearWalk_8
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -50,6 +50,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -58,9 +59,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -72,7 +73,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,16 +82,20 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,7 +107,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +119,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,16 +147,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 128
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44e00e58edfdbe14ab4beeddc707b4ec
+      spriteID: 6d710e3306b375e30800000000000000
       internalID: 4492124437698582486
       vertices: []
       indices: 
@@ -161,18 +166,18 @@ TextureImporter:
       name: OwlbearWalk_1
       rect:
         serializedVersion: 2
-        x: 192
+        x: 48
         y: 0
-        width: 192
-        height: 128
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffc26f9cd974ee24ab38d48382996a24
+      spriteID: bb60eb02f5e69e460800000000000000
       internalID: 7271464428216649403
       vertices: []
       indices: 
@@ -182,18 +187,18 @@ TextureImporter:
       name: OwlbearWalk_2
       rect:
         serializedVersion: 2
-        x: 384
+        x: 96
         y: 0
-        width: 192
-        height: 128
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06ad589b59917514fb0a687a304eaf52
+      spriteID: 4526ce9a400162f80800000000000000
       internalID: -8131794464954097068
       vertices: []
       indices: 
@@ -203,18 +208,18 @@ TextureImporter:
       name: OwlbearWalk_3
       rect:
         serializedVersion: 2
-        x: 576
+        x: 144
         y: 0
-        width: 192
-        height: 128
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 908e24acb23b40c4ebec35b2a687581d
+      spriteID: f437ef288daf42b50800000000000000
       internalID: 6567649964430619471
       vertices: []
       indices: 
@@ -224,18 +229,18 @@ TextureImporter:
       name: OwlbearWalk_4
       rect:
         serializedVersion: 2
-        x: 768
+        x: 192
         y: 0
-        width: 192
-        height: 128
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b4c31e58e852764cbe22cbf472f37bf
+      spriteID: f34bc9cf7aa91b720800000000000000
       internalID: 2860237284645319743
       vertices: []
       indices: 
@@ -245,18 +250,18 @@ TextureImporter:
       name: OwlbearWalk_5
       rect:
         serializedVersion: 2
-        x: 960
+        x: 240
         y: 0
-        width: 192
-        height: 128
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3395dc2c79c0fbc44ba04fd2c6c86291
+      spriteID: 1d362df6587c92ad0800000000000000
       internalID: -2726428723475487791
       vertices: []
       indices: 
@@ -266,18 +271,18 @@ TextureImporter:
       name: OwlbearWalk_6
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 288
         y: 0
-        width: 192
-        height: 128
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f04c5cab1f80c947a86a300179a3008
+      spriteID: 817d475b2b90b3e40800000000000000
       internalID: 5637110021737469720
       vertices: []
       indices: 
@@ -287,18 +292,18 @@ TextureImporter:
       name: OwlbearWalk_7
       rect:
         serializedVersion: 2
-        x: 1344
+        x: 336
         y: 0
-        width: 192
-        height: 128
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 637fed19688d399408742ed9e11cfacd
+      spriteID: 65fd5154dd961a9d0800000000000000
       internalID: -2764812297161023658
       vertices: []
       indices: 
@@ -308,18 +313,18 @@ TextureImporter:
       name: OwlbearWalk_8
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 384
         y: 0
-        width: 192
-        height: 128
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33e9a9524d643264f893621ceacb5443
+      spriteID: 36912b49be3209d20800000000000000
       internalID: 3283163623072078179
       vertices: []
       indices: 

@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickup: {fileID: 8395294293350479208, guid: 9e42c659609a79d47af3adee122dae2a, type: 3}
+  itemToDrop: {fileID: 0}
+  numberOfItem: 1
+  spawnSound: {fileID: 8300000, guid: e68a512fcca1bc24c8b68a0dc41bd9d9, type: 3}

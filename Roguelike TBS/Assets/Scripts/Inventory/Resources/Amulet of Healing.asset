@@ -23,5 +23,6 @@ MonoBehaviour:
   consumable: 0
   cooldownTimer: 120
   healingAmount: 15
-  onUseParticleEffect: {fileID: 0}
-  sfx: {fileID: 0}
+  onUseParticleEffect: {fileID: 5084641533062172750, guid: 7acd2cc53805d804fbd14cab457a6276,
+    type: 3}
+  sfx: {fileID: 8300000, guid: 3ae984400f101b14082701a8f816ad46, type: 3}

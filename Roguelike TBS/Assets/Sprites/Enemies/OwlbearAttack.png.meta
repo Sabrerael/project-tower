@@ -24,7 +24,7 @@ TextureImporter:
       213: -6019843536611839396
     second: OwlbearAttack_6
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -44,6 +44,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -52,9 +53,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -66,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,16 +76,20 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +113,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,16 +141,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 224
-        height: 128
+        width: 56
+        height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4285, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0de37b5c2f991154eb41d9681b840ad7
+      spriteID: 089f37bc5971e1c60800000000000000
       internalID: 7790690337528478080
       vertices: []
       indices: 
@@ -155,18 +160,18 @@ TextureImporter:
       name: OwlbearAttack_1
       rect:
         serializedVersion: 2
-        x: 224
+        x: 56
         y: 0
-        width: 224
-        height: 128
+        width: 56
+        height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4285, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2de050618274c7c43a201657269342fd
+      spriteID: b296f3bede71cda90800000000000000
       internalID: -7287923786370815701
       vertices: []
       indices: 
@@ -176,18 +181,18 @@ TextureImporter:
       name: OwlbearAttack_2
       rect:
         serializedVersion: 2
-        x: 448
+        x: 112
         y: 0
-        width: 224
-        height: 128
+        width: 56
+        height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4285, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff1429650e613e249aa5bae3dd6ddab0
+      spriteID: 4b232ab3b8cb34c10800000000000000
       internalID: 2036678762688557748
       vertices: []
       indices: 
@@ -197,18 +202,18 @@ TextureImporter:
       name: OwlbearAttack_3
       rect:
         serializedVersion: 2
-        x: 672
+        x: 168
         y: 0
-        width: 224
-        height: 128
+        width: 56
+        height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4285, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92519ec929db6d14f8c5102e590006cf
+      spriteID: f62250edd9fe77520800000000000000
       internalID: 2699889962945684079
       vertices: []
       indices: 
@@ -218,18 +223,18 @@ TextureImporter:
       name: OwlbearAttack_4
       rect:
         serializedVersion: 2
-        x: 896
+        x: 224
         y: 0
-        width: 224
-        height: 128
+        width: 56
+        height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4285, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a13f2b118e27e704a9f0df02fe463730
+      spriteID: e9e7258b5fa211b40800000000000000
       internalID: 5409151862296444574
       vertices: []
       indices: 
@@ -239,18 +244,18 @@ TextureImporter:
       name: OwlbearAttack_5
       rect:
         serializedVersion: 2
-        x: 1120
+        x: 280
         y: 0
-        width: 224
-        height: 128
+        width: 56
+        height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4285, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d314478a67bb2594598df04ddc28f267
+      spriteID: bda66fe09fa3ec8a0800000000000000
       internalID: -6283019588762965285
       vertices: []
       indices: 
@@ -260,18 +265,18 @@ TextureImporter:
       name: OwlbearAttack_6
       rect:
         serializedVersion: 2
-        x: 1344
+        x: 336
         y: 0
-        width: 224
-        height: 128
+        width: 56
+        height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4285, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 453abe938ef03dc4b817140f9e490d93
+      spriteID: c52f1dca238357ca0800000000000000
       internalID: -6019843536611839396
       vertices: []
       indices: 

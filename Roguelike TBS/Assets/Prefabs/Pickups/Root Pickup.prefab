@@ -146,4 +146,4 @@ MonoBehaviour:
   item: {fileID: 0}
   number: 1
   spriteRenderer: {fileID: 3169422164052819538}
-  sfx: {fileID: 8300000, guid: d2607202210b02743bc6b497249269da, type: 3}
+  sfx: {fileID: 8300000, guid: 5e8661b7a21460a44802aa420d42e1d3, type: 3}

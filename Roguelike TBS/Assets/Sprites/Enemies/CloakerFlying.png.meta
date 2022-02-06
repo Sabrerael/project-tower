@@ -30,7 +30,7 @@ TextureImporter:
       213: -4435186703029598275
     second: CloakerFlying_8
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -50,6 +50,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -58,9 +59,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -72,7 +73,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,16 +82,20 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,7 +107,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +119,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,16 +147,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba84681440d7e6b42bdcc97ffb3a92e3
+      spriteID: e48a5b0d113fab3a0800000000000000
       internalID: -6648734642017556402
       vertices: []
       indices: 
@@ -161,18 +166,18 @@ TextureImporter:
       name: CloakerFlying_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 32
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0dcef0f628d1c4458c19a89ea797b27
+      spriteID: 369713115eb8f3170800000000000000
       internalID: 8160394865770854755
       vertices: []
       indices: 
@@ -182,18 +187,18 @@ TextureImporter:
       name: CloakerFlying_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 64
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f305c7359bc3b34e8caf43ea25a8c83
+      spriteID: d4e4ae0345ef403c0800000000000000
       internalID: -4394107698855391667
       vertices: []
       indices: 
@@ -203,18 +208,18 @@ TextureImporter:
       name: CloakerFlying_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 96
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3541b28a0cae0cb45967fd387f2e54fe
+      spriteID: 78bc585e0ab530990800000000000000
       internalID: -7420987014372799609
       vertices: []
       indices: 
@@ -224,18 +229,18 @@ TextureImporter:
       name: CloakerFlying_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 128
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8223c5ec9ee766442bb9429ef05bbcfc
+      spriteID: b6b66b7f6934fa920800000000000000
       internalID: 3003693792159492971
       vertices: []
       indices: 
@@ -245,18 +250,18 @@ TextureImporter:
       name: CloakerFlying_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 160
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 862296d6c2cfaab4ea9d7b7e85f4275b
+      spriteID: 3b761c60d0b17e1d0800000000000000
       internalID: -3321656457400588365
       vertices: []
       indices: 
@@ -266,18 +271,18 @@ TextureImporter:
       name: CloakerFlying_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 192
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b3ce150cf3ed674598b455eb972f85c
+      spriteID: 173f5308c25eb8430800000000000000
       internalID: 3786371891027374961
       vertices: []
       indices: 
@@ -287,18 +292,18 @@ TextureImporter:
       name: CloakerFlying_7
       rect:
         serializedVersion: 2
-        x: 896
+        x: 224
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b64aeff7582e96a4fa1bfffe22aae0fb
+      spriteID: e6c8938cba1dd0fb0800000000000000
       internalID: -4679853902039249810
       vertices: []
       indices: 
@@ -308,18 +313,18 @@ TextureImporter:
       name: CloakerFlying_8
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 256
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b77a1fe8745c00748b44e360a6806052
+      spriteID: db78265313d0372c0800000000000000
       internalID: -4435186703029598275
       vertices: []
       indices: 
