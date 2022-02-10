@@ -52,6 +52,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -153,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfx: {fileID: 0}
   movementSpeed: 3.75
+  moneyDropped: 1
   alphaChangeTime: 1
   disappearenceTime: 1.5
   visableTime: 15
@@ -174,7 +177,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.24, y: 1.92}
+  m_Size: {x: 1, y: 1.5}
   m_Direction: 0
 --- !u!95 &3656592765898074161
 Animator:
@@ -202,10 +205,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6312044418315515495}
     m_Modifications:
-    - target: {fileID: 8384248595204781744, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
-      propertyPath: m_Name
-      value: Health Bar
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
@@ -224,6 +227,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -236,16 +244,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
@@ -267,6 +265,11 @@ PrefabInstance:
       propertyPath: healthComponent
       value: 
       objectReference: {fileID: 2504915984313925441}
+    - target: {fileID: 8384248595204781744, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+        type: 3}
+      propertyPath: m_Name
+      value: Health Bar
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 122a1dd73fcea254b9a781a20a6aab1a, type: 3}
 --- !u!4 &7521821233802481545 stripped

@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class ExitDoor : MonoBehaviour {
-    [SerializeField] Sprite openDoor = null;
+    [SerializeField] Sprite openDoorSprite = null;
     [SerializeField] int floor = 1;
+    [SerializeField] SpriteRenderer doorToOpen = null;
 
     private LevelLoader levelLoader = null;
 
@@ -12,18 +14,25 @@ public class ExitDoor : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
-            if (floor == 1) {
-                levelLoader.LoadLevelTwo();
-            } else if (floor == 2) {
-                levelLoader.LoadLevelThree();
-            } else if (floor == 3) {
-                levelLoader.LoadWinScreen();
-            }
+            StartCoroutine(FloorTransition(other.gameObject));
         }
+    }
+
+    private IEnumerator FloorTransition(GameObject player) {
+        yield return new WaitForSeconds(1.5f);
+        
+        if (floor == 1) {
+            levelLoader.LoadLevelTwo();
+        } else if (floor == 2) {
+            levelLoader.LoadLevelThree();
+        } else if (floor == 3) {
+            levelLoader.LoadWinScreen();
+        } 
     }
 
     public void Unlock() {
         gameObject.GetComponent<Collider2D>().enabled = true;
-        gameObject.GetComponentInChildren<SpriteRenderer>().sprite = openDoor;
+        doorToOpen.sprite = openDoorSprite;
+        doorToOpen.gameObject.GetComponent<SpriteMask>().enabled = true;
     }
 }

@@ -124,8 +124,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06, y: 0.07}
-  m_Size: {x: 1.53, y: 0.84}
+  m_Offset: {x: 0.05, y: 0}
+  m_Size: {x: 1.2, y: 0.8}
   m_Direction: 1
 --- !u!114 &5603317434479675125
 MonoBehaviour:
@@ -194,7 +194,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 1.28}
+    oldSize: {x: 1.5, y: 1}
     newSize: {x: 0.49, y: 0.34}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -234,12 +234,12 @@ PrefabInstance:
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.65
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1180239306533068007, guid: 122a1dd73fcea254b9a781a20a6aab1a,
         type: 3}

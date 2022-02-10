@@ -11,6 +11,7 @@ public class RoomMovement : MonoBehaviour {
     [SerializeField] RoomManager newRoomManager = null;  
     [SerializeField] Direction directionToMove;
     [SerializeField] Sprite openDoor = null;
+    [SerializeField] GameObject doorGameObject = null;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
@@ -56,7 +57,7 @@ public class RoomMovement : MonoBehaviour {
     public void SetNewRoomManager(RoomManager roomManager) { newRoomManager = roomManager; }
 
     public void OpenDoor() {
-        gameObject.GetComponent<Collider2D>().enabled = true;
-        gameObject.GetComponentInChildren<SpriteRenderer>().sprite = openDoor;
+        doorGameObject.GetComponent<SpriteRenderer>().sprite = openDoor;
+        doorGameObject.GetComponent<SpriteMask>().enabled = true;
     }
 }

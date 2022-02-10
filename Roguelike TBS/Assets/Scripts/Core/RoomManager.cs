@@ -10,6 +10,7 @@ public class RoomManager : MonoBehaviour {
     [SerializeField] GameObject enemiesParent = null;
     [SerializeField] EnemySpawns[] enemySpawns = null;
     [SerializeField] EnemySpawner[] enemySpawners = null;
+    [SerializeField] GameObject[] doorColliders = null;
 
     private bool itemSpawned = false;
     private bool roomIsActive = false;
@@ -103,14 +104,16 @@ public class RoomManager : MonoBehaviour {
     }
 
     protected void OpenAllDoors() {
-        var rooms = gameObject.GetComponentsInChildren<RoomMovement>();
+        var roomsToMoveTo = gameObject.GetComponentsInChildren<RoomMovement>();
 
-        foreach(var room in rooms) {
+        foreach(var room in roomsToMoveTo) {
             room.OpenDoor();
+            doorColliders[(int)room.GetDirection()].SetActive(false);
         }
     }
 
     private void OpenExitDoor() {
         gameObject.GetComponentsInChildren<ExitDoor>()[0].Unlock();
+        doorColliders[4].SetActive(false);
     }
 }
