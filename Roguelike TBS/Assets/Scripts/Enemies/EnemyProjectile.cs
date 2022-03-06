@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour {
     [SerializeField] int contactDamage = 1;
-    [SerializeField] float deltaX, deltaY = 0;
+    [SerializeField] protected float deltaX, deltaY = 0;
     
-    private Enemy wielder = null;
+    protected Enemy wielder = null;
 
-    private void Update() {
+    protected virtual void Update() {
         float newXPos = transform.localPosition.x + (deltaX * Time.deltaTime);
         float newyPos = transform.localPosition.y + (deltaY * Time.deltaTime);
 
