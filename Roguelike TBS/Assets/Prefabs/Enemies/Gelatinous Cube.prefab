@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
-  movementSpeed: 8
+  movementSpeed: 2
   moneyDropped: 1
   slimeSpawners:
   - {fileID: 5499922236453728186}

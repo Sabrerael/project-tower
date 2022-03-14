@@ -9,6 +9,10 @@ public class PlayerFlipper : MonoBehaviour {
     }
 
     private void Update() {
+        if (mainCam == null) {
+            mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        }
+
         if (transform.position.x >= mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue()).x) {
             transform.localScale = new Vector2(-1f, 1f);
         } else {

@@ -69,17 +69,17 @@ public class GelatinousCube : Boss {
         if (phase == CubePhase.Idle) { return; }
 
         if (inMove) {
-            transform.position = Vector3.MoveTowards(transform.position, moveLocation, moveDistance);
-            if (Vector3.Distance(transform.position, moveLocation) < 0.001) {
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
+            if (Vector3.Distance(transform.localPosition, moveLocation) < 0.001) {
                 inMove = false;
                 StartCoroutine(IdleTimer(0.3f));
             } 
         } else {
             if (phase == CubePhase.Move1 || phase == CubePhase.Move2 ||
                 phase == CubePhase.Move3 || phase == CubePhase.Move4) {
-                if (transform.position.x - xMin <= 0.002f) {
+                if (transform.localPosition.x - xMin <= 0.002f) {
                     AttackMoveRight();
-                } else if (xMax - transform.position.x <= 0.002f) {
+                } else if (xMax - transform.localPosition.x <= 0.002f) {
                     AttackMoveLeft();
                 }
             } else if (phase == CubePhase.Jump1 || phase == CubePhase.Jump2 ||
@@ -149,17 +149,17 @@ public class GelatinousCube : Boss {
     }
 
     private void AttackMoveLeft() {
-        moveLocation = new Vector2(xMin, transform.position.y);
+        moveLocation = new Vector2(xMin, transform.localPosition.y);
         moveDistance = movementSpeed*Time.fixedDeltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, moveLocation, moveDistance);
+        transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
         inMove = true;
         GetComponent<Animator>().SetTrigger("MovingLeft");
     }
     
     private void AttackMoveRight() {
-        moveLocation = new Vector2(xMax, transform.position.y);
+        moveLocation = new Vector2(xMax, transform.localPosition.y);
         moveDistance = movementSpeed*Time.fixedDeltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, moveLocation, moveDistance);
+        transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
         inMove = true;
         GetComponent<Animator>().SetTrigger("MovingRight");
     }
@@ -167,27 +167,24 @@ public class GelatinousCube : Boss {
     private void JumpToRandomCorner() {
         var randomCorner = ChooseRandomCorner();
         moveLocation = new Vector2(randomCorner.x, randomCorner.y);
-        moveDistance = Vector3.Distance(transform.position, moveLocation) * (Time.fixedDeltaTime / jumpTime);
-        Debug.Log(moveDistance + "; " + Time.fixedDeltaTime);
-        transform.position = Vector3.MoveTowards(transform.position, moveLocation, moveDistance);
+        moveDistance = Vector3.Distance(transform.localPosition, moveLocation) * (Time.fixedDeltaTime / jumpTime);
+        transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
         inMove = true;
         GetComponent<Animator>().SetTrigger("Jumping");
     }
 
     private void JumpToRandomSpot() {
         moveLocation = new Vector2(Random.Range(xMin, xMax), Random.Range(yMin, yMax));
-        moveDistance = Vector3.Distance(transform.position, moveLocation) * (Time.fixedDeltaTime / jumpTime);
-        Debug.Log(moveDistance + "; " + Time.fixedDeltaTime);
-        transform.position = Vector3.MoveTowards(transform.position, moveLocation, moveDistance);
+        moveDistance = Vector3.Distance(transform.localPosition, moveLocation) * (Time.fixedDeltaTime / jumpTime);
+        transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
         inMove = true;
         GetComponent<Animator>().SetTrigger("Jumping");
     }
 
     private void JumpToCenter() {
         moveLocation = new Vector2(6, -6);
-        moveDistance = Vector3.Distance(transform.position, moveLocation) * (Time.fixedDeltaTime / jumpTime);
-        Debug.Log(moveDistance + "; " + Time.fixedDeltaTime);
-        transform.position = Vector3.MoveTowards(transform.position, moveLocation, moveDistance);
+        moveDistance = Vector3.Distance(transform.localPosition, moveLocation) * (Time.fixedDeltaTime / jumpTime);
+        transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
         inMove = true;
         GetComponent<Animator>().SetTrigger("Jumping");
     }
@@ -208,8 +205,8 @@ public class GelatinousCube : Boss {
         Corner corner; 
         do {
             corner = corners[Random.Range(0, 4)];
-        } while(Mathf.Abs(corner.x - transform.position.x) <= 0.002f && 
-                Mathf.Abs(corner.y - transform.position.y) <= 0.002f);
+        } while(Mathf.Abs(corner.x - transform.localPosition.x) <= 0.002f && 
+                Mathf.Abs(corner.y - transform.localPosition.y) <= 0.002f);
         return corner;
     }
 

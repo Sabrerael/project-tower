@@ -37,6 +37,12 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         EquipWeapon(currentWeapon);
     }
 
+    private void Update() {
+        if (mainCam == null) {
+            mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        }    
+    }
+
     private void OnCollisionEnter2D(Collision2D other) {
         if (iFramesActive) { return; }
 
@@ -85,13 +91,17 @@ public class Fighter : MonoBehaviour, IModifierProvider {
             inputReceived = true;
             ChangeWeaponState();
         }
-            
-        handTransform.gameObject.GetComponentInChildren<Collider2D>().enabled = true;
+
         AudioSource.PlayClipAtPoint(swingSound, transform.position);
     }
 
     public void StartIFrameTimer(float time) {
         StartCoroutine(IFrameTimer(time));
+    }
+
+    public void ToggleWeaponCollider() {
+        var weaponCollider = handTransform.gameObject.GetComponentInChildren<Collider2D>();
+        weaponCollider.enabled = !weaponCollider.enabled;
     }
 
     private void ChangeWeaponState() {

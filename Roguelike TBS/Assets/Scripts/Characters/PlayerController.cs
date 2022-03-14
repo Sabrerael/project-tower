@@ -11,9 +11,8 @@ public class PlayerController : MonoBehaviour {
     private void OnMove(InputValue value) {
         if (value.Get<Vector2>().magnitude <= Mathf.Epsilon) {
             GetComponent<Animator>().SetBool("IsWalking", false);
-        } else {
-            
         }
+        
         GetComponent<Movement>().SetMovementValues(value.Get<Vector2>());
     }
 

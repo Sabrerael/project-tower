@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
 public class FloorManager : MonoBehaviour {
     [SerializeField] GameObject[] roomArray = null;
@@ -31,6 +29,7 @@ public class FloorManager : MonoBehaviour {
         var player = GameObject.FindGameObjectWithTag("Player");
         if (player) {
             player.transform.position = new Vector3(6, -6, 0);
+            player.GetComponent<Movement>().UpdateMinMaxValues();
         } else {
             Instantiate(characters[(int)gameManager.GetPlayerCharacter()], new Vector3(6, -6, 0), Quaternion.identity);
         }

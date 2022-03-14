@@ -752,7 +752,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5593148085998671929}
   - component: {fileID: 5593148085998671930}
-  - component: {fileID: 3224140383815247667}
   - component: {fileID: 5286268840431421705}
   m_Layer: 0
   m_Name: F2 Shop Room
@@ -796,23 +795,6 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &3224140383815247667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5593148085998671931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1de47b2b1d6a4524bbdb64f3ba3950c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropSpawner: {fileID: 1642124143803316642}
-  enemiesParent: {fileID: 8543775141546398616}
-  enemySpawns: []
-  enemySpawners: []
-  doorColliders: []
 --- !u!114 &5286268840431421705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,8 +807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5819f50ba54f6b84cb675b9f3c3b3dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropSpawner: {fileID: 0}
-  enemiesParent: {fileID: 0}
+  dropSpawner: {fileID: 1642124143803316642}
+  enemiesParent: {fileID: 8543775141546398616}
   enemySpawns: []
   enemySpawners: []
   doorColliders:
@@ -839,7 +821,7 @@ MonoBehaviour:
   - {fileID: 1662120766174805187}
   - {fileID: 7815539713237857988}
   - {fileID: 4978163489290208237}
-  itemsForSale: {fileID: 0}
+  itemsForSale: {fileID: 11400000, guid: 4ee0aa9db01ea144f86b7bcc44114f9d, type: 2}
 --- !u!1 &5593148086083654272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,12 +3513,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67a6951828183e94299e61c6b5c6cdd0, type: 3}
---- !u!4 &3545337601641512178 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7499785742057189087, guid: 67a6951828183e94299e61c6b5c6cdd0,
-    type: 3}
-  m_PrefabInstance: {fileID: 6424110704918712877}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1662120766174805187 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5635705871575084782, guid: 67a6951828183e94299e61c6b5c6cdd0,
@@ -3549,6 +3525,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014a2293fe81c8a4f85a8372c8e7bfa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &3545337601641512178 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7499785742057189087, guid: 67a6951828183e94299e61c6b5c6cdd0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6424110704918712877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7425592301776659244
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,10 +15,12 @@ MonoBehaviour:
   itemID: 9debc0f5-5fa9-4f9e-b4e8-06d888d9caa1
   displayName: Health Potion
   description: This mysterious red liquid will fix that flesh wound right up.
-  icon: {fileID: 21300000, guid: ecf23fca192bf9042b17bd487f92b9fa, type: 3}
+  shopPrice: 1
+  icon: {fileID: 21300000, guid: d176a5633ce98c74eaded6ef1db69063, type: 3}
   pickup: {fileID: 561203848152525723, guid: 3e3b4704ce0e8a445afd4c405087166e, type: 3}
   stackable: 1
   consumable: 1
+  cooldownTimer: 1
   healingAmount: 10
   onUseParticleEffect: {fileID: 5084641533062172750, guid: 7acd2cc53805d804fbd14cab457a6276,
     type: 3}

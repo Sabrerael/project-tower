@@ -138,16 +138,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 152
-        height: 128
+        width: 38
+        height: 32
       alignment: 9
-      pivot: {x: 0.415, y: 0.5}
+      pivot: {x: 0.421052, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51f11e8fd4cfcd54ab96f624119d6b45
+      spriteID: 96ac417be75d86300800000000000000
       internalID: 245680919905880681
       vertices: []
       indices: 
@@ -157,18 +157,18 @@ TextureImporter:
       name: SkeletonArcherAttach_1
       rect:
         serializedVersion: 2
-        x: 152
+        x: 38
         y: 0
-        width: 152
-        height: 128
+        width: 38
+        height: 32
       alignment: 9
-      pivot: {x: 0.415, y: 0.5}
+      pivot: {x: 0.421052, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f16aefc14f3e6454c89c7d6f0ff4335b
+      spriteID: 9b9d72b6132d11790800000000000000
       internalID: -7561031189685347911
       vertices: []
       indices: 
@@ -178,18 +178,18 @@ TextureImporter:
       name: SkeletonArcherAttach_2
       rect:
         serializedVersion: 2
-        x: 304
+        x: 76
         y: 0
-        width: 152
-        height: 128
+        width: 38
+        height: 32
       alignment: 9
-      pivot: {x: 0.415, y: 0.5}
+      pivot: {x: 0.421052, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e0d927a5557c08438ac68d04e0e4e0e
+      spriteID: 69f6fa5592c181980800000000000000
       internalID: -8568067327215571050
       vertices: []
       indices: 
@@ -199,18 +199,18 @@ TextureImporter:
       name: SkeletonArcherAttach_3
       rect:
         serializedVersion: 2
-        x: 456
+        x: 114
         y: 0
-        width: 152
-        height: 128
+        width: 38
+        height: 32
       alignment: 9
-      pivot: {x: 0.415, y: 0.5}
+      pivot: {x: 0.421052, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adc24862026b66846ac7e9ac4512e240
+      spriteID: 987a0ff4473d860c0800000000000000
       internalID: -4582180124338641015
       vertices: []
       indices: 
@@ -220,18 +220,18 @@ TextureImporter:
       name: SkeletonArcherAttach_4
       rect:
         serializedVersion: 2
-        x: 608
+        x: 152
         y: 0
-        width: 152
-        height: 128
+        width: 38
+        height: 32
       alignment: 9
-      pivot: {x: 0.415, y: 0.5}
+      pivot: {x: 0.421052, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a064260a43d32e45b499176ca485fd0
+      spriteID: a6ab8446d4567fd10800000000000000
       internalID: 2159305929416817258
       vertices: []
       indices: 
@@ -241,18 +241,18 @@ TextureImporter:
       name: SkeletonArcherAttach_5
       rect:
         serializedVersion: 2
-        x: 760
+        x: 190
         y: 0
-        width: 152
-        height: 128
+        width: 38
+        height: 32
       alignment: 9
-      pivot: {x: 0.415, y: 0.5}
+      pivot: {x: 0.421052, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 279c3cb6173ca864cacb58d9f7f6e7b3
+      spriteID: a455cb22f8a1a7740800000000000000
       internalID: 5150458325916996938
       vertices: []
       indices: 
