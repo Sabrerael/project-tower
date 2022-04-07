@@ -9,17 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2401f721474bff4983584b743f7ab91, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Liquid Fire
   m_EditorClassIdentifier: 
-  itemID: d14bc315-85f8-4711-a60d-e6d7dbecea43
+  itemID: 153bf180-8885-443d-96b8-e0b682bfd5c5
   displayName: Liquid Fire
   description: For when you can't conjure up your own fire.
-  icon: {fileID: 21300000, guid: 2431e5b8c519e974aa46aa3976a95ad0, type: 3}
-  pickup: {fileID: 4997390496118050742, guid: 7764226ebc1be88499b85585bc221e93, type: 3}
+  shopPrice: 1
+  icon: {fileID: 21300000, guid: d8b225075ffba644eb92ff5340bcfa9b, type: 3}
+  pickup: {fileID: 0}
   stackable: 1
   consumable: 1
-  throwSpeed: 5
-  itemPrefab: {fileID: 2981230630987062648, guid: 8baf7b66c54fe0040ab669923b8a36d8,
-    type: 3}
-  sfx: {fileID: 8300000, guid: c7ca7689ec0c3e7408ae4b0c7e836cee, type: 3}
+  cooldownTimer: 1
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: f075e436cff81e948901abe5e1849111, type: 2}
+  - {fileID: 11400000, guid: 847341cfefef9db41a779de90f6c32ff, type: 2}

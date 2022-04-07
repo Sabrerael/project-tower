@@ -9,18 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2401f721474bff4983584b743f7ab91, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Caltrops
   m_EditorClassIdentifier: 
-  itemID: cd1fd66c-7bda-4cf1-a5f9-acaf20a8958f
+  itemID: 0a5f4565-9bf9-4c14-afba-d129b8c90dd9
   displayName: Caltrops
-  description: This simple yet effective trap will deal damage and slow down any enemy
-    that walks across them.
+  description: This simple yet effective trap will deal damage and slow down any
+    enemy that walks across them.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: 953bb6c800350604899f1946dbfdb065, type: 3}
-  pickup: {fileID: 3238385613123008244, guid: b386a74600b32cb4194e5697b2dda69d, type: 3}
+  pickup: {fileID: 0}
   stackable: 1
   consumable: 1
-  throwSpeed: 7
-  itemPrefab: {fileID: 9013888103382522242, guid: 4152cdfbacb96e949aec7480426bebc3,
-    type: 3}
-  sfx: {fileID: 8300000, guid: c7ca7689ec0c3e7408ae4b0c7e836cee, type: 3}
+  cooldownTimer: 1
+  targetingStrategy: {fileID: 11400000, guid: 130e3fd062a673045929d19d448e7014, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: fe8674715b6c36e40b900bd9fab8f931, type: 2}
+  - {fileID: 11400000, guid: 847341cfefef9db41a779de90f6c32ff, type: 2}

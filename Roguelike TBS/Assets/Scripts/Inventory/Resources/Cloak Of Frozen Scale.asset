@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 029db4da47cc1174389aaee44c4c01e2, type: 3}
-  m_Name: Cloak Of Frozen Scale
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
+  m_Name: Cloak of Frozen Scale
   m_EditorClassIdentifier: 
-  itemID: 6a6285ce-9659-40dd-865f-ae6881136064
+  itemID: f33f8240-2d9c-4283-86af-6417c80f954b
   displayName: Cloak Of Frozen Scale
   description: This magical cloak, supposedly made of from dragon scales, has the
     chance to freeze any enemies that dare to attack you.
@@ -20,5 +20,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 5c39bc8e8d1961340b2ea6b1a684cf08, type: 3}
   pickup: {fileID: 0}
   stackable: 0
-  numerator: 1
-  denominator: 20
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 5286f86f76303cd41b5b54aeda966a66, type: 2}

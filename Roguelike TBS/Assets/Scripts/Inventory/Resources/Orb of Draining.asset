@@ -9,17 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5387239366e9594f8807469dcb9a805, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Orb of Draining
   m_EditorClassIdentifier: 
-  itemID: 162dfd56-4aae-4041-a610-a073af5d4488
+  itemID: 88e18b99-26a8-4adc-8c11-ec1b0ae16c43
   displayName: Orb of Draining
-  description: A sky blue orb, this magical item will drain the health of nearby enemies
-    to heal the user.
+  description: A sky blue orb, this magical item will drain the health of nearby
+    enemies to heal the user.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: 872157c74ba1e6145a465f8548dd0d32, type: 3}
-  pickup: {fileID: 8710806042474463348, guid: f1b4693806c821642991ca97c94be20d, type: 3}
+  pickup: {fileID: 0}
   stackable: 0
   consumable: 0
-  aoePrefab: {fileID: 2568748944854759653, guid: 0f06f47274d746f47a828df1c3a40f81,
-    type: 3}
-  sfx: {fileID: 8300000, guid: 3ae984400f101b14082701a8f816ad46, type: 3}
+  cooldownTimer: 60
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 3cc8d29872a84454a993260459ba7b82, type: 2}
+  - {fileID: 11400000, guid: c1f23f0c2fd9dfe4fab1d459e1e10e85, type: 2}

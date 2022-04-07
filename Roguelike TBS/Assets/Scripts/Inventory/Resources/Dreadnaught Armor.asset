@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 332456c6510fd5348bf7c9d917ec1787, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
   m_Name: Dreadnaught Armor
   m_EditorClassIdentifier: 
-  itemID: b8c665f1-ac7a-43b2-89c0-88c4be19254d
+  itemID: d62074a2-5c36-41cb-9a64-fe86b91e4f0d
   displayName: Dreadnaught Armor
   description: This incredibly heavy armor will grant you a great defensive bonus
     but slow you down.
@@ -20,9 +20,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 6ec6b06a6c937f5428415537bde27d43, type: 3}
   pickup: {fileID: 0}
   stackable: 0
-  statToIncrease: 4
-  statIncrease: 5
-  increaseModifier: Additive
-  statToDecrease: 5
-  statDecrease: -10
-  decreaseModifier: Multiplicative
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 17aaff1e2c2c51a4bae0bddb444569e5, type: 2}
+  - {fileID: 11400000, guid: 7ef71baadea8f944c9fa0b6622609910, type: 2}

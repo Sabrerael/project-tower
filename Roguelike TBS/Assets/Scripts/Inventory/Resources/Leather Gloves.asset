@@ -9,16 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbe0f2301174a914a9e0c7056a6ce912, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
   m_Name: Leather Gloves
   m_EditorClassIdentifier: 
-  itemID: 0aa43d7d-d6da-489b-bb25-7e6f39608fd6
+  itemID: 2d5e3db5-adf9-4250-80c7-9f719cf6d38b
   displayName: Leather Gloves
-  description: Gloves made of course leather. Allows the wearer to better grip their
+  description: Gloves made of coarse leather. Allows the wearer to better grip their
     weapon, increasing their Attack by 1.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: 8750627a8d8483a4bb2b531d30c745e8, type: 3}
-  pickup: {fileID: 6547483839719417194, guid: 75ad34f7226c4504d98f39b4e2ccdf23, type: 3}
+  pickup: {fileID: 0}
   stackable: 0
-  modifierAmount: 1
-  statModified: 3
-  typeOfModifier: Additive
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 7b863e1e6eebaf8479f3b195d6c65b4a, type: 2}

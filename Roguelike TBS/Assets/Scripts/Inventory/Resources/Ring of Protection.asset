@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc2111a9855802f49b111bff38157a86, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
   m_Name: Ring of Protection
   m_EditorClassIdentifier: 
-  itemID: 98af280c-144a-46f1-9de6-246e4cfde90b
+  itemID: acddf6e9-617c-4b4d-a4cd-0395b7fb3f21
   displayName: Ring of Protection
   description: This magical ring will occasionally create a barrier that will shield
     you from damage.
@@ -20,5 +20,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 29b74eaad51c0d54496e621be8a7a815, type: 3}
   pickup: {fileID: 0}
   stackable: 0
-  numerator: 1
-  denominator: 20
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 067757ea5623ec14b99f9c150efce28e, type: 2}

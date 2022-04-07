@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cba274b8b8a41c419ddb00a71b44185, type: 3}
+  m_Name: Effect Spawn Projectile Acid Vial
+  m_EditorClassIdentifier: 
+  projectileToSpawn: {fileID: -5501794344471033134, guid: 042857d9a76dbfe428bec462c931baf4,
+    type: 3}
+  throwSpeed: 5
+  damage: 1

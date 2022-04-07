@@ -3,7 +3,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = ("Shop/Shop Library"))]
 public class ShopLibrary : ScriptableObject {
-    [SerializeField] HealthPotion healthPotion = null;
+    [SerializeField] ActionItem healthPotion = null;
     [SerializeField] int maxNumHealthPotions = 3;
     [SerializeField] ShopItemConfig[] possibleItemsForSale = null;
 

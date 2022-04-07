@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda33b94f9649a24fb51c879c320bdab, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Amulet of Healing
   m_EditorClassIdentifier: 
-  itemID: c4079776-1ebb-456c-b829-f50169203e01
+  itemID: c65bfdc1-c5c8-4d14-87b3-61e0e587b89f
   displayName: Amulet of Healing
   description: Focusing magical energies into this amulet will grant it the ability
     to heal some of your wounds.
@@ -22,7 +22,7 @@ MonoBehaviour:
   stackable: 0
   consumable: 0
   cooldownTimer: 120
-  healingAmount: 15
-  onUseParticleEffect: {fileID: 5084641533062172750, guid: 7acd2cc53805d804fbd14cab457a6276,
-    type: 3}
-  sfx: {fileID: 8300000, guid: 3ae984400f101b14082701a8f816ad46, type: 3}
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 73360f79a85199e4094ae5b6c07701a4, type: 2}
+  - {fileID: 11400000, guid: 20f735776ffe4864bbd846f63ebd9610, type: 2}

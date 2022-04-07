@@ -45,6 +45,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -89,10 +91,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 831840725666697072}
-  - component: {fileID: 2741359800321458906}
   - component: {fileID: 7586443397008843316}
   - component: {fileID: 7535182007054037311}
   - component: {fileID: 2589582589370809648}
+  - component: {fileID: -6285759652994404056}
   m_Layer: 10
   m_Name: Bear Trap
   m_TagString: Item
@@ -115,19 +117,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2741359800321458906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4819002388150956887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb3b934eed27d948bb084d5fe59e298, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contactDamage: 1
 --- !u!114 &7586443397008843316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,9 +163,42 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-6285759652994404056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819002388150956887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76898b62be9711499cf95c395bc7fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  isHoming: 1
+  hitEffect: {fileID: 0}
+  maxLifeTime: 10
+  destroyOnHit: []
+  lifeAfterImpact: 0
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7586443397008843316}
+        m_TargetAssemblyTypeName: SpawnAOE, Assembly-CSharp
+        m_MethodName: SpawnAreaOfEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1

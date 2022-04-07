@@ -9,17 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5387239366e9594f8807469dcb9a805, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Coin of the Winds
   m_EditorClassIdentifier: 
-  itemID: f0d2a8d2-540d-467c-ad5f-b84eef62001c
+  itemID: b92b1ecf-62ea-4a0b-a91b-eb17810963b3
   displayName: Coin of the Winds
-  description: This silver coin causes strong winds to flow out from the holder, forcing
-    all enemies away.
+  description: This silver coin causes strong winds to flow out from the holder,
+    forcing all enemies away.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: 8f2219279ae6c6a429b535ca5037435f, type: 3}
-  pickup: {fileID: 3140477682808134016, guid: ecd2a710a5a356e40a2c77e68ad912cd, type: 3}
+  pickup: {fileID: 0}
   stackable: 0
   consumable: 0
-  aoePrefab: {fileID: 8861034780250026624, guid: 5dfe2e948f07e9e4284d831661efe13c,
-    type: 3}
-  sfx: {fileID: 8300000, guid: 32ea60fd7918f8b4ca4067d07164401f, type: 3}
+  cooldownTimer: 30
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 459726119e1bd33419902a30534dd48b, type: 2}
+  - {fileID: 11400000, guid: 84abdec733ebce248ad21f4dd26e5b2c, type: 2}

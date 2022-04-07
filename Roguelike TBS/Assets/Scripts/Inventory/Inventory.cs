@@ -51,12 +51,12 @@ public class Inventory : MonoBehaviour, IModifierProvider {
         return player.GetComponent<Inventory>();
     }
 
-    private bool CanUseHealthPotion(int slot) {
-        if (actionItemInventory[slot].item is HealthPotion) {
-            if (gameObject.GetComponent<Health>().IsAtMaxHealth()) {
-                return false;
-            }
-        }
+    private bool CanUseHealthPotion(int slot) { // TODO Fix this to work with the Action Items
+        //if (actionItemInventory[slot].item is HealthPotion) {
+            //if (gameObject.GetComponent<Health>().IsAtMaxHealth()) {
+                //return false;
+            //}
+        //}
 
         return true;
     }
@@ -298,21 +298,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     public bool AddToFirstEmptyPassiveItemSlot(PassiveItem item) {
         passiveItemInventory.Add(item);
 
-        if (item is RegenItem) {
-            StartCoroutine((item as RegenItem).StartRegen());
-        } else if (item is PurseModifier) {
-            (item as PurseModifier).AddPurseMultiplier(GetComponent<Purse>());
-        } else if (item as StatModifierItem) {
-            (item as StatModifierItem).ApplyStatChanges(this);
-        } else if (item as TradeOffItem) {
-            (item as TradeOffItem).ApplyStatChanges(this);
-        } else if (item as ShieldItem) {
-            GetComponent<Fighter>().onInitialHit += (item as ShieldItem).WillShieldPlayer;
-        } else if (item as DodgeChanceItem) {
-            GetComponent<Fighter>().onInitialHit += (item as DodgeChanceItem).WillDodge;
-        } else if (item as AttackFeedbackItem) {
-            GetComponent<Fighter>().onActualHit += (item as AttackFeedbackItem).FeedbackEffect;
-        }
+        item.TriggerPassiveEffect(gameObject);
 
         if (passiveItemInventoryUpdated != null) {
             passiveItemInventoryUpdated();
@@ -341,21 +327,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     public bool AddPassiveItemToSlot(PassiveItem item) {
         passiveItemInventory.Add(item);
         
-        if (item is RegenItem) {
-            StartCoroutine((item as RegenItem).StartRegen());
-        } else if (item is PurseModifier) {
-            (item as PurseModifier).AddPurseMultiplier(GetComponent<Purse>());
-        } else if (item as StatModifierItem) {
-            (item as StatModifierItem).ApplyStatChanges(this);
-        } else if (item as TradeOffItem) {
-            (item as TradeOffItem).ApplyStatChanges(this);
-        } else if (item as ShieldItem) {
-            GetComponent<Fighter>().onInitialHit += (item as ShieldItem).WillShieldPlayer;
-        } else if (item as DodgeChanceItem) {
-            GetComponent<Fighter>().onInitialHit += (item as DodgeChanceItem).WillDodge;
-        } else if (item as AttackFeedbackItem) {
-            GetComponent<Fighter>().onActualHit += (item as AttackFeedbackItem).FeedbackEffect;
-        }
+        item.TriggerPassiveEffect(gameObject);
 
         if (passiveItemInventoryUpdated != null) {
             passiveItemInventoryUpdated();

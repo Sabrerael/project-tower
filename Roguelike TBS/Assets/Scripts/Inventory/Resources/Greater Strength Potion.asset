@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bcb1133f92c6ff4a9fc38c71b6c441a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Greater Strength Potion
   m_EditorClassIdentifier: 
-  itemID: d9eab878-ac80-4506-982b-4e4e8cca56e3
+  itemID: b95e0c2e-7fe9-4ac3-af2b-5da253b69cab
   displayName: Greater Strength Potion
   description: Increases Strength better than the other potion
   shopPrice: 1
@@ -20,10 +20,9 @@ MonoBehaviour:
   pickup: {fileID: 0}
   stackable: 1
   consumable: 1
-  cooldownTimer: 1
-  stat: 3
-  increase: 50
-  time: 30
-  onUseParticleEffect: {fileID: 9143154608172599820, guid: 567ad428c9101cc47af8abed508bc604,
-    type: 3}
-  sfx: {fileID: 8300000, guid: 916baf2dd37cd7e42acb847d997f9893, type: 3}
+  cooldownTimer: 30
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 16ceb74f6a5af4740b0245aca9129fa1, type: 2}
+  - {fileID: 11400000, guid: 0bed1572bfa46564c87c49655dc7689c, type: 2}
+  - {fileID: 11400000, guid: dc7023156be014940a0a69704372030d, type: 2}

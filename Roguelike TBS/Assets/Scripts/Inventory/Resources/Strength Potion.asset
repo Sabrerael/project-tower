@@ -9,19 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bcb1133f92c6ff4a9fc38c71b6c441a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Strength Potion
   m_EditorClassIdentifier: 
-  itemID: b216a03d-e094-4b53-b1de-4671e08c44df
+  itemID: d65bcb1c-83da-4d27-9ed5-4d53b54a09ec
   displayName: Strength Potion
   description: A green potion that increases your strength for a short time.
-  icon: {fileID: 21300000, guid: 943bd0dc883c686439bd2bcb13cc2eae, type: 3}
-  pickup: {fileID: 3153871385561775611, guid: 7368adb75eafdcb4795db70ce5b7f1dd, type: 3}
+  shopPrice: 1
+  icon: {fileID: 21300000, guid: 0f28c094deccf6b41ad3562fa49a3676, type: 3}
+  pickup: {fileID: 0}
   stackable: 1
   consumable: 1
-  stat: 3
-  increase: 30
-  time: 30
-  onUseParticleEffect: {fileID: 9143154608172599820, guid: 567ad428c9101cc47af8abed508bc604,
-    type: 3}
-  sfx: {fileID: 8300000, guid: 916baf2dd37cd7e42acb847d997f9893, type: 3}
+  cooldownTimer: 30
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: abf5411d7bf414b4ca2bb6b01eea4c04, type: 2}
+  - {fileID: 11400000, guid: 0bed1572bfa46564c87c49655dc7689c, type: 2}
+  - {fileID: 11400000, guid: dc7023156be014940a0a69704372030d, type: 2}

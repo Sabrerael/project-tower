@@ -9,16 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbe0f2301174a914a9e0c7056a6ce912, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
   m_Name: Ring of Strength
   m_EditorClassIdentifier: 
-  itemID: b9ab74ca-1ed7-4e0b-a336-f6a9ad7c6b19
+  itemID: 8689ef9f-9757-4110-973a-2c9be4acc9c8
   displayName: Ring of Strength
   description: Wearing this simple ring makes you feel more powerful and gives you
     a +2 to your Strength.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: 6028066e2e5ae9b4aab64c20b23b35aa, type: 3}
-  pickup: {fileID: 933037598572381295, guid: 96b6c1ce53993f9489bab9fb1879e30c, type: 3}
+  pickup: {fileID: 0}
   stackable: 0
-  modifierAmount: 2
-  statModified: 3
-  typeOfModifier: Additive
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 519a7c1431a3e6a4cad9dad91f6d04b2, type: 2}

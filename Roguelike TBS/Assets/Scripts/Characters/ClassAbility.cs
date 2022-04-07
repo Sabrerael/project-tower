@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 /// <summary>
@@ -13,6 +12,7 @@ public abstract class ClassAbility : ScriptableObject {
     [SerializeField] ActivatationPoint activatationPoint = ActivatationPoint.OnActivate;
     [SerializeField] string abilityName = "";
     [SerializeField] string abilityDescription = "";
+    [SerializeField] EffectStrategy[] effectStrategies;
 
     // PUBLIC
 

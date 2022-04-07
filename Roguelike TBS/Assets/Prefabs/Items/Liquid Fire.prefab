@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2073376566893718319}
   - component: {fileID: 2073376566893718316}
   - component: {fileID: 5743684303132271542}
-  - component: {fileID: 2981230630987062648}
   - component: {fileID: -4248555111599795721}
   - component: {fileID: -5004625922170837005}
+  - component: {fileID: 8742447518933682901}
   m_Layer: 10
   m_Name: Liquid Fire
   m_TagString: Item
@@ -46,7 +46,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.03999999, y: 0.0016077161}
@@ -83,19 +83,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2981230630987062648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073376566893718317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb3b934eed27d948bb084d5fe59e298, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contactDamage: 1
 --- !u!114 &-4248555111599795721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +111,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: 270
+--- !u!114 &8742447518933682901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073376566893718317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76898b62be9711499cf95c395bc7fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  isHoming: 0
+  hitEffect: {fileID: 0}
+  maxLifeTime: 10
+  destroyOnHit: []
+  lifeAfterImpact: 0
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -4248555111599795721}
+        m_TargetAssemblyTypeName: SpawnAOE, Assembly-CSharp
+        m_MethodName: SpawnAreaOfEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2073376567516914006
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +214,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 998918281
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d8b225075ffba644eb92ff5340bcfa9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

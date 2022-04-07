@@ -9,21 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bcb1133f92c6ff4a9fc38c71b6c441a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Greater Defense Potion
   m_EditorClassIdentifier: 
-  itemID: 30956b1a-6a01-4bed-bbe7-21a51455f121
+  itemID: f8cb33dc-f992-46b3-812b-6e54a6f06550
   displayName: Greater Defense Potion
   description: Increases defense better than the other potion
   shopPrice: 1
   icon: {fileID: 21300000, guid: e878c823670c6434da197d3a1cc2b50c, type: 3}
   pickup: {fileID: 0}
-  stackable: 0
-  consumable: 0
+  stackable: 1
+  consumable: 1
   cooldownTimer: 1
-  stat: 4
-  increase: 50
-  time: 30
-  onUseParticleEffect: {fileID: 9143154608172599820, guid: 14ee7b15038ff7247a7609109cad870e,
-    type: 3}
-  sfx: {fileID: 8300000, guid: 916baf2dd37cd7e42acb847d997f9893, type: 3}
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: fe938437a066e1c42b748001e4365b92, type: 2}
+  - {fileID: 11400000, guid: b0aeadb120aa53041a2a65888e3bdf93, type: 2}
+  - {fileID: 11400000, guid: dc7023156be014940a0a69704372030d, type: 2}

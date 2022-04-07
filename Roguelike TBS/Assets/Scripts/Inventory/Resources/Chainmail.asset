@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbe0f2301174a914a9e0c7056a6ce912, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
   m_Name: Chainmail
   m_EditorClassIdentifier: 
-  itemID: eacd19a5-a984-4455-9486-1d069af7c7f2
+  itemID: 212ef9b4-b021-4c55-899f-a570a411c53e
   displayName: Chainmail
   description: A shirt of chainmail that increases the defense of the wearer.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: 6fddd52f78a46a94ba379dd0fbd14109, type: 3}
-  pickup: {fileID: 8816613031341936194, guid: 75922865ec2d28f48955826b9d92bd3b, type: 3}
+  pickup: {fileID: 0}
   stackable: 0
-  modifierAmount: 2
-  statModified: 4
-  typeOfModifier: Additive
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 525996507a01b3548b1472ad897999d2, type: 2}

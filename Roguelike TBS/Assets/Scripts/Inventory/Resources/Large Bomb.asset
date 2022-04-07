@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2401f721474bff4983584b743f7ab91, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Large Bomb
   m_EditorClassIdentifier: 
-  itemID: e10a432b-2858-481b-94b3-a46036324c2a
+  itemID: 4f5cfa78-8060-4ae6-873f-e02f2b51260a
   displayName: Large Bomb
   description: Bigger than the other bomb
   shopPrice: 1
@@ -20,8 +20,8 @@ MonoBehaviour:
   pickup: {fileID: 0}
   stackable: 1
   consumable: 1
-  cooldownTimer: 1
-  throwSpeed: 3
-  itemPrefab: {fileID: 9104795105161012715, guid: f56a827fba201c34296c07157502e0ea,
-    type: 3}
-  sfx: {fileID: 8300000, guid: c7ca7689ec0c3e7408ae4b0c7e836cee, type: 3}
+  cooldownTimer: 5
+  targetingStrategy: {fileID: 11400000, guid: 130e3fd062a673045929d19d448e7014, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 9db04e9cff1c49b49884503b3cb2a946, type: 2}
+  - {fileID: 11400000, guid: 847341cfefef9db41a779de90f6c32ff, type: 2}

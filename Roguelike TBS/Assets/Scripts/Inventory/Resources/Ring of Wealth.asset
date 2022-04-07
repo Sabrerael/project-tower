@@ -9,14 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0615ca20a6de32947a122e0485f2d52a, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
   m_Name: Ring of Wealth
   m_EditorClassIdentifier: 
-  itemID: 82bd2099-f716-4999-ba76-d3456c1ec0b1
+  itemID: a271c254-5054-4c1f-9600-8807bda46212
   displayName: Ring of Wealth
   description: Helps you make money moves
   shopPrice: 1
   icon: {fileID: 21300000, guid: 90aedb12386778b4fb17904d3f9a8b8c, type: 3}
   pickup: {fileID: 0}
   stackable: 0
-  multiplier: 1.5
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: e56574ee39b30444b99b8a4fa20b43bc, type: 2}

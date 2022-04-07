@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 289cc8b0bc3278e4da6bde9078756961, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
   m_Name: Cloak of Displacement
   m_EditorClassIdentifier: 
-  itemID: d1622e5d-d446-44fb-9e92-4c91aaec5e16
+  itemID: aa043002-d908-489a-b987-9470feec293e
   displayName: Cloak of Displacement
   description: This ghostly cloak will occasionally grant you an astral form, allowing
     you to dodge attacks.
@@ -20,5 +20,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: f7e728cc071cdbb479abbff376a5a46a, type: 3}
   pickup: {fileID: 0}
   stackable: 0
-  numerator: 1
-  denominator: 20
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 067757ea5623ec14b99f9c150efce28e, type: 2}

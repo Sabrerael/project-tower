@@ -3,6 +3,8 @@
 public class Weapon : MonoBehaviour {
     [SerializeField] float baseAttackSpeed = 10;
     [SerializeField] protected WeaponConfig weaponConfig = null;
+    [SerializeField] TargetingStrategy targetingStrategy;
+    [SerializeField] EffectStrategy[] effectStrategies;
 
     protected Fighter wielder = null;
     private float timeCount = 0f;
@@ -19,7 +21,19 @@ public class Weapon : MonoBehaviour {
     }
     
     public virtual void UseActiveAbility() {
-        // Empty, this will be overridden in specific weapon scripts
-        return;
+        AbilityData data = new AbilityData(wielder.gameObject);
+        targetingStrategy.StartTargeting(data,
+            () => {
+                TargetAcquired(data);
+            });
+
     }
+
+    private void TargetAcquired(AbilityData data) {
+        foreach (var effect in effectStrategies) {
+            effect.StartEffect(data, EffectFinished);
+        }
+    }
+
+    private void EffectFinished() {}
 }

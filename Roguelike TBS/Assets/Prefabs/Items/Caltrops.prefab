@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5807336699748897832}
-  - component: {fileID: 9013888103382522242}
   - component: {fileID: 3626788981940664684}
   - component: {fileID: 3715152289746430567}
   - component: {fileID: 8713494320930743912}
+  - component: {fileID: 5201884941867847767}
   m_Layer: 10
   m_Name: Caltrops
   m_TagString: Item
@@ -35,19 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9013888103382522242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872387410318419983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb3b934eed27d948bb084d5fe59e298, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contactDamage: 1
 --- !u!114 &3626788981940664684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,12 +81,45 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.175
+--- !u!114 &5201884941867847767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872387410318419983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76898b62be9711499cf95c395bc7fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  isHoming: 0
+  hitEffect: {fileID: 0}
+  maxLifeTime: 5
+  destroyOnHit: []
+  lifeAfterImpact: 0
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3626788981940664684}
+        m_TargetAssemblyTypeName: SpawnAOE, Assembly-CSharp
+        m_MethodName: SpawnAreaOfEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &4665792796357856596
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +165,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

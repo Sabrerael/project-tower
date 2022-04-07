@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cba274b8b8a41c419ddb00a71b44185, type: 3}
+  m_Name: Effect Spawn Projectile Bear Trap
+  m_EditorClassIdentifier: 
+  projectileToSpawn: {fileID: -6285759652994404056, guid: f3486fe8115960d4b88f6731c0109235,
+    type: 3}
+  throwSpeed: 5
+  damage: 1

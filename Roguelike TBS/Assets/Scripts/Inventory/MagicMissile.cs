@@ -17,7 +17,6 @@ public class MagicMissile : MonoBehaviour {
 
     private void Update() {
         if (!caster) { return; }
-
         target = caster.GetComponent<Character>().GetCurrentRoom().GetEnemiesParent().transform.GetChild(0).gameObject;
         startingPoint = transform.position;
 

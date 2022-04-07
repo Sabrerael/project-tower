@@ -9,19 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bcb1133f92c6ff4a9fc38c71b6c441a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Defense Potion
   m_EditorClassIdentifier: 
-  itemID: 1ca9f032-b4f3-4d0f-8b6b-83272d1a2604
+  itemID: 7bf4bcbf-1a67-4358-a36d-a95d1dbbd8de
   displayName: Defense Potion
-  description: This mystrious blue potion will increase your defense for a short time.
+  description: This mystrious blue potion will increase your defense for a short
+    time.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: 17a4b0ae44b843e4490c02270c79e382, type: 3}
-  pickup: {fileID: 3639444658826190136, guid: 0eceb122d8ed8744c926bc91eccef70e, type: 3}
+  pickup: {fileID: 0}
   stackable: 1
   consumable: 1
-  stat: 4
-  increase: 30
-  time: 30
-  onUseParticleEffect: {fileID: 9143154608172599820, guid: 567ad428c9101cc47af8abed508bc604,
-    type: 3}
-  sfx: {fileID: 8300000, guid: 916baf2dd37cd7e42acb847d997f9893, type: 3}
+  cooldownTimer: 1
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 0e45588c68e0c2c4abf23207f55944b2, type: 2}
+  - {fileID: 11400000, guid: b0aeadb120aa53041a2a65888e3bdf93, type: 2}

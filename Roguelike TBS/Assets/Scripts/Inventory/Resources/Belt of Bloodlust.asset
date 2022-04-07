@@ -9,16 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbe0f2301174a914a9e0c7056a6ce912, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
   m_Name: Belt of Bloodlust
   m_EditorClassIdentifier: 
-  itemID: 2d95cfa9-4dba-4570-b941-db3a1c318fbb
+  itemID: 111cfc6f-9acf-42a6-8c56-f6e3fc65c4d1
   displayName: Belt of Bloodlust
   description: A magic belt that imbues the wearer with strength, increasing their
     Attack by 10%.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: a579dcb214bbf04438c8feacb1b915d0, type: 3}
-  pickup: {fileID: 6804450315308749359, guid: ebb327f0bd1bb46429bcd9af9cf03f95, type: 3}
+  pickup: {fileID: 0}
   stackable: 0
-  modifierAmount: 10
-  statModified: 3
-  typeOfModifier: Multiplicative
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: ef6547416e6341d4a8a4d12deefbb5cf, type: 2}

@@ -9,18 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda33b94f9649a24fb51c879c320bdab, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Greater Health Potion
   m_EditorClassIdentifier: 
-  itemID: 3a7ca4c8-3105-42b6-96cc-c0b2b541603b
+  itemID: d79b0785-7315-4ce9-8df2-42379f898cc3
   displayName: Greater Health Potion
-  description: This deep red potion will heal 20 health points to the adventurer who
-    drinks it.
+  description: This deep red potion will heal 20 health points to the adventurer
+    who drinks it.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: 7add2691e6dec2d4a847ac9eb7d5263b, type: 3}
-  pickup: {fileID: 5341070917969346335, guid: 29970e199cd571a468e8cf15eab076d5, type: 3}
+  pickup: {fileID: 0}
   stackable: 1
   consumable: 1
-  healingAmount: 20
-  onUseParticleEffect: {fileID: 5084641533062172750, guid: 7acd2cc53805d804fbd14cab457a6276,
-    type: 3}
-  sfx: {fileID: 8300000, guid: 916baf2dd37cd7e42acb847d997f9893, type: 3}
+  cooldownTimer: 1
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 418ab157ac0677641b5a60d3102aa337, type: 2}
+  - {fileID: 11400000, guid: 20f735776ffe4864bbd846f63ebd9610, type: 2}
+  - {fileID: 11400000, guid: dc7023156be014940a0a69704372030d, type: 2}

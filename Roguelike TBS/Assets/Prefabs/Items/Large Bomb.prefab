@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6042340200040179777}
-  - component: {fileID: 9104795105161012715}
   - component: {fileID: 3538009397587723525}
   - component: {fileID: 3513835489121195534}
   - component: {fileID: 8908671448485173761}
+  - component: {fileID: 5305821991154367090}
   m_Layer: 10
   m_Name: Large Bomb
   m_TagString: Item
@@ -35,19 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9104795105161012715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923450447278576742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb3b934eed27d948bb084d5fe59e298, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contactDamage: 1
 --- !u!114 &3538009397587723525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,12 +81,45 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.13}
   serializedVersion: 2
   m_Radius: 0.35
+--- !u!114 &5305821991154367090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923450447278576742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76898b62be9711499cf95c395bc7fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  isHoming: 0
+  hitEffect: {fileID: 0}
+  maxLifeTime: 5
+  destroyOnHit: []
+  lifeAfterImpact: 0
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3538009397587723525}
+        m_TargetAssemblyTypeName: SpawnAOE, Assembly-CSharp
+        m_MethodName: SpawnAreaOfEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &4867617431626379581
 GameObject:
   m_ObjectHideFlags: 0

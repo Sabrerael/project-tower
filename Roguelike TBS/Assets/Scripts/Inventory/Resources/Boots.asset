@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbe0f2301174a914a9e0c7056a6ce912, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
   m_Name: Boots
   m_EditorClassIdentifier: 
-  itemID: 7f26147b-5367-4dad-95af-5b8955c7e177
+  itemID: a7510c30-68a0-4a27-9c75-854dbc8ac73d
   displayName: Boots
   description: These comfy boots will help you run through the tower a bit faster.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: 023d58c8959ca9242aabd080bbe9c99a, type: 3}
-  pickup: {fileID: 5247382207618183168, guid: bc2021b4ba876b941a2f62585dfa15d3, type: 3}
+  pickup: {fileID: 0}
   stackable: 0
-  modifierAmount: 10
-  statModified: 5
-  typeOfModifier: Multiplicative
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: b1dc6745262cb4241b78f874e2794474, type: 2}

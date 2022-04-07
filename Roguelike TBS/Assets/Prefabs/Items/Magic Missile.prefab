@@ -45,6 +45,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -91,7 +93,7 @@ GameObject:
   - component: {fileID: 1351271577691342676}
   - component: {fileID: 9103184465953065306}
   - component: {fileID: 1610385567796506076}
-  - component: {fileID: -998587592425598947}
+  - component: {fileID: 5255731757254038551}
   m_Layer: 10
   m_Name: Magic Missile
   m_TagString: Magic
@@ -124,7 +126,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -151,7 +153,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-998587592425598947
+--- !u!114 &5255731757254038551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,12 +162,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7099480259740861144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779fbdb800c3ffc449ce426eeea3b609, type: 3}
+  m_Script: {fileID: 11500000, guid: a76898b62be9711499cf95c395bc7fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 7.5
-  xMin: 0
-  xMax: 0
-  yMin: 0
-  yMax: 0
-  damage: 10
+  speed: 7.5
+  isHoming: 1
+  hitEffect: {fileID: 0}
+  maxLifeTime: 10
+  destroyOnHit: []
+  lifeAfterImpact: 0
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []

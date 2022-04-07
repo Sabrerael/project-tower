@@ -9,6 +9,7 @@ public class SpawnAOE : MonoBehaviour {
 
     private void Start() {
         startingPoint = transform.position;
+        instigator = GetComponent<Projectile>().GetInstigator(); //This might cause issues somewhere else
     }
 
     private void Update() {
@@ -17,17 +18,10 @@ public class SpawnAOE : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        SpawnAreaOfEffect();
-    }
-
-    public void SetInstigator(GameObject value) { instigator = value; }
-
-    private void SpawnAreaOfEffect() {
+    public void SpawnAreaOfEffect() {
         var newAOF = Instantiate(aofGameObject, transform.position + (Vector3.forward * 5), Quaternion.identity);
-        newAOF.SetInstigator(gameObject.GetComponent<ThrownItem>().GetWielder().gameObject);
+        newAOF.SetInstigator(instigator);
         if (sfx) { AudioSource.PlayClipAtPoint(sfx, newAOF.transform.position); }
         Destroy(gameObject);
     }
-
 }

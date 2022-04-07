@@ -9,16 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbe0f2301174a914a9e0c7056a6ce912, type: 3}
+  m_Script: {fileID: 11500000, guid: 80f4725a2e235974eb6cffe1d1028e49, type: 3}
   m_Name: Pot Helmet
   m_EditorClassIdentifier: 
-  itemID: 9aa31ede-ffac-4ebf-a389-429dac7d6342
+  itemID: 690b6fba-9c83-4519-ac80-e56a8ccbfcb5
   displayName: Pot
   description: A metal cooking pot that happens to fit perfectly on your head. Increase
     Defense by 1.
+  shopPrice: 1
   icon: {fileID: 21300000, guid: 2625eaefe94ce734783e9970eb5b1b35, type: 3}
-  pickup: {fileID: 4881587474592446091, guid: 31a678e9c14d5e044b19b707182efe2b, type: 3}
+  pickup: {fileID: 0}
   stackable: 0
-  modifierAmount: 1
-  statModified: 4
-  typeOfModifier: Additive
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 4ce393717e4ef6748807440ccb0083d4, type: 2}

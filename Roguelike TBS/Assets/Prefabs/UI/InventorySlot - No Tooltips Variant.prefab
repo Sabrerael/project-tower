@@ -7,6 +7,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 451783661929078898, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -64
+      objectReference: {fileID: 0}
+    - target: {fileID: 451783661929078898, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -64
+      objectReference: {fileID: 0}
+    - target: {fileID: 451783661929078898, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451783661929078898, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5524119340431424442, guid: 20e37bdb2ce25fa4d90031e791b13a93,
         type: 3}
       propertyPath: m_Pivot.x
@@ -116,6 +136,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InventorySlot - No Tooltips Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735227859109368480, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735227859109368480, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735227859109368480, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735227859109368480, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873741933791479997, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873741933791479997, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873741933791479997, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873741933791479997, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873741933791479997, guid: 20e37bdb2ce25fa4d90031e791b13a93,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3226120745141519503, guid: 20e37bdb2ce25fa4d90031e791b13a93, type: 3}

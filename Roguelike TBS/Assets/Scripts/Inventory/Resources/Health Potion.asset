@@ -9,19 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda33b94f9649a24fb51c879c320bdab, type: 3}
+  m_Script: {fileID: 11500000, guid: 2532af30e32ed514db621fae7b711fcd, type: 3}
   m_Name: Health Potion
   m_EditorClassIdentifier: 
-  itemID: 9debc0f5-5fa9-4f9e-b4e8-06d888d9caa1
+  itemID: 53d82bf8-fd25-4286-b893-4c66de6b1fe9
   displayName: Health Potion
   description: This mysterious red liquid will fix that flesh wound right up.
   shopPrice: 1
   icon: {fileID: 21300000, guid: d176a5633ce98c74eaded6ef1db69063, type: 3}
-  pickup: {fileID: 561203848152525723, guid: 3e3b4704ce0e8a445afd4c405087166e, type: 3}
+  pickup: {fileID: 0}
   stackable: 1
   consumable: 1
   cooldownTimer: 1
-  healingAmount: 10
-  onUseParticleEffect: {fileID: 5084641533062172750, guid: 7acd2cc53805d804fbd14cab457a6276,
-    type: 3}
-  sfx: {fileID: 8300000, guid: 916baf2dd37cd7e42acb847d997f9893, type: 3}
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 917a2d3b5ec7bfd4f9bc297072ea9a5a, type: 2}
+  - {fileID: 11400000, guid: 20f735776ffe4864bbd846f63ebd9610, type: 2}
+  - {fileID: 11400000, guid: dc7023156be014940a0a69704372030d, type: 2}
