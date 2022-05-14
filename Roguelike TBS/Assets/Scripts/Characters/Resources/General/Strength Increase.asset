@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c862a7b56181f842af267c5905cb189, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Strength Increase
   m_EditorClassIdentifier: 
   activatationPoint: 0
   abilityName: Strength Increase
-  abilityDescription: Gains a +2 to Strength
-  stat: 3
-  statIncrease: 2
+  abilityDescription: Grants a +2 to Strength
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 3347dbb80d422004882fb2f1efcaca16, type: 2}

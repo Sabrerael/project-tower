@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc15839faffd0014e919b2d57306db1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Oath of Glory - Guiding Bolt
   m_EditorClassIdentifier: 
   activatationPoint: 1
   abilityName: Oath of Glory - Guiding Bolt
   abilityDescription: Upon activating Divine Protection, a flash of light launches
     at a nearby enemy, dealing 8 radient damage
-  toInstantiate: {fileID: 0}
+  targetingStrategy: {fileID: 11400000, guid: 5646b051c2d56f8409ff4c17b3426fd8, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 84b686bc315f80142877a7a963ffd0df, type: 2}

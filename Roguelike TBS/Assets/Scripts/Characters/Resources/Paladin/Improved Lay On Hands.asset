@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5abbc20201a6fe4898e26e3646af3a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Improved Lay On Hands
   m_EditorClassIdentifier: 
   activatationPoint: 1
   abilityName: Improved Lay On Hands
   abilityDescription: When activating Divine Protection, the Paladin heals themselves
     for 10 Health Points.
-  healAmount: 10
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 9d893bbb4dd273a4e9751a9f3f32f54c, type: 2}

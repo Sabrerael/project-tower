@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using RPG.Stats;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,8 +19,8 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     protected BaseStats baseStats;
     protected RoomManager currentRoom = null;
     
-    protected ClassAbility[] randomBonuses = new ClassAbility[3];
-    protected List<ClassAbility> selectedAbilities = new List<ClassAbility>();
+    protected Feat[] randomBonuses = new Feat[3];
+    protected List<Feat> selectedAbilities = new List<Feat>();
     protected int levelOfBonuses = 0;
 
     // Passive Stat increases
@@ -102,7 +101,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
         choiceIndexes = new List<int>();
     }
 
-    protected abstract void HandleSelectedClassAbility(ClassAbility ability);
+    protected abstract void HandleSelectedClassAbility(Feat ability);
 
     public IEnumerable<int> GetAdditiveModifiers(Stat stat) {
         yield return passiveModifyAdditions[stat];
@@ -128,7 +127,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     public void SetCurrentRoom(RoomManager roomManager) { currentRoom = roomManager; }
     
     public RoomManager GetCurrentRoom() { return currentRoom; }
-    public List<ClassAbility> GetSelectedAbilities() { return selectedAbilities; }
+    public List<Feat> GetSelectedAbilities() { return selectedAbilities; }
 
     public void TriggerOnRoomClear() {
         if (onRoomClear != null) { onRoomClear(gameObject); }

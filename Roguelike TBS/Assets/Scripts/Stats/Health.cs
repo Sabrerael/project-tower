@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace RPG.Stats {
@@ -35,7 +36,8 @@ namespace RPG.Stats {
             if (healthPoints == 0) {
                 Die();
                 AwardExperience(instigator);
-                return;
+            } else {
+                StartCoroutine(DamageEffect());
             }
         }
 
@@ -97,6 +99,17 @@ namespace RPG.Stats {
             if (healthPoints <= 0) {
                 Die();
             }
+        }
+
+        private IEnumerator DamageEffect() {
+            //TODO Make the color transition smoother -- Maybe this just goes in Update?
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            yield return new WaitForSeconds(.1f);
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            yield return new WaitForSeconds(.1f);
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            yield return new WaitForSeconds(.1f);
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 }

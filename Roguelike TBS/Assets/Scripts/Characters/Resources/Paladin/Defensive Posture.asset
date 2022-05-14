@@ -9,14 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c34ebdf6be5eb4fbab9552febd2ad1, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Defensive Posture
   m_EditorClassIdentifier: 
   activatationPoint: 0
   abilityName: Defensive Posture
-  abilityDescription: The Paladin takes up a defensive fighting stance, gaining a
-    10% increase to Defense in exchange for a 5% decrease to Strength
-  statToIncrease: 4
-  statIncrease: 10
-  statToDecrease: 3
-  statDecrease: 5
+  abilityDescription: The Paladin takes up a defensive fighting stance during Divine
+    Protection, gaining a 10% increase to Defense in exchange for a 5% decrease to
+    Strength
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 312ba049dfc3cea468ecba50dab07c38, type: 2}
+  - {fileID: 11400000, guid: 938937cd260202f49943ec3426c3aa71, type: 2}

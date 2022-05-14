@@ -6,11 +6,11 @@ public class FeatSlotUI : MonoBehaviour {
     [SerializeField] int index = 0;
 
     // STATE
-    ClassAbility feat;
+    Feat feat;
 
     // PUBLIC
 
-    public void Setup(ClassAbility feat, int index) {
+    public void Setup(Feat feat, int index) {
         this.feat = feat;
         this.index = index;
         description.text = this.feat.GetAbilityName() + ": " + this.feat.GetAbilityDescription();

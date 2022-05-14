@@ -16,6 +16,7 @@ public class WeaponConfig : InventoryItem {
 
         if (equippedPrefab != null) {
             weapon = Instantiate(equippedPrefab, hand);
+            weapon.enabled = false;
             weapon.gameObject.GetComponent<Collider2D>().enabled = false;
             weapon.gameObject.name = weaponName;
             weapon.SetWielder(fighter);

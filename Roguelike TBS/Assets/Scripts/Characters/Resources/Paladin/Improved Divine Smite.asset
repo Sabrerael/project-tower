@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33115207e98e3934fa533f1ed0544b6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Improved Divine Smite
   m_EditorClassIdentifier: 
   activatationPoint: 0
   abilityName: Improved Divine Smite
   abilityDescription: While Divine Protection is active, the Paladin deals 10% more
     damage as radient damage
-  stat: 3
-  statIncrease: 10
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 9d54cd83cc838cf42abf9caa1a627524, type: 2}

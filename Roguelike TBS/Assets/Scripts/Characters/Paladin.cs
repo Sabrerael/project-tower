@@ -62,7 +62,7 @@ public class Paladin : Character {
         yield return passiveModifyPercentages[stat];
     }
 
-    protected override void HandleSelectedClassAbility(ClassAbility ability) {
+    protected override void HandleSelectedClassAbility(Feat ability) {
         selectedAbilities.Add(ability);
         if (ability.GetActivatationPoint() == ActivatationPoint.Passive) {
             ability.Use(gameObject);

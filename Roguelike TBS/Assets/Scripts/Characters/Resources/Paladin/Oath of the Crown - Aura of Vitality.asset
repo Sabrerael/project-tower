@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e749dcf825d9f404aa181bcf174ba1a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Oath of the Crown - Aura of Vitality
   m_EditorClassIdentifier: 
-  activatationPoint: 0
+  activatationPoint: 1
   abilityName: Oath of the Crown - Aura of Vitality
   abilityDescription: While Divine Protection is active, the Paladin will regen 2
     Health Points every 4 seconds
-  regenAmount: 2
-  regenFrameCount: 240
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: b46bd68d44fa4bf46a4a4eae6b89d138, type: 2}

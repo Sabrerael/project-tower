@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2f396670f9ff7479d06bc22c1fb2be, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Movement Speed Increase
   m_EditorClassIdentifier: 
   activatationPoint: 0
   abilityName: Movement Speed Increase
-  abilityDescription: Gains an additional 5% to Movement Speed.
-  stat: 5
-  statIncrease: 5
+  abilityDescription: Grants an additional 5% to Movement Speed.
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 75323ed6cf2f189439eeaa6c84cd3539, type: 2}

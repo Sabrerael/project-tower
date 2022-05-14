@@ -49,14 +49,12 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         if (onInitialHit != null && onInitialHit()) { return; }
 
         if (other.gameObject.tag == "Enemy") {
-            gameObject.GetComponent<Animator>().SetTrigger("Hit");
             var enemyBaseStats = other.gameObject.GetComponent<BaseStats>();
             var damageTaken = enemyBaseStats.GetStat(Stat.Attack) - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
             gameObject.GetComponent<Health>().TakeDamage(other.gameObject, damageTaken);
             StartCoroutine(IFrameTimer(iFramesTimeLimit));
             if (onActualHit != null) { onActualHit(other.gameObject.GetComponent<Enemy>()); }
         } else if (other.gameObject.tag == "Enemy Projectile") {
-            gameObject.GetComponent<Animator>().SetTrigger("Hit");
             var enemyProjectile = other.gameObject.GetComponent<EnemyProjectile>();
             var damageTaken = enemyProjectile.GetDamage() - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
             gameObject.GetComponent<Health>().TakeDamage(other.gameObject, damageTaken);

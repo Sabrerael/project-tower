@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33115207e98e3934fa533f1ed0544b6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Oath of Glory - Aura of Alacrity
   m_EditorClassIdentifier: 
   activatationPoint: 0
   abilityName: Oath of Glory - Aura of Alacrity
   abilityDescription: While Divine Protection is active, the Paladin gains an additional
     10% bonus to their movement speed
-  stat: 5
-  statIncrease: 10
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 48f1d820e8aa8d04bbfc6a0e70fbce2c, type: 2}

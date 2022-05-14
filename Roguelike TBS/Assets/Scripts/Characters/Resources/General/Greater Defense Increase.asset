@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2f396670f9ff7479d06bc22c1fb2be, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Greater Defense Increase
   m_EditorClassIdentifier: 
   activatationPoint: 0
   abilityName: Greater Defense Increase
-  abilityDescription: Gains an additional 3% to Defense
-  stat: 4
-  statIncrease: 3
+  abilityDescription: Grants an additional 3% to Defense
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 6329d3a615f91d14086e28c76ff64aa9, type: 2}

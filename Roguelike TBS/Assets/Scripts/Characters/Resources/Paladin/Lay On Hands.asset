@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5abbc20201a6fe4898e26e3646af3a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Lay On Hands
   m_EditorClassIdentifier: 
   activatationPoint: 1
   abilityName: Lay On Hands
   abilityDescription: When activating Divine Protection, the Paladin heals themselves
     for 5 Health Points.
-  healAmount: 5
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 817265d49e344d24796f54e6768fbedf, type: 2}

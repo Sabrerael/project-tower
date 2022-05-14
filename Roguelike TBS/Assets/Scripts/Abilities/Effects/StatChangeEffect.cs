@@ -1,12 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Stat Change Effect", menuName = "Abilities/Effects/Stat Change")]
 public class StatChangeEffect : EffectStrategy {
     [SerializeField] bool additiveChange;
     [SerializeField] Stat statToChange;
+    [Tooltip("Enter 0 if the Effect should be constant, otherwise enter the duration of the change")]
     [SerializeField] int timeForChange;
     [Tooltip("Flat numbers if Additive, percent change if not")]
     [SerializeField] int changeAmount;

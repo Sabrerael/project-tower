@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c34ebdf6be5eb4fbab9552febd2ad1, type: 3}
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Guarded Stance
   m_EditorClassIdentifier: 
   activatationPoint: 0
   abilityName: Guarded Stance
   abilityDescription: While Divine Protection is active, the Paladin moves 10% slower
     to increase their defense by 10%
-  statToIncrease: 4
-  statIncrease: 10
-  statToDecrease: 5
-  statDecrease: 10
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 52728ae5fca7560489f1704716d31d72, type: 2}
+  - {fileID: 11400000, guid: ef10436ca56020243b6592418ce17835, type: 2}
