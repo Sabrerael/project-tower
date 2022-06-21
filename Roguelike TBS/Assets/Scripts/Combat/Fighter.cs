@@ -28,6 +28,8 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     private bool waitingForNextAttack = false;
     protected bool inputReceived = false;
     private WeaponState weaponState = WeaponState.Ready;
+    protected GameObject weaponGameObject = null;
+    protected WeaponType weaponStyle = WeaponType.OneHanded;
 
     public event Func<bool> onInitialHit;
     public event Action<Enemy> onActualHit;
@@ -64,7 +66,8 @@ public class Fighter : MonoBehaviour, IModifierProvider {
 
     public void EquipWeapon(WeaponConfig weapon) {
         currentWeapon = weapon;
-        weapon.Spawn(handTransform, null, this);
+        weaponGameObject = weapon.Spawn(handTransform, null, this);
+        weaponState = (WeaponState)weapon.GetWeaponType();
     }
 
     // Sets iFramesActive to the opposite of what it currently is
@@ -102,6 +105,10 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         weaponCollider.enabled = !weaponCollider.enabled;
     }
 
+    public void ToggleWeapon() {
+        weaponGameObject.SetActive(!weaponGameObject.activeInHierarchy);
+    }
+
     private void ChangeWeaponState() {
         if (weaponState == WeaponState.Swinging3) {
             weaponState = WeaponState.Ready;
@@ -112,6 +119,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
             weaponState = WeaponState.Swinging1;
             CheckMouseLocation();
             GetComponent<Animator>().SetTrigger("AttackState1");
+            GetComponent<Animator>().SetInteger("AttackStyle", (int)weaponStyle);
             return;
         }
 
@@ -141,11 +149,14 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     private void CheckMouseLocation() {
         var offset = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;
         var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-
         if (40 < angle && angle < 110) {
            GetComponent<Animator>().SetTrigger("MouseUp"); 
         } else if (-110 < angle && angle < -40) {
             GetComponent<Animator>().SetTrigger("MouseDown");
+        } else if (Mathf.Abs(angle) > 110) {
+            GetComponent<Animator>().SetTrigger("MouseLeft");
+        } else {
+            GetComponent<Animator>().SetTrigger("MouseRight");
         }
     }
 

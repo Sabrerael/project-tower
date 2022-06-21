@@ -151,7 +151,7 @@ MonoBehaviour:
     relativeChance: 4
     minNumber: 1
     maxNumber: 1
-  - item: {fileID: 0}
+  - item: {fileID: 11400000, guid: ae04ea780edf3cf469de6423487552e3, type: 2}
     itemDropped: {fileID: 933037598572381295, guid: 96b6c1ce53993f9489bab9fb1879e30c,
       type: 3}
     relativeChance: 4

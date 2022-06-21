@@ -61,8 +61,9 @@ namespace RPG.Stats {
 
         private void Die() {
             if (gameObject.tag == "Player") {
-                // Go to Game Over screen
-                levelLoader.LoadGameOver();
+                // Trigger a coroutine to 'die' and go to Game Over screen
+                StartCoroutine(PlayerDeath());
+                return;
             }
 
             if (isDead) { return; }
@@ -110,6 +111,14 @@ namespace RPG.Stats {
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             yield return new WaitForSeconds(.1f);
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+
+        private IEnumerator PlayerDeath() {
+            isDead = true;
+            var animator = GetComponent<Animator>();
+            animator.SetBool("IsDead", true);
+            yield return new WaitForSeconds(2.5f);
+            levelLoader.LoadGameOver();
         }
     }
 }

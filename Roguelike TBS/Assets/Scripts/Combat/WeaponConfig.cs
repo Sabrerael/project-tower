@@ -11,12 +11,11 @@ public class WeaponConfig : InventoryItem {
     const string weaponName = "Weapon";
     Weapon weapon = null;
 
-    public void Spawn(Transform hand, Animator animator, Fighter fighter) {
+    public GameObject Spawn(Transform hand, Animator animator, Fighter fighter) {
         DestroyOldWeapon(hand);
 
         if (equippedPrefab != null) {
             weapon = Instantiate(equippedPrefab, hand);
-            weapon.enabled = false;
             weapon.gameObject.GetComponent<Collider2D>().enabled = false;
             weapon.gameObject.name = weaponName;
             weapon.SetWielder(fighter);
@@ -29,8 +28,10 @@ public class WeaponConfig : InventoryItem {
                 weaponAbilityIcon.GetComponent<Image>().sprite = null;
                 weaponAbilityIcon.GetComponent<Image>().color = Color.clear;
             }
+            weapon.gameObject.SetActive(false);
         }
         HandlePassive(fighter.gameObject);
+        return weapon.gameObject;
     }
 
     private void DestroyOldWeapon(Transform hand) {
@@ -43,6 +44,7 @@ public class WeaponConfig : InventoryItem {
     }
 
     public int GetWeaponDamage() { return weaponDamage; }
+    public WeaponType GetWeaponType() { return weaponType; }
 
     public virtual void HandlePassive(GameObject user) {
         // Overrided in specific files for now

@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour {
     [SerializeField] float dodgeSpeed;
     [SerializeField] float dodgeDistance;
 
+    private Animator animator;
     private Rigidbody2D playerRigidbody;
     private float xMin, xMax, yMin, yMax;
     private Vector2 movementValues = new Vector2();
@@ -23,6 +24,7 @@ public class Movement : MonoBehaviour {
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1,0,0)).x - padding;
         yMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).y + padding;
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0,1,0)).y - padding;
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate() {
@@ -74,11 +76,27 @@ public class Movement : MonoBehaviour {
     }
 
     public void NormalMovement() {
-        GetComponent<Animator>().SetBool("IsWalking", true);
+        animator.SetBool("IsWalking", true);
         var movementSpeed = GetComponent<BaseStats>().GetStat(Stat.MovementSpeed);
+
+        Debug.Log(movementValues);
 
         float deltaX = movementValues.x * Time.fixedDeltaTime * movementSpeed;
         float deltaY = movementValues.y * Time.fixedDeltaTime * movementSpeed;
+
+        if (movementValues.x < 0) {
+            animator.SetBool("WalkingRight", false);
+            animator.SetBool("MovingVertical", false);
+        } else if (movementValues.x > 0) {
+            animator.SetBool("WalkingRight", true);
+            animator.SetBool("MovingVertical", false);
+        } else if (movementValues.y < Mathf.Epsilon) {
+            animator.SetBool("WalkingDown", true);
+            animator.SetBool("MovingVertical", true);
+        } else if (movementValues.y > Mathf.Epsilon) {
+            animator.SetBool("WalkingDown", false);
+            animator.SetBool("MovingVertical", true);
+        } 
 
         float newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
         float newyPos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);

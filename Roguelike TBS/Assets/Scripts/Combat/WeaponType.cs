@@ -1,5 +1,5 @@
 public enum WeaponType {
     OneHanded,
     TwoHanded,
-    Piercing,
+    Lance,
 }

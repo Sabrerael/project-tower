@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 0b2377b876b9947469c149394a4ea99e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1413465217777112301
+    second: PaladinTwoHandedAttackBody_0
+  - first:
+      213: -2068792001642255861
+    second: PaladinTwoHandedAttackBody_1
+  - first:
+      213: -8132464932093424751
+    second: PaladinTwoHandedAttackBody_2
+  - first:
+      213: -7088324723600904794
+    second: PaladinTwoHandedAttackBody_3
+  - first:
+      213: -1303092438028984431
+    second: PaladinTwoHandedAttackBody_4
+  - first:
+      213: -4517176319736321699
+    second: PaladinTwoHandedAttackBody_5
+  - first:
+      213: -7891828848208698596
+    second: PaladinTwoHandedAttackBody_6
+  - first:
+      213: -8542058769709341211
+    second: PaladinTwoHandedAttackBody_7
+  - first:
+      213: 4814132114435995979
+    second: PaladinTwoHandedAttackBody_8
+  - first:
+      213: 3380979357788000670
+    second: PaladinTwoHandedAttackBody_9
+  - first:
+      213: -2405070155103731968
+    second: PaladinTwoHandedAttackBody_10
+  - first:
+      213: -981521672378369714
+    second: PaladinTwoHandedAttackBody_11
+  - first:
+      213: 1878652483456998913
+    second: PaladinTwoHandedAttackBody_12
+  - first:
+      213: 5291172687131904228
+    second: PaladinTwoHandedAttackBody_13
+  - first:
+      213: 6625191840269896624
+    second: PaladinTwoHandedAttackBody_14
+  - first:
+      213: -4864923763248063472
+    second: PaladinTwoHandedAttackBody_15
+  - first:
+      213: -1810658344730412780
+    second: PaladinTwoHandedAttackBody_16
+  - first:
+      213: -2557858402975580680
+    second: PaladinTwoHandedAttackBody_17
+  - first:
+      213: 4980308027368706913
+    second: PaladinTwoHandedAttackBody_18
+  - first:
+      213: 8974293780804712590
+    second: PaladinTwoHandedAttackBody_19
+  - first:
+      213: 1157370801270492236
+    second: PaladinTwoHandedAttackBody_20
+  - first:
+      213: 5203156464011714111
+    second: PaladinTwoHandedAttackBody_21
+  - first:
+      213: 5815524578660352347
+    second: PaladinTwoHandedAttackBody_22
+  - first:
+      213: -1159911046794922505
+    second: PaladinTwoHandedAttackBody_23
+  - first:
+      213: 3790004707373084381
+    second: PaladinTwoHandedAttackBody_24
+  - first:
+      213: -7708612339484481861
+    second: PaladinTwoHandedAttackBody_25
+  - first:
+      213: -644421338980621832
+    second: PaladinTwoHandedAttackBody_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de499ff6023ad9310800000000000000
+      internalID: 1413465217777112301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0aa1fba2ac2a43e0800000000000000
+      internalID: -2068792001642255861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b004e5b3ea32f80800000000000000
+      internalID: -8132464932093424751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad262d283631ad90800000000000000
+      internalID: -7088324723600904794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fd8c9e45c7aede0800000000000000
+      internalID: -1303092438028984431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d596f4af114cf41c0800000000000000
+      internalID: -4517176319736321699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_6
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13275aa9779a7290800000000000000
+      internalID: -7891828848208698596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_7
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5e6f48ec2847980800000000000000
+      internalID: -8542058769709341211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_8
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49f1c6d6ab3fc240800000000000000
+      internalID: 4814132114435995979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_9
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91d1ed00d6abee20800000000000000
+      internalID: 3380979357788000670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_10
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ff521cf697f9ed0800000000000000
+      internalID: -2405070155103731968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_11
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e493a824d3fe062f0800000000000000
+      internalID: -981521672378369714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_12
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e1cdcea70521a10800000000000000
+      internalID: 1878652483456998913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_13
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e80fbd66850e6940800000000000000
+      internalID: 5291172687131904228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_14
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb8a1080e861fb50800000000000000
+      internalID: 6625191840269896624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_15
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c1e30ec915c7cb0800000000000000
+      internalID: -4864923763248063472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_16
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4193fb824df3fd6e0800000000000000
+      internalID: -1810658344730412780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_17
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd74e8a559a08cd0800000000000000
+      internalID: -2557858402975580680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_18
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163965b93cb9d1540800000000000000
+      internalID: 4980308027368706913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_19
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88bcd255a81b8c70800000000000000
+      internalID: 8974293780804712590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_20
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c032b9c9ecf0010800000000000000
+      internalID: 1157370801270492236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_21
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e123c8c33553840800000000000000
+      internalID: 5203156464011714111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_22
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b518a95dac4e4b050800000000000000
+      internalID: 5815524578660352347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_23
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5bcb46c0b27efe0800000000000000
+      internalID: -1159911046794922505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_24
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddee708733dc89430800000000000000
+      internalID: 3790004707373084381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_25
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6a5d15be1850590800000000000000
+      internalID: -7708612339484481861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinTwoHandedAttackBody_26
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 0
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1e06cd43e8e07f0800000000000000
+      internalID: -644421338980621832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
