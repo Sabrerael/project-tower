@@ -67,7 +67,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     public void EquipWeapon(WeaponConfig weapon) {
         currentWeapon = weapon;
         weaponGameObject = weapon.Spawn(handTransform, null, this);
-        weaponState = (WeaponState)weapon.GetWeaponType();
+        weaponStyle = weapon.GetWeaponType();
     }
 
     // Sets iFramesActive to the opposite of what it currently is
@@ -114,12 +114,13 @@ public class Fighter : MonoBehaviour, IModifierProvider {
             weaponState = WeaponState.Ready;
             return;
         }
-
+        Debug.Log("In ChangeWeaponState");
         if (weaponState == WeaponState.Ready) {
             weaponState = WeaponState.Swinging1;
             CheckMouseLocation();
             GetComponent<Animator>().SetTrigger("AttackState1");
             GetComponent<Animator>().SetInteger("AttackStyle", (int)weaponStyle);
+            Debug.Log((int)weaponStyle);
             return;
         }
 
