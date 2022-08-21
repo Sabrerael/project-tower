@@ -34,6 +34,7 @@ public class Barbarian : Character {
     public override void ActiveAbility() {
         if (abilityState != AbilityState.Ready) { return; }
 
+        GetComponent<Animator>().SetTrigger("Rage");
         abilityState = AbilityState.Active;
         if (abilityParticles != null) { 
             Instantiate(abilityParticles, transform);

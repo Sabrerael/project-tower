@@ -1,7 +1,88 @@
 fileFormatVersion: 2
 guid: 444cbeaa5e5afe44b87df05d21b7cc05
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8680723728645525741
+    second: BarbarianTwoHandedAttackArms_0
+  - first:
+      213: -7750408829953507588
+    second: BarbarianTwoHandedAttackArms_1
+  - first:
+      213: 8283690779409892025
+    second: BarbarianTwoHandedAttackArms_2
+  - first:
+      213: -1575224450789950621
+    second: BarbarianTwoHandedAttackArms_3
+  - first:
+      213: 3400353664442830522
+    second: BarbarianTwoHandedAttackArms_4
+  - first:
+      213: -3107888449921501356
+    second: BarbarianTwoHandedAttackArms_5
+  - first:
+      213: 1246461266591531062
+    second: BarbarianTwoHandedAttackArms_6
+  - first:
+      213: 848301842897797100
+    second: BarbarianTwoHandedAttackArms_7
+  - first:
+      213: -5776023840273396703
+    second: BarbarianTwoHandedAttackArms_8
+  - first:
+      213: -2391675175558995595
+    second: BarbarianTwoHandedAttackArms_9
+  - first:
+      213: 5829766671985126247
+    second: BarbarianTwoHandedAttackArms_10
+  - first:
+      213: 6868824428306929937
+    second: BarbarianTwoHandedAttackArms_11
+  - first:
+      213: -2949626943113102838
+    second: BarbarianTwoHandedAttackArms_12
+  - first:
+      213: -1291579652081761906
+    second: BarbarianTwoHandedAttackArms_13
+  - first:
+      213: -4219065594495076078
+    second: BarbarianTwoHandedAttackArms_14
+  - first:
+      213: 2563827689852889912
+    second: BarbarianTwoHandedAttackArms_15
+  - first:
+      213: -8679948064080059195
+    second: BarbarianTwoHandedAttackArms_16
+  - first:
+      213: -6043307978823243816
+    second: BarbarianTwoHandedAttackArms_17
+  - first:
+      213: -817569520777190572
+    second: BarbarianTwoHandedAttackArms_18
+  - first:
+      213: 1535229010238475612
+    second: BarbarianTwoHandedAttackArms_19
+  - first:
+      213: -6736850820556396675
+    second: BarbarianTwoHandedAttackArms_20
+  - first:
+      213: 5490013743269254844
+    second: BarbarianTwoHandedAttackArms_21
+  - first:
+      213: 987725795024701148
+    second: BarbarianTwoHandedAttackArms_22
+  - first:
+      213: -2033136865625731108
+    second: BarbarianTwoHandedAttackArms_23
+  - first:
+      213: -8090871568898154894
+    second: BarbarianTwoHandedAttackArms_24
+  - first:
+      213: -6142837574847801575
+    second: BarbarianTwoHandedAttackArms_25
+  - first:
+      213: -8446420345187022688
+    second: BarbarianTwoHandedAttackArms_26
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +113,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +122,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,7 +194,574 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0983f1d30287870800000000000000
+      internalID: 8680723728645525741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfef19a8b34017490800000000000000
+      internalID: -7750408829953507588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2c7efffd495f270800000000000000
+      internalID: 8283690779409892025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bb72935bda32ae0800000000000000
+      internalID: -1575224450789950621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_4
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe00d754ab703f20800000000000000
+      internalID: 3400353664442830522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457b3eccbef8ed4d0800000000000000
+      internalID: -3107888449921501356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_6
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630c87dfae15c4110800000000000000
+      internalID: 1246461266591531062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_7
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef7b381806c5cb00800000000000000
+      internalID: 848301842897797100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_8
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c01528be077dfa0800000000000000
+      internalID: -5776023840273396703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_9
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571afa679101fced0800000000000000
+      internalID: -2391675175558995595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_10
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ba51796ed77e050800000000000000
+      internalID: 5829766671985126247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_11
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11992c9cc67f25f50800000000000000
+      internalID: 6868824428306929937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_12
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a72db4ce1d017d0800000000000000
+      internalID: -2949626943113102838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_13
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e814b864623631ee0800000000000000
+      internalID: -1291579652081761906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_14
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2197c04023ed275c0800000000000000
+      internalID: -4219065594495076078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_15
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bedfe33bb849320800000000000000
+      internalID: 2563827689852889912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_16
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c42bab5931aa8780800000000000000
+      internalID: -8679948064080059195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_17
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7e4fd796bd12ca0800000000000000
+      internalID: -6043307978823243816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_18
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453a3ee3ad867a4f0800000000000000
+      internalID: -817569520777190572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_19
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d832c96aa3e4510800000000000000
+      internalID: 1535229010238475612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_20
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77efef3fd5e182a0800000000000000
+      internalID: -6736850820556396675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_21
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb693938962703c40800000000000000
+      internalID: 5490013743269254844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_22
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd600fb906b15bd00800000000000000
+      internalID: 987725795024701148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_23
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf80a0fac8d8c3e0800000000000000
+      internalID: -2033136865625731108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_24
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e9484ec2377bf80800000000000000
+      internalID: -8090871568898154894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_25
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917564695c140caa0800000000000000
+      internalID: -6142837574847801575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarbarianTwoHandedAttackArms_26
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8ce75727948ca80800000000000000
+      internalID: -8446420345187022688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
