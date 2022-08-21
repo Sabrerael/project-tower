@@ -24,6 +24,6 @@ MonoBehaviour:
     type: 3}
   weaponDamage: 8
   abilityIcon: {fileID: 0}
-  weaponType: 0
+  weaponType: 2
   activatationPoint: 3
   healthPoints: 5
