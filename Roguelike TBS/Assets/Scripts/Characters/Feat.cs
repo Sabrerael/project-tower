@@ -10,7 +10,7 @@ using UnityEngine;
 [System.Serializable]
 [CreateAssetMenu(fileName = "New Feat", menuName = "Feat")]
 public class Feat : ScriptableObject {
-    [SerializeField] ActivatationPoint activatationPoint = ActivatationPoint.OnActivate;
+    [SerializeField] ActivationPoint activationPoint = ActivationPoint.OnActivate;
     [SerializeField] string abilityName = "";
     [SerializeField] string abilityDescription = "";
     [SerializeField] TargetingStrategy targetingStrategy; // Currently this should only be SelfTargeting
@@ -31,7 +31,7 @@ public class Feat : ScriptableObject {
             });
     }
 
-    public ActivatationPoint GetActivatationPoint() { return activatationPoint; }
+    public ActivationPoint GetActivationPoint() { return activationPoint; }
     public string GetAbilityName() { return abilityName; }
     public string GetAbilityDescription() { return abilityDescription; }
 

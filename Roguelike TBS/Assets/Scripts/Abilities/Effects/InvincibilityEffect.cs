@@ -8,5 +8,7 @@ public class InvincibilityEffect : EffectStrategy {
     public override void StartEffect(AbilityData data, Action finished) {
         Fighter fighter = data.GetUser().GetComponent<Fighter>();
         fighter.StartIFrameTimer(invulnerabilityTimer);
+
+        finished();
     }
 }

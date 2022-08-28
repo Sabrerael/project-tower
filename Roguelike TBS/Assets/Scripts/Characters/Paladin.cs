@@ -46,7 +46,9 @@ public class Paladin : Character {
         if (onAbilityActivate != null) {
             onAbilityActivate(gameObject);
         }
-        StartCoroutine(StatTimer(abilityTimer, abilityModifyPercent));
+        
+        abilityCoroutine = StatTimer(abilityTimer, abilityModifyPercent);
+        StartCoroutine(abilityCoroutine);
     }
 
     public override void CallOnAbilityKill() {
@@ -64,11 +66,11 @@ public class Paladin : Character {
 
     protected override void HandleSelectedClassAbility(Feat ability) {
         selectedAbilities.Add(ability);
-        if (ability.GetActivatationPoint() == ActivatationPoint.Passive) {
+        if (ability.GetActivationPoint() == ActivationPoint.Passive) {
             ability.Use(gameObject);
-        } else if (ability.GetActivatationPoint() == ActivatationPoint.OnActivate) {
+        } else if (ability.GetActivationPoint() == ActivationPoint.OnActivate) {
             onAbilityActivate += ability.Use;
-        } else if (ability.GetActivatationPoint() == ActivatationPoint.OnKill) {
+        } else if (ability.GetActivationPoint() == ActivationPoint.OnKill) {
             onAbilityKill += ability.Use;
         }
         if (onFeatAdded != null) {

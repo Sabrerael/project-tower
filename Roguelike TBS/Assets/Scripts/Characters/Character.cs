@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using RPG.Stats;
 using UnityEngine;
@@ -26,12 +27,14 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     // Passive Stat increases
     protected Dictionary<Stat, int> passiveModifyAdditions = new Dictionary<Stat, int>();
     protected Dictionary<Stat, int> passiveModifyPercentages = new Dictionary<Stat, int>();
+    protected int criticalChance = 3;
 
     // Active Ability variables
     protected Dictionary<Stat, int> activeAbilityModifyPercentages = new Dictionary<Stat, int>();
     protected float cooldownTimer = 0;
     protected GameObject characterAbilityIcon;
     protected AbilityState abilityState = AbilityState.Ready;
+    protected IEnumerator abilityCoroutine;
 
     public event Action<GameObject> onRoomClear;
     public virtual event Action onFeatAdded;
@@ -66,6 +69,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
 
     public AbilityState GetAbilityState() { return abilityState; }
 
+    // Virtual Functions
     public virtual void ActiveAbility() {
         // Overrided in the specific character classes
     }
@@ -73,6 +77,12 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     public virtual void CallOnAbilityKill() {
         // Overrided in the specific character classes
     }
+
+    public virtual void AddTimeToAbility(float time) {
+        // Overrided in the specific character classes
+    }
+
+    protected abstract void HandleSelectedClassAbility(Feat ability);
 
     public void ChooseLevelUpModifier() {
         if (baseStats.GetLevel() % 2 == 1) { return; }
@@ -101,8 +111,6 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
         choiceIndexes = new List<int>();
     }
 
-    protected abstract void HandleSelectedClassAbility(Feat ability);
-
     public IEnumerable<int> GetAdditiveModifiers(Stat stat) {
         yield return passiveModifyAdditions[stat];
     }
@@ -124,6 +132,10 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
         passiveModifyPercentages[stat] += percent;
     }
 
+    public void ModifyCriticalChance(int percent) {
+        criticalChance += percent;
+    }
+
     public void SetCurrentRoom(RoomManager roomManager) { currentRoom = roomManager; }
     
     public RoomManager GetCurrentRoom() { return currentRoom; }
@@ -131,5 +143,10 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
 
     public void TriggerOnRoomClear() {
         if (onRoomClear != null) { onRoomClear(gameObject); }
+    }
+
+    public int EndAbilityCoroutine(int value) {
+        StopCoroutine(abilityCoroutine);
+        return value;
     }
 }

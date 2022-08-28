@@ -1,6 +1,7 @@
-public enum ActivatationPoint {
+public enum ActivationPoint {
     Passive, 
     OnActivate,
     OnKill,
-    OnRoomClear
+    OnRoomClear,
+    OnHealthCondition
 }

@@ -9,7 +9,7 @@ using UnityEngine;
 /// </remarks>
 [System.Serializable]
 public abstract class ClassAbility : ScriptableObject {
-    [SerializeField] ActivatationPoint activatationPoint = ActivatationPoint.OnActivate;
+    [SerializeField] ActivationPoint activationPoint = ActivationPoint.OnActivate;
     [SerializeField] string abilityName = "";
     [SerializeField] string abilityDescription = "";
     [SerializeField] EffectStrategy[] effectStrategies;
@@ -22,7 +22,7 @@ public abstract class ClassAbility : ScriptableObject {
     /// <param name="user">The character that is using this action.</param>
     public virtual void Use(GameObject user) {}
 
-    public ActivatationPoint GetActivatationPoint() { return activatationPoint; }
+    public ActivationPoint GetActivationPoint() { return activationPoint; }
     public string GetAbilityName() { return abilityName; }
     public string GetAbilityDescription() { return abilityDescription; }
 }

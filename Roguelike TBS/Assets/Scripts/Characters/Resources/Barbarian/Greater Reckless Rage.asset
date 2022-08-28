@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
-  m_Name: Always Be Raging
+  m_Name: Greater Reckless Rage
   m_EditorClassIdentifier: 
-  activatationPoint: 0
-  abilityName: Always Be Raging
-  abilityDescription: The Barbarian's Cooldown decreases by 10%
+  activatationPoint: 1
+  abilityName: Greater Reckless Rage
+  abilityDescription: When in Rage, the Barbarian gains a 15% bonus to Strength while
+    losing 10% of their Defense
   targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
   effectStrategies:
-  - {fileID: 11400000, guid: c65bbe2698b27ee45b8376c34754ffdc, type: 2}
+  - {fileID: 11400000, guid: 811afa5f37d97584aa91c7bb8cfe302a, type: 2}
+  - {fileID: 11400000, guid: 6f972e45d270018449935f8e82c580e6, type: 2}

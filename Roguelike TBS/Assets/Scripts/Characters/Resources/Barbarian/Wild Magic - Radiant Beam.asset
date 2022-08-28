@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
+  m_Name: Wild Magic - Radiant Beam
+  m_EditorClassIdentifier: 
+  activatationPoint: 1
+  abilityName: Wild Magic - Radiant Beam
+  abilityDescription: When activating Rage, a beam of light shoots out of the Barbarian's
+    chest directly at an enemy, dealing 6 Radient damage.
+  targetingStrategy: {fileID: 11400000, guid: 5646b051c2d56f8409ff4c17b3426fd8, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: dc1fe0367e02f4e438408c0b3a9e1acc, type: 2}

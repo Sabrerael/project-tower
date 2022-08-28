@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
-  m_Name: Always Be Raging
+  m_Name: Explosive Killer
   m_EditorClassIdentifier: 
-  activatationPoint: 0
-  abilityName: Always Be Raging
-  abilityDescription: The Barbarian's Cooldown decreases by 10%
+  activatationPoint: 1
+  abilityName: Explosive Killer
+  abilityDescription: While in Rage, every enemy that the Barbarian defeats explodes,
+    dealing 5 Fire damage to nearby enemies.
   targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
   effectStrategies:
-  - {fileID: 11400000, guid: c65bbe2698b27ee45b8376c34754ffdc, type: 2}
+  - {fileID: 11400000, guid: 222b91d0aab342447b3c5923cc397a54, type: 2}

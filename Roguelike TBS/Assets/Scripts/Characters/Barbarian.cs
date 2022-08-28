@@ -42,7 +42,8 @@ public class Barbarian : Character {
         if (onAbilityActivate != null) {
             onAbilityActivate(gameObject);
         }
-        StartCoroutine(AbilityTimer(abilityTime));
+        abilityCoroutine = AbilityTimer(abilityTime);
+        StartCoroutine(abilityCoroutine);
     }
 
     public override void CallOnAbilityKill() {
@@ -51,7 +52,7 @@ public class Barbarian : Character {
         }
     }
 
-    public void AddTimeToAbility(float time) {
+    public override void AddTimeToAbility(float time) {
         extendedAbilityTime += time;
     }
 
@@ -64,13 +65,16 @@ public class Barbarian : Character {
 
     protected override void HandleSelectedClassAbility(Feat ability) {
         selectedAbilities.Add(ability);
-        if (ability.GetActivatationPoint() == ActivatationPoint.Passive) {
+        if (ability.GetActivationPoint() == ActivationPoint.Passive) {
             ability.Use(gameObject);
-        } else if (ability.GetActivatationPoint() == ActivatationPoint.OnActivate) {
+        } else if (ability.GetActivationPoint() == ActivationPoint.OnActivate) {
             onAbilityActivate += ability.Use;
-        } else if (ability.GetActivatationPoint() == ActivatationPoint.OnKill) {
+        } else if (ability.GetActivationPoint() == ActivationPoint.OnKill) {
             onAbilityKill += ability.Use;
+        } else if (ability.GetActivationPoint() == ActivationPoint.OnHealthCondition) {
+            // TODO keeping for a possible use later    
         }
+
         if (onFeatAdded != null) {
             onFeatAdded();
         }
@@ -81,6 +85,7 @@ public class Barbarian : Character {
 
         yield return new WaitForSeconds(time);
 
+        // TODO This only counts any accumulated time during the initial time. Need to modify to make sure it can be extended as long as the ability is active
         if (extendedAbilityTime != 0) {
             yield return new WaitForSeconds(extendedAbilityTime);
         }
