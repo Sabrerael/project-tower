@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Raging Trance
   m_EditorClassIdentifier: 
-  activatationPoint: 1
-  abilityName: 
-  abilityDescription: 
-  targetingStrategy: {fileID: 0}
-  effectStrategies: []
+  activationPoint: 1
+  abilityName: Raging Trance
+  abilityDescription: The Barbarian enters a trance to extend their rage. If hit,
+    the trance breaks and ends their rage immediately.
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: dd16cc84f06ddd044abc046e1294fbb0, type: 2}
+  - {fileID: 11400000, guid: b86807ce655df8c4982d9f41366cf350, type: 2}

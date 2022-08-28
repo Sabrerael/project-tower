@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Blood Fury
   m_EditorClassIdentifier: 
-  activatationPoint: 1
-  abilityName: 
-  abilityDescription: 
-  targetingStrategy: {fileID: 0}
-  effectStrategies: []
+  activationPoint: 0
+  abilityName: Blood Fury
+  abilityDescription: The Barbarian increases their critical chance by 10%
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: a1fa1168672326741a70604aee0dfdef, type: 2}

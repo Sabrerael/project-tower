@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Greater Reckless Rage
   m_EditorClassIdentifier: 
-  activatationPoint: 1
+  activationPoint: 1
   abilityName: Greater Reckless Rage
   abilityDescription: When in Rage, the Barbarian gains a 15% bonus to Strength while
     losing 10% of their Defense

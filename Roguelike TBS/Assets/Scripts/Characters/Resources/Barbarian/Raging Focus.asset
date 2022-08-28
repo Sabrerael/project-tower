@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Raging Focus
   m_EditorClassIdentifier: 
-  activatationPoint: 1
-  abilityName: 
-  abilityDescription: 
-  targetingStrategy: {fileID: 0}
-  effectStrategies: []
+  activationPoint: 1
+  abilityName: Raging Focus
+  abilityDescription: The Barbarian slows down the rate of their attack to deal increased
+    damage.
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: d4046316b1140ac45a42e7ba67628ca1, type: 2}
+  - {fileID: 11400000, guid: d298a45a984a8d34c804157b798b8113, type: 2}

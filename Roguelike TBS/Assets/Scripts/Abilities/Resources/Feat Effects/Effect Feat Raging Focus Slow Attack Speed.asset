@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Effect Feat Raging Focus Slow Attack Speed
   m_EditorClassIdentifier: 
   additiveChange: 0
-  statToChange: 0
-  changeAmount: 0
+  statToChange: 7
+  changeAmount: -10

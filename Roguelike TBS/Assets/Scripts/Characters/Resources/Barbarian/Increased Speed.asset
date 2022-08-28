@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Increased Speed
   m_EditorClassIdentifier: 
-  activatationPoint: 1
+  activationPoint: 1
   abilityName: Increased Speed
   abilityDescription: When in Rage, the Barbarian moves 10% faster.
   targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}

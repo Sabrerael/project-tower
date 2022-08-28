@@ -322,6 +322,11 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7448079461017747273, guid: 290223314dda3944c841107f71bb7bcf,
+        type: 3}
+      propertyPath: levelUpMenu
+      value: 
+      objectReference: {fileID: 6954571125155744622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 290223314dda3944c841107f71bb7bcf, type: 3}
 --- !u!114 &985748743 stripped
@@ -2258,6 +2263,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abea7d94aaa39c541848c6db6117c234, type: 3}
+--- !u!114 &6954571125155744622 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7909841413941147286, guid: abea7d94aaa39c541848c6db6117c234,
+    type: 3}
+  m_PrefabInstance: {fileID: 6954571125155744621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f96f04797f0644fb8ff4ce6f67605c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8238741865287957786
 PrefabInstance:
   m_ObjectHideFlags: 0

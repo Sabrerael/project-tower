@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Explosive Killer
   m_EditorClassIdentifier: 
-  activatationPoint: 1
+  activationPoint: 1
   abilityName: Explosive Killer
   abilityDescription: While in Rage, every enemy that the Barbarian defeats explodes,
     dealing 5 Fire damage to nearby enemies.

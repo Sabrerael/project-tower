@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88cc4a0db70b2a43afc2481b6abf97d, type: 3}
   m_Name: Effect Feat Blood Fury
   m_EditorClassIdentifier: 
-  critChangeModification: 0
+  critChangeModification: 10
