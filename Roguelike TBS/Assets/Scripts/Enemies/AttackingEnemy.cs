@@ -9,7 +9,7 @@ public class AttackingEnemy : Enemy {
     private void Update() {
         if (player == null) { return; }
 
-        if (gameObject.GetComponent<Health>().IsDead()) { return; }
+        if (health.IsDead()) { return; }
 
         var offset = new Vector2(
             player.transform.position.x - gameObject.transform.position.x,

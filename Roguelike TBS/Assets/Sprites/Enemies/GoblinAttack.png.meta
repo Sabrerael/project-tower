@@ -17,6 +17,21 @@ TextureImporter:
   - first:
       213: -4959758552482848756
     second: GoblinAttackSheet_4
+  - first:
+      213: -4595621095415242872
+    second: GoblinAttack_0
+  - first:
+      213: 6009215467603149564
+    second: GoblinAttack_1
+  - first:
+      213: -8281098661829765949
+    second: GoblinAttack_2
+  - first:
+      213: -5892475939613967414
+    second: GoblinAttack_3
+  - first:
+      213: -546976181994433175
+    second: GoblinAttack_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,106 +145,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GoblinAttackSheet_0
+      name: GoblinAttack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
+        width: 48
         height: 32
       alignment: 9
-      pivot: {x: 0.4, y: 5}
+      pivot: {x: 0.33333334, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f4200e85ddb8c690800000000000000
-      internalID: -7581601247770172169
+      spriteID: 88f9b7d56f21930c0800000000000000
+      internalID: -4595621095415242872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoblinAttackSheet_1
+      name: GoblinAttack_1
       rect:
         serializedVersion: 2
-        x: 40
+        x: 48
         y: 0
-        width: 40
+        width: 48
         height: 32
       alignment: 9
-      pivot: {x: 0.4, y: 5}
+      pivot: {x: 0.33333334, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e96ed3718a60f9830800000000000000
-      internalID: 4079987106435163806
+      spriteID: cf2c44d21a5056350800000000000000
+      internalID: 6009215467603149564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoblinAttackSheet_2
+      name: GoblinAttack_2
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 0
-        width: 40
+        width: 48
         height: 32
       alignment: 9
-      pivot: {x: 0.4, y: 5}
+      pivot: {x: 0.33333334, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07e0d566103c173d0800000000000000
-      internalID: -3210570648558694800
+      spriteID: 3c49ca764a0a31d80800000000000000
+      internalID: -8281098661829765949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoblinAttackSheet_3
+      name: GoblinAttack_3
       rect:
         serializedVersion: 2
-        x: 120
+        x: 144
         y: 0
-        width: 40
+        width: 48
         height: 32
       alignment: 9
-      pivot: {x: 0.4, y: 5}
+      pivot: {x: 0.33333334, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62606872e6186cc20800000000000000
-      internalID: 3226408493167019558
+      spriteID: acbf5c34a58b93ea0800000000000000
+      internalID: -5892475939613967414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoblinAttackSheet_4
+      name: GoblinAttack_4
       rect:
         serializedVersion: 2
-        x: 160
+        x: 192
         y: 0
-        width: 40
+        width: 48
         height: 32
       alignment: 9
-      pivot: {x: 0.4, y: 5}
+      pivot: {x: 0.33333334, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c00ed8bdfd56b2bb0800000000000000
-      internalID: -4959758552482848756
+      spriteID: 9655f9b7f00c868f0800000000000000
+      internalID: -546976181994433175
       vertices: []
       indices: 
       edges: []

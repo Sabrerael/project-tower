@@ -51,6 +51,7 @@ public class Movement : MonoBehaviour {
         GetComponent<Animator>().SetTrigger("DodgeRoll");
     }
 
+    // Keeping this in case I need it. I should be good without it but I'm not sure
     public void UpdateMinMaxValues() {
         Camera gameCamera = Camera.main;
         xMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).x + padding;
@@ -79,8 +80,6 @@ public class Movement : MonoBehaviour {
         animator.SetBool("IsWalking", true);
         var movementSpeed = GetComponent<BaseStats>().GetStat(Stat.MovementSpeed);
 
-        Debug.Log(movementValues);
-
         float deltaX = movementValues.x * Time.fixedDeltaTime * movementSpeed;
         float deltaY = movementValues.y * Time.fixedDeltaTime * movementSpeed;
 
@@ -98,8 +97,8 @@ public class Movement : MonoBehaviour {
             animator.SetBool("MovingVertical", true);
         } 
 
-        float newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-        float newyPos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
+        float newXPos = transform.position.x + deltaX;//Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
+        float newyPos = transform.position.y + deltaY;//Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
 
         transform.position = new Vector2(newXPos, newyPos);
     }

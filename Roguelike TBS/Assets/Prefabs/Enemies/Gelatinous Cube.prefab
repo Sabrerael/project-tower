@@ -85,7 +85,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.49, y: 0.34}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -126,7 +126,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.75, y: 1.4}
   m_Direction: 0
 --- !u!114 &3941349733104393478
 MonoBehaviour:
@@ -191,17 +191,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
-  movementSpeed: 2
+  movementSpeed: 1.35
   moneyDropped: 1
+  bossName: Gelatinous Cube
   slimeSpawners:
   - {fileID: 5499922236453728186}
   - {fileID: 5967201805771514692}
   - {fileID: 3102615479636904323}
-  xMax: 11.5
-  xMin: 0.5
-  yMax: -2.5
-  yMin: -9.5
-  jumpTime: 1.5
+  xMax: 13.5
+  xMin: -1.5
+  yMax: -1.5
+  yMin: -10.5
+  jumpTime: 8.5
 --- !u!1001 &4055840599497443520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218,7 +219,7 @@ PrefabInstance:
     - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: levelOfEnemy
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4750231927203397398, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -233,12 +234,12 @@ PrefabInstance:
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.25
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -316,7 +317,7 @@ PrefabInstance:
     - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: levelOfEnemy
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4750231927203397398, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -336,7 +337,7 @@ PrefabInstance:
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.25
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -414,7 +415,7 @@ PrefabInstance:
     - target: {fileID: -7834141438252826301, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: levelOfEnemy
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4750231927203397398, guid: b798e819513982044af0d272189d741b,
         type: 3}
@@ -429,12 +430,12 @@ PrefabInstance:
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.25
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4991839158071589850, guid: b798e819513982044af0d272189d741b,
         type: 3}

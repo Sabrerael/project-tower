@@ -6,6 +6,12 @@ public class Pickup : MonoBehaviour {
     [SerializeField] SpriteRenderer spriteRenderer = null;
     [SerializeField] AudioClip sfx = null;
 
+    private void Start() {
+        if (item.GetIcon()) {
+            spriteRenderer.sprite = item.GetIcon();
+        }    
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
             DoPickup(other);

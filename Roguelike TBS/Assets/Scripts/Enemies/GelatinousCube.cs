@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using RPG.Stats;
 using UnityEngine;
 
 public class GelatinousCube : Boss {
@@ -10,7 +9,7 @@ public class GelatinousCube : Boss {
     private int numOfAttacks = 0;
     private CubePhase phase = CubePhase.Starting;
 
-    //Attack Pattern: Jump to corner, move to opposite wall, repeat x4 or x8, 
+    //Attack Pattern: Jump to a random point along a wall, move to opposite wall, repeat x4 or x8, 
     //                random jumps, jump to center and spawn slimes, back to beginning
 
     enum CubePhase {
@@ -64,133 +63,155 @@ public class GelatinousCube : Boss {
     }
 
     private void Update() {
-        if (gameObject.GetComponent<Health>().IsDead()) { return; }
+        if (health.IsDead()) { return; }
 
         if (phase == CubePhase.Idle) { return; }
 
         if (inMove) {
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
-            if (Vector3.Distance(transform.localPosition, moveLocation) < 0.001) {
-                inMove = false;
-                StartCoroutine(IdleTimer(0.3f));
-            } 
         } else {
-            if (phase == CubePhase.Move1 || phase == CubePhase.Move2 ||
-                phase == CubePhase.Move3 || phase == CubePhase.Move4) {
-                if (transform.localPosition.x - xMin <= 0.002f) {
-                    AttackMoveRight();
-                } else if (xMax - transform.localPosition.x <= 0.002f) {
-                    AttackMoveLeft();
-                }
-            } else if (phase == CubePhase.Jump1 || phase == CubePhase.Jump2 ||
-                       phase == CubePhase.Jump3 || phase == CubePhase.Jump4) {
-                JumpToRandomCorner();
-            } else if (phase == CubePhase.RandomJump1 || phase == CubePhase.RandomJump2 ||
-                       phase == CubePhase.RandomJump3 || phase == CubePhase.RandomJump4) {
-                JumpToRandomSpot();
-            } else if (phase == CubePhase.JumpToCenter) {
-                JumpToCenter();
-            } else if (phase == CubePhase.SpawnSlimes) {
-                StartCoroutine(SpawnSlimes());
-            } else if (phase == CubePhase.Starting) {
+            if (phase == CubePhase.Starting) {
                 StartCoroutine(IdleTimer(1));
             }
         }
+    }
+
+    public void StartIdleCoroutine(float time) {
+        StartCoroutine(IdleTimer(time));
+    }
+
+    public void ToggleMove() {
+        inMove = !inMove;
     }
 
     private void ChangeBossPhase() {
         switch (phase) {
             case CubePhase.Starting:
                 phase = CubePhase.Jump1;
+                JumpToRandomSide();
                 break;
             case CubePhase.Jump1:
                 phase = CubePhase.Move1;
+                if (transform.localPosition.x - xMin <= 0.002f) {
+                    AttackMoveRight();
+                } else if (xMax - transform.localPosition.x <= 0.002f) {
+                    AttackMoveLeft();
+                }
                 break;
             case CubePhase.Move1:
                 phase = CubePhase.Jump2;
+                JumpToRandomSide();
                 break;
             case CubePhase.Jump2:
                 phase = CubePhase.Move2;
+                if (transform.localPosition.x - xMin <= 0.002f) {
+                    AttackMoveRight();
+                } else if (xMax - transform.localPosition.x <= 0.002f) {
+                    AttackMoveLeft();
+                }
                 break;
             case CubePhase.Move2:
                 phase = CubePhase.Jump3;
+                JumpToRandomSide();
                 break;
             case CubePhase.Jump3:
                 phase = CubePhase.Move3;
+                if (transform.localPosition.x - xMin <= 0.002f) {
+                    AttackMoveRight();
+                } else if (xMax - transform.localPosition.x <= 0.002f) {
+                    AttackMoveLeft();
+                }
                 break;
             case CubePhase.Move3:
                 phase = CubePhase.Jump4;
+                JumpToRandomSide();
                 break;
             case CubePhase.Jump4:
                 phase = CubePhase.Move4;
+                if (transform.localPosition.x - xMin <= 0.002f) {
+                    AttackMoveRight();
+                } else if (xMax - transform.localPosition.x <= 0.002f) {
+                    AttackMoveLeft();
+                }
                 break;
             case CubePhase.Move4:
                 phase = CubePhase.RandomJump1;
+                JumpToRandomSpot();
                 break;
             case CubePhase.RandomJump1:
                 phase = CubePhase.RandomJump2;
+                JumpToRandomSpot();
                 break;
             case CubePhase.RandomJump2:
                 phase = CubePhase.RandomJump3;
+                JumpToRandomSpot();
                 break;
             case CubePhase.RandomJump3:
                 phase = CubePhase.RandomJump4;
+                JumpToRandomSpot();
                 break;
             case CubePhase.RandomJump4:
                 phase = CubePhase.JumpToCenter;
+                JumpToCenter();
                 break;
             case CubePhase.JumpToCenter:
                 phase = CubePhase.SpawnSlimes;
+                StartCoroutine(SpawnSlimes());
                 break;
             case CubePhase.Spawning:
                 phase = CubePhase.Jump1;
+                JumpToRandomSide();
                 break;
-      }
+        }
     }
 
     private void AttackMoveLeft() {
         moveLocation = new Vector2(xMin, transform.localPosition.y);
         moveDistance = movementSpeed*Time.fixedDeltaTime;
         transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
-        inMove = true;
-        GetComponent<Animator>().SetTrigger("MovingLeft");
+        animator.SetTrigger("MovingLeft");
     }
     
     private void AttackMoveRight() {
         moveLocation = new Vector2(xMax, transform.localPosition.y);
         moveDistance = movementSpeed*Time.fixedDeltaTime;
         transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
-        inMove = true;
-        GetComponent<Animator>().SetTrigger("MovingRight");
+        animator.SetTrigger("MovingRight");
     }
 
+    // Unused right now, keeping for posterity
     private void JumpToRandomCorner() {
         var randomCorner = ChooseRandomCorner();
         moveLocation = new Vector2(randomCorner.x, randomCorner.y);
         moveDistance = Vector3.Distance(transform.localPosition, moveLocation) * (Time.fixedDeltaTime / jumpTime);
         transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
-        inMove = true;
-        GetComponent<Animator>().SetTrigger("Jumping");
+        animator.SetTrigger("Jumping");
+    }
+
+    private void JumpToRandomSide() {
+        var randomCorner = ChooseRandomCorner();
+        moveLocation = new Vector2(randomCorner.x, Random.Range(yMin, yMax));
+        moveDistance = (Vector3.Distance(transform.localPosition, moveLocation) * Time.fixedDeltaTime) / jumpTime;
+        //inMove = true;
+        animator.SetTrigger("Jumping");
     }
 
     private void JumpToRandomSpot() {
         moveLocation = new Vector2(Random.Range(xMin, xMax), Random.Range(yMin, yMax));
         moveDistance = Vector3.Distance(transform.localPosition, moveLocation) * (Time.fixedDeltaTime / jumpTime);
         transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
-        inMove = true;
-        GetComponent<Animator>().SetTrigger("Jumping");
+        animator.SetTrigger("Jumping");
     }
 
     private void JumpToCenter() {
         moveLocation = new Vector2(6, -6);
         moveDistance = Vector3.Distance(transform.localPosition, moveLocation) * (Time.fixedDeltaTime / jumpTime);
         transform.localPosition = Vector3.MoveTowards(transform.localPosition, moveLocation, moveDistance);
-        inMove = true;
-        GetComponent<Animator>().SetTrigger("Jumping");
+        animator.SetTrigger("Jumping");
     }
 
     private IEnumerator SpawnSlimes() {
-        GetComponent<Animator>().SetTrigger("Spawning");
+        animator.SetTrigger("Spawning");
         phase = CubePhase.Spawning;
         yield return new WaitForSeconds(1);
         foreach (var spawner in slimeSpawners) {
@@ -198,7 +219,7 @@ public class GelatinousCube : Boss {
             yield return new WaitForSeconds(1);
         }
         yield return new WaitForSeconds(1);
-        StartCoroutine(IdleTimer(2.5f));
+        StartCoroutine(IdleTimer(1f));
     }
 
     private Corner ChooseRandomCorner() {

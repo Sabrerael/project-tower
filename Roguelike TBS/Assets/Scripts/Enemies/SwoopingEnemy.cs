@@ -29,34 +29,38 @@ public class SwoopingEnemy : Enemy {
         } else {
             timer += Time.deltaTime;
             if (timer >= cooldownTime) {
-                timer = 0;
-
-                startingPoint = transform.localPosition;
-
-                var offset = new Vector2(
-                    player.transform.position.x - gameObject.transform.position.x,
-                    player.transform.position.y - gameObject.transform.position.y
-                );
-                var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-
-                var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
-                var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
-
-                deltaX = xRatio * movementSpeed * Time.deltaTime;
-                deltaY = yRatio * movementSpeed * Time.deltaTime;
-
-                float newXPos = Mathf.Clamp(transform.localPosition.x + deltaX, xMin, xMax);
-                float newyPos = Mathf.Clamp(transform.localPosition.y + deltaY, yMin, yMax);
-
-                transform.localPosition = new Vector2(newXPos, newyPos);
-                
-                if (Mathf.Sign(deltaX) == -1) {
-                    transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
-                } else {
-                    transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
-                }
-                moving = true;
+                GetComponent<Animator>().SetTrigger("Swoop");
             }
         }
+    }
+
+    public void StartSwoop() {
+        timer = 0;
+
+        startingPoint = transform.localPosition;
+
+        var offset = new Vector2(
+            player.transform.position.x - gameObject.transform.position.x,
+            player.transform.position.y - gameObject.transform.position.y
+        );
+        var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
+
+        var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
+        var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
+
+        deltaX = xRatio * movementSpeed * Time.deltaTime;
+        deltaY = yRatio * movementSpeed * Time.deltaTime;
+
+        float newXPos = Mathf.Clamp(transform.localPosition.x + deltaX, xMin, xMax);
+        float newyPos = Mathf.Clamp(transform.localPosition.y + deltaY, yMin, yMax);
+
+        transform.localPosition = new Vector2(newXPos, newyPos);
+                
+        if (Mathf.Sign(deltaX) == -1) {
+            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+        } else {
+            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+        }
+        moving = true;
     }
 }

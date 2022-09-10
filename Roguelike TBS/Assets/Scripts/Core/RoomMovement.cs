@@ -23,23 +23,22 @@ public class RoomMovement : MonoBehaviour {
         Vector3 newPosition = new Vector3();
         
         if (directionToMove == Direction.Up) {
-            Camera.main.transform.position = Camera.main.transform.position + new Vector3(0,14,0);
-            newPosition = player.transform.position + new Vector3(0,5.5f,0);
+            Camera.main.transform.position = Camera.main.transform.position + new Vector3(0,16,0);
+            newPosition = player.transform.position + new Vector3(0,3.5f,0);
         } else if (directionToMove == Direction.Down) {
-            Camera.main.transform.position = Camera.main.transform.position + new Vector3(0,-14,0);
-            newPosition = player.transform.position + new Vector3(0,-5.5f,0);
+            Camera.main.transform.position = Camera.main.transform.position + new Vector3(0,-16,0);
+            newPosition = player.transform.position + new Vector3(0,-3.5f,0);
         } else if (directionToMove == Direction.Right) {
-            Camera.main.transform.position = Camera.main.transform.position + new Vector3(18,0,0);
+            Camera.main.transform.position = Camera.main.transform.position + new Vector3(22,0,0);
             newPosition = player.transform.position + new Vector3(5f,0,0);
         } else if (directionToMove == Direction.Left) {
-            Camera.main.transform.position = Camera.main.transform.position + new Vector3(-18,0,0);
+            Camera.main.transform.position = Camera.main.transform.position + new Vector3(-22,0,0);
             newPosition = player.transform.position + new Vector3(-5f,0,0);
         }
 
-        player.GetComponent<Movement>().UpdateMinMaxValues();
+        //player.GetComponent<Movement>().UpdateMinMaxValues();
         player.transform.position = newPosition;
 
-        
         ActivateNewRoom(player);
     }
 

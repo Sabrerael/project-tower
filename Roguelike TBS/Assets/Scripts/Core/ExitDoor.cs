@@ -22,7 +22,8 @@ public class ExitDoor : MonoBehaviour {
         yield return new WaitForSeconds(1.5f);
         
         if (floor == 1) {
-            levelLoader.LoadLevelTwo();
+            //levelLoader.LoadLevelTwo();
+            levelLoader.LoadWinScreen();
         } else if (floor == 2) {
             levelLoader.LoadLevelThree();
         } else if (floor == 3) {

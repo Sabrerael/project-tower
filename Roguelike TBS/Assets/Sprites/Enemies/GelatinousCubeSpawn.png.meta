@@ -20,6 +20,36 @@ TextureImporter:
   - first:
       213: 5153302210019163043
     second: GelatinousCubeSpawn_5
+  - first:
+      213: 1908583176643760026
+    second: GelatinousCubeSpawn_6
+  - first:
+      213: 3421859117948087561
+    second: GelatinousCubeSpawn_7
+  - first:
+      213: -2037524112172620159
+    second: GelatinousCubeSpawn_8
+  - first:
+      213: -172392045819448311
+    second: GelatinousCubeSpawn_9
+  - first:
+      213: -7391895964831256977
+    second: GelatinousCubeSpawn_10
+  - first:
+      213: -1772135265086232578
+    second: GelatinousCubeSpawn_11
+  - first:
+      213: -1060818035829826012
+    second: GelatinousCubeSpawn_12
+  - first:
+      213: 2282664893804563278
+    second: GelatinousCubeSpawn_13
+  - first:
+      213: -4358813364558620827
+    second: GelatinousCubeSpawn_14
+  - first:
+      213: 577201649059323725
+    second: GelatinousCubeSpawn_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -138,10 +168,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 68
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,12 +187,12 @@ TextureImporter:
       name: GelatinousCubeSpawn_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 68
         y: 0
-        width: 128
-        height: 128
+        width: 68
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,12 +208,12 @@ TextureImporter:
       name: GelatinousCubeSpawn_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 136
         y: 0
-        width: 128
-        height: 128
+        width: 68
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,12 +229,12 @@ TextureImporter:
       name: GelatinousCubeSpawn_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 204
         y: 0
-        width: 128
-        height: 128
+        width: 68
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,12 +250,12 @@ TextureImporter:
       name: GelatinousCubeSpawn_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 272
         y: 0
-        width: 128
-        height: 128
+        width: 68
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,12 +271,12 @@ TextureImporter:
       name: GelatinousCubeSpawn_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 340
         y: 0
-        width: 128
-        height: 128
+        width: 68
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,6 +284,216 @@ TextureImporter:
       bones: []
       spriteID: 3ab7d608e05348740800000000000000
       internalID: 5153302210019163043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GelatinousCubeSpawn_6
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f432c7946ac7a10800000000000000
+      internalID: 1908583176643760026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GelatinousCubeSpawn_7
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d2abcecb2ec7f20800000000000000
+      internalID: 3421859117948087561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GelatinousCubeSpawn_8
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18668a08d9249b3e0800000000000000
+      internalID: -2037524112172620159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GelatinousCubeSpawn_9
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 0
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90434d2095a8b9df0800000000000000
+      internalID: -172392045819448311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GelatinousCubeSpawn_10
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 0
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ee69fa8c5ba6990800000000000000
+      internalID: -7391895964831256977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GelatinousCubeSpawn_11
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 0
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7a7969d5c1867e0800000000000000
+      internalID: -1772135265086232578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GelatinousCubeSpawn_12
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e190bed973741f0800000000000000
+      internalID: -1060818035829826012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GelatinousCubeSpawn_13
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 0
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bc97870a7adaf10800000000000000
+      internalID: 2282664893804563278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GelatinousCubeSpawn_14
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 0
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5671243c6526283c0800000000000000
+      internalID: -4358813364558620827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GelatinousCubeSpawn_15
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 0
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f53f777d1a20800800000000000000
+      internalID: 577201649059323725
       vertices: []
       indices: 
       edges: []

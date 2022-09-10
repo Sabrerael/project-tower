@@ -177,10 +177,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: GelatinousCubeJump_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 68
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,12 +217,12 @@ TextureImporter:
       name: GelatinousCubeJump_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 136
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,12 +238,12 @@ TextureImporter:
       name: GelatinousCubeJump_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 204
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,12 +259,12 @@ TextureImporter:
       name: GelatinousCubeJump_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 272
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,12 +280,12 @@ TextureImporter:
       name: GelatinousCubeJump_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 340
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,12 +301,12 @@ TextureImporter:
       name: GelatinousCubeJump_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 408
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,12 +322,12 @@ TextureImporter:
       name: GelatinousCubeJump_7
       rect:
         serializedVersion: 2
-        x: 896
+        x: 476
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,12 +343,12 @@ TextureImporter:
       name: GelatinousCubeJump_8
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 544
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,12 +364,12 @@ TextureImporter:
       name: GelatinousCubeJump_9
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 612
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,12 +385,12 @@ TextureImporter:
       name: GelatinousCubeJump_10
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 680
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -406,12 +406,12 @@ TextureImporter:
       name: GelatinousCubeJump_11
       rect:
         serializedVersion: 2
-        x: 1408
+        x: 748
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,12 +427,12 @@ TextureImporter:
       name: GelatinousCubeJump_12
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 816
         y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 68
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -440,132 +440,6 @@ TextureImporter:
       bones: []
       spriteID: 4eb2914406afa64f0800000000000000
       internalID: -834579489557500956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GelatinousCubeJump_13
-      rect:
-        serializedVersion: 2
-        x: 1664
-        y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45616fc95e48f2c80800000000000000
-      internalID: -8345305462778489260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GelatinousCubeJump_14
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 459d1d77b9403af70800000000000000
-      internalID: 9197199929797368148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GelatinousCubeJump_15
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27d8025fa1d6df670800000000000000
-      internalID: 8574129228132420978
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GelatinousCubeJump_16
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b2506b9f05ab8be0800000000000000
-      internalID: -1473902966583831882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GelatinousCubeJump_17
-      rect:
-        serializedVersion: 2
-        x: 2176
-        y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5d2acb20e86cd260800000000000000
-      internalID: 7123684022609915230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GelatinousCubeJump_18
-      rect:
-        serializedVersion: 2
-        x: 2304
-        y: 0
-        width: 128
-        height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8807d74c9cc8cf210800000000000000
-      internalID: 1368123185026658440
       vertices: []
       indices: 
       edges: []

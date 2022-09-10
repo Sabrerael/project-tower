@@ -126,10 +126,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 32
+        width: 40
+        height: 40
       alignment: 9
-      pivot: {x: 0.3333, y: 0.5}
+      pivot: {x: 0.4, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,12 +145,12 @@ TextureImporter:
       name: GoblinArcherDeath_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 40
         y: 0
-        width: 48
-        height: 32
+        width: 40
+        height: 40
       alignment: 9
-      pivot: {x: 0.3333, y: 0.5}
+      pivot: {x: 0.4, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,12 +166,12 @@ TextureImporter:
       name: GoblinArcherDeath_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 80
         y: 0
-        width: 48
-        height: 32
+        width: 40
+        height: 40
       alignment: 9
-      pivot: {x: 0.3333, y: 0.5}
+      pivot: {x: 0.4, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,12 +187,12 @@ TextureImporter:
       name: GoblinArcherDeath_3
       rect:
         serializedVersion: 2
-        x: 144
+        x: 120
         y: 0
-        width: 48
-        height: 32
+        width: 40
+        height: 40
       alignment: 9
-      pivot: {x: 0.3333, y: 0.5}
+      pivot: {x: 0.4, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,12 +208,12 @@ TextureImporter:
       name: GoblinArcherDeath_4
       rect:
         serializedVersion: 2
-        x: 192
+        x: 160
         y: 0
-        width: 48
-        height: 32
+        width: 40
+        height: 40
       alignment: 9
-      pivot: {x: 0.3333, y: 0.5}
+      pivot: {x: 0.4, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,12 +229,12 @@ TextureImporter:
       name: GoblinArcherDeath_5
       rect:
         serializedVersion: 2
-        x: 240
+        x: 200
         y: 0
-        width: 48
-        height: 32
+        width: 40
+        height: 40
       alignment: 9
-      pivot: {x: 0.3333, y: 0.5}
+      pivot: {x: 0.4, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

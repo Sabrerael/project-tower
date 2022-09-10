@@ -126,10 +126,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 39
+        width: 40
         height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,12 +145,12 @@ TextureImporter:
       name: GoblinArcherAttack_1
       rect:
         serializedVersion: 2
-        x: 39
+        x: 40
         y: 0
-        width: 39
+        width: 40
         height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,12 +166,12 @@ TextureImporter:
       name: GoblinArcherAttack_2
       rect:
         serializedVersion: 2
-        x: 78
+        x: 80
         y: 0
-        width: 39
+        width: 40
         height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,12 +187,12 @@ TextureImporter:
       name: GoblinArcherAttack_3
       rect:
         serializedVersion: 2
-        x: 117
+        x: 120
         y: 0
-        width: 39
+        width: 40
         height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,12 +208,12 @@ TextureImporter:
       name: GoblinArcherAttack_4
       rect:
         serializedVersion: 2
-        x: 156
+        x: 160
         y: 0
-        width: 39
+        width: 40
         height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,12 +229,12 @@ TextureImporter:
       name: GoblinArcherAttack_5
       rect:
         serializedVersion: 2
-        x: 195
+        x: 200
         y: 0
-        width: 39
+        width: 40
         height: 32
       alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+      pivot: {x: 0.4, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
