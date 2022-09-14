@@ -515,9 +515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 32
-  m_RefResolutionX: 640
-  m_RefResolutionY: 360
+  m_AssetsPPU: 35
+  m_RefResolutionX: 796
+  m_RefResolutionY: 448
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -2028,7 +2028,7 @@ PrefabInstance:
     - target: {fileID: 3145165280580370892, guid: f7699b610e4b9234dae2b9aa27416ad9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3145165280580370894, guid: f7699b610e4b9234dae2b9aa27416ad9,
         type: 3}
@@ -2089,7 +2089,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b2fa9cb6552f1d54d862b0559e28cccb, type: 3}
+      objectReference: {fileID: 8300000, guid: ea57cdab8e491cd4fb80fd4266ddad6c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7699b610e4b9234dae2b9aa27416ad9, type: 3}
 --- !u!1001 &6954571125155744621

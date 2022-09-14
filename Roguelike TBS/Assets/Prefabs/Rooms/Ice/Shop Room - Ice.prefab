@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 5593148085998671930}
   - component: {fileID: 5286268840431421705}
   m_Layer: 0
-  m_Name: F2 Shop Room
+  m_Name: Shop Room - Ice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

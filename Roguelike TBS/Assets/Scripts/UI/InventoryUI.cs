@@ -22,6 +22,10 @@ public class InventoryUI : MonoBehaviour {
         //else if (instance != this)
             //Destroy(gameObject);
         
+        if (!playerInventory) {
+            playerInventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
+        }
+
         playerInventory.actionItemInventoryUpdated += Redraw;
         Redraw();
     }
