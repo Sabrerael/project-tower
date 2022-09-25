@@ -9,6 +9,7 @@ public class BossHealthBar : HealthBar {
         if (healthComponent == null) { return; }
 
         foreground.localScale = new Vector3(healthComponent.GetFraction(), 1, 1);
+        healthComponent.onDeath += DisableCanvas;
     }
 
     public void SetHealthComponent(GameObject boss) {
@@ -21,5 +22,9 @@ public class BossHealthBar : HealthBar {
 
     public void EnableCanvas() {
         rootCanvas.gameObject.SetActive(true);
+    }
+
+    public void DisableCanvas() {
+        rootCanvas.gameObject.SetActive(false);
     }
 }

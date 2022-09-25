@@ -29,11 +29,11 @@ public class RoomMovement : MonoBehaviour {
             Camera.main.transform.position = Camera.main.transform.position + new Vector3(0,-16,0);
             newPosition = player.transform.position + new Vector3(0,-3.5f,0);
         } else if (directionToMove == Direction.Right) {
-            Camera.main.transform.position = Camera.main.transform.position + new Vector3(22,0,0);
-            newPosition = player.transform.position + new Vector3(5f,0,0);
+            Camera.main.transform.position = Camera.main.transform.position + new Vector3(24,0,0);
+            newPosition = player.transform.position + new Vector3(7f,0,0);
         } else if (directionToMove == Direction.Left) {
-            Camera.main.transform.position = Camera.main.transform.position + new Vector3(-22,0,0);
-            newPosition = player.transform.position + new Vector3(-5f,0,0);
+            Camera.main.transform.position = Camera.main.transform.position + new Vector3(-24,0,0);
+            newPosition = player.transform.position + new Vector3(-7f,0,0);
         }
 
         //player.GetComponent<Movement>().UpdateMinMaxValues();

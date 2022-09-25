@@ -1989,7 +1989,7 @@ MonoBehaviour:
   shopRoom: {fileID: 8995660890031525271, guid: 6a3646c7c96b41f4b9e13a6c9d3704aa,
     type: 3}
   shopRoomIndex: 22
-  xDeltaBetweenRooms: 22
+  xDeltaBetweenRooms: 24
   yDeltaBetweenRooms: 16
   dropLibrary: {fileID: 11400000, guid: 2861fb8ca16fd0244844fc120113fa95, type: 2}
   characters:

@@ -1093,14 +1093,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 35
+  m_AssetsPPU: 32
   m_RefResolutionX: 796
   m_RefResolutionY: 448
   m_UpscaleRT: 0
   m_PixelSnapping: 0
-  m_CropFrameX: 0
-  m_CropFrameY: 0
-  m_StretchFill: 0
+  m_CropFrameX: 1
+  m_CropFrameY: 1
+  m_StretchFill: 1
 --- !u!81 &539289337
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2683,7 +2683,7 @@ MonoBehaviour:
   shopRoom: {fileID: 5593148085998671931, guid: a756aef4f90ddca4093ff0f1b5335f75,
     type: 3}
   shopRoomIndex: 8
-  xDeltaBetweenRooms: 22
+  xDeltaBetweenRooms: 24
   yDeltaBetweenRooms: 16
   dropLibrary: {fileID: 11400000, guid: ab8a311c3bb301246bebd96a0b6a3f67, type: 2}
   characters:

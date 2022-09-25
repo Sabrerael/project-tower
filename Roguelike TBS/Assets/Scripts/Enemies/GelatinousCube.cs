@@ -192,7 +192,6 @@ public class GelatinousCube : Boss {
         var randomCorner = ChooseRandomCorner();
         moveLocation = new Vector2(randomCorner.x, Random.Range(yMin, yMax));
         moveDistance = (Vector3.Distance(transform.localPosition, moveLocation) * Time.fixedDeltaTime) / jumpTime;
-        //inMove = true;
         animator.SetTrigger("Jumping");
     }
 

@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
-  movementSpeed: 1.35
+  movementSpeed: 6
   moneyDropped: 1
   bossName: Gelatinous Cube
   slimeSpawners:
@@ -202,7 +202,7 @@ MonoBehaviour:
   xMin: -1.5
   yMax: -1.5
   yMin: -10.5
-  jumpTime: 8.5
+  jumpTime: 2
 --- !u!1001 &4055840599497443520
 PrefabInstance:
   m_ObjectHideFlags: 0
