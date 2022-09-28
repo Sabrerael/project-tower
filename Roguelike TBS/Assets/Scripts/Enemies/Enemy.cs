@@ -1,5 +1,5 @@
-using UnityEngine;
 using RPG.Stats;
+using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     [SerializeField] protected AudioClip sfx = null;

@@ -17,7 +17,7 @@ public class SpawnTargetPrefabEffect : EffectStrategy {
 
         if (destroyDelay > 0) {
             yield return new WaitForSeconds(destroyDelay);
-            Destroy(instance.gameObject);
+            //Destroy(instance.gameObject);
         }
         finished();
     }

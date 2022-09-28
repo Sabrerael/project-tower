@@ -26,6 +26,10 @@
     HellHound,
     Harpy,
     Bullywug,
+    FrostGiant,
+    IceGolem,
+    Redcap,
+    Mammoth,
     GelatinousCube,
     Beholder,
     Balor

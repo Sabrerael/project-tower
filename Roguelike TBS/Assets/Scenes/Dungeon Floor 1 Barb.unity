@@ -515,14 +515,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 35
+  m_AssetsPPU: 32
   m_RefResolutionX: 796
   m_RefResolutionY: 448
   m_UpscaleRT: 0
   m_PixelSnapping: 0
-  m_CropFrameX: 0
-  m_CropFrameY: 0
-  m_StretchFill: 0
+  m_CropFrameX: 1
+  m_CropFrameY: 1
+  m_StretchFill: 1
 --- !u!81 &949040480
 AudioListener:
   m_ObjectHideFlags: 0
@@ -877,18 +877,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 033b1bf6e1d13ba4fb6e5a3c2acf1444, type: 3}
---- !u!114 &1655774890 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 703357157223343585, guid: 5fa968a3f977d4f4e88ffc9271f1d732,
-    type: 3}
-  m_PrefabInstance: {fileID: 8855161219780384631}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e41c414e8592f4c45bcf5e6df730f36a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!850595691 &1670963845
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1988,14 +1976,14 @@ MonoBehaviour:
   endRoom: {fileID: 2213059576952845, guid: 5dd827fae54408447ba1eddaf259ca0f, type: 3}
   shopRoom: {fileID: 8995660890031525271, guid: 6a3646c7c96b41f4b9e13a6c9d3704aa,
     type: 3}
-  shopRoomIndex: 22
+  shopRoomIndex: 25
   xDeltaBetweenRooms: 24
   yDeltaBetweenRooms: 16
   dropLibrary: {fileID: 11400000, guid: 2861fb8ca16fd0244844fc120113fa95, type: 2}
   characters:
   - {fileID: 6605892206959597984, guid: f0acd8a3f62b84140a2d28dd8144de9d, type: 3}
   - {fileID: 7448079461017747273, guid: 290223314dda3944c841107f71bb7bcf, type: 3}
-  pauseMenu: {fileID: 1655774890}
+  pauseMenu: {fileID: 0}
 --- !u!114 &2044533278 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7649190338548185899, guid: 290223314dda3944c841107f71bb7bcf,

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5512080488435723468}
   - component: {fileID: 1186311355967763407}
   - component: {fileID: 6474025519595320238}
+  - component: {fileID: 2185315232907614628}
   m_Layer: 11
   m_Name: Mammoth
   m_TagString: Enemy
@@ -185,6 +186,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2185315232907614628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282074403671609471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a4a3871eef47b40b171f0a068c5402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 0}
+  movementSpeed: 0
+  moneyDropped: 1
+  weaponDamage: 10
 --- !u!1001 &2838276815637816651
 PrefabInstance:
   m_ObjectHideFlags: 0

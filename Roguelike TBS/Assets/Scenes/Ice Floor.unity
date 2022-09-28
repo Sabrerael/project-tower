@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806021c30df82e6478f93ba2f85df30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newMusic: {fileID: 8300000, guid: 1b997c829fb8ffd4cbf7a8133a8cd5d3, type: 3}
+  newMusic: {fileID: 8300000, guid: 0d868bf84bcc33c438e94edbde0b0aa4, type: 3}
 --- !u!4 &7309581
 Transform:
   m_ObjectHideFlags: 0
@@ -1499,7 +1499,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1048959757
 GameObject:
@@ -2671,13 +2671,12 @@ MonoBehaviour:
   - {fileID: 7342467459405598018, guid: 9bb5fbfa20021de4493addec7e4e2a30, type: 3}
   - {fileID: 3769628823123758589, guid: e409cb7f26c49a74faf751d320ad0425, type: 3}
   - {fileID: 7071654272308978142, guid: 37e0068fb018c434dbabec7034034da3, type: 3}
-  - {fileID: 6852206995137021137, guid: 2ca224e99efb9014facb3bfb2534e00b, type: 3}
   doorArray:
   - {fileID: 1096564015869058349, guid: 99754197e42d7bd4c960144da6294230, type: 3}
   - {fileID: 2968423306976284900, guid: 54dcae44ed95bd142bf5b1f5406459b1, type: 3}
   - {fileID: 3776251881357127655, guid: ccc165050f245a543b7554914e4a05da, type: 3}
   - {fileID: 6914899084443436149, guid: 386a7c045bc72de42af1597697c88483, type: 3}
-  numberOfRooms: 18
+  numberOfRooms: 12
   startingRoom: {fileID: 622674953}
   endRoom: {fileID: 5650056998342982269, guid: c001062d2cde3044bafa2a8a21bf913b, type: 3}
   shopRoom: {fileID: 5593148085998671931, guid: a756aef4f90ddca4093ff0f1b5335f75,
@@ -2715,7 +2714,7 @@ PrefabInstance:
     - target: {fileID: 3145165280580370894, guid: f7699b610e4b9234dae2b9aa27416ad9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3145165280580370894, guid: f7699b610e4b9234dae2b9aa27416ad9,
         type: 3}
