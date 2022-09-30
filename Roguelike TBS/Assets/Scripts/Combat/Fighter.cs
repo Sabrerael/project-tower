@@ -30,12 +30,14 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     private WeaponState weaponState = WeaponState.Ready;
     protected GameObject weaponGameObject = null;
     protected WeaponType weaponStyle = WeaponType.OneHanded;
+    protected Movement movement;
 
     public event Func<bool> onInitialHit;
     public event Action<Enemy> onActualHit;
 
     private void Start() {
         mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        movement = GetComponent<Movement>();
         EquipWeapon(currentWeapon);
     }
 
@@ -74,8 +76,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     public void ToggleIFramesActive() { iFramesActive = !iFramesActive; }
 
     public void DodgeRoll() {
-        // Set Animator value
-        GetComponent<Movement>().StartDodgeRolling();
+        movement.StartDodgeRolling();
         StartIFrameTimer(dodgeRollTime);
     }
 
@@ -92,8 +93,6 @@ public class Fighter : MonoBehaviour, IModifierProvider {
             inputReceived = true;
             ChangeWeaponState();
         }
-
-        AudioSource.PlayClipAtPoint(swingSound, transform.position);
     }
 
     public void StartIFrameTimer(float time) {
@@ -107,6 +106,14 @@ public class Fighter : MonoBehaviour, IModifierProvider {
 
     public void ToggleWeapon() {
         weaponGameObject.SetActive(!weaponGameObject.activeInHierarchy);
+    }
+
+    public void ToggleMovement() {
+        movement.enabled = !movement.enabled;
+    }
+
+    public void PlayAudioClip() {
+        AudioSource.PlayClipAtPoint(swingSound, transform.position);
     }
 
     private void ChangeWeaponState() {

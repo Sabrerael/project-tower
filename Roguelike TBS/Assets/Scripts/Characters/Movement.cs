@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour {
+    [SerializeField] float movementSpeed = 6;
+    [SerializeField] float velocityAdjustment = 50000;
     [SerializeField] float padding = 0.5f;
     [SerializeField] float speedUpRate = 0.4f;
     [SerializeField] float dodgeSpeed;
@@ -16,6 +18,8 @@ public class Movement : MonoBehaviour {
     private float deltaY = 0;
     private bool isDodging = false;
     private Vector3 dodgeStartingPosition = new Vector3();
+    private Vector3 dodgeEndingPosition = new Vector3();
+    private float t;
 
     private void Start() {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -35,20 +39,21 @@ public class Movement : MonoBehaviour {
         }
     }
 
+    private void DodgeRoll() {
+        transform.localPosition = new Vector3(Mathf.Lerp(dodgeStartingPosition.x, dodgeEndingPosition.x, t),
+                                              Mathf.Lerp(dodgeStartingPosition.y, dodgeEndingPosition.y, t));
+
+        t += Time.fixedDeltaTime * dodgeSpeed;
+    }
+
     public void StartDodgeRolling() {
+        if (movementValues.magnitude < Mathf.Epsilon) { return; }
+
         isDodging = true;
         dodgeStartingPosition = transform.localPosition;
-        var mouse = Mouse.current.position.ReadValue();
-        var screenPoint = Camera.main.WorldToScreenPoint(dodgeStartingPosition);
-        var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
-        var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-
-        var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
-        var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
-        deltaX = xRatio * dodgeSpeed * Time.fixedDeltaTime;
-        deltaY = yRatio * dodgeSpeed * Time.fixedDeltaTime;
-
-        GetComponent<Animator>().SetTrigger("DodgeRoll");
+        dodgeEndingPosition = transform.localPosition + new Vector3(dodgeDistance*movementValues.x, dodgeDistance*movementValues.y);
+        animator.SetTrigger("DodgeRoll");
+        t = 0;
     }
 
     // Keeping this in case I need it. I should be good without it but I'm not sure
@@ -64,24 +69,12 @@ public class Movement : MonoBehaviour {
         movementValues = values;
     }
 
-    private void DodgeRoll() {
-        float newXPos = Mathf.Clamp(transform.localPosition.x + deltaX, xMin, xMax);
-        float newyPos = Mathf.Clamp(transform.localPosition.y + deltaY, yMin, yMax);
-
-        transform.localPosition = new Vector2(newXPos, newyPos);
-
-        if ((dodgeStartingPosition - transform.localPosition).magnitude >= dodgeDistance) {
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
-            isDodging = false;
-        }
+    private void EndDodgeRoll() {
+        isDodging = false;
     }
 
     public void NormalMovement() {
         animator.SetBool("IsWalking", true);
-        var movementSpeed = GetComponent<BaseStats>().GetStat(Stat.MovementSpeed);
-
-        float deltaX = movementValues.x * Time.fixedDeltaTime * movementSpeed;
-        float deltaY = movementValues.y * Time.fixedDeltaTime * movementSpeed;
 
         if (movementValues.x < 0) {
             animator.SetBool("WalkingRight", false);
@@ -97,9 +90,7 @@ public class Movement : MonoBehaviour {
             animator.SetBool("MovingVertical", true);
         } 
 
-        float newXPos = transform.position.x + deltaX;//Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-        float newyPos = transform.position.y + deltaY;//Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
-
-        transform.position = new Vector2(newXPos, newyPos);
+        playerRigidbody.AddForce(new Vector2(movementValues.x * movementSpeed*velocityAdjustment * Time.fixedDeltaTime,
+                                       movementValues.y * movementSpeed*velocityAdjustment * Time.fixedDeltaTime));
     }
 }

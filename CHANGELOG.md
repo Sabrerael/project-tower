@@ -1,5 +1,9 @@
 CHANGELOG
 
+v0.4.2:
+
+-----------------------------------------------------------------
+
 v0.4.1:
   Content Additions:
 	- Added the Ice Floor

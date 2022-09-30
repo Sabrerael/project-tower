@@ -1410,7 +1410,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Created by @SabreRael
 
-    Build Version 0.4.1'
+    Build Version 0.4.2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 065c7c4618496a140bab23d5d3ac78e6, type: 2}
   m_sharedMaterial: {fileID: -5052694200749206396, guid: 065c7c4618496a140bab23d5d3ac78e6,
