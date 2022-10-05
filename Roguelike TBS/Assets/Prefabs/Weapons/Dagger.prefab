@@ -47,6 +47,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -95,10 +97,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.225}
+  m_Offset: {x: -0.02, y: 0.385}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.06}
     oldSize: {x: 0.5, y: 1}
     newSize: {x: 0.05, y: 0.13}
     adaptiveTilingThreshold: 0.5
@@ -106,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.065, y: 0.265}
+  m_Size: {x: 0.3, y: 0.45}
   m_EdgeRadius: 0
 --- !u!114 &8865886493480136718
 MonoBehaviour:
@@ -121,7 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseAttackSpeed: 16
-  startingAngle: -20
-  endingAngle: -160
   weaponConfig: {fileID: 11400000, guid: 15d46265eea10c94489b3099e2b18a6c, type: 2}
-  swingSound: {fileID: 8300000, guid: 3da7a30bbf6bcf34fac6d4d4c43fc703, type: 3}
+  targetingStrategy: {fileID: 0}
+  effectStrategies: []

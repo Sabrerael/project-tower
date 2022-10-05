@@ -47,6 +47,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -95,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.36}
+  m_Offset: {x: -0.02, y: 0.77}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.085}
@@ -106,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.2}
+  m_Size: {x: 0.25, y: 0.4}
   m_EdgeRadius: 0
 --- !u!114 &-1730134469691448914
 MonoBehaviour:
@@ -121,10 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseAttackSpeed: 8
-  startingAngle: -20
-  endingAngle: -160
   weaponConfig: {fileID: 11400000, guid: cd9ff9d00a99fa245bf086f939e9a49c, type: 2}
-  swingSound: {fileID: 8300000, guid: 3da7a30bbf6bcf34fac6d4d4c43fc703, type: 3}
+  targetingStrategy: {fileID: 0}
+  effectStrategies: []
   projectile: {fileID: 1933491423486881612, guid: c8b7e05c1a33af340a66cdb9b1b1326d,
     type: 3}
   cooldownTimer: 30

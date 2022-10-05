@@ -97,10 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseAttackSpeed: 10
-  startingAngle: -20
-  endingAngle: -160
   weaponConfig: {fileID: 11400000, guid: 376b237214fd1da49b95b872f1fa4df6, type: 2}
-  swingSound: {fileID: 8300000, guid: 3da7a30bbf6bcf34fac6d4d4c43fc703, type: 3}
+  targetingStrategy: {fileID: 0}
+  effectStrategies: []
 --- !u!58 &8524976296528264381
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -116,4 +115,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.67}
   serializedVersion: 2
-  m_Radius: 0.14
+  m_Radius: 0.28

@@ -1,6 +1,30 @@
 CHANGELOG
 
 v0.4.2:
+  Content Additions:
+     - Added 2 new enemies to the Ice Floor
+
+  Characters: 
+  	- Adjusted movement speed values
+	- Updated animator controllers
+	- Made it so Attacking and using Active Abilities will stop movement. Movement will be allowed once the attack/ability is complete
+	- Made it so the roll can only be triggered in the direction of movement instead of the direction of the mouse
+	  > This was just awkward and made the movement feel off
+     - Adjusted player character hitboxes
+     - Added a shadow to player characters
+     - Added a particle system to kick up dust while moving
+
+  Enemies: 
+     - Adjusted movement speed values
+     - Adjusted enemy hitboxes
+     - Added a shadow to enemies
+
+  Weapons:
+     - Adjusted hitboxes
+
+
+  Bug Fixes:
+	- Fixed an issue where the player always flipped to the right
 
 -----------------------------------------------------------------
 

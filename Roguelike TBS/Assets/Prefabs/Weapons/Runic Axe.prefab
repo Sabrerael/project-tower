@@ -97,11 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseAttackSpeed: 10
-  startingAngle: -20
-  endingAngle: -160
-  timeBeforeNextSwing: 0.5
   weaponConfig: {fileID: 11400000, guid: 62f53efc5bfcf3841bafc370eff1f459, type: 2}
-  swingSound: {fileID: 8300000, guid: 3da7a30bbf6bcf34fac6d4d4c43fc703, type: 3}
+  targetingStrategy: {fileID: 0}
+  effectStrategies: []
 --- !u!61 &903204994190025441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +113,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
+  m_Offset: {x: 0, y: 0.53}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.11}
@@ -126,5 +124,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.38, y: 0.28}
+  m_Size: {x: 0.55, y: 0.4}
   m_EdgeRadius: 0

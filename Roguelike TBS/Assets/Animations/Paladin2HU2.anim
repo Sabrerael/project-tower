@@ -116,7 +116,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.2666667
+        time: 1.25
         value: 2
         inSlope: Infinity
         outSlope: Infinity
@@ -254,7 +254,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.2666667
+        time: 1.25
         value: 2
         inSlope: Infinity
         outSlope: Infinity
@@ -602,6 +602,13 @@ AnimationClip:
     messageOptions: 0
   - time: 1.25
     functionName: ToggleWeapon
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.25
+    functionName: ToggleMovement
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

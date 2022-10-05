@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour {
     [SerializeField] float dodgeSpeed;
     [SerializeField] float dodgeDistance;
 
+    [SerializeField] ParticleSystem dust = null;
+
     private Animator animator;
     private Rigidbody2D playerRigidbody;
     private float xMin, xMax, yMin, yMax;
@@ -20,6 +22,7 @@ public class Movement : MonoBehaviour {
     private Vector3 dodgeStartingPosition = new Vector3();
     private Vector3 dodgeEndingPosition = new Vector3();
     private float t;
+    private float dustTimer = 0;
 
     private void Start() {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -36,6 +39,8 @@ public class Movement : MonoBehaviour {
             DodgeRoll();
         } else if (movementValues.magnitude > Mathf.Epsilon) {
             NormalMovement();
+        } else {
+            dustTimer = 5;
         }
     }
 
@@ -54,6 +59,7 @@ public class Movement : MonoBehaviour {
         dodgeEndingPosition = transform.localPosition + new Vector3(dodgeDistance*movementValues.x, dodgeDistance*movementValues.y);
         animator.SetTrigger("DodgeRoll");
         t = 0;
+        dust.Play();
     }
 
     // Keeping this in case I need it. I should be good without it but I'm not sure
@@ -92,5 +98,11 @@ public class Movement : MonoBehaviour {
 
         playerRigidbody.AddForce(new Vector2(movementValues.x * movementSpeed*velocityAdjustment * Time.fixedDeltaTime,
                                        movementValues.y * movementSpeed*velocityAdjustment * Time.fixedDeltaTime));
+        if (dustTimer > 1.5) {
+            dust.Play();
+            dustTimer = 0;
+        } else {
+            dustTimer += Time.fixedDeltaTime;
+        }
     }
 }
