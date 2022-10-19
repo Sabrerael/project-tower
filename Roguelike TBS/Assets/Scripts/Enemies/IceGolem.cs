@@ -11,6 +11,7 @@ public class IceGolem : AttackingEnemy {
         for (int i = 0; i < iceShardArray.Length; i++) {
             iceShardArray[i] = Instantiate(iceShard, transform.position, Quaternion.identity);
             iceShardArray[i].transform.rotation = Quaternion.Euler(0, 0, angles[i]);
+            // TODO fix these GetComponents?
             iceShardArray[i].GetComponent<EnemyProjectile>().SetDamage(gameObject.GetComponent<BaseStats>().GetStat(Stat.Attack));
             iceShardArray[i].GetComponent<EnemyProjectile>().SetWielder(gameObject.GetComponent<Enemy>());
 

@@ -1,11 +1,10 @@
-﻿using RPG.Stats;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SlimeMovement : Enemy {
     private void Update() {
         if (player == null) { return; }
 
-        if (gameObject.GetComponent<Health>().IsDead()) { return; }
+        if (health.IsDead()) { return; }
 
         var offset = new Vector2(
             player.transform.position.x - gameObject.transform.position.x,
@@ -16,12 +15,9 @@ public class SlimeMovement : Enemy {
         var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
         var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
 
-        var deltaX = xRatio * movementSpeed * Time.deltaTime;
-        var deltaY = yRatio * movementSpeed * Time.deltaTime;
+        var deltaX = xRatio * movementSpeed;
+        var deltaY = yRatio * movementSpeed;
 
-        float newXPos = transform.localPosition.x + deltaX;
-        float newyPos = transform.localPosition.y + deltaY;
-
-        transform.localPosition = new Vector2(newXPos, newyPos);
+        enemyRigidbody2D.velocity = new Vector2(deltaX, deltaY);
     }
 }

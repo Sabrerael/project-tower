@@ -7,9 +7,8 @@ public class Spirit : Enemy {
     [SerializeField] float timeBetweenShots = 2f;
     [SerializeField] float shootTimer = -3f;
 
-    // Update is called once per frame
     private void Update() {
-        if (gameObject.GetComponent<Health>().IsDead()) { return; }
+        if (health.IsDead()) { return; }
 
         shootTimer += Time.deltaTime;
 
@@ -21,7 +20,7 @@ public class Spirit : Enemy {
     }
 
     private void TriggerAttackAnimation() {
-        GetComponent<Animator>().SetTrigger("Attack");
+        animator.SetTrigger("Attack");
         shootTimer = 0;
     }
 
@@ -35,13 +34,10 @@ public class Spirit : Enemy {
         var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
         var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
 
-        var deltaX = xRatio * movementSpeed * Time.deltaTime;
-        var deltaY = yRatio * movementSpeed * Time.deltaTime;
+        var deltaX = xRatio * movementSpeed;
+        var deltaY = yRatio * movementSpeed;
 
-        float newXPos = transform.localPosition.x + deltaX;
-        float newyPos = transform.localPosition.y + deltaY;
-
-        transform.localPosition = new Vector2(newXPos, newyPos);
+        enemyRigidbody2D.velocity = new Vector2(deltaX, deltaY);
 
         if (Mathf.Sign(deltaX) == -1) {
             transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
@@ -52,6 +48,7 @@ public class Spirit : Enemy {
 
     private void ShootMagic() {
         GameObject spawnedItem = Instantiate(magicBlob, gameObject.transform.position, Quaternion.identity);
+        // TODO fix these GetComponents?
         spawnedItem.GetComponent<EnemyProjectile>().SetDamage(gameObject.GetComponent<BaseStats>().GetStat(Stat.Attack));
         spawnedItem.GetComponent<EnemyProjectile>().SetWielder(gameObject.GetComponent<Enemy>());
 

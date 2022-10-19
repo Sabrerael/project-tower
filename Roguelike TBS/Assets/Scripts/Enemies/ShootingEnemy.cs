@@ -7,9 +7,8 @@ public class ShootingEnemy : Enemy {
     [SerializeField] float timeBetweenShots = 2f;
     [SerializeField] float shootTimer = -3f; // Gives player timer before Enemy starts shooting
 
-    // Update is called once per frame
     private void Update() {
-        if (gameObject.GetComponent<Health>().IsDead()) { return; }
+        if (health.IsDead()) { return; }
 
         shootTimer += Time.deltaTime;
 
@@ -25,11 +24,12 @@ public class ShootingEnemy : Enemy {
     }
 
     private void TriggerAttackAnimation() {
-        GetComponent<Animator>().SetTrigger("Attack");
+        animator.SetTrigger("Attack");
     }
 
     public void Attack() {
         GameObject spawnedItem = Instantiate(arrow, transform.position, Quaternion.identity);
+        // TODO fix these GetComponents?
         spawnedItem.GetComponent<EnemyProjectile>().SetDamage(gameObject.GetComponent<BaseStats>().GetStat(Stat.Attack));
         spawnedItem.GetComponent<EnemyProjectile>().SetWielder(gameObject.GetComponent<Enemy>());
 

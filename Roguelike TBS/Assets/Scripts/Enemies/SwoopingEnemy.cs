@@ -14,22 +14,17 @@ public class SwoopingEnemy : Enemy {
     private float deltaY = 0;
 
     private void Update() {
-        if (gameObject.GetComponent<Health>().IsDead()) { return; }
+        if (health.IsDead()) { return; }
 
         if (moving) {
-            float newXPos = Mathf.Clamp(transform.localPosition.x + deltaX, xMin, xMax);
-            float newyPos = Mathf.Clamp(transform.localPosition.y + deltaY, yMin, yMax);
-
-            transform.localPosition = new Vector2(newXPos, newyPos);
-
             if ((startingPoint - transform.localPosition).magnitude >= distance) {
-                gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+                enemyRigidbody2D.velocity = new Vector3();
                 moving = false;
             }
         } else {
             timer += Time.deltaTime;
             if (timer >= cooldownTime) {
-                GetComponent<Animator>().SetTrigger("Swoop");
+                animator.SetTrigger("Swoop");
             }
         }
     }
@@ -48,13 +43,10 @@ public class SwoopingEnemy : Enemy {
         var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
         var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
 
-        deltaX = xRatio * movementSpeed * Time.deltaTime;
-        deltaY = yRatio * movementSpeed * Time.deltaTime;
+        deltaX = xRatio * movementSpeed;
+        deltaY = yRatio * movementSpeed;
 
-        float newXPos = Mathf.Clamp(transform.localPosition.x + deltaX, xMin, xMax);
-        float newyPos = Mathf.Clamp(transform.localPosition.y + deltaY, yMin, yMax);
-
-        transform.localPosition = new Vector2(newXPos, newyPos);
+        enemyRigidbody2D.velocity = new Vector2(deltaX, deltaY);
                 
         if (Mathf.Sign(deltaX) == -1) {
             transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);

@@ -20,13 +20,10 @@ public class AttackingEnemy : Enemy {
         var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
         var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
 
-        var deltaX = xRatio * movementSpeed * Time.deltaTime;
-        var deltaY = yRatio * movementSpeed * Time.deltaTime;
+        var deltaX = xRatio * movementSpeed;
+        var deltaY = yRatio * movementSpeed;
 
-        float newXPos = transform.position.x + deltaX;
-        float newyPos = transform.position.y + deltaY;
-
-        transform.position = new Vector2(newXPos, newyPos);
+        enemyRigidbody2D.velocity = new Vector2(deltaX, deltaY);
 
         if (Mathf.Sign(deltaX) == -1) {
             transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
@@ -40,6 +37,7 @@ public class AttackingEnemy : Enemy {
             if (attackState == AttackState.Ready) {
                 TriggerAttack();
             } else if (attackState == AttackState.Attacking) {
+                // TODO Maybe these other calls move into one of the Player scripts as a single function call
                 other.gameObject.GetComponent<Animator>().SetTrigger("Hit");
                 var playerBaseStats = other.gameObject.GetComponent<BaseStats>();
                 var damageDealt = gameObject.GetComponent<BaseStats>().GetStat(Stat.Attack) - playerBaseStats.GetStat(Stat.Defense);
@@ -51,7 +49,7 @@ public class AttackingEnemy : Enemy {
     }
 
     public void TriggerAttack() {
-        GetComponent<Animator>().SetTrigger("Attack");
+        animator.SetTrigger("Attack");
     }
 
     public void Attacking() {

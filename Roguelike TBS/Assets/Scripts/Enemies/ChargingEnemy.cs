@@ -1,4 +1,3 @@
-using RPG.Stats;
 using UnityEngine;
 
 public class ChargingEnemy : Enemy {
@@ -12,17 +11,12 @@ public class ChargingEnemy : Enemy {
     private float deltaY = 0;
 
     private void Update() {
-        if (gameObject.GetComponent<Health>().IsDead()) { return; }
+        if (health.IsDead()) { return; }
 
-        if (moving) {
-            float newXPos = transform.localPosition.x + deltaX;
-            float newyPos = transform.localPosition.y + deltaY;
-
-            transform.localPosition = new Vector2(newXPos, newyPos);
-        } else {
+        if (!moving) {
             timer += Time.deltaTime;
             if (timer >= cooldownTime) {
-                GetComponent<Animator>().SetTrigger("Charge");
+                animator.SetTrigger("Charge");
             }
         }
     }
@@ -30,7 +24,8 @@ public class ChargingEnemy : Enemy {
     private new void OnCollisionEnter2D(Collision2D other) {
         base.OnCollisionEnter2D(other);
 
-        GetComponent<Animator>().SetTrigger("Stop");
+        animator.SetTrigger("Stop");
+        enemyRigidbody2D.velocity = new Vector2();
         moving = false;
         timer = 0;
     }
@@ -47,13 +42,10 @@ public class ChargingEnemy : Enemy {
         var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
         var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
 
-        deltaX = xRatio * movementSpeed * Time.deltaTime;
-        deltaY = yRatio * movementSpeed * Time.deltaTime;
+        deltaX = xRatio * movementSpeed;
+        deltaY = yRatio * movementSpeed;
 
-        float newXPos = transform.localPosition.x + deltaX;
-        float newyPos = transform.localPosition.y + deltaY;
-
-        transform.localPosition = new Vector2(newXPos, newyPos);
+        enemyRigidbody2D.velocity = new Vector2(deltaX, deltaY);
                 
         if (Mathf.Sign(deltaX) == 1) {
             transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);

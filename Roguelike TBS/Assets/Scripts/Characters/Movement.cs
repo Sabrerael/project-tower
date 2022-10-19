@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour {
     [SerializeField] float speedUpRate = 0.4f;
     [SerializeField] float dodgeSpeed;
     [SerializeField] float dodgeDistance;
-
     [SerializeField] ParticleSystem dust = null;
 
     private Animator animator;
@@ -48,7 +47,11 @@ public class Movement : MonoBehaviour {
         transform.localPosition = new Vector3(Mathf.Lerp(dodgeStartingPosition.x, dodgeEndingPosition.x, t),
                                               Mathf.Lerp(dodgeStartingPosition.y, dodgeEndingPosition.y, t));
 
-        t += Time.fixedDeltaTime * dodgeSpeed;
+        if (t >= 1) {
+            isDodging = false;
+        } else {
+            t += Time.fixedDeltaTime * dodgeSpeed;
+        }
     }
 
     public void StartDodgeRolling() {

@@ -10,14 +10,17 @@ public class Enemy : MonoBehaviour {
     protected GameObject player;
     protected Health health;
     protected Animator animator;
+    protected Rigidbody2D enemyRigidbody2D;
 
     // Start is called before the first frame update
-    private void Awake() {
+    protected void Awake() {
         player = GameObject.FindGameObjectWithTag("Player");
         health = GetComponent<Health>();
         animator = GetComponent<Animator>();
+        enemyRigidbody2D = GetComponent<Rigidbody2D>();
 
         health.onDeath += AddMoney;
+        health.onDeath += SetRigidbodyTypeToStatic;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -66,6 +69,10 @@ public class Enemy : MonoBehaviour {
         } else {
             movementSpeed = Mathf.Max(movementSpeed - speedChange, 0);
         }
+    }
+
+    public void SetRigidbodyTypeToStatic() {
+        enemyRigidbody2D.bodyType = RigidbodyType2D.Static;
     }
 
     private void AddMoney() {

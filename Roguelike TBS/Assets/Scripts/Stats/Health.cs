@@ -61,7 +61,6 @@ namespace RPG.Stats {
 
         private void Die() {
             if (gameObject.tag == "Player") {
-                // Trigger a coroutine to 'die' and go to Game Over screen
                 StartCoroutine(PlayerDeath());
                 return;
             }
