@@ -18,6 +18,7 @@ v0.4.2:
      - Adjusted movement speed values
      - Adjusted enemy hitboxes
      - Added a shadow to enemies
+     - Modified how certain enemies trigger damage
 
   Weapons:
      - Adjusted hitboxes
@@ -25,6 +26,7 @@ v0.4.2:
 
   Bug Fixes:
 	- Fixed an issue where the player always flipped to the right
+	- Fixed an issue where the enemy health bars would flip when the enemy turned to face the player
 
 -----------------------------------------------------------------
 

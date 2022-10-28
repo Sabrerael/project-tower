@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using RPG.Stats;
+﻿using RPG.Stats;
 using UnityEngine;
 
 public class HealthBar : MonoBehaviour {
@@ -17,5 +15,13 @@ public class HealthBar : MonoBehaviour {
         rootCanvas.enabled = true;
 
         foreground.localScale = new Vector3(healthComponent.GetFraction(), 1, 1);
+    }
+
+    public void SetLocalScale(bool negativeLocalScale) {
+        if (negativeLocalScale) {
+            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+        } else {
+            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+        }
     }
 }

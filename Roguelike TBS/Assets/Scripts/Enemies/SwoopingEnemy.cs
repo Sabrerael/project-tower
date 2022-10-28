@@ -50,8 +50,10 @@ public class SwoopingEnemy : Enemy {
                 
         if (Mathf.Sign(deltaX) == -1) {
             transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+            healthBar.SetLocalScale(true);
         } else {
             transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+            healthBar.SetLocalScale(false);
         }
         moving = true;
     }

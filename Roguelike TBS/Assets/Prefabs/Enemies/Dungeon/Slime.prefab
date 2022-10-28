@@ -224,6 +224,7 @@ MonoBehaviour:
   sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
   movementSpeed: 3
   moneyDropped: 1
+  healthBar: {fileID: 442441630807801723}
 --- !u!114 &5535630117016792133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,3 +355,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7647013529532456013}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &442441630807801723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7799240715049362230, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7647013529532456013}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b20e58a55a012f4983ec6a4c14aea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

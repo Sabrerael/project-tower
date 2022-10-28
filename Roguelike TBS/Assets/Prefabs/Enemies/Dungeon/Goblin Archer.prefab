@@ -192,6 +192,7 @@ MonoBehaviour:
   sfx: {fileID: 8300000, guid: 8a4494ebe0140804bbf58fe192cfe314, type: 3}
   movementSpeed: 0
   moneyDropped: 1
+  healthBar: {fileID: 7162098059115693479}
   arrow: {fileID: 1188875467988603800, guid: 451fdaccb2f9efc4aa31743959503ecc, type: 3}
   arrowSpeed: 7.5
   timeBetweenShots: 1.75
@@ -358,3 +359,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1105803199578433169}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7162098059115693479 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7799240715049362230, guid: 122a1dd73fcea254b9a781a20a6aab1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1105803199578433169}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b20e58a55a012f4983ec6a4c14aea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

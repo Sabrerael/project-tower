@@ -1,10 +1,11 @@
-using RPG.Stats;
 using UnityEngine;
 
 public class AttackingEnemy : Enemy {
     [SerializeField] int weaponDamage = 10;
+    [SerializeField] GameObject attackZone;
 
     private AttackState attackState = AttackState.Ready;
+    private float cooldownTimer = 0;
 
     private void Update() {
         if (player == null) { return; }
@@ -27,8 +28,18 @@ public class AttackingEnemy : Enemy {
 
         if (Mathf.Sign(deltaX) == -1) {
             transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+            healthBar.SetLocalScale(true);
         } else {
             transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+            healthBar.SetLocalScale(false);
+        }
+
+        if (attackState == AttackState.Cooldown) {
+            cooldownTimer += Time.deltaTime;
+        }
+
+        if (cooldownTimer >= 2) {
+            ResetAttackState();
         }
     }
 
@@ -36,27 +47,30 @@ public class AttackingEnemy : Enemy {
         if (other.gameObject.tag == "Player") {
             if (attackState == AttackState.Ready) {
                 TriggerAttack();
-            } else if (attackState == AttackState.Attacking) {
-                // TODO Maybe these other calls move into one of the Player scripts as a single function call
-                other.gameObject.GetComponent<Animator>().SetTrigger("Hit");
-                var playerBaseStats = other.gameObject.GetComponent<BaseStats>();
-                var damageDealt = gameObject.GetComponent<BaseStats>().GetStat(Stat.Attack) - playerBaseStats.GetStat(Stat.Defense);
-                other.gameObject.GetComponent<Health>().TakeDamage(gameObject, damageDealt);
-                other.GetComponent<Fighter>().StartIFrameTimer(0.75f);
-                attackState = AttackState.Cooldown;
             }
         }
     }
 
     public void TriggerAttack() {
         animator.SetTrigger("Attack");
+        attackState = AttackState.Attacking;
     }
 
-    public void Attacking() {
-        attackState = AttackState.Attacking;
+    public void AttackCooldown() {
+        attackState = AttackState.Cooldown;
+        DisableAttackZone();
     }
 
     public void ResetAttackState() {
         attackState = AttackState.Ready;
+        cooldownTimer = 0;
+    }
+
+    public void EnableAttackZone() {
+        attackZone.SetActive(true);
+    }
+
+    public void DisableAttackZone() {
+        attackZone.SetActive(false);
     }
 }

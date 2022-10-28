@@ -15,8 +15,10 @@ public class ShootingEnemy : Enemy {
         if (shootTimer >= timeBetweenShots) {
             if (Mathf.Sign(player.transform.position.x - transform.position.x) == -1) {
                 transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+                healthBar.SetLocalScale(true);
             } else {
                 transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+                healthBar.SetLocalScale(false);
             }
             TriggerAttackAnimation();
             shootTimer = 0;
