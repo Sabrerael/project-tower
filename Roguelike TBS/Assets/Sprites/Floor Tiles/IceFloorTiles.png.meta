@@ -20,6 +20,24 @@ TextureImporter:
   - first:
       213: -6727165859669826608
     second: IceFloorTiles_5
+  - first:
+      213: 2199949644963777342
+    second: IceFloorTiles_6
+  - first:
+      213: -1096619648853227709
+    second: IceFloorTiles_7
+  - first:
+      213: 7601456530456292893
+    second: IceFloorTiles_8
+  - first:
+      213: 6379988038001803075
+    second: IceFloorTiles_9
+  - first:
+      213: -2594351120874631260
+    second: IceFloorTiles_10
+  - first:
+      213: 6721710934069939881
+    second: IceFloorTiles_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -254,6 +272,132 @@ TextureImporter:
       bones: []
       spriteID: 0d3ae3dea4e44a2a0800000000000000
       internalID: -6727165859669826608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceFloorTiles_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b00d7db8ac78e10800000000000000
+      internalID: 2199949644963777342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceFloorTiles_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347c3605d3608c0f0800000000000000
+      internalID: -1096619648853227709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceFloorTiles_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1eab61b07ccd7960800000000000000
+      internalID: 7601456530456292893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceFloorTiles_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fb65461554a8850800000000000000
+      internalID: 6379988038001803075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceFloorTiles_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af81a9a6630ffbd0800000000000000
+      internalID: -2594351120874631260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceFloorTiles_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae091c3b70584d50800000000000000
+      internalID: 6721710934069939881
       vertices: []
       indices: 
       edges: []
