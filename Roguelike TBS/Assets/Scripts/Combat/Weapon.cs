@@ -21,6 +21,8 @@ public class Weapon : MonoBehaviour {
     }
     
     public virtual void UseActiveAbility() {
+        if (targetingStrategy == null) { return; }
+        
         AbilityData data = new AbilityData(wielder.gameObject);
         targetingStrategy.StartTargeting(data,
             () => {

@@ -2,9 +2,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour {
+    private Fighter fighter;
+
+    private void Start() {
+        fighter = GetComponent<Fighter>();
+    }
+
     private void OnAttack(InputValue value) {
         if (value.isPressed) {
-            GetComponent<Fighter>().CheckIfSwinging();
+            fighter.CheckIfSwinging();
         }
     }
 
@@ -18,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 
     private void OnRoll(InputValue value) {
         if (value.isPressed) {
-            GetComponent<Fighter>().DodgeRoll();
+            fighter.DodgeRoll();
         }
     }
 
@@ -30,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 
     private void OnWeaponAbility(InputValue value) {
         if (value.isPressed) {
-            GetComponent<Weapon>().UseActiveAbility();
+            fighter.GetWeapon().UseActiveAbility();
         }
     }
 
@@ -40,33 +46,15 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void OnItem1(InputValue value) {
+    private void OnActiveItem(InputValue value) {
         if (value.isPressed) {
             GetComponent<Inventory>().UseItemInSlot(0);
         }
     }
 
-    private void OnItem2(InputValue value) {
+    private void OnSwitchItem(InputValue value) {
         if (value.isPressed) {
-            GetComponent<Inventory>().UseItemInSlot(1);
-        }
-    }
-
-    private void OnItem3(InputValue value) {
-        if (value.isPressed) {
-            GetComponent<Inventory>().UseItemInSlot(2);
-        }
-    }
-
-    private void OnItem4(InputValue value) {
-        if (value.isPressed) {
-            GetComponent<Inventory>().UseItemInSlot(3);
-        }
-    }
-
-    private void OnItem5(InputValue value) {
-        if (value.isPressed) {
-            GetComponent<Inventory>().UseItemInSlot(4);
+            //GetComponent<Inventory>().UseItemInSlot(1);
         }
     }
 

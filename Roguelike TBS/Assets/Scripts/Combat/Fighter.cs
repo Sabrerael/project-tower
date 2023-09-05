@@ -20,6 +20,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     [SerializeField] float comboResetTime = 1.25f;
     [SerializeField] AudioClip swingSound = null;
 
+    private Animator animator;
     private Camera mainCam;
     private int multiplicativeModifier = 0;
     private int movementModifier = 0;
@@ -38,6 +39,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     private void Start() {
         mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         movement = GetComponent<Movement>();
+        animator = GetComponent<Animator>();
         EquipWeapon(currentWeapon);
     }
 
@@ -95,6 +97,10 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         }
     }
 
+    public Weapon GetWeapon() {
+        return weaponGameObject.GetComponent<Weapon>();
+    }
+
     public void StartIFrameTimer(float time) {
         StartCoroutine(IFrameTimer(time));
     }
@@ -121,13 +127,10 @@ public class Fighter : MonoBehaviour, IModifierProvider {
             weaponState = WeaponState.Ready;
             return;
         }
-        Debug.Log("In ChangeWeaponState");
         if (weaponState == WeaponState.Ready) {
             weaponState = WeaponState.Swinging1;
-            CheckMouseLocation();
-            GetComponent<Animator>().SetTrigger("AttackState1");
-            GetComponent<Animator>().SetInteger("AttackStyle", (int)weaponStyle);
-            Debug.Log((int)weaponStyle);
+            animator.SetTrigger("AttackState1");
+            animator.SetInteger("AttackStyle", (int)weaponStyle);
             return;
         }
 
@@ -140,31 +143,15 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         if (inputReceived) {
             if (weaponState == WeaponState.Swinging1) {
                 weaponState = WeaponState.Swinging2;
-                CheckMouseLocation();
-                GetComponent<Animator>().SetTrigger("AttackState2");
+                animator.SetTrigger("AttackState2");
                 inputReceived = false;
                 return;
             } else if (weaponState == WeaponState.Swinging2) {
                 weaponState = WeaponState.Swinging3;
-                CheckMouseLocation();
-                GetComponent<Animator>().SetTrigger("AttackState3");
+                animator.SetTrigger("AttackState3");
                 waitingForNextAttack = true;
                 return;
             }
-        }
-    }
-
-    private void CheckMouseLocation() {
-        var offset = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;
-        var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-        if (40 < angle && angle < 110) {
-           GetComponent<Animator>().SetTrigger("MouseUp"); 
-        } else if (-110 < angle && angle < -40) {
-            GetComponent<Animator>().SetTrigger("MouseDown");
-        } else if (Mathf.Abs(angle) > 110) {
-            GetComponent<Animator>().SetTrigger("MouseLeft");
-        } else {
-            GetComponent<Animator>().SetTrigger("MouseRight");
         }
     }
 
@@ -173,10 +160,10 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         ChangeWeaponState();
         inputReceived = false;
         waitingForNextAttack = false;
-        GetComponent<Animator>().ResetTrigger("AttackState2");
-        GetComponent<Animator>().ResetTrigger("AttackState3");
-        GetComponent<Animator>().ResetTrigger("MouseUp");
-        GetComponent<Animator>().ResetTrigger("MouseDown");
+        animator.ResetTrigger("AttackState2");
+        animator.ResetTrigger("AttackState3");
+        animator.ResetTrigger("MouseUp");
+        animator.ResetTrigger("MouseDown");
     }
 
     public IEnumerable<int> GetAdditiveModifiers(Stat stat) {

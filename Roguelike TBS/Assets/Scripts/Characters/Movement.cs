@@ -4,22 +4,19 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour {
     [SerializeField] float movementSpeed = 6;
-    [SerializeField] float velocityAdjustment = 50000;
     [SerializeField] float padding = 0.5f;
-    [SerializeField] float speedUpRate = 0.4f;
     [SerializeField] float dodgeSpeed;
-    [SerializeField] float dodgeDistance;
     [SerializeField] ParticleSystem dust = null;
 
     private Animator animator;
     private Rigidbody2D playerRigidbody;
     private float xMin, xMax, yMin, yMax;
     private Vector2 movementValues = new Vector2();
-    private float deltaX = 0;
-    private float deltaY = 0;
     private bool isDodging = false;
-    private Vector3 dodgeStartingPosition = new Vector3();
-    private Vector3 dodgeEndingPosition = new Vector3();
+    private bool movingRight = false;
+    private bool movingDown = true;
+    private bool movingVertical = true;
+    private Vector3 dodgeDirection = new Vector3();
     private float t;
     private float dustTimer = 0;
 
@@ -44,22 +41,27 @@ public class Movement : MonoBehaviour {
     }
 
     private void DodgeRoll() {
-        transform.localPosition = new Vector3(Mathf.Lerp(dodgeStartingPosition.x, dodgeEndingPosition.x, t),
-                                              Mathf.Lerp(dodgeStartingPosition.y, dodgeEndingPosition.y, t));
-
-        if (t >= 1) {
-            isDodging = false;
-        } else {
-            t += Time.fixedDeltaTime * dodgeSpeed;
-        }
+        playerRigidbody.AddForce(new Vector2(dodgeDirection.x * dodgeSpeed,
+                                             dodgeDirection.y * dodgeSpeed));
+        t += Time.fixedDeltaTime;
     }
 
     public void StartDodgeRolling() {
-        if (movementValues.magnitude < Mathf.Epsilon) { return; }
+        if (movementValues.magnitude < Mathf.Epsilon) {
+            if (!movingVertical && !movingRight) {
+                dodgeDirection = Vector3.left;
+            } else if (!movingVertical && movingRight) {
+                dodgeDirection = Vector3.right;
+            } else if (movingVertical && movingDown) {
+                dodgeDirection = Vector3.down;
+            } else if (movingVertical && !movingDown) {
+                dodgeDirection = Vector3.up;
+            } 
+        } else {
+            dodgeDirection = movementValues;
+        }
 
         isDodging = true;
-        dodgeStartingPosition = transform.localPosition;
-        dodgeEndingPosition = transform.localPosition + new Vector3(dodgeDistance*movementValues.x, dodgeDistance*movementValues.y);
         animator.SetTrigger("DodgeRoll");
         t = 0;
         dust.Play();
@@ -88,19 +90,28 @@ public class Movement : MonoBehaviour {
         if (movementValues.x < 0) {
             animator.SetBool("WalkingRight", false);
             animator.SetBool("MovingVertical", false);
+            movingRight = false;
+            movingVertical = false;
         } else if (movementValues.x > 0) {
             animator.SetBool("WalkingRight", true);
             animator.SetBool("MovingVertical", false);
+            movingRight = true;
+            movingVertical = false;
         } else if (movementValues.y < Mathf.Epsilon) {
             animator.SetBool("WalkingDown", true);
             animator.SetBool("MovingVertical", true);
+            movingDown = true;
+            movingVertical = true;
         } else if (movementValues.y > Mathf.Epsilon) {
             animator.SetBool("WalkingDown", false);
             animator.SetBool("MovingVertical", true);
+            movingDown = false;
+            movingVertical = true;
         } 
 
-        playerRigidbody.AddForce(new Vector2(movementValues.x * movementSpeed*velocityAdjustment * Time.fixedDeltaTime,
-                                       movementValues.y * movementSpeed*velocityAdjustment * Time.fixedDeltaTime));
+        playerRigidbody.AddForce(new Vector2(movementValues.x * movementSpeed,
+                                             movementValues.y * movementSpeed));
+        
         if (dustTimer > 1.5) {
             dust.Play();
             dustTimer = 0;
