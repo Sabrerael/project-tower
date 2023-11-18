@@ -9,6 +9,9 @@ namespace RPG.Stats {
         
         private bool isDead = false;
         private LevelLoader levelLoader = null;
+        Animator animator;
+        BaseStats baseStats;
+        SpriteRenderer spriteRenderer;
 
         public event Func<int, int> onDamageTaken;
         public event Action onDeath;
@@ -16,6 +19,9 @@ namespace RPG.Stats {
         private void Start() {
             healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
             levelLoader = GameObject.Find("Level Loader").GetComponent<LevelLoader>();
+            animator = GetComponent<Animator>();
+            baseStats = GetComponent<BaseStats>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         public bool IsDead() { return isDead; }
@@ -60,7 +66,7 @@ namespace RPG.Stats {
         }
 
         private void Die() {
-            if (gameObject.tag == "Player") {
+            if (gameObject.CompareTag("Player")) {
                 StartCoroutine(PlayerDeath());
                 return;
             }
@@ -68,11 +74,11 @@ namespace RPG.Stats {
             if (isDead) { return; }
 
             isDead = true;
-            gameObject.GetComponent<Animator>().SetBool("Dead", true);
+            animator.SetBool("Dead", true);
             foreach (var collider in gameObject.GetComponents<Collider2D>()) {
                 collider.enabled = false;
             }
-            gameObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
+            spriteRenderer.sortingOrder = -1;
             transform.SetParent(GameObject.Find("Dead Enemies").transform);
             
             if (onDeath != null) {
@@ -86,7 +92,7 @@ namespace RPG.Stats {
             Experience experience = instigator.GetComponent<Experience>();
             if (experience == null) { return; }
             
-            experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
+            experience.GainExperience(baseStats.GetStat(Stat.ExperienceReward));
         }
 
         public object CaptureState() {
@@ -103,18 +109,17 @@ namespace RPG.Stats {
 
         private IEnumerator DamageEffect() {
             //TODO Make the color transition smoother -- Maybe this just goes in Update?
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            yield return new WaitForSeconds(.1f);
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-            yield return new WaitForSeconds(.1f);
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            yield return new WaitForSeconds(.1f);
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(.25f);
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(.25f);
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(.25f);
+            spriteRenderer.color = Color.white;
         }
 
         private IEnumerator PlayerDeath() {
             isDead = true;
-            var animator = GetComponent<Animator>();
             animator.SetBool("IsDead", true);
             yield return new WaitForSeconds(2.5f);
             levelLoader.LoadGameOver();

@@ -61,12 +61,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ade11c035685eb4bad7f032b0e119f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 6
-  velocityAdjustment: 900
+  movementSpeed: 100
   padding: 0.5
-  speedUpRate: 0.4
-  dodgeSpeed: 4.5
-  dodgeDistance: 2.5
+  dodgeSpeed: 150
   dust: {fileID: 2053084883625066409}
 --- !u!50 &4383780246614317367
 Rigidbody2D:

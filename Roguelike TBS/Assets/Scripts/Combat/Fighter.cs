@@ -22,6 +22,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
 
     private Animator animator;
     private Camera mainCam;
+    private CinemachineShake cinemachineShake;
     private int multiplicativeModifier = 0;
     private int movementModifier = 0;
     private int attackSpeedModifier = 0;
@@ -38,6 +39,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
 
     private void Start() {
         mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        cinemachineShake = CinemachineShake.Instance;
         movement = GetComponent<Movement>();
         animator = GetComponent<Animator>();
         EquipWeapon(currentWeapon);
@@ -54,17 +56,22 @@ public class Fighter : MonoBehaviour, IModifierProvider {
 
         if (onInitialHit != null && onInitialHit()) { return; }
 
-        if (other.gameObject.tag == "Enemy") {
+        if (other.gameObject.CompareTag("Enemy")) {
             var enemyBaseStats = other.gameObject.GetComponent<BaseStats>();
             var damageTaken = enemyBaseStats.GetStat(Stat.Attack) - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
             gameObject.GetComponent<Health>().TakeDamage(other.gameObject, damageTaken);
             StartCoroutine(IFrameTimer(iFramesTimeLimit));
             if (onActualHit != null) { onActualHit(other.gameObject.GetComponent<Enemy>()); }
-        } else if (other.gameObject.tag == "Enemy Projectile") {
+            cinemachineShake.ShakeCamera(2.5f, .2f);
+            if (other.gameObject.GetComponent<SlimeMovement>()) {
+                other.gameObject.GetComponent<SlimeMovement>().RunContactKnockback(GetComponent<Collider2D>());
+            }
+        } else if (other.gameObject.CompareTag("Enemy Projectile")) {
             var enemyProjectile = other.gameObject.GetComponent<EnemyProjectile>();
             var damageTaken = enemyProjectile.GetDamage() - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
             gameObject.GetComponent<Health>().TakeDamage(other.gameObject, damageTaken);
             StartCoroutine(IFrameTimer(iFramesTimeLimit));
+            cinemachineShake.ShakeCamera(2.5f, .2f);
         }
     }
 

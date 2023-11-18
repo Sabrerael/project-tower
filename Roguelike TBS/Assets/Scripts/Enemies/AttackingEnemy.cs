@@ -11,22 +11,8 @@ public class AttackingEnemy : Enemy {
         if (player == null) { return; }
 
         if (health.IsDead()) { return; }
-
-        var offset = new Vector2(
-            player.transform.position.x - gameObject.transform.position.x,
-            player.transform.position.y - gameObject.transform.position.y
-        );
-        var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-
-        var xRatio = Mathf.Cos(angle * Mathf.Deg2Rad);
-        var yRatio = Mathf.Sin(angle * Mathf.Deg2Rad);
-
-        var deltaX = xRatio * movementSpeed;
-        var deltaY = yRatio * movementSpeed;
-
-        enemyRigidbody2D.velocity = new Vector2(deltaX, deltaY);
-
-        if (Mathf.Sign(deltaX) == -1) {
+        
+        if (Mathf.Sign(aiPath.desiredVelocity.x) == -1) {
             transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
             healthBar.SetLocalScale(true);
         } else {
@@ -44,7 +30,7 @@ public class AttackingEnemy : Enemy {
     }
 
     private void OnTriggerStay2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.CompareTag("Player")) {
             if (attackState == AttackState.Ready) {
                 TriggerAttack();
             }

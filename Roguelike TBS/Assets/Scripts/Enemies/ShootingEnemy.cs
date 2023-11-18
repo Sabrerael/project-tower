@@ -1,14 +1,46 @@
+using Pathfinding;
 using RPG.Stats;
+using System.Collections;
 using UnityEngine;
 
 public class ShootingEnemy : Enemy {
-    [SerializeField] GameObject arrow = null;
+    [SerializeField] EnemyProjectile arrow = null;
     [SerializeField] float arrowSpeed = 5f;
     [SerializeField] float timeBetweenShots = 2f;
     [SerializeField] float shootTimer = -3f; // Gives player timer before Enemy starts shooting
+    [SerializeField] float nextWaypointDistance = 3f;
+    [SerializeField] float walkingSpeed;
 
-    private void Update() {
-        if (health.IsDead()) { return; }
+    private Path path;
+    private int currentWaypoint = 0;
+    private bool reachedEndOfPath = false;
+    private bool interrupted = false;
+    private Seeker seeker;
+
+    private void Start() {
+        seeker = GetComponent<Seeker>();
+
+        InvokeRepeating("UpdatePath", 0f, 0.5f);
+        seeker.StartPath(enemyRigidbody2D.position, player.transform.position, OnPathComplete);
+    }
+
+    private void FixedUpdate() {
+        if (health.IsDead() || interrupted) { return; }
+
+        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - enemyRigidbody2D.position).normalized;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3)direction, direction);
+
+        if (hit.collider.gameObject.CompareTag("Player")) {
+            Vector2 force = direction * walkingSpeed * Time.deltaTime;
+            enemyRigidbody2D.AddForce(force);
+
+            float distance = Vector2.Distance(enemyRigidbody2D.position, path.vectorPath[currentWaypoint]);
+
+            if (distance < nextWaypointDistance) {
+                currentWaypoint++;
+            }
+            return;
+        }
 
         shootTimer += Time.deltaTime;
 
@@ -20,8 +52,10 @@ public class ShootingEnemy : Enemy {
                 transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
                 healthBar.SetLocalScale(false);
             }
+            
             TriggerAttackAnimation();
             shootTimer = 0;
+            return;
         }
     }
 
@@ -30,10 +64,10 @@ public class ShootingEnemy : Enemy {
     }
 
     public void Attack() {
-        GameObject spawnedItem = Instantiate(arrow, transform.position, Quaternion.identity);
+        EnemyProjectile spawnedItem = Instantiate(arrow, transform.position, Quaternion.identity);
         // TODO fix these GetComponents?
-        spawnedItem.GetComponent<EnemyProjectile>().SetDamage(gameObject.GetComponent<BaseStats>().GetStat(Stat.Attack));
-        spawnedItem.GetComponent<EnemyProjectile>().SetWielder(gameObject.GetComponent<Enemy>());
+        spawnedItem.SetDamage(gameObject.GetComponent<BaseStats>().GetStat(Stat.Attack));
+        spawnedItem.SetWielder(this);
 
         var offset = new Vector2(
             player.transform.position.x - spawnedItem.transform.position.x,
@@ -46,6 +80,28 @@ public class ShootingEnemy : Enemy {
 
         spawnedItem.transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        spawnedItem.GetComponent<EnemyProjectile>().SetMovementValues(xRatio * arrowSpeed, yRatio * arrowSpeed);
+        spawnedItem.SetMovementValues(xRatio * arrowSpeed, yRatio * arrowSpeed);
+    }
+
+    protected override IEnumerator Knockback(Collider2D other) {
+        interrupted = true;
+        enemyRigidbody2D.AddForce((transform.position - other.transform.position).normalized * knockbackForce);
+        yield return new WaitForSeconds(knockbackTime);
+        enemyRigidbody2D.velocity = Vector3.zero;
+        yield return new WaitForSeconds(knockbackTime);
+        interrupted = false;
+    }
+
+    private void OnPathComplete(Path p){
+        if (!p.error) {
+            path = p;
+            currentWaypoint = 0;
+        }
+    }
+
+    private void UpdatePath() {
+        if (seeker.IsDone()) {
+            seeker.StartPath(enemyRigidbody2D.position, player.transform.position, OnPathComplete);
+        }
     }
 }

@@ -14,7 +14,7 @@ public class RoomMovement : MonoBehaviour {
     [SerializeField] GameObject doorGameObject = null;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.CompareTag("Player")) {
             MoveToRoom(other.gameObject);
         }
     }

@@ -13,7 +13,7 @@ public class Pickup : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") {
+        if (other.CompareTag("Player")) {
             DoPickup(other);
         }
     }

@@ -6,8 +6,8 @@ public class AttackZone : MonoBehaviour {
     [SerializeField] AttackingEnemy enemy;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") {
-            other.gameObject.GetComponent<Animator>().SetTrigger("Hit");
+        if (other.CompareTag("Player")) {
+            other.GetComponent<Animator>().SetTrigger("Hit");
             var playerBaseStats = other.gameObject.GetComponent<BaseStats>();
             var damageDealt = enemyBaseStats.GetStat(Stat.Attack) - playerBaseStats.GetStat(Stat.Defense);
             other.gameObject.GetComponent<Health>().TakeDamage(gameObject, damageDealt);
