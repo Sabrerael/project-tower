@@ -23,6 +23,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
     private Animator animator;
     private Camera mainCam;
     private CinemachineShake cinemachineShake;
+    private Health health;
     private int multiplicativeModifier = 0;
     private int movementModifier = 0;
     private int attackSpeedModifier = 0;
@@ -42,6 +43,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         cinemachineShake = CinemachineShake.Instance;
         movement = GetComponent<Movement>();
         animator = GetComponent<Animator>();
+        health = GetComponent<Health>();
         EquipWeapon(currentWeapon);
     }
 
@@ -59,7 +61,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         if (other.gameObject.CompareTag("Enemy")) {
             var enemyBaseStats = other.gameObject.GetComponent<BaseStats>();
             var damageTaken = enemyBaseStats.GetStat(Stat.Attack) - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
-            gameObject.GetComponent<Health>().TakeDamage(other.gameObject, damageTaken);
+            health.TakeDamage(other.gameObject, damageTaken);
             StartCoroutine(IFrameTimer(iFramesTimeLimit));
             if (onActualHit != null) { onActualHit(other.gameObject.GetComponent<Enemy>()); }
             cinemachineShake.ShakeCamera(2.5f, .2f);
@@ -69,7 +71,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
         } else if (other.gameObject.CompareTag("Enemy Projectile")) {
             var enemyProjectile = other.gameObject.GetComponent<EnemyProjectile>();
             var damageTaken = enemyProjectile.GetDamage() - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
-            gameObject.GetComponent<Health>().TakeDamage(other.gameObject, damageTaken);
+            health.TakeDamage(other.gameObject, damageTaken);
             StartCoroutine(IFrameTimer(iFramesTimeLimit));
             cinemachineShake.ShakeCamera(2.5f, .2f);
         }

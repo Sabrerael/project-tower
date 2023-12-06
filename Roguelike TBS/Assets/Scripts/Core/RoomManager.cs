@@ -90,6 +90,7 @@ public class RoomManager : MonoBehaviour {
     }
 
     public GameObject GetEnemiesParent() { return enemiesParent; }
+    public InventoryItem GetDropSpawnerItem() { return dropSpawner.GetItemToDrop(); }
 
     public void ConfigureDropSpawner(InventoryItem item, int number) { 
         dropSpawner.SetItemToDrop(item);

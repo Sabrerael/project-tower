@@ -1,11 +1,22 @@
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour {
     private Fighter fighter;
+    private Inventory inventory;
+    private Animator animator;
+    private Movement movement;
+    private Character character;
+    private PotionInventory potionInventory;
 
     private void Start() {
         fighter = GetComponent<Fighter>();
+        inventory = GetComponent<Inventory>();
+        animator = GetComponent<Animator>();
+        movement = GetComponent<Movement>();
+        character = GetComponent<Character>();
+        potionInventory = GetComponent<PotionInventory>();
     }
 
     private void OnAttack(InputValue value) {
@@ -16,10 +27,10 @@ public class PlayerController : MonoBehaviour {
 
     private void OnMove(InputValue value) {
         if (value.Get<Vector2>().magnitude <= Mathf.Epsilon) {
-            GetComponent<Animator>().SetBool("IsWalking", false);
+            animator.SetBool("IsWalking", false);
         }
         
-        GetComponent<Movement>().SetMovementValues(value.Get<Vector2>());
+        movement.SetMovementValues(value.Get<Vector2>());
     }
 
     private void OnRoll(InputValue value) {
@@ -30,7 +41,7 @@ public class PlayerController : MonoBehaviour {
 
     private void OnCharacterAbility(InputValue value) {
         if (value.isPressed) {
-            GetComponent<Character>().ActiveAbility();
+            character.ActiveAbility();
         }
     }
 
@@ -42,31 +53,38 @@ public class PlayerController : MonoBehaviour {
 
     private void OnPause(InputValue value) {
         if (value.isPressed) {
+            // TODO Probably not the best way to handle this
             GameObject.Find("Floor Manager").GetComponent<FloorManager>().TogglePause();
         }
     }
 
     private void OnActiveItem(InputValue value) {
         if (value.isPressed) {
-            GetComponent<Inventory>().UseItemInSlot(0);
+            inventory.UseActiveItem();
         }
     }
 
     private void OnSwitchItem(InputValue value) {
         if (value.isPressed) {
-            //GetComponent<Inventory>().UseItemInSlot(1);
+            inventory.SwitchActiveItem();
         }
     }
 
     private void OnChangeWeapon(InputValue value) {
         if (value.isPressed) {
-            GetComponent<Inventory>().ChangeWeapon();
+            inventory.ChangeWeapon();
         }
     }
 
     private void OnDeleteWeapon(InputValue value) {
         if (value.isPressed) {
-            GetComponent<Inventory>().DeleteEquipWeapon();
+            inventory.DeleteEquipWeapon();
+        }
+    }
+
+    private void OnPotion(InputValue value) {
+        if (value.isPressed) {
+            potionInventory.UsePotion();
         }
     }
 }

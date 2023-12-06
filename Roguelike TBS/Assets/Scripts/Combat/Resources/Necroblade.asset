@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 804fefe6-3139-4dff-a97e-62ccc30fac26
   displayName: Necroblade
-  description: A mystic blade steeped in necrotic energies. If used properly, it can
-    drain the life force of your enemies to supplant your own.
+  description: A mystic blade steeped in necrotic energies. If used properly, it
+    can drain the life force of your enemies to supplant your own.
   icon: {fileID: 21300000, guid: b1a429e805903504eac861346ff77f74, type: 3}
   pickup: {fileID: 1522993731178321327, guid: 6c2532e318dd04d499acaf665b0313a9, type: 3}
   stackable: 0

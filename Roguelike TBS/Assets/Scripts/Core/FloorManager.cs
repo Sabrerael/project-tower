@@ -20,11 +20,13 @@ public class FloorManager : MonoBehaviour {
     private GameObject roomsParent = null;
     private List<GameObject> rooms = new List<GameObject>();
     private GameManager gameManager = null;
+    private LootManager lootManager = null;
 
     private int levelOfEnemies = 1;
 
     private void Awake() {
         gameManager = GameManager.instance;
+        lootManager = LootManager.instance;
         
         var player = GameObject.FindGameObjectWithTag("Player");
         if (player) {
@@ -58,10 +60,18 @@ public class FloorManager : MonoBehaviour {
 
             MakeNewDoors(rooms[i]); 
             CreateNewRooms(rooms, rooms[i]);
+        }
 
-            if (i != 0 && i != rooms.Count - 1 && i != shopRoomIndex) {
-                AddLootToRoom(rooms[i]);
-            }
+        List<InventoryItem> lootDrops = lootManager.GetRandomLootItems(rooms.Count / 4);
+        foreach (InventoryItem item in lootDrops) {
+            bool lootSet = false;
+            do {
+                int index = Random.Range(1, rooms.Count);
+                if (rooms[index].GetComponent<RoomManager>().GetDropSpawnerItem() == null) {
+                    AddLootToRoom(rooms[index], item);
+                    lootSet = true;
+                }
+            } while (!lootSet);
         }
     }
 
@@ -168,15 +178,8 @@ public class FloorManager : MonoBehaviour {
         return null;
     }
 
-    private void AddLootToRoom(GameObject room) {
-        var drops = dropLibrary.GetRandomDrops();
-        // Technically don't need foreach loop. 
-        foreach(var drop in drops) {
-            if (!drop.item.IsStackable()) {
-                gameManager.AddItemToKnockoutList(drop.item);
-            }
-            room.GetComponent<RoomManager>().ConfigureDropSpawner(drop.item, drop.number);
-        }
+    private void AddLootToRoom(GameObject room, InventoryItem item) {
+        room.GetComponent<RoomManager>().ConfigureDropSpawner(item, 1);
     }
 
     private void SetEnemyLevels(GameObject room) {

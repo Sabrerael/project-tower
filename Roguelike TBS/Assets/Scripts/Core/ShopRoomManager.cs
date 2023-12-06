@@ -11,7 +11,8 @@ public class ShopRoomManager : RoomManager {
     }
 
     public void SetShopTables() {
-        for (int i = 0; i < shopTables.Length; i++) {
+        // TODO Rework with the LootManager
+        /*for (int i = 0; i < shopTables.Length; i++) {
             if (i == 0) {
                 var healthPotions = itemsForSale.GetHealthPotions();
                 shopTables[i].SetItemForSale(healthPotions.item, healthPotions.number);
@@ -25,6 +26,6 @@ public class ShopRoomManager : RoomManager {
                     shopTables[i].SetItemForSale(item.item, item.number);
                 }
             }
-        }
+        }*/
     }
 }

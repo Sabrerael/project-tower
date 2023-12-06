@@ -14,11 +14,11 @@ public class ShopLibrary : ScriptableObject {
         public int maxNumber; // Future work as above
 
         public int GetRandomNumber() {
-            if (!item.IsStackable()) {
+            //if (!item.IsStackable()) {
                 return 1;
-            }
+            //}
 
-            return UnityEngine.Random.Range(minNumber, maxNumber+1);
+            //return UnityEngine.Random.Range(minNumber, maxNumber+1);
         }
     }
 

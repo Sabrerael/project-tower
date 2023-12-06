@@ -15,28 +15,28 @@ public class DropLibrary : ScriptableObject {
         public int maxNumber; // Future work as above
 
         public int GetRandomNumber() {
-            if (!item.IsStackable()) {
+            //if (!item.IsStackable()) {
                 return 1;
-            }
+            //}
 
-            return UnityEngine.Random.Range(minNumber, maxNumber+1);
+            //return UnityEngine.Random.Range(minNumber, maxNumber+1);
         }
     }
 
-    public struct Dropped {
+    public struct DroppedOld {
         public InventoryItem item;
         public Pickup itemDropped;
         public int number;
     }
 
     // These don't have to be IEnumerables
-    public IEnumerable<Dropped> GetRandomDrops() {
+    public IEnumerable<DroppedOld> GetRandomDrops() {
         if (!ShouldRandomDrop()) {
             yield break;
         }
 
         var gameManager = GameManager.instance;
-        var randomDrop = new Dropped();
+        var randomDrop = new DroppedOld();
 
         do {
             randomDrop = GetRandomDrop();
@@ -49,9 +49,9 @@ public class DropLibrary : ScriptableObject {
         return UnityEngine.Random.Range(0,100) < dropChancePercentage;
     }
 
-    private Dropped GetRandomDrop() {
+    private DroppedOld GetRandomDrop() {
         DropConfig drop = SelectRandomItem();
-        Dropped result = new Dropped();
+        DroppedOld result = new DroppedOld();
         result.item = drop.item;
         result.itemDropped = drop.itemDropped;
         result.number = drop.GetRandomNumber();

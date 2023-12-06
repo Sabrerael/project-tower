@@ -603,51 +603,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Item1",
-                    "type": "Button",
-                    "id": "5a54da3f-0d52-496a-b82f-79f32ca5d884",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Item2",
-                    "type": "Button",
-                    "id": "f12a7755-0ceb-4ddd-ae98-03f592d4a921",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Item3",
-                    "type": "Button",
-                    "id": "5d1aff7c-6655-45e2-a151-11d1d5999be4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Item4",
-                    "type": "Button",
-                    "id": "eab3e5d1-3d29-42a9-8819-54a0735c1608",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Item5",
-                    "type": "Button",
-                    "id": "c2beaf49-4a7e-40ee-b333-169b1e2a1aad",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "DeleteWeapon",
                     "type": "Button",
                     "id": "c8f189cd-1514-4675-90e2-3fa866379b4a",
@@ -660,6 +615,15 @@
                     "name": "Pause",
                     "type": "Button",
                     "id": "c618c4ce-a7fb-4f70-a28a-fb5b2bec11ac",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Potion",
+                    "type": "Button",
+                    "id": "6be3c34b-de21-405c-abbe-8ed08546d662",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -955,61 +919,6 @@
                 },
                 {
                     "name": "",
-                    "id": "43244278-6df5-4c7a-9708-e8555bb4f582",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Item1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ab9c0b8d-d210-4ab5-89d7-3b0bb73e7cb4",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Item2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "434a2e16-ee8d-4a20-841a-5fa0784d3e34",
-                    "path": "<Keyboard>/3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Item3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0039365e-a3d0-4396-83fb-6f8b4430b856",
-                    "path": "<Keyboard>/4",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Item4",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c3cabdd3-7859-4a4e-a4ff-8afee4fc869c",
-                    "path": "<Keyboard>/5",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Item5",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "dc14b38f-288e-44e5-abb7-69e7506dd98b",
                     "path": "<Keyboard>/backspace",
                     "interactions": "",
@@ -1093,6 +1002,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "ChangeWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31f5d759-8b02-4a04-b863-22f1775e31fe",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Potion",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

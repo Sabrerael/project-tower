@@ -22,11 +22,6 @@ public abstract class InventoryItem : ScriptableObject, ISerializationCallbackRe
     [SerializeField] int shopPrice = 1;
     [Tooltip("The UI icon to represent this item in the inventory.")]
     [SerializeField] Sprite icon = null;
-    // TO BE REMOVED. WILL NEED A NEW FUNCTION
-    [Tooltip("The prefab that should be spawned when this item is dropped.")]
-    [SerializeField] Pickup pickup = null;
-    [Tooltip("If true, multiple items of this type can be stacked in the same inventory slot.")]
-    [SerializeField] bool stackable = false;
 
     // STATE
     static Dictionary<string, InventoryItem> itemLookupCache;
@@ -79,10 +74,6 @@ public abstract class InventoryItem : ScriptableObject, ISerializationCallbackRe
 
     public string GetItemID() {
         return itemID;
-    }
-
-    public bool IsStackable() {
-        return stackable;
     }
         
     public string GetDisplayName() {

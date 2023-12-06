@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RPG.Stats;
 using UnityEngine;
-
+// TODO THIS IS SUPER GROSS. I NEED TO PULL THIS SHIT OUT INTO SEPERATE FILES.
 public class Inventory : MonoBehaviour, IModifierProvider {
     [Serializable]
     public struct ActionItemInventorySlot {
@@ -11,13 +11,14 @@ public class Inventory : MonoBehaviour, IModifierProvider {
         public int number;
     }
 
-    [SerializeField] WeaponConfig[] weaponInventory = new WeaponConfig[5];
-    [SerializeField] ActionItemInventorySlot[] actionItemInventory = new ActionItemInventorySlot[5];
+    [SerializeField] WeaponConfig[] weaponInventory = new WeaponConfig[3];
+    [SerializeField] ActionItemInventorySlot[] actionItemInventory = new ActionItemInventorySlot[2];
     [SerializeField] List<PassiveItem> passiveItemInventory = new List<PassiveItem>();
     [SerializeField] AudioClip sfx = null;
 
     private int activeWeaponIndex = 0;
-    private bool[] activeItemsInCooldown = {false, false, false, false, false};
+    private int activeActionItemIndex = 0;
+    private bool[] activeItemsInCooldown = {false, false};
 
     protected Dictionary<Stat, int> statModifyAdditions = new Dictionary<Stat, int>();
     protected Dictionary<Stat, int> statModifyPercentages = new Dictionary<Stat, int>();
@@ -30,9 +31,29 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     }
 
     public void UseItemInSlot(int index) {
-        if (GetItemInSlot(index) != null && CanUseHealthPotion(index) && !activeItemsInCooldown[index]) {
+        if (GetItemInSlot(index) != null && !activeItemsInCooldown[index]) {
             actionItemInventory[index].item.Use(gameObject);
             RemoveFromSlot(index, 1);
+        }
+    }
+
+    public void UseActiveItem() {
+        if (GetItemInSlot(activeActionItemIndex) != null && !activeItemsInCooldown[activeActionItemIndex]) {
+            actionItemInventory[activeActionItemIndex].item.Use(gameObject);
+        }
+    }
+
+    public void SwitchActiveItem() {
+        int indexToSwitchTo;
+        if (activeActionItemIndex == 0) {
+            indexToSwitchTo = 1;
+        } else {
+            indexToSwitchTo = 0;
+        }
+
+        if (GetItemInSlot(activeActionItemIndex) != null) {
+            activeWeaponIndex = indexToSwitchTo;
+            // TODO UI Stuff
         }
     }
 
@@ -49,16 +70,6 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     public static Inventory GetPlayerInventory() {
         var player = GameObject.FindWithTag("Player");
         return player.GetComponent<Inventory>();
-    }
-
-    private bool CanUseHealthPotion(int slot) { // TODO Fix this to work with the Action Items
-        //if (actionItemInventory[slot].item is HealthPotion) {
-            //if (gameObject.GetComponent<Health>().IsAtMaxHealth()) {
-                //return false;
-            //}
-        //}
-
-        return true;
     }
 
     /// <summary>
@@ -248,7 +259,9 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     /// that there are.
     /// </summary>
     public void RemoveFromSlot(int slot, int number) {
-        if (!actionItemInventory[slot].item.isConsumable()) { return; }
+        return;
+        
+        /*if (!actionItemInventory[slot].item.isConsumable()) { return; }
         
         actionItemInventory[slot].number -= number;
 
@@ -259,7 +272,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
 
         if (actionItemInventoryUpdated != null) {
             actionItemInventoryUpdated();
-        }
+        }*/
     }
 
     /// <summary>
@@ -386,7 +399,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
     /// </summary>
     /// <returns>-1 if no stack exists or if the item is not stackable.</returns>
     private int FindActionItemStack(InventoryItem item) {
-        if (!item.IsStackable()) {
+        /*if (!item.IsStackable()) {
             return -1;
         }
 
@@ -394,7 +407,7 @@ public class Inventory : MonoBehaviour, IModifierProvider {
             if (object.ReferenceEquals(actionItemInventory[i].item, item)) {
                 return i;
             }
-        }
+        }*/
         return -1;
     }
 

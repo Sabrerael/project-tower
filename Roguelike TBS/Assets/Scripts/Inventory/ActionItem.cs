@@ -11,8 +11,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = ("Inventory/Action Item"))]
 public class ActionItem : InventoryItem {
     // CONFIG DATA
-    [Tooltip("Does an instance of this item get consumed every time it's used.")]
-    [SerializeField] bool consumable = false;
+    //[Tooltip("Does an instance of this item get consumed every time it's used.")]
+    //[SerializeField] bool consumable = false;
     [Tooltip("Cooldown Timer")]
     [SerializeField] float cooldownTimer = 1f;
     [Tooltip("Targeting Strategy")]
@@ -41,10 +41,6 @@ public class ActionItem : InventoryItem {
     }
 
     private void EffectFinished() {
-    }
-
-    public bool isConsumable() {
-        return consumable;
     }
 
     public float GetCooldownTimer() {
