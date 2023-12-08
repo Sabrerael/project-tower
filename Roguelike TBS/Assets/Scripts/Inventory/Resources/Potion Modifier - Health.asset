@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Potion Modifier - Health
   m_EditorClassIdentifier: 
   itemID: 74af5604-411c-44c6-b0f9-262ce2d78e33
-  displayName: 
-  description: 
+  displayName: Potion Modifier - Health
+  description: This additive allows your health potions to recover more health.
   shopPrice: 1
-  icon: {fileID: 0}
-  pickup: {fileID: 0}
-  stackable: 0
-  targetingStrategy: {fileID: 0}
-  effectStrategies: []
+  icon: {fileID: 21300000, guid: 2f4c7717b4645cd4492657bb75599358, type: 3}
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 193a0044486a5974cbccf51f2812b51e, type: 2}

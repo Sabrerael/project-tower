@@ -8,6 +8,7 @@ namespace RPG.Stats {
         [SerializeField] Sprite deadSprite = null;
         
         private bool isDead = false;
+        private bool shieldUp = false;
         private LevelLoader levelLoader = null;
         Animator animator;
         BaseStats baseStats;
@@ -28,6 +29,11 @@ namespace RPG.Stats {
 
         public void TakeDamage(GameObject instigator, int damage) {
             if (isDead) { return; }
+
+            if (shieldUp) {
+                shieldUp = false;
+                return;
+            }
 
             if (Mathf.Sign(damage) == -1 || damage == 0) {
                 damage = 1;
@@ -63,6 +69,10 @@ namespace RPG.Stats {
 
         public bool IsAtMaxHealth() {
             return GetHealthPoints() == GetMaxHealthPoints();
+        }
+
+        public void SetShieldUp() {
+            shieldUp = true;
         }
 
         private void Die() {

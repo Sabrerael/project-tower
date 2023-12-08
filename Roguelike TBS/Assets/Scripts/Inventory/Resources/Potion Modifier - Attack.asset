@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Potion Modifier - Attack
   m_EditorClassIdentifier: 
   itemID: f53c1dd5-b4b5-43bc-8a28-f6a01f007cb4
-  displayName: 
-  description: 
+  displayName: Potion Modifier - Attack
+  description: This additive allows your health potions to briefly increase your
+    Attack.
   shopPrice: 1
-  icon: {fileID: 0}
-  pickup: {fileID: 0}
-  stackable: 0
-  targetingStrategy: {fileID: 0}
-  effectStrategies: []
+  icon: {fileID: 21300000, guid: bc008b56d7151bd40acae74a45bf5714, type: 3}
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 3602f1e1c66e6f940921441dc279fffd, type: 2}

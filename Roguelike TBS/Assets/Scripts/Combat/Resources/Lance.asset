@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Lance
   m_EditorClassIdentifier: 
   itemID: 2cfb403a-c67d-4ce9-a671-172181f466af
-  displayName: 
+  displayName: Lance
   description: 
   shopPrice: 1
   icon: {fileID: 0}
-  pickup: {fileID: 0}
-  stackable: 0
   equippedPrefab: {fileID: 0}
-  weaponDamage: 5
+  weaponDamage: 7
   abilityIcon: {fileID: 0}
   weaponType: 0

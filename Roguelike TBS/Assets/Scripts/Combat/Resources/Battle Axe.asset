@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Battle Axe
   m_EditorClassIdentifier: 
   itemID: d88f010f-d3a7-41fa-818f-e9c23f0929fa
-  displayName: 
+  displayName: Battle Axe
   description: 
   shopPrice: 1
   icon: {fileID: 0}
-  pickup: {fileID: 0}
-  stackable: 0
   equippedPrefab: {fileID: 0}
   weaponDamage: 5
   abilityIcon: {fileID: 0}

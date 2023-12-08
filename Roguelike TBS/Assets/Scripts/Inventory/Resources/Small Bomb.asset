@@ -17,10 +17,7 @@ MonoBehaviour:
   description: If you light the fuse, make sure to throw it.
   shopPrice: 1
   icon: {fileID: 21300000, guid: 89bb10d7bfc64384d8bc4cbb066d516a, type: 3}
-  pickup: {fileID: 0}
-  stackable: 1
-  consumable: 1
-  cooldownTimer: 5
+  cooldownTimer: 60
   targetingStrategy: {fileID: 11400000, guid: 130e3fd062a673045929d19d448e7014, type: 2}
   effectStrategies:
   - {fileID: 11400000, guid: 5cdbb639e3318e84ab715eb71000b359, type: 2}

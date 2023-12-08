@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ccd47c39e55a0242a14ce6aecb637fe, type: 3}
   m_Name: Effect Add Shield To Potion
   m_EditorClassIdentifier: 
-  effectToAdd: {fileID: 0}
+  effectToAdd: {fileID: 11400000, guid: e7bf2064b0e1a0c48b74a8118fa823cf, type: 2}

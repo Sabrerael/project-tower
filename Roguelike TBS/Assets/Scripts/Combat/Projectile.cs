@@ -26,9 +26,8 @@ public class Projectile : MonoBehaviour {
         if (target != null && isHoming && !target.IsDead()) {
             GetAimLocation();
             SetRotation();
-            Debug.Log("In the Update If Statement");
         }
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 
     public GameObject GetInstigator() { return instigator; }
@@ -54,11 +53,8 @@ public class Projectile : MonoBehaviour {
         if (target == null) {
             return targetPoint;
         }
-        //CapsuleCollider targetCapsule = target.GetComponent<CapsuleCollider>();
-        //if (targetCapsule == null) {
-            return target.transform.position;
-        //}
-        //return target.transform.position + Vector3.up * targetCapsule.height / 2;
+
+        return target.transform.position;
     }
 
     private void SetRotation() {
@@ -72,10 +68,10 @@ public class Projectile : MonoBehaviour {
 
             transform.rotation = Quaternion.Euler(0, 0, angle);
         } else {
-            var screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
+            var screenPoint = Camera.main.WorldToScreenPoint(transform.position);
             var offset = new Vector2(
-                    target.transform.position.x - screenPoint.x,
-                    target.transform.position.y - screenPoint.y
+                    target.transform.position.x - transform.position.x,
+                    target.transform.position.y - transform.position.y
             );
             var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
 
@@ -86,7 +82,7 @@ public class Projectile : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         Health health = other.GetComponent<Health>();
         if (target != null && health != target) return;
         if (health == null || health.IsDead()) return;

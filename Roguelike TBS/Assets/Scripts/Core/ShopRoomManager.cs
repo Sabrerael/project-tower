@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ShopRoomManager : RoomManager {
     [SerializeField] ShopTable[] shopTables = null;
-    [SerializeField] ShopLibrary itemsForSale = null;
 
     private GameManager gameManager = null;
 

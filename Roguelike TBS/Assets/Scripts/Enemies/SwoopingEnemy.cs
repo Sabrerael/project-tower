@@ -53,8 +53,6 @@ public class SwoopingEnemy : Enemy {
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - enemyRigidbody2D.position).normalized;
         RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3)direction, direction);
 
-        Debug.Log(hit.collider);
-
         if (hit.collider.gameObject.CompareTag("Player")) {
             animator.SetTrigger("Swoop");
             return;

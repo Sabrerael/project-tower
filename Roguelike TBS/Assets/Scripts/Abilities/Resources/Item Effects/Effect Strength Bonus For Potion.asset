@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007d075c98954cb40b10e6062a8059b6, type: 3}
   m_Name: Effect Strength Bonus For Potion
   m_EditorClassIdentifier: 
-  additiveChange: 0
+  additiveChange: 1
   statToChange: 3
   timeForChange: 30
-  changeAmount: 30
+  changeAmount: 5

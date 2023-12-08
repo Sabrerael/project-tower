@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ccd47c39e55a0242a14ce6aecb637fe, type: 3}
   m_Name: Effect Add More Health To Potion
   m_EditorClassIdentifier: 
-  effectToAdd: {fileID: 0}
+  effectToAdd: {fileID: 11400000, guid: 917a2d3b5ec7bfd4f9bc297072ea9a5a, type: 2}

@@ -12,7 +12,6 @@ public class FloorManager : MonoBehaviour {
     [SerializeField] float xDeltaBetweenRooms = 18;
     [SerializeField] float yDeltaBetweenRooms = 14;
 
-    [SerializeField] DropLibrary dropLibrary = null;
     [SerializeField] Character[] characters = null;
     [SerializeField] PauseMenu pauseMenu = null;
 

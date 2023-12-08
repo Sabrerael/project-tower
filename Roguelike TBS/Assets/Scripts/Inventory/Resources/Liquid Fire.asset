@@ -17,10 +17,7 @@ MonoBehaviour:
   description: For when you can't conjure up your own fire.
   shopPrice: 1
   icon: {fileID: 21300000, guid: d8b225075ffba644eb92ff5340bcfa9b, type: 3}
-  pickup: {fileID: 0}
-  stackable: 1
-  consumable: 1
-  cooldownTimer: 1
+  cooldownTimer: 60
   targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
   effectStrategies:
   - {fileID: 11400000, guid: f075e436cff81e948901abe5e1849111, type: 2}

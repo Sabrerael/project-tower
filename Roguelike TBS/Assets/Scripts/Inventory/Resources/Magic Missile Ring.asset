@@ -17,10 +17,7 @@ MonoBehaviour:
   description: A magical ring that allows the wielder to cast Magic Missile.
   shopPrice: 1
   icon: {fileID: 21300000, guid: d6468ad796d71ad40915f33eef8fb603, type: 3}
-  pickup: {fileID: 0}
-  stackable: 0
-  consumable: 0
-  cooldownTimer: 1
+  cooldownTimer: 90
   targetingStrategy: {fileID: 11400000, guid: 5646b051c2d56f8409ff4c17b3426fd8, type: 2}
   effectStrategies:
   - {fileID: 11400000, guid: df93baa8f0a641b4ca25c26f7941938a, type: 2}
