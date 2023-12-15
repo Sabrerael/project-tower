@@ -9,22 +9,24 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4383780246614317360}
+  - component: {fileID: 6291460629405002498}
+  - component: {fileID: 5243569103272183601}
+  - component: {fileID: 8653081930771871401}
   - component: {fileID: 4383780246614317362}
   - component: {fileID: 4383780246614317367}
   - component: {fileID: 4383780246614317366}
   - component: {fileID: 4383780246614317361}
+  - component: {fileID: 6605892206959597984}
   - component: {fileID: -3796348304969860358}
-  - component: {fileID: 5638160444598600647}
+  - component: {fileID: 4975066957920948533}
   - component: {fileID: 5687580889366928301}
   - component: {fileID: 7769827717582791061}
-  - component: {fileID: 4975066957920948533}
-  - component: {fileID: 6291460629405002498}
-  - component: {fileID: 6605892206959597984}
   - component: {fileID: 2136328106936073578}
+  - component: {fileID: 5638160444598600647}
   - component: {fileID: 8561713649446563629}
-  - component: {fileID: 5243569103272183601}
-  - component: {fileID: 8653081930771871401}
   - component: {fileID: 6178356196139809458}
+  - component: {fileID: 4234374915942662091}
+  - component: {fileID: 7586670404713480546}
   m_Layer: 9
   m_Name: Paladin
   m_TagString: Player
@@ -50,6 +52,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &6291460629405002498
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383780246614317365}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23ce4209f03aca340ba43ed36cbd51a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5243569103272183601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383780246614317365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5cceb6020623a448a9565c4a02cb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8653081930771871401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383780246614317365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 91491d88468b9e249af9c297f2f744ac,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &4383780246614317362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +228,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6605892206959597984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383780246614317365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0afb8c3f6d0217b498c204ea7c0015e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelUpBonuses: {fileID: 11400000, guid: 273e4711a4078544abff238e14a5c6d7, type: 2}
+  abilityParticles: {fileID: 1012001659695591961, guid: 78e7ddfbcaa481841a52539742eda257,
+    type: 3}
+  levelUpMenu: {fileID: 0}
+  activeAbilityIcon: {fileID: 21300000, guid: c455d60a1183e3b48925ccbee2621692, type: 3}
+  abilityModifyPercent: 30
+  abilityTimer: 30
 --- !u!114 &-3796348304969860358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +265,7 @@ MonoBehaviour:
   dodgeRollTime: 0.2
   comboResetTime: 0.95
   swingSound: {fileID: 8300000, guid: 3da7a30bbf6bcf34fac6d4d4c43fc703, type: 3}
---- !u!114 &5638160444598600647
+--- !u!114 &4975066957920948533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,28 +274,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4383780246614317365}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6760bc2e338f77b46a600989f2a4dd06, type: 3}
+  m_Script: {fileID: 11500000, guid: 009423547802c7a4c9da66267dead78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponInventory:
-  - {fileID: 11400000, guid: a6b5cc039499c9a47b6b9563435a233b, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  actionItemInventory:
-  - item: {fileID: 11400000, guid: 4703d353e3af46044b2f05647f7ef57c, type: 2}
-    number: 10
-  - item: {fileID: 0}
-    number: 0
-  - item: {fileID: 0}
-    number: 0
-  - item: {fileID: 0}
-    number: 0
-  - item: {fileID: 0}
-    number: 0
-  passiveItemInventory: []
-  sfx: {fileID: 8300000, guid: 0b2514c61149ce4438a0801771553ccb, type: 3}
+  startingLevel: 1
+  characterClass: 0
+  progression: {fileID: 11400000, guid: f3dd213ddc757e84abe0383c2bd778b7, type: 2}
+  levelUpParticleEffect: {fileID: 5680376962896631795, guid: d0e3af0059546524cb11c25aa12e536d,
+    type: 3}
+  shouldUseModifiers: 1
 --- !u!114 &5687580889366928301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,62 +310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experiencePoints: 0
---- !u!114 &4975066957920948533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4383780246614317365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 009423547802c7a4c9da66267dead78a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingLevel: 1
-  characterClass: 0
-  progression: {fileID: 11400000, guid: f3dd213ddc757e84abe0383c2bd778b7, type: 2}
-  levelUpParticleEffect: {fileID: 5680376962896631795, guid: d0e3af0059546524cb11c25aa12e536d,
-    type: 3}
-  shouldUseModifiers: 1
---- !u!95 &6291460629405002498
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4383780246614317365}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 23ce4209f03aca340ba43ed36cbd51a2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6605892206959597984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4383780246614317365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afb8c3f6d0217b498c204ea7c0015e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelUpBonuses: {fileID: 11400000, guid: 273e4711a4078544abff238e14a5c6d7, type: 2}
-  abilityParticles: {fileID: 1012001659695591961, guid: 78e7ddfbcaa481841a52539742eda257,
-    type: 3}
-  levelUpMenu: {fileID: 0}
-  activeAbilityIcon: {fileID: 21300000, guid: c455d60a1183e3b48925ccbee2621692, type: 3}
-  abilityModifyPercent: 30
-  abilityTimer: 30
 --- !u!114 &2136328106936073578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +322,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8099a16619192c34abdece7c8d3d383a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5638160444598600647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383780246614317365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6760bc2e338f77b46a600989f2a4dd06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponInventory:
+  - {fileID: 11400000, guid: a6b5cc039499c9a47b6b9563435a233b, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  sfx: {fileID: 8300000, guid: 0b2514c61149ce4438a0801771553ccb, type: 3}
 --- !u!114 &8561713649446563629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,49 +352,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingBalance: 0
---- !u!114 &5243569103272183601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4383780246614317365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5cceb6020623a448a9565c4a02cb87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8653081930771871401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4383780246614317365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 91491d88468b9e249af9c297f2f744ac,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &6178356196139809458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +370,36 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 917a2d3b5ec7bfd4f9bc297072ea9a5a, type: 2}
   - {fileID: 11400000, guid: 20f735776ffe4864bbd846f63ebd9610, type: 2}
   - {fileID: 11400000, guid: dc7023156be014940a0a69704372030d, type: 2}
+--- !u!114 &4234374915942662091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383780246614317365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ac719dde7a97d4fae437238e8d6aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionItemInventory:
+  - item: {fileID: 0}
+    number: 0
+  - item: {fileID: 0}
+    number: 0
+--- !u!114 &7586670404713480546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383780246614317365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9979bdcea3b351a4e9be13b0c6e86558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passiveItemInventory: []
 --- !u!1 &5536216651936108515
 GameObject:
   m_ObjectHideFlags: 0

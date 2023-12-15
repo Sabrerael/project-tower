@@ -32,10 +32,10 @@ public class Pickup : MonoBehaviour {
             other.gameObject.GetComponent<Inventory>().AddToFirstEmptyWeaponSlot(item as WeaponConfig);
             Destroy(gameObject);
         } else if (item as ActionItem) {
-            other.gameObject.GetComponent<Inventory>().AddToFirstEmptyActionItemSlot(item as ActionItem, number);
+            other.gameObject.GetComponent<ActionItemInventory>().AddToFirstEmptyActionItemSlot(item as ActionItem, number);
             Destroy(gameObject);
         } else if (item as PassiveItem) {
-            other.gameObject.GetComponent<Inventory>().AddToFirstEmptyPassiveItemSlot(item as PassiveItem);
+            other.gameObject.GetComponent<PassiveItemInventory>().AddToFirstEmptyPassiveItemSlot(item as PassiveItem);
             Destroy(gameObject);
         }
         if (sfx) { AudioSource.PlayClipAtPoint(sfx, transform.position); }

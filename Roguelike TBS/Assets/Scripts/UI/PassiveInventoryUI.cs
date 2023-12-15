@@ -5,7 +5,7 @@ public class PassiveInventoryUI : MonoBehaviour {
     [SerializeField] PassiveInventorySlotUI InventoryItemPrefab = null;
 
     // CACHE
-    [SerializeField] Inventory playerInventory;
+    [SerializeField] PassiveItemInventory playerInventory;
 
     // LIFECYCLE METHODS
 

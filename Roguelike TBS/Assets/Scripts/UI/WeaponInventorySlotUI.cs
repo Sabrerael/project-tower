@@ -40,7 +40,7 @@ public class WeaponInventorySlotUI : MonoBehaviour, IItemHolder {
     }
 
     public void RemoveItems(int number) {
-        inventory.RemoveFromSlot(index, number);
+        //inventory.RemoveFromSlot(index, number);
     }
 
     private void UpdateIcon() {

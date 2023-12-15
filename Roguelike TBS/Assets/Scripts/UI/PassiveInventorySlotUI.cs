@@ -7,11 +7,11 @@ public class PassiveInventorySlotUI : MonoBehaviour, IItemHolder {
 
     // STATE
     InventoryItem item;
-    Inventory inventory;
+    PassiveItemInventory inventory;
 
     // PUBLIC
 
-    public void Setup(Inventory inventory, int index) {
+    public void Setup(PassiveItemInventory inventory, int index) {
         this.inventory = inventory;
         this.index = index;
         icon.SetItem(inventory.GetPassiveItemInSlot(index), 1);
@@ -38,7 +38,7 @@ public class PassiveInventorySlotUI : MonoBehaviour, IItemHolder {
     }
 
     public void RemoveItems(int number) {
-        inventory.RemoveFromSlot(index, number);
+        //inventory.RemoveFromSlot(index, number);
     }
 
     private void UpdateIcon() {

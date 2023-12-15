@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 998918281
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 05e6b249a209c6c418db926813174060, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba75bedda589a5f418bc8cbfc4347162, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,10 +97,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06, y: 0.72}
+  m_Offset: {x: 0, y: 0.53}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.075}
+    pivot: {x: 0.5, y: 0.09}
     oldSize: {x: 0.5, y: 1}
     newSize: {x: 0.05, y: 0.13}
     adaptiveTilingThreshold: 0.5
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.4}
+  m_Size: {x: 0.55, y: 0.4}
   m_EdgeRadius: 0
 --- !u!114 &3256438923246476992
 MonoBehaviour:
@@ -123,6 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseAttackSpeed: 6
-  weaponConfig: {fileID: 11400000, guid: ccf185caa284abb4f9f768447c2f4992, type: 2}
+  weaponConfig: {fileID: 11400000, guid: 7da13e20cc6ac784e9cda83bcfd8ef7b, type: 2}
   targetingStrategy: {fileID: 0}
   effectStrategies: []

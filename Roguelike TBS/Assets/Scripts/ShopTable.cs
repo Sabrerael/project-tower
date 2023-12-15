@@ -59,9 +59,9 @@ public class ShopTable : MonoBehaviour {
             player.GetComponent<Inventory>().AddToFirstEmptyWeaponSlot(itemForSale as WeaponConfig);
             player.GetComponent<Fighter>().EquipWeapon(itemForSale as WeaponConfig);
         } else if (itemForSale as PassiveItem) {
-            player.GetComponent<Inventory>().AddToFirstEmptyPassiveItemSlot(itemForSale as PassiveItem);
+            player.GetComponent<PassiveItemInventory>().AddToFirstEmptyPassiveItemSlot(itemForSale as PassiveItem);
         } else if (itemForSale as ActionItem) {
-            player.GetComponent<Inventory>().AddToFirstEmptyActionItemSlot(itemForSale as ActionItem, 1);
+            player.GetComponent<ActionItemInventory>().AddToFirstEmptyActionItemSlot(itemForSale as ActionItem, 1);
         }
         numberOfItems--;
         SetQuantityLabel();
@@ -83,7 +83,7 @@ public class ShopTable : MonoBehaviour {
         if (itemForSale as WeaponConfig) {
             hasSpaceForItem = player.GetComponent<Inventory>().HasSpaceForWeapon(itemForSale as WeaponConfig);
         } else if (itemForSale as ActionItem) {
-            hasSpaceForItem = player.GetComponent<Inventory>().HasSpaceForActionItem(itemForSale as ActionItem);
+            hasSpaceForItem = player.GetComponent<ActionItemInventory>().HasSpaceForActionItem(itemForSale as ActionItem);
         } else if (itemForSale as PassiveItem) {
             hasSpaceForItem = true;
         }

@@ -26,6 +26,7 @@ public class ShootingEnemy : Enemy {
 
     private void FixedUpdate() {
         if (health.IsDead() || interrupted) { return; }
+        if (path == null) { return; }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - enemyRigidbody2D.position).normalized;
         RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3)direction, direction);

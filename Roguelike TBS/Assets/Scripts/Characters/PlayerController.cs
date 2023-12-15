@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour {
     private Fighter fighter;
     private Inventory inventory;
+    private ActionItemInventory actionItemInventory;
     private Animator animator;
     private Movement movement;
     private Character character;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour {
         animator = GetComponent<Animator>();
         movement = GetComponent<Movement>();
         character = GetComponent<Character>();
+        actionItemInventory = GetComponent<ActionItemInventory>();
         potionInventory = GetComponent<PotionInventory>();
     }
 
@@ -60,13 +62,13 @@ public class PlayerController : MonoBehaviour {
 
     private void OnActiveItem(InputValue value) {
         if (value.isPressed) {
-            inventory.UseActiveItem();
+            actionItemInventory.UseActiveItem();
         }
     }
 
     private void OnSwitchItem(InputValue value) {
         if (value.isPressed) {
-            inventory.SwitchActiveItem();
+            actionItemInventory.SwitchActiveItem();
         }
     }
 

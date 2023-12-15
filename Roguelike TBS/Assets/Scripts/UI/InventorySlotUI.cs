@@ -9,11 +9,11 @@ public class InventorySlotUI : MonoBehaviour, IItemHolder {
 
     // STATE
     InventoryItem item;
-    Inventory inventory;
+    ActionItemInventory inventory;
 
     // PUBLIC
 
-    public void Setup(Inventory inventory, int index) {
+    public void Setup(ActionItemInventory inventory, int index) {
         this.inventory = inventory;
         this.index = index;
         icon.SetItem(inventory.GetItemInSlot(index), inventory.GetNumberInActionItemSlot(index));

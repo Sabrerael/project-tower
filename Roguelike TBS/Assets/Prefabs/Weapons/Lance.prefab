@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 998918281
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c619090942bf1414ab002594d52d3053, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78921ab552b6cc942a17030f69df3aca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_Offset: {x: -0.02, y: 0.77}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.085}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.5, y: 1}
     newSize: {x: 0.05, y: 0.13}
     adaptiveTilingThreshold: 0.5
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseAttackSpeed: 8
-  weaponConfig: {fileID: 11400000, guid: cd9ff9d00a99fa245bf086f939e9a49c, type: 2}
+  weaponConfig: {fileID: 11400000, guid: 1d8b4dbc7aae4124a8936ba1febe36d9, type: 2}
   targetingStrategy: {fileID: 0}
   effectStrategies: []
   projectile: {fileID: 1933491423486881612, guid: c8b7e05c1a33af340a66cdb9b1b1326d,

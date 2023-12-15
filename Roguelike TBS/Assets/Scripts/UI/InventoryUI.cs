@@ -13,6 +13,7 @@ public class InventoryUI : MonoBehaviour {
 
     // CACHE
     [SerializeField] Inventory playerInventory;
+    [SerializeField] ActionItemInventory actionItemInventory;
 
     // LIFECYCLE METHODS
 
@@ -26,7 +27,11 @@ public class InventoryUI : MonoBehaviour {
             playerInventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
         }
 
-        playerInventory.actionItemInventoryUpdated += Redraw;
+        if (!actionItemInventory) {
+            actionItemInventory = GameObject.FindWithTag("Player").GetComponent<ActionItemInventory>();
+        }
+
+        actionItemInventory.actionItemInventoryUpdated += Redraw;
         Redraw();
     }
 
@@ -39,9 +44,9 @@ public class InventoryUI : MonoBehaviour {
 
         // Magic Number situation. Fix to get player inventory
         //for (int i = 0; i < playerInventory.GetSize(); i++) {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             var itemUI = Instantiate(InventoryItemPrefab, transform);
-            itemUI.Setup(playerInventory, i);
+            itemUI.Setup(actionItemInventory, i);
         }
     }    
 }

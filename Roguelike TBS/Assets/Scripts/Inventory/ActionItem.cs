@@ -41,6 +41,7 @@ public class ActionItem : InventoryItem {
     }
 
     private void EffectFinished() {
+        //ActionItemInventory.instance.
     }
 
     public float GetCooldownTimer() {
