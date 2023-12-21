@@ -159,7 +159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 1
-  deadSprite: {fileID: 0}
+  whiteFlashMat: {fileID: 2100000, guid: e7a7e2cc2fd02f047a075c26164f2e18, type: 2}
+  restoreDefaultMaterialTime: 0.2
+  deadObject: {fileID: 6406101480878648595, guid: fabfe9c1a5012e64e879e18bf672d3f1,
+    type: 3}
 --- !u!95 &6439223855039930213
 Animator:
   serializedVersion: 3

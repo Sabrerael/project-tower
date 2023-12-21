@@ -234,7 +234,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 1
-  deadSprite: {fileID: 0}
+  whiteFlashMat: {fileID: 2100000, guid: e7a7e2cc2fd02f047a075c26164f2e18, type: 2}
+  restoreDefaultMaterialTime: 0.2
+  deadObject: {fileID: 5610362665402618146, guid: 3184ddb914da90849ad697207e20b37a,
+    type: 3}
 --- !u!95 &4428150229514644149
 Animator:
   serializedVersion: 3
@@ -296,6 +299,8 @@ MonoBehaviour:
   movementSpeed: 1.5
   moneyDropped: 1
   healthBar: {fileID: 7989338077384067406}
+  knockbackForce: 1000000
+  knockbackTime: 0.35
   weaponDamage: 10
   attackZone: {fileID: 1492608537675864190}
 --- !u!114 &6722928488785773760

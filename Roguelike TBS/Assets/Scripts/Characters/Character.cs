@@ -32,7 +32,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     // Active Ability variables
     protected Dictionary<Stat, int> activeAbilityModifyPercentages = new Dictionary<Stat, int>();
     protected float cooldownTimer = 0;
-    protected GameObject characterAbilityIcon;
+    protected Image characterAbilityIcon;
     protected AbilityState abilityState = AbilityState.Ready;
     protected IEnumerator abilityCoroutine;
 
@@ -51,7 +51,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
         if (baseStats != null) {
             baseStats.onLevelUp += ChooseLevelUpModifier;
         }
-        characterAbilityIcon = GameObject.Find("Character Ability Icon");
+        characterAbilityIcon = GameObject.Find("Character Ability Icon").GetComponent<Image>();
 
         foreach(Stat stat in Enum.GetValues(typeof(Stat))) {
             passiveModifyPercentages[stat] = 0;
@@ -61,9 +61,8 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
 
     private void Start() {
         if (activeAbilityIcon) {
-                var weaponAbilityIcon = GameObject.Find("Character Ability Icon");
-                weaponAbilityIcon.GetComponent<Image>().sprite = activeAbilityIcon;
-                weaponAbilityIcon.GetComponent<Image>().color = new Color(1,1,1,0.75f);
+                characterAbilityIcon.sprite = activeAbilityIcon;
+                characterAbilityIcon.color = new Color(1,1,1,0.75f);
         }
     }
 

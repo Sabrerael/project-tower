@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Stats;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,8 @@ public class Paladin : Character {
     [Header("Paladin Active Ability Modifiers")]
     [SerializeField] int abilityModifyPercent = 30;
     [SerializeField] float abilityTimer = 30;
+
+    private Health health;
 
     private event Action<GameObject> onAbilityActivate;
     private event Action<GameObject> onAbilityKill;
@@ -33,6 +36,7 @@ public class Paladin : Character {
         }
 
         activeAbilityModifyPercentages[Stat.Defense] = abilityModifyPercent;
+        health = GetComponent<Health>();
     }
 
     public override void ActiveAbility() {
@@ -46,9 +50,9 @@ public class Paladin : Character {
         if (onAbilityActivate != null) {
             onAbilityActivate(gameObject);
         }
-        
-        abilityCoroutine = StatTimer(abilityTimer, abilityModifyPercent);
-        StartCoroutine(abilityCoroutine);
+
+        health.SetTemporaryHealth(15);
+        health.onTemporaryHealthGone += StartAbilityCooldown;
     }
 
     public override void CallOnAbilityKill() {
@@ -78,11 +82,11 @@ public class Paladin : Character {
         }
     }
 
-    private IEnumerator StatTimer(float time, int percent) {
-        characterAbilityIcon.GetComponent<Image>().color = new Color(0.5f,0.5f,0.5f,0.25f);
+    private void StartAbilityCooldown() {
+        StartCoroutine(AbilityCooldown());
+    }
 
-        yield return new WaitForSeconds(time);
-
+    private IEnumerator AbilityCooldown() {
         abilityState = AbilityState.Cooldown;
         cooldownTimer = baseStats.GetStat(Stat.Cooldown);
 

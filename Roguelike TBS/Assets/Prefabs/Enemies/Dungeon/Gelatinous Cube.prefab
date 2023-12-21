@@ -158,7 +158,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 1
-  deadSprite: {fileID: 0}
+  whiteFlashMat: {fileID: 2100000, guid: e7a7e2cc2fd02f047a075c26164f2e18, type: 2}
+  restoreDefaultMaterialTime: 0.2
+  deadObject: {fileID: 0}
 --- !u!95 &2527909878121153124
 Animator:
   serializedVersion: 3
@@ -193,6 +195,9 @@ MonoBehaviour:
   sfx: {fileID: 8300000, guid: bca9c1c2378fcde4395e2a7dd407dfe3, type: 3}
   movementSpeed: 6
   moneyDropped: 1
+  healthBar: {fileID: 0}
+  knockbackForce: 1000000
+  knockbackTime: 0.35
   bossName: Gelatinous Cube
   slimeSpawners:
   - {fileID: 5499922236453728186}

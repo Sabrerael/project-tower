@@ -5,16 +5,22 @@ using UnityEngine;
 namespace RPG.Stats {
     public class Health : MonoBehaviour {
         [SerializeField] int healthPoints = 1;
-        [SerializeField] Sprite deadSprite = null;
+        [SerializeField] Material whiteFlashMat;
+        [SerializeField] float restoreDefaultMaterialTime = 0.2f;
+        [SerializeField] GameObject deadObject;
         
         private bool isDead = false;
         private bool shieldUp = false;
+        private int temporaryHealthPoints = 0;
+        private Transform deadEnemyParent;
         private LevelLoader levelLoader = null;
+        private Material defaultMaterial;
         Animator animator;
         BaseStats baseStats;
         SpriteRenderer spriteRenderer;
 
         public event Func<int, int> onDamageTaken;
+        public event Action onTemporaryHealthGone;
         public event Action onDeath;
 
         private void Start() {
@@ -23,6 +29,8 @@ namespace RPG.Stats {
             animator = GetComponent<Animator>();
             baseStats = GetComponent<BaseStats>();
             spriteRenderer = GetComponent<SpriteRenderer>();
+            deadEnemyParent = GameObject.Find("Dead Enemies").transform;
+            defaultMaterial = spriteRenderer.material;
         }
 
         public bool IsDead() { return isDead; }
@@ -43,7 +51,20 @@ namespace RPG.Stats {
                 damage = onDamageTaken(damage);
             }
             
-            healthPoints = Mathf.Max(healthPoints - damage, 0);
+            if (temporaryHealthPoints >= 0) {
+                int temporaryHealthDamage = Mathf.Min(damage, temporaryHealthPoints);
+                temporaryHealthPoints = temporaryHealthPoints - temporaryHealthDamage;
+                damage -= temporaryHealthDamage;
+
+                if (temporaryHealthPoints == 0 && onTemporaryHealthGone != null) {
+                    onTemporaryHealthGone();
+                }
+            }
+
+
+            if (damage != 0) {
+                healthPoints = Mathf.Max(healthPoints - damage, 0);
+            }
 
             if (healthPoints == 0) {
                 Die();
@@ -57,22 +78,26 @@ namespace RPG.Stats {
             healthPoints = Mathf.Min(healthPoints + healthToRestore, GetMaxHealthPoints());
         }
 
-        public int GetHealthPoints() { return healthPoints; }
+        public int GetHealthPoints() { return healthPoints + temporaryHealthPoints; }
 
         public int GetMaxHealthPoints() {
             return GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         public float GetFraction() {
-            return (float)healthPoints / (float)GetMaxHealthPoints();
+            return (float)(healthPoints + temporaryHealthPoints) / (float)GetMaxHealthPoints();
         }
 
         public bool IsAtMaxHealth() {
-            return GetHealthPoints() == GetMaxHealthPoints();
+            return GetHealthPoints() >= GetMaxHealthPoints();
         }
 
         public void SetShieldUp() {
             shieldUp = true;
+        }
+
+        public void SetTemporaryHealth(int value) {
+            temporaryHealthPoints = value;
         }
 
         private void Die() {
@@ -89,11 +114,12 @@ namespace RPG.Stats {
                 collider.enabled = false;
             }
             spriteRenderer.sortingOrder = -1;
-            transform.SetParent(GameObject.Find("Dead Enemies").transform);
+            Instantiate(deadObject, transform.position, Quaternion.identity, deadEnemyParent);
             
             if (onDeath != null) {
                 onDeath();
             }
+            Destroy(gameObject);
         }
 
         private void AwardExperience(GameObject instigator) {
@@ -118,14 +144,9 @@ namespace RPG.Stats {
         }
 
         private IEnumerator DamageEffect() {
-            //TODO Make the color transition smoother -- Maybe this just goes in Update?
-            spriteRenderer.color = Color.red;
-            yield return new WaitForSeconds(.25f);
-            spriteRenderer.color = Color.white;
-            yield return new WaitForSeconds(.25f);
-            spriteRenderer.color = Color.red;
-            yield return new WaitForSeconds(.25f);
-            spriteRenderer.color = Color.white;
+            spriteRenderer.material = whiteFlashMat;
+            yield return new WaitForSeconds(restoreDefaultMaterialTime);
+            spriteRenderer.material = defaultMaterial;
         }
 
         private IEnumerator PlayerDeath() {

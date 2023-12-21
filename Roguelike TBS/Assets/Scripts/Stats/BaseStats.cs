@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 namespace RPG.Stats{
@@ -64,6 +65,21 @@ namespace RPG.Stats{
             return currentLevel;
         }
 
+        public float GetExperienceFraction(){
+            float XPToLevelUp = progression.GetStat(Stat.ExperienceToLevelUp, characterClass, currentLevel);
+            float XPOfCurrentLevel;
+            if (currentLevel != 1) {
+                XPOfCurrentLevel = progression.GetStat(Stat.ExperienceToLevelUp, characterClass, currentLevel-1);
+            } else {
+                XPOfCurrentLevel = 0;
+            }
+
+            float xpNumerator = experience.GetPoints() - XPOfCurrentLevel;
+            float xpDenominator = XPToLevelUp - XPOfCurrentLevel;
+
+            return xpNumerator / xpDenominator;
+        }
+
         // This is for setting the level of enemies
         public void SetLevel(int level) {
             currentLevel = level;
@@ -99,7 +115,6 @@ namespace RPG.Stats{
 
         private int CalculateLevel()
         {
-            Experience experience = GetComponent<Experience>();
             if (experience == null) return startingLevel;
 
             float currentXP = experience.GetPoints();

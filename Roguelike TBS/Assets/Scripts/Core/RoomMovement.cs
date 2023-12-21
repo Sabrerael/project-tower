@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Cinemachine;
+using UnityEngine;
 
 public enum Direction {
     Up,
@@ -13,6 +14,12 @@ public class RoomMovement : MonoBehaviour {
     [SerializeField] Sprite openDoor = null;
     [SerializeField] GameObject doorGameObject = null;
 
+    private ICinemachineCamera virtualCamera;
+
+    private void Start() {
+        virtualCamera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
+    } 
+
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
             MoveToRoom(other.gameObject);
@@ -23,16 +30,16 @@ public class RoomMovement : MonoBehaviour {
         Vector3 newPosition = new Vector3();
         
         if (directionToMove == Direction.Up) {
-            Camera.main.transform.position = Camera.main.transform.position + new Vector3(0,16,0);
+            virtualCamera.VirtualCameraGameObject.transform.position = virtualCamera.VirtualCameraGameObject.transform.position + new Vector3(0,16,0);
             newPosition = player.transform.position + new Vector3(0,3.5f,0);
         } else if (directionToMove == Direction.Down) {
-            Camera.main.transform.position = Camera.main.transform.position + new Vector3(0,-16,0);
+            virtualCamera.VirtualCameraGameObject.transform.position = virtualCamera.VirtualCameraGameObject.transform.position + new Vector3(0,-16,0);
             newPosition = player.transform.position + new Vector3(0,-3.5f,0);
         } else if (directionToMove == Direction.Right) {
-            Camera.main.transform.position = Camera.main.transform.position + new Vector3(24,0,0);
+            virtualCamera.VirtualCameraGameObject.transform.position = virtualCamera.VirtualCameraGameObject.transform.position + new Vector3(24,0,0);
             newPosition = player.transform.position + new Vector3(7f,0,0);
         } else if (directionToMove == Direction.Left) {
-            Camera.main.transform.position = Camera.main.transform.position + new Vector3(-24,0,0);
+            virtualCamera.VirtualCameraGameObject.transform.position = virtualCamera.VirtualCameraGameObject.transform.position + new Vector3(-24,0,0);
             newPosition = player.transform.position + new Vector3(-7f,0,0);
         }
 
