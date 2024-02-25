@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour {
         if (other.CompareTag("Weapon")) {
             animator.SetTrigger("Hit");
             GameObject wielder = other.gameObject.GetComponent<Weapon>().GetWielder().gameObject;
-            var damageTaken = wielder.GetComponent<BaseStats>().GetStat(Stat.Attack) - baseStats.GetStat(Stat.Defense);
+            var damageTaken = wielder.GetComponent<BaseStats>().GetStat(Stat.Attack);
             Debug.Log("Damage being dealt is " + damageTaken);
             health.TakeDamage(wielder, damageTaken);
 
@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour {
     protected void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Item")) {
             animator.SetTrigger("Hit");
-            var damageTaken = other.gameObject.GetComponent<ThrownItem>().GetDamage() - baseStats.GetStat(Stat.Defense);
+            var damageTaken = other.gameObject.GetComponent<ThrownItem>().GetDamage();
 
             health.TakeDamage(
                 other.gameObject.GetComponent<ThrownItem>().GetWielder().gameObject,
@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour {
             }
         } else if (other.gameObject.CompareTag("Magic")) {
             animator.SetTrigger("Hit");
-            var damageTaken = other.gameObject.GetComponent<MagicMissile>().GetDamage() - baseStats.GetStat(Stat.Defense);
+            var damageTaken = other.gameObject.GetComponent<MagicMissile>().GetDamage();
 
             health.TakeDamage(
                 other.gameObject.GetComponent<MagicMissile>().GetCaster().gameObject,
@@ -76,6 +76,8 @@ public class Enemy : MonoBehaviour {
             }
         }
     }
+
+    public void TogglePath() { aiPath.enabled = !aiPath.enabled; }
 
     public void ModifyMovementSpeed(float speedChange) {
         if (Mathf.Approximately(speedChange, 0)) {

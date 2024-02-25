@@ -60,7 +60,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
 
         if (other.gameObject.CompareTag("Enemy")) {
             var enemyBaseStats = other.gameObject.GetComponent<BaseStats>();
-            var damageTaken = enemyBaseStats.GetStat(Stat.Attack) - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
+            var damageTaken = enemyBaseStats.GetStat(Stat.Attack);
             health.TakeDamage(other.gameObject, damageTaken);
             StartCoroutine(IFrameTimer(iFramesTimeLimit));
             if (onActualHit != null) { onActualHit(other.gameObject.GetComponent<Enemy>()); }
@@ -70,7 +70,7 @@ public class Fighter : MonoBehaviour, IModifierProvider {
             }
         } else if (other.gameObject.CompareTag("Enemy Projectile")) {
             var enemyProjectile = other.gameObject.GetComponent<EnemyProjectile>();
-            var damageTaken = enemyProjectile.GetDamage() - gameObject.GetComponent<BaseStats>().GetStat(Stat.Defense);
+            var damageTaken = enemyProjectile.GetDamage();
             health.TakeDamage(other.gameObject, damageTaken);
             StartCoroutine(IFrameTimer(iFramesTimeLimit));
             cinemachineShake.ShakeCamera(2.5f, .2f);

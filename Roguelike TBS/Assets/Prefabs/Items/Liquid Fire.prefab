@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2073376566893718316}
   - component: {fileID: 5743684303132271542}
   - component: {fileID: -4248555111599795721}
-  - component: {fileID: -5004625922170837005}
   - component: {fileID: 8742447518933682901}
   m_Layer: 10
   m_Name: Liquid Fire
@@ -98,19 +97,6 @@ MonoBehaviour:
   aofGameObject: {fileID: 2067796684210634225, guid: d2ba85b01c045424f9d26a17c523e8f2,
     type: 3}
   sfx: {fileID: 8300000, guid: 39064c86ce5465e4aa78415c5bcdaa38, type: 3}
---- !u!114 &-5004625922170837005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073376566893718317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c260a9430f15ada4aacbafe51d00604f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotation: 270
 --- !u!114 &8742447518933682901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2073376567516914089}
   - component: {fileID: 2073376567516914088}
+  - component: {fileID: 783709963859665690}
   m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
@@ -226,3 +213,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &783709963859665690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073376567516914006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c260a9430f15ada4aacbafe51d00604f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: 270

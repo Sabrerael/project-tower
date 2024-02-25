@@ -4,29 +4,23 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour {
     [SerializeField] float movementSpeed = 6;
-    [SerializeField] float padding = 0.5f;
     [SerializeField] float dodgeSpeed;
     [SerializeField] ParticleSystem dust = null;
 
     private Animator animator;
     private Rigidbody2D playerRigidbody;
-    private float xMin, xMax, yMin, yMax;
     private Vector2 movementValues = new Vector2();
     private bool isDodging = false;
     private bool movingRight = false;
     private bool movingDown = true;
     private bool movingVertical = true;
-    private Vector3 dodgeDirection = new Vector3();
+    private Vector2 dodgeDirection = new Vector2();
     private float t;
     private float dustTimer = 0;
 
     private void Start() {
         playerRigidbody = GetComponent<Rigidbody2D>();
         Camera gameCamera = Camera.main;
-        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).x + padding;
-        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1,0,0)).x - padding;
-        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).y + padding;
-        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0,1,0)).y - padding;
         animator = GetComponent<Animator>();
     }
 
@@ -41,8 +35,7 @@ public class Movement : MonoBehaviour {
     }
 
     private void DodgeRoll() {
-        playerRigidbody.AddForce(new Vector2(dodgeDirection.x * dodgeSpeed,
-                                             dodgeDirection.y * dodgeSpeed));
+        playerRigidbody.MovePosition(playerRigidbody.position + (dodgeDirection * (dodgeSpeed * Time.fixedDeltaTime)));
         t += Time.fixedDeltaTime;
     }
 
@@ -65,15 +58,6 @@ public class Movement : MonoBehaviour {
         animator.SetTrigger("DodgeRoll");
         t = 0;
         dust.Play();
-    }
-
-    // Keeping this in case I need it. I should be good without it but I'm not sure
-    public void UpdateMinMaxValues() {
-        Camera gameCamera = Camera.main;
-        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).x + padding;
-        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1,0,0)).x - padding;
-        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).y + padding;
-        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0,1,0)).y - padding;
     }
 
     public void SetMovementValues(Vector2 values) {
@@ -109,8 +93,7 @@ public class Movement : MonoBehaviour {
             movingVertical = true;
         } 
 
-        playerRigidbody.AddForce(new Vector2(movementValues.x * movementSpeed,
-                                             movementValues.y * movementSpeed));
+        playerRigidbody.MovePosition(playerRigidbody.position + (movementValues * (movementSpeed * Time.fixedDeltaTime)));
         
         if (dustTimer > 1.5) {
             dust.Play();

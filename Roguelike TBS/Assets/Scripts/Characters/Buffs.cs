@@ -11,14 +11,12 @@ public class Buffs : MonoBehaviour, IModifierProvider {
         additiveBuffs.Add(Stat.Attack, 0);
         additiveBuffs.Add(Stat.AttackSpeed, 0);
         additiveBuffs.Add(Stat.Cooldown, 0);
-        additiveBuffs.Add(Stat.Defense, 0);
         additiveBuffs.Add(Stat.Health, 0);
         additiveBuffs.Add(Stat.MovementSpeed, 0);
 
         multiplicativeBuffs.Add(Stat.Attack, 0);
         multiplicativeBuffs.Add(Stat.AttackSpeed, 0);
         multiplicativeBuffs.Add(Stat.Cooldown, 0);
-        multiplicativeBuffs.Add(Stat.Defense, 0);
         multiplicativeBuffs.Add(Stat.Health, 0);
         multiplicativeBuffs.Add(Stat.MovementSpeed, 0);
     }

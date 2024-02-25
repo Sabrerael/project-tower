@@ -13,6 +13,7 @@ public class HUDManager : MonoBehaviour {
     [SerializeField] TextMeshProUGUI levelText;
     [SerializeField] RectTransform experienceForeground;
     [SerializeField] TextMeshProUGUI experienceText;
+    [SerializeField] TextMeshProUGUI purseText;
     [SerializeField] Image weaponIcon;
     [SerializeField] Image activeItemIcon;
     [SerializeField] Image characterAbilityIcon;
@@ -25,6 +26,7 @@ public class HUDManager : MonoBehaviour {
     private BaseStats baseStats;
     private Experience experience;
     private Purse purse; 
+    private Fighter fighter;
     private Inventory weaponInventory;
     private ActionItemInventory actionItemInventory;
     private PotionInventory potionInventory;
@@ -42,7 +44,7 @@ public class HUDManager : MonoBehaviour {
     }
 
     private void Start() {
-        character = Character.instance;
+        character = Character.Instance;
         health = character?.GetComponent<Health>();
         baseStats = character?.GetComponent<BaseStats>();
         experience = character?.GetComponent<Experience>();
@@ -50,6 +52,8 @@ public class HUDManager : MonoBehaviour {
         weaponInventory = character?.GetComponent<Inventory>();
         actionItemInventory = character?.GetComponent<ActionItemInventory>();
         potionInventory = character?.GetComponent<PotionInventory>();
+
+        RedrawAll();
     }
 
     // Clean up, all this shouldn't be calculated every frame
@@ -71,15 +75,42 @@ public class HUDManager : MonoBehaviour {
                 ToggleItemPopup();
             }
         }
+        RedrawAll();
+    }
 
+    private void RedrawAll() {
+        RedrawHealth();
+        RedrawExperience();
+        RedrawAbilities();
+        RedrawPurse();
+    }
+
+    private void RedrawHealth() {
         if (health == null) {
             healthText.text = "Dead";
+            healthForeground.localScale = new Vector3(0, 1, 1);
             return;
         }
-        healthText.text = health.GetHealthPoints().ToString() + "/" + health.GetMaxHealthPoints().ToString();
 
+        healthText.text = health.GetHealthPoints().ToString() + "/" + health.GetMaxHealthPoints().ToString();
         healthForeground.localScale = new Vector3(health.GetFraction(), 1, 1);
+    }
+
+    private void RedrawExperience() {
+        levelText.text = "Lv " + baseStats.GetLevel().ToString();
+        experienceText.text = experience.GetPoints().ToString() + "/" + baseStats.GetPointsToLevelUp().ToString();
         experienceForeground.localScale = new Vector3(baseStats.GetExperienceFraction(), 1, 1);
+    }
+
+    private void RedrawAbilities() {
+        Debug.Log(weaponInventory.GetEquipWeaponConfig().GetIcon());
+        weaponIcon.sprite = weaponInventory.GetEquipWeaponConfig().GetIcon();
+        activeItemIcon.sprite = actionItemInventory.GetActiveActionItemSprite();
+        characterAbilityIcon.sprite = character.GetActiveAbilityIcon();
+    }
+
+    private void RedrawPurse() {
+        purseText.text = purse.GetBalance().ToString();
     }
 
     private void ToggleItemPopup() {

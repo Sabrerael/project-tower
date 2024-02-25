@@ -190,6 +190,10 @@ public class Inventory : MonoBehaviour, IModifierProvider {
         }
     }
 
+    public WeaponConfig GetEquipWeaponConfig() {
+        return weaponInventory[activeWeaponIndex];
+    }
+
     public void ModifyPassiveBonusAddition(Stat stat, int increase) {
         statModifyAdditions[stat] += increase;
     }

@@ -9,7 +9,7 @@ public class AttackZone : MonoBehaviour {
         if (other.CompareTag("Player")) {
             other.GetComponent<Animator>().SetTrigger("Hit");
             var playerBaseStats = other.gameObject.GetComponent<BaseStats>();
-            var damageDealt = enemyBaseStats.GetStat(Stat.Attack) - playerBaseStats.GetStat(Stat.Defense);
+            var damageDealt = enemyBaseStats.GetStat(Stat.Attack);
             other.gameObject.GetComponent<Health>().TakeDamage(gameObject, damageDealt);
             other.GetComponent<Fighter>().StartIFrameTimer(0.75f);
             enemy.AttackCooldown();

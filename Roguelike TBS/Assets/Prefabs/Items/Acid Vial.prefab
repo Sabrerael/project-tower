@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1662325867141765533}
   - component: {fileID: 4927628349256470791}
   - component: {fileID: 5682909633389306694}
-  - component: {fileID: 3556760327166596418}
   - component: {fileID: -5501794344471033134}
   m_Layer: 10
   m_Name: Acid Vial
@@ -98,19 +97,6 @@ MonoBehaviour:
   aofGameObject: {fileID: 3291257683920763191, guid: 0922dec19142b344ba52fe276722ad22,
     type: 3}
   sfx: {fileID: 8300000, guid: 39064c86ce5465e4aa78415c5bcdaa38, type: 3}
---- !u!114 &3556760327166596418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662325867141765532}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c260a9430f15ada4aacbafe51d00604f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotation: 270
 --- !u!114 &-5501794344471033134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1662325867760243480}
   - component: {fileID: 1662325867760243481}
+  - component: {fileID: 6635170177256909425}
   m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
@@ -226,3 +213,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6635170177256909425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662325867760243687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c260a9430f15ada4aacbafe51d00604f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: 270

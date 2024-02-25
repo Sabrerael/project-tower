@@ -12,6 +12,7 @@ using UnityEngine;
 public class Feat : ScriptableObject {
     [SerializeField] ActivationPoint activationPoint = ActivationPoint.OnActivate;
     [SerializeField] string abilityName = "";
+    [TextArea(5,10)]
     [SerializeField] string abilityDescription = "";
     [SerializeField] TargetingStrategy targetingStrategy; // Currently this should only be SelfTargeting
     [SerializeField] EffectStrategy[] effectStrategies;

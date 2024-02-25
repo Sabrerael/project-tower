@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8a54f767fece049961c094d92f9015, type: 3}
-  m_Name: Effect Feat Lasting Rage
+  m_Script: {fileID: 11500000, guid: 33d2c0e470a9b964cbde96dbe8510786, type: 3}
+  m_Name: Effect Feat Greater Rage
   m_EditorClassIdentifier: 
-  timerChange: 2
+  additiveChange: 1
+  statToChange: 3
+  changeAmount: 3

@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Reckless Rage
   m_EditorClassIdentifier: 
-  activatationPoint: 1
+  activationPoint: 1
   abilityName: Reckless Rage
-  abilityDescription: When entering Rage, the Barbarian will gain a 10% increase
-    to Attack at the cost of a 5% decrease to Defense
-  targetingStrategy: {fileID: 0}
+  abilityDescription: When entering Rage, the Barbarian will gain a 5 point increase
+    to Attack at the cost of taking 2 additional points of damage each time you get
+    hit.
+  targetingStrategy: {fileID: 11400000, guid: e43ca412c7422d1418eeab6fe2497bab, type: 2}
   effectStrategies:
   - {fileID: 11400000, guid: d4046316b1140ac45a42e7ba67628ca1, type: 2}
-  - {fileID: 11400000, guid: ec70a266ec305bf498a471b186ea3766, type: 2}
+  - {fileID: 0}

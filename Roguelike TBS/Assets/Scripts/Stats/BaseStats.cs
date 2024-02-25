@@ -65,6 +65,10 @@ namespace RPG.Stats{
             return currentLevel;
         }
 
+        public int GetPointsToLevelUp() {
+            return progression.GetStat(Stat.ExperienceToLevelUp, characterClass, currentLevel);
+        }
+
         public float GetExperienceFraction(){
             float XPToLevelUp = progression.GetStat(Stat.ExperienceToLevelUp, characterClass, currentLevel);
             float XPOfCurrentLevel;

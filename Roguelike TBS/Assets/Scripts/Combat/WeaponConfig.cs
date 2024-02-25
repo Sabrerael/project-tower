@@ -19,7 +19,8 @@ public class WeaponConfig : InventoryItem {
             weapon.gameObject.GetComponent<Collider2D>().enabled = false;
             weapon.gameObject.name = weaponName;
             weapon.SetWielder(fighter);
-            if (abilityIcon) {
+            // TODO Call HUD Manager to update this
+            /*if (abilityIcon) {
                 var weaponAbilityIcon = GameObject.Find("Weapon Ability Icon");
                 weaponAbilityIcon.GetComponent<Image>().sprite = abilityIcon;
                 weaponAbilityIcon.GetComponent<Image>().color = new Color(1,1,1,0.75f);
@@ -27,7 +28,7 @@ public class WeaponConfig : InventoryItem {
                 var weaponAbilityIcon = GameObject.Find("Weapon Ability Icon");
                 weaponAbilityIcon.GetComponent<Image>().sprite = null;
                 weaponAbilityIcon.GetComponent<Image>().color = Color.clear;
-            }
+            }*/
             weapon.gameObject.SetActive(false);
         }
         HandlePassive(fighter.gameObject);

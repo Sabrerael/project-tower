@@ -5,9 +5,7 @@ using RPG.Stats;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class Character : MonoBehaviour, IModifierProvider {
-    public static Character instance = null;
-
+public abstract class Character : Singleton<Character>, IModifierProvider {
     [Header("Level Up Bonus Variables")]
     [SerializeField] protected LevelUpBonuses levelUpBonuses = null;
     [SerializeField] protected GameObject abilityParticles = null;
@@ -27,7 +25,7 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     // Passive Stat increases
     protected Dictionary<Stat, int> passiveModifyAdditions = new Dictionary<Stat, int>();
     protected Dictionary<Stat, int> passiveModifyPercentages = new Dictionary<Stat, int>();
-    protected int criticalChance = 3;
+    protected int criticalChance = 5;
 
     // Active Ability variables
     protected Dictionary<Stat, int> activeAbilityModifyPercentages = new Dictionary<Stat, int>();
@@ -39,13 +37,8 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
     public event Action<GameObject> onRoomClear;
     public virtual event Action onFeatAdded;
 
-    private void Awake() {
-        if (instance == null)
-            instance = this;
-        else if (instance != this)
-            Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
+    protected override void Awake() {
+        base.Awake();
 
         baseStats = GetComponent<BaseStats>();
         if (baseStats != null) {
@@ -108,6 +101,10 @@ public abstract class Character : MonoBehaviour, IModifierProvider {
         levelUpMenu.ToggleBodyActive();
         Time.timeScale = 1;
         choiceIndexes = new List<int>();
+    }
+
+    public Sprite GetActiveAbilityIcon() {
+        return activeAbilityIcon;
     }
 
     public IEnumerable<int> GetAdditiveModifiers(Stat stat) {

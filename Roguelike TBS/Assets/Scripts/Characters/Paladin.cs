@@ -15,6 +15,7 @@ public class Paladin : Character {
     [Header("Paladin Active Ability Modifiers")]
     [SerializeField] int abilityModifyPercent = 30;
     [SerializeField] float abilityTimer = 30;
+    [SerializeField] int temporaryHealthPoints = 15;
 
     private Health health;
 
@@ -23,19 +24,12 @@ public class Paladin : Character {
     public override event Action onFeatAdded;
 
     private void Start() {
-        if (activeAbilityIcon) {
-            var weaponAbilityIcon = GameObject.Find("Character Ability Icon");
-            weaponAbilityIcon.GetComponent<Image>().sprite = activeAbilityIcon;
-            weaponAbilityIcon.GetComponent<Image>().color = new Color(1,1,1,0.75f);
-        }
-
         levelUpMenu = GameObject.Find("Level Up Bonuses Menu").GetComponent<LevelUpBonusMenu>();
 
         foreach(Stat stat in Enum.GetValues(typeof(Stat))) {
             activeAbilityModifyPercentages[stat] = 0;
         }
 
-        activeAbilityModifyPercentages[Stat.Defense] = abilityModifyPercent;
         health = GetComponent<Health>();
     }
 
@@ -51,7 +45,7 @@ public class Paladin : Character {
             onAbilityActivate(gameObject);
         }
 
-        health.SetTemporaryHealth(15);
+        health.SetTemporaryHealth(temporaryHealthPoints);
         health.onTemporaryHealthGone += StartAbilityCooldown;
     }
 
@@ -94,5 +88,9 @@ public class Paladin : Character {
 
         characterAbilityIcon.GetComponent<Image>().color = new Color(1,1,1,0.75f);
         abilityState = AbilityState.Ready;
+    }
+
+    public void ModifyTemporaryHealthAmount(int temporaryHealthIncrease) {
+        temporaryHealthPoints += temporaryHealthIncrease;
     }
 }

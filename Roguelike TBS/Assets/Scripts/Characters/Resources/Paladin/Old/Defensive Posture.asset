@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5751f67de5e504743ad24cef146d5f4a, type: 3}
   m_Name: Defensive Posture
   m_EditorClassIdentifier: 
-  activatationPoint: 0
+  activationPoint: 1
   abilityName: Defensive Posture
   abilityDescription: The Paladin takes up a defensive fighting stance during Divine
     Protection, gaining a 10% increase to Defense in exchange for a 5% decrease to

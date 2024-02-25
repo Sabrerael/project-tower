@@ -126,9 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ade11c035685eb4bad7f032b0e119f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 100
-  padding: 0.5
-  dodgeSpeed: 150
+  movementSpeed: 4.5
+  dodgeSpeed: 6
   dust: {fileID: 2053084883625066409}
 --- !u!50 &4383780246614317367
 Rigidbody2D:
@@ -143,8 +142,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 20
-  m_AngularDrag: 5
+  m_LinearDrag: 0
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -247,6 +246,7 @@ MonoBehaviour:
   activeAbilityIcon: {fileID: 21300000, guid: c455d60a1183e3b48925ccbee2621692, type: 3}
   abilityModifyPercent: 30
   abilityTimer: 30
+  temporaryHealthPoints: 15
 --- !u!114 &-3796348304969860358
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -151,7 +151,7 @@ namespace RPG.Stats {
 
         private IEnumerator PlayerDeath() {
             isDead = true;
-            animator.SetBool("IsDead", true);
+            //animator.SetBool("IsDead", true);
             yield return new WaitForSeconds(2.5f);
             levelLoader.LoadGameOver();
         }
