@@ -229,7 +229,11 @@ public class ActionItemInventory : MonoBehaviour, IModifierProvider {
     }
 
     public Sprite GetActiveActionItemSprite() {
-        return actionItemInventory[activeActionItemIndex].item.GetIcon();
+        if (actionItemInventory[activeActionItemIndex].item != null) {
+            return actionItemInventory[activeActionItemIndex].item.GetIcon();
+        } else {
+            return null;
+        }
     }
 
     public void ModifyPassiveBonusAddition(Stat stat, int increase) {

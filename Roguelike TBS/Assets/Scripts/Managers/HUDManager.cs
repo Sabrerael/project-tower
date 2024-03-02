@@ -103,7 +103,6 @@ public class HUDManager : MonoBehaviour {
     }
 
     private void RedrawAbilities() {
-        Debug.Log(weaponInventory.GetEquipWeaponConfig().GetIcon());
         weaponIcon.sprite = weaponInventory.GetEquipWeaponConfig().GetIcon();
         activeItemIcon.sprite = actionItemInventory.GetActiveActionItemSprite();
         characterAbilityIcon.sprite = character.GetActiveAbilityIcon();

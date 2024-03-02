@@ -14,7 +14,7 @@ public enum AbilityState {
 public class Paladin : Character {
     [Header("Paladin Active Ability Modifiers")]
     [SerializeField] int abilityModifyPercent = 30;
-    [SerializeField] float abilityTimer = 30;
+    //[SerializeField] float abilityTimer = 30; // Should be necessary when the temporary health points go away
     [SerializeField] int temporaryHealthPoints = 15;
 
     private Health health;

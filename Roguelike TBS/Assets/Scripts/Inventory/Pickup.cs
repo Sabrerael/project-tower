@@ -39,7 +39,9 @@ public class Pickup : MonoBehaviour {
             Destroy(gameObject);
         }
         if (sfx) { AudioSource.PlayClipAtPoint(sfx, transform.position); }
-        GameObject.Find("HUD").GetComponent<HUD>().LaunchItemPopup(item.GetDisplayName() + ": " + item.GetDescription());
+
+        HUD hud = GameObject.Find("HUD").GetComponent<HUD>();
+        hud.LaunchItemPopup(item.GetDisplayName() + ": " + item.GetDescription());
     }
 
     private void SetPickupSprite() {
