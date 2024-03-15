@@ -61,7 +61,6 @@ namespace RPG.Stats {
                 }
             }
 
-
             if (damage != 0) {
                 healthPoints = Mathf.Max(healthPoints - damage, 0);
             }
@@ -151,7 +150,7 @@ namespace RPG.Stats {
 
         private IEnumerator PlayerDeath() {
             isDead = true;
-            //animator.SetBool("IsDead", true);
+            animator.SetBool("IsDead", true);
             yield return new WaitForSeconds(2.5f);
             levelLoader.LoadGameOver();
         }

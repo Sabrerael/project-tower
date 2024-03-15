@@ -11,10 +11,8 @@ public class ShootingEnemy : Enemy {
     [SerializeField] float nextWaypointDistance = 3f;
     [SerializeField] float walkingSpeed;
 
-    private Path path;
     private int currentWaypoint = 0;
     private bool reachedEndOfPath = false;
-    private bool interrupted = false;
     private Seeker seeker;
 
     private void Start() {

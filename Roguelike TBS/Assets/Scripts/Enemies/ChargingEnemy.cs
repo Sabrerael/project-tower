@@ -7,7 +7,6 @@ public class ChargingEnemy : Enemy {
     [SerializeField] float nextWaypointDistance = 3f;
     [SerializeField] float walkingSpeed;
 
-    private Path path;
     private int currentWaypoint = 0;
     private bool reachedEndOfPath = false;
     private Seeker seeker;
@@ -54,7 +53,6 @@ public class ChargingEnemy : Enemy {
         RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3)direction, direction);
 
         if (hit.collider.gameObject.CompareTag("Player")) {
-            Debug.Log("raycast hit player");
             animator.SetTrigger("Charge");
             return;
         }

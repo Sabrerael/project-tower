@@ -17,10 +17,8 @@ MonoBehaviour:
   description: Heavy and difficult to swing around but it sure hits hard.
   shopPrice: 1
   icon: {fileID: 21300000, guid: 05e6b249a209c6c418db926813174060, type: 3}
-  pickup: {fileID: 5903220691494757437, guid: 779634de0eebcca4c857e82548f7540e, type: 3}
-  stackable: 0
   equippedPrefab: {fileID: 4388903834529384958, guid: 15667cbe7356d7e488e3720d0f49c9f8,
     type: 3}
   weaponDamage: 10
-  abilityIcon: {fileID: 0}
+  abilityIcon: {fileID: 21300000, guid: 05e6b249a209c6c418db926813174060, type: 3}
   weaponType: 1

@@ -17,10 +17,8 @@ MonoBehaviour:
   description: Good for keeping your enemies a bit farther away.
   shopPrice: 1
   icon: {fileID: 21300000, guid: 28b8b89a8730ed646a34cc6ffe2ad328, type: 3}
-  pickup: {fileID: 8139775243973864965, guid: e271a7a972df96247844489fe267db74, type: 3}
-  stackable: 0
   equippedPrefab: {fileID: -5106568644448268394, guid: 19022d7c8ffe0eb4ba1c03a8f0a44bed,
     type: 3}
   weaponDamage: 8
-  abilityIcon: {fileID: 0}
+  abilityIcon: {fileID: 21300000, guid: 28b8b89a8730ed646a34cc6ffe2ad328, type: 3}
   weaponType: 2

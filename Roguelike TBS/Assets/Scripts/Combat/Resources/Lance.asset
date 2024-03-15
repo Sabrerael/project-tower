@@ -16,8 +16,9 @@ MonoBehaviour:
   displayName: Lance
   description: 
   shopPrice: 1
-  icon: {fileID: 0}
-  equippedPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: 78921ab552b6cc942a17030f69df3aca, type: 3}
+  equippedPrefab: {fileID: 8383926745681792197, guid: 353ed3d117ab6eb4b948d83a4726bf72,
+    type: 3}
   weaponDamage: 7
-  abilityIcon: {fileID: 0}
-  weaponType: 0
+  abilityIcon: {fileID: 21300000, guid: 78921ab552b6cc942a17030f69df3aca, type: 3}
+  weaponType: 2

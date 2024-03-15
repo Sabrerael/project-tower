@@ -16,8 +16,9 @@ MonoBehaviour:
   displayName: Battle Axe
   description: 
   shopPrice: 1
-  icon: {fileID: 0}
-  equippedPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: ba75bedda589a5f418bc8cbfc4347162, type: 3}
+  equippedPrefab: {fileID: 3256438923246476992, guid: 3966343c66dfe074088ceba58fe54429,
+    type: 3}
   weaponDamage: 5
-  abilityIcon: {fileID: 0}
-  weaponType: 0
+  abilityIcon: {fileID: 21300000, guid: ba75bedda589a5f418bc8cbfc4347162, type: 3}
+  weaponType: 1

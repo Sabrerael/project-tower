@@ -1,5 +1,6 @@
 using Pathfinding;
 using RPG.Stats;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -16,11 +17,12 @@ public class Enemy : MonoBehaviour {
     protected AIPath aiPath;    
     protected Animator animator;
     protected BaseStats baseStats;
+    protected Boolean interrupted;
     protected GameObject player;
     protected Health health;
     protected Rigidbody2D enemyRigidbody2D;
+    protected Path path;
 
-    // Start is called before the first frame update
     protected void Awake() {
         player = GameObject.FindGameObjectWithTag("Player");
         aiDestinationSetter = GetComponent<AIDestinationSetter>();
@@ -37,7 +39,6 @@ public class Enemy : MonoBehaviour {
 
     protected virtual void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Weapon")) {
-            animator.SetTrigger("Hit");
             GameObject wielder = other.gameObject.GetComponent<Weapon>().GetWielder().gameObject;
             var damageTaken = wielder.GetComponent<BaseStats>().GetStat(Stat.Attack);
             Debug.Log("Damage being dealt is " + damageTaken);
@@ -53,7 +54,6 @@ public class Enemy : MonoBehaviour {
 
     protected void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Item")) {
-            animator.SetTrigger("Hit");
             var damageTaken = other.gameObject.GetComponent<ThrownItem>().GetDamage();
 
             health.TakeDamage(
@@ -64,7 +64,6 @@ public class Enemy : MonoBehaviour {
                 AudioSource.PlayClipAtPoint(sfx, transform.position);
             }
         } else if (other.gameObject.CompareTag("Magic")) {
-            animator.SetTrigger("Hit");
             var damageTaken = other.gameObject.GetComponent<MagicMissile>().GetDamage();
 
             health.TakeDamage(
@@ -100,11 +99,11 @@ public class Enemy : MonoBehaviour {
     }
 
     protected virtual IEnumerator Knockback(Collider2D other) {
-        aiPath.enabled = false;
-        enemyRigidbody2D.AddForce((transform.position - other.transform.position).normalized * knockbackForce);
+        interrupted = true;
+        enemyRigidbody2D.AddForce((transform.position - other.transform.position).normalized * knockbackForce, ForceMode2D.Impulse);
         yield return new WaitForSeconds(knockbackTime);
         enemyRigidbody2D.velocity = Vector3.zero;
         yield return new WaitForSeconds(knockbackTime);
-        aiPath.enabled = true;
+        interrupted = false;
     }
 }
