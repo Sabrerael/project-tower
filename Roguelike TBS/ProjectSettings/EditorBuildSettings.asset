@@ -18,13 +18,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Dungeon Floor.unity
     guid: b9a95cb90f8b9644794f2c648558be70
   - enabled: 1
-    path: Assets/Scenes/Dungeon Floor 1 Barb.unity
+    path: Assets/Scenes/Unused/Dungeon Floor 1 Barb.unity
     guid: c7293d875526f9046af2f55b1d452f83
   - enabled: 1
-    path: Assets/Scenes/Ice Floor.unity
+    path: Assets/Scenes/Unused/Ice Floor.unity
     guid: e8a48bc41ab1dc742b8efc16ef690c4b
   - enabled: 1
-    path: Assets/Scenes/Level 3.unity
+    path: Assets/Scenes/Unused/Level 3.unity
     guid: beae835f1c8c2e14faee542ddde4af8c
   - enabled: 1
     path: Assets/Scenes/Win Screen.unity

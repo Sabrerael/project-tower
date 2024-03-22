@@ -27,6 +27,10 @@ public class RoomMovement : MonoBehaviour {
     }
 
     private void MoveToRoom(GameObject player) {
+        if (virtualCamera == null) {
+            virtualCamera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
+        }
+
         Vector3 newPosition = new Vector3();
         
         if (directionToMove == Direction.Up) {
