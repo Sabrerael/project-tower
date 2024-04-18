@@ -26,7 +26,9 @@ public class Enemy : MonoBehaviour {
     protected void Awake() {
         player = GameObject.FindGameObjectWithTag("Player");
         aiDestinationSetter = GetComponent<AIDestinationSetter>();
-        aiDestinationSetter.target = player.transform;
+        if (player) {
+            aiDestinationSetter.target = player.transform;
+        }
         aiPath = GetComponent<AIPath>();
         health = GetComponent<Health>();
         animator = GetComponent<Animator>();

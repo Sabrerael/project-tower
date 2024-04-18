@@ -26,6 +26,7 @@ public class RoomMovement : MonoBehaviour {
         }
     }
 
+    // TODO Update to do a smooth panover and then activate enemies.
     private void MoveToRoom(GameObject player) {
         if (virtualCamera == null) {
             virtualCamera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
@@ -40,10 +41,10 @@ public class RoomMovement : MonoBehaviour {
             virtualCamera.VirtualCameraGameObject.transform.position = virtualCamera.VirtualCameraGameObject.transform.position + new Vector3(0,-16,0);
             newPosition = player.transform.position + new Vector3(0,-3.5f,0);
         } else if (directionToMove == Direction.Right) {
-            virtualCamera.VirtualCameraGameObject.transform.position = virtualCamera.VirtualCameraGameObject.transform.position + new Vector3(24,0,0);
+            virtualCamera.VirtualCameraGameObject.transform.position = virtualCamera.VirtualCameraGameObject.transform.position + new Vector3(26,0,0);
             newPosition = player.transform.position + new Vector3(7f,0,0);
         } else if (directionToMove == Direction.Left) {
-            virtualCamera.VirtualCameraGameObject.transform.position = virtualCamera.VirtualCameraGameObject.transform.position + new Vector3(-24,0,0);
+            virtualCamera.VirtualCameraGameObject.transform.position = virtualCamera.VirtualCameraGameObject.transform.position + new Vector3(-26,0,0);
             newPosition = player.transform.position + new Vector3(-7f,0,0);
         }
 

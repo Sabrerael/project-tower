@@ -40,7 +40,7 @@ public class Pickup : MonoBehaviour {
         }
         if (sfx) { AudioSource.PlayClipAtPoint(sfx, transform.position); }
 
-        HUD hud = GameObject.Find("HUD").GetComponent<HUD>();
+        HUDManager hud = GameObject.Find("HUD").GetComponent<HUDManager>();
         hud.LaunchItemPopup(item.GetDisplayName() + ": " + item.GetDescription());
     }
 
